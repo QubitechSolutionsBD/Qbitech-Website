@@ -1,0 +1,28 @@
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
+
+// SCSS FOR VARIABLE AND BREAKPOINT
+@import "./variable.scss";
+@import "./breakpoints.scss";
+
+// SCSS FOR PAGES
+@import "./pages/Home.scss";
+@import "./pages/Blog.scss";
+@import "./pages/Contact.scss";
+@import "./pages/About.scss";
+
+// FOR ALL COMPONENTS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// SETUP WEBSITE BACKGROUND COLOR
+body,
+html {
+  background: var(--primary-color);
+  color: var(--text-color-white);
+  font-family: var(--primary-font);
+}
