@@ -1,0 +1,129 @@
+.navforviwer {
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+    transition: 0.3s;
+    background: var(--primary-color);
+    
+    .container{
+        width: 100%;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .nav-items{
+            padding: 0 50px;
+            a {
+                display: inline-block;
+                margin: 0 10px;
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: var(--primary-font);
+                font-weight: 500;
+                color: var(--text-color-white);
+                transition: 0.4s;
+                font-weight: bold;
+              }
+              a:hover { color: var(--blue-color); }
+              a.active { color: var(--blue-color); }
+        }
+    }
+  }
+  
+  ///////////////////////////////////////////////
+  /* ============== TOGGLE BUTTON ============= */
+  .btn__toggler {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    margin-right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .btn__toggler:focus {
+    outline: none;
+  }
+  .btn__toggler-line {
+    width: 100%;
+    height: 2px;
+    background: var(--text-color-white);
+  }
+  
+  ///////////////////////////////////////////////
+  /* ============== SIDE DRAWER ============= */
+  .side__drawer {
+    height: 100%;
+    width: 60%;
+    max-width: 400px;
+    padding: 70px 0 50px 0;
+    background: var(--primary-color);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-110%);
+    transition: 0.3s ease-out;
+    z-index: 200;
+  }
+  .side__drawer.open { transform: translateX(0); }
+  .side__drawer .navbar-brand {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--text-color-white);
+    border-radius: 0;
+  }
+  .side__drawer ul {
+    height: 100%;
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .side__drawer li {
+    margin: 10px 0;
+  }
+  .side__drawer li a {
+    width: 100%;
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-color);
+    display: inline-block;
+  }
+  .side__drawer li a svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  .backdrop {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+  }
+  .backdrop-white { background: transparent; }
+  
+  //  controll window width
+  @media (min-width: 769px) { .btn__toggler { display: none; }}
+  @media (max-width: 768px) {
+    .navforviwer{
+      padding: 0 20px;
+      a.donate { font-size: 15px; padding: 5px 15px; border-radius: 5px; margin-right: 0; }
+    }
+    .nav-items { display: none; }
+  }
+  
