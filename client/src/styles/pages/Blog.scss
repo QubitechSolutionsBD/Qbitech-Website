@@ -1,4 +1,138 @@
 .blog {
   margin-top: 75px;
-  min-height: 100vh;
+  &__topLine {
+    font-size: 24px;
+    margin-top: 55px;
+    @include media("<=phone") {
+      font-size: 18px;
+      text-align: justify;
+    }
+  }
+  &__topLine2 {
+    font-size: 48px;
+    margin-top: 23px;
+    @include media("<=phone") {
+      font-size: 26px;
+    }
+  }
+  &__line {
+    margin-top: 23px;
+  }
+  &__departments {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 110px;
+    margin-top: 48px;
+    @include media("<=desktop") {
+      width: 85%;
+    }
+    @include media("<=tablet") {
+      width: 85%;
+    }
+    @include media("<=phone") {
+      width: 90%;
+    }
+    .department {
+      text-align: center;
+      padding: 11px;
+      border: 1px solid white;
+      border-radius: 25px;
+      margin: 9px;
+      height: 178px;
+      width: 11%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: nowrap;
+      @include media("<=semiDesktop") {
+        width: 23%;
+      }
+      @include media("<=phone") {
+        width: 85%;
+        padding: 15px;
+      }
+      @include media("<=tablet") {
+        width: 40%;
+      }
+
+      &:hover {
+        transition: 0.4s;
+        box-shadow: -2px 2px 6px 2px #ffffff !important;
+        img {
+          transition: 0.4s;
+          color: rgb(116, 85, 85);
+          height: 52px;
+          width: 52px;
+        }
+        p {
+          transition: 0.4s;
+          font-weight: 700;
+        }
+      }
+      img {
+        height: 42px;
+        width: 42px;
+      }
+      p {
+        padding-top: auto;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__liveEvents {
+    display: flex;
+    width: 85%;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .liveEvent {
+      height: 483px;
+      width: 30%;
+      margin-top: 20px;
+      @include media("<=tablet") {
+        width: 48%;
+      }
+      @include media("<=phone") {
+        width: 95%;
+      }
+      img {
+        width: 100%;
+      }
+      .bottomLine {
+        width: 25%;
+      }
+      h1 {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: justify;
+      }
+      h3 {
+        font-size: 14px;
+      }
+      p {
+        text-align: justify;
+        font-size: 14px;
+      }
+      h5 {
+        margin-top: 14px;
+      }
+      .techs {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(auto, 1fr));
+        grid-gap: 10px;
+      }
+    }
+  }
 }

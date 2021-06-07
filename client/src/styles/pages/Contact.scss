@@ -1,3 +1,81 @@
 .contact {
   margin-top: 75px;
+  &__body {
+    padding-left: 121px;
+    padding-right: 121px;
+    margin-bottom: 120px;
+    h3 {
+      //styleName: 24px bold;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 30px;
+      margin-top: 60px;
+    }
+    .contact-left {
+      padding-left: 41px;
+
+      ul {
+        list-style: none;
+        margin-top: 10px;
+        li {
+          display: flex;
+          align-items: center;
+          margin-top: 17px;
+          margin-bottom: 17px;
+          font-size: 18px;
+        }
+      }
+    }
+    .contact-right {
+      max-width: 100%;
+      padding-right: 40px;
+
+      .form-layout {
+        display: block;
+        width: 100%;
+        label {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        input {
+          padding-left: 10px;
+          margin-top: 6px;
+          margin-bottom: 18px;
+          height: 44px;
+          width: 100%;
+          left: 677px;
+          top: 426px;
+          border-radius: 6px;
+          font-size: 18px;
+          line-height: 24px;
+        }
+        textarea {
+          padding-left: 10px;
+          margin-top: 6px;
+          margin-bottom: 18px;
+          height: 159px;
+          width: 100%;
+          border-radius: 6px;
+          font-size: 18px;
+          line-height: 24px;
+        }
+        button {
+          text-align: center;
+          width: 100%;
+          height: 44px;
+          border-radius: 6px;
+          font-size: 18px;
+          line-height: 24px;
+          background: none;
+          color: white;
+          border: 1.5px solid white;
+        }
+      }
+    }
+  }
+  &__locationMap {
+    margin-bottom: 200px;
+  }
 }
