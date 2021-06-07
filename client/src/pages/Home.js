@@ -9,6 +9,7 @@ import Industries from "../components/Home/Industries";
 import Insights from "../components/Home/Insights";
 import Partners from "../components/Home/Partners";
 import Testomonials from "../components/Home/Testomonials";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
         <Clients />
         <Testomonials />
       </div>
+      <Footer />
     </>
   );
 }

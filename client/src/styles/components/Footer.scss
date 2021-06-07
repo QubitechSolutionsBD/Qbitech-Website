@@ -1,0 +1,122 @@
+///////////////////////////////////////////////
+// FOOTER MAIN PART
+.footer {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include media("<=phone") {
+    padding: 20px 0;
+  }
+
+  div {
+    width: 20%;
+    @include media("<=phone") {
+      width: 100%;
+      padding: 0 20px;
+      margin-bottom: 35px;
+    }
+    h3 {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 35px;
+      @include media("<=phone") {
+        font-size: 17px;
+        line-height: 17px;
+        margin-bottom: 20px;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: var(--text-color-white);
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      font-weight: lighter;
+      font-size: 14px;
+      line-height: 24px;
+      transition: 0.4s;
+      &:hover {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__company {
+    overflow: hidden;
+    img.logo {
+      margin-bottom: 10px;
+      margin-left: -30px;
+    }
+    p {
+      font-size: 15px;
+      color: var(--text-color-white);
+      font-weight: lighter;
+    }
+    .social-links {
+      margin-top: 20px;
+      margin-left: -20px;
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__contact {
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+///////////////////////////////////////////////
+// FOOTER SECOND PART
+.footer-last {
+  height: 40px;
+  position: relative;
+  .border {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media("<=phone") {
+      height: 1.2px;
+    }
+    
+  }
+  .image {
+    background: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media("<=phone") {
+      width: 25%;
+    }
+    img{
+      @include media("<=phone") {
+        width: 100%;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////
+// FOOTER COPYRIGHT TEXT
+.copyright{
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    @include media("<=phone") {
+      margin-top: 10px;
+      padding: 20px 0;
+      font-size: 13px;
+    }
+}
