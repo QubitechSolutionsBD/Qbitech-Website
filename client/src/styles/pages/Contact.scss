@@ -23,6 +23,12 @@
     }
     .contact-left {
       padding-left: 41px;
+      @include media("<=tablet") {
+        padding-left: 0px;
+      }
+      @include media("<=phone") {
+        padding-left: 0px;
+      }
 
       ul {
         list-style: none;
