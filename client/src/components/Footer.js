@@ -12,7 +12,7 @@ import youtube from "../assets/social-links/youtube.png";
 function Footer() {
   return (
     <>
-    {/* ----------------- FOOTER MAIN PART ----------------- */}
+      {/* ----------------- FOOTER MAIN PART ----------------- */}
       <div className="footer">
         <div className="footer__company">
           <img src={logo} className="logo" alt="Qbitech" />
@@ -69,7 +69,7 @@ function Footer() {
         </div>
       </div>
 
-    {/* ----------------- COPYRIGHT PART ----------------- */}
+      {/* ----------------- COPYRIGHT PART ----------------- */}
       <div className="copyright">
         © 2020 Landify UI Kit. All rights reserved.
       </div>

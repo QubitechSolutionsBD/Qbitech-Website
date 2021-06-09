@@ -4,6 +4,14 @@
     padding-left: 121px;
     padding-right: 121px;
     margin-bottom: 120px;
+    @include media("<=tablet") {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+    @include media("<=phone") {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
     h3 {
       //styleName: 24px bold;
       font-size: 24px;
@@ -15,6 +23,15 @@
     }
     .contact-left {
       padding-left: 41px;
+      @include media("<=semiDesktop") {
+        padding-left: 0px;
+      }
+      @include media("<=tablet") {
+        padding-left: 0px;
+      }
+      @include media("<=phone") {
+        padding-left: 0px;
+      }
 
       ul {
         list-style: none;
@@ -31,6 +48,12 @@
     .contact-right {
       max-width: 100%;
       padding-right: 40px;
+      @include media("<=tablet") {
+        padding-right: 10px;
+      }
+      @include media("<=phone") {
+        padding-right: 0px;
+      }
 
       .form-layout {
         display: block;

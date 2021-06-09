@@ -5,7 +5,7 @@
     margin-top: 55px;
     @include media("<=phone") {
       font-size: 18px;
-      text-align: justify;
+      text-align: center;
     }
   }
   &__topLine2 {
