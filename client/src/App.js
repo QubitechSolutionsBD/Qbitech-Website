@@ -2,11 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./styles/App.scss";
 
-// components
+// PAGES
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/services/web" component={Services} />
+          <Route exact path="/services/software" component={Services} />
+          <Route exact path="/services/hardware" component={Services} />
+
         </Switch>
       </Router>
     </div>
