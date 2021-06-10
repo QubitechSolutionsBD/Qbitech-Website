@@ -26,6 +26,7 @@
                 color: var(--text-color-white);
                 transition: 0.4s;
                 font-weight: bold;
+                text-transform: uppercase;
               }
               a:hover { color: var(--blue-color); }
               a.active { color: var(--blue-color); }
