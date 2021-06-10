@@ -8,10 +8,11 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    padding: 0 100px;
     margin-bottom: 2rem;
 
     .content {
+      width: 80%;
+      margin: auto;
       h1 {
         font-size: 4rem;
       }
@@ -98,16 +99,17 @@
   &__wrokwith {
     width: 80%;
     margin: auto;
+    margin-bottom: 120px;
     .slider {
       min-height: 20vh;
       .works {
         width: 100%;
         height: 20vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
         img {
-          width: 10%;
+          width: 50%;
         }
       }
     }

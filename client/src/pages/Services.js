@@ -228,23 +228,20 @@ function Services() {
         <div className="common-heading">
           <h2>Who We’ve Worked WIth</h2>
         </div>
-
-        <div className="works">
           <Slider {...settings} className="slider">
-            <img src={oddo} alt="oddo" />
-            <img src={adobe} alt="Adobe" />
-            <img src={oracle} alt="oracle" />
-            <img src={oddo} alt="oddo" />
-            <img src={adobe} alt="Adobe" />
-            <img src={oracle} alt="oracle" />
-            <img src={oddo} alt="oddo" />
-            <img src={adobe} alt="Adobe" />
-            <img src={oracle} alt="oracle" />
-            <img src={oddo} alt="oddo" />
-            <img src={adobe} alt="Adobe" />
-            <img src={oracle} alt="oracle" />
+            <div className="works"><img src={oddo} alt="oddo" /></div>
+            <div className="works"><img src={adobe} alt="Adobe" /></div>
+            <div className="works"><img src={oracle} alt="oracle" /></div>
+            <div className="works"><img src={oddo} alt="oddo" /></div>
+            <div className="works"><img src={adobe} alt="Adobe" /></div>
+            <div className="works"><img src={oracle} alt="oracle" /></div>
+            <div className="works"><img src={oddo} alt="oddo" /></div>
+            <div className="works"><img src={adobe} alt="Adobe" /></div>
+            <div className="works"><img src={oracle} alt="oracle" /></div>
+            <div className="works"><img src={oddo} alt="oddo" /></div>
+            <div className="works"><img src={adobe} alt="Adobe" /></div>
+            <div className="works"><img src={oracle} alt="oracle" /></div>
           </Slider>
-        </div>
       </div>
       <Footer />
     </>
