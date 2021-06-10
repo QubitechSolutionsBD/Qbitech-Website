@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import line from "../assets/blog-svg/Line 15.svg";
 import cover from "../assets/case-studies/Cover.png";
 import body from "../assets/case-studies/Body.svg";
+import Footer from "../components/Footer";
 const CaseStudies = () => {
   const cases = [
     {
@@ -75,6 +76,7 @@ const CaseStudies = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
