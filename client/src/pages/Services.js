@@ -28,9 +28,20 @@ function Services() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    arrows: false,
+    autoplay: true,
+    speed: 900,
+    autoplaySpeed: 2500,
+    dotsClass: "slick-dots slick-thumb",
+    customPaging: (i) => {
+      return (
+        <div className="custom-dots">
+          <div className="box"></div>
+        </div>
+      );
+    },
     responsive: [
       {
         breakpoint: 1024,
@@ -38,7 +49,7 @@ function Services() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: true,
         }
       },
       {
@@ -46,7 +57,7 @@ function Services() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
+          initialSlide: 2,
         }
       },
       {
@@ -54,8 +65,7 @@ function Services() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          arrows: false,
-          rows: 3
+          rows: 2
         }
       }
     ]
@@ -124,13 +134,14 @@ function Services() {
             <div className="works"><img src={oddo} alt="oddo" /></div>
             <div className="works"><img src={oracle} alt="oracle" /></div>
             <div className="works"><img src={adobe} alt="Adobe" /></div>
+            <div className="works"><img src={google} alt="google" /></div>
             <div className="works"><img src={oracle} alt="oracle" /></div>
             <div className="works"><img src={adobe} alt="Adobe" /></div>
-            <div className="works"><img src={oddo} alt="oddo" /></div>
+            <div className="works"><img src={google} alt="google" /></div>
             <div className="works"><img src={adobe} alt="Adobe" /></div>
             <div className="works"><img src={oracle} alt="oracle" /></div>
             <div className="works"><img src={oddo} alt="oddo" /></div>
-            <div className="works"><img src={oddo} alt="oddo" /></div>
+            <div className="works"><img src={google} alt="google" /></div>
             <div className="works"><img src={adobe} alt="Adobe" /></div>
             <div className="works"><img src={oracle} alt="oracle" /></div>
           </Slider>
