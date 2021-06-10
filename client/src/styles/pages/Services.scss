@@ -19,9 +19,7 @@
       margin: auto;
       h1 {
         font-size: 4rem;
-        @include media("<=phone") {
-          font-size: 1.5rem;
-        }
+        @include media("<=phone") { font-size: 1.5rem; }
       }
       p {
         margin-top: 25px;
@@ -62,6 +60,10 @@
     margin: auto;
     text-align: justify;
     margin-bottom: 120px;
+    @include media("<=phone") {
+      font-size: 14px;
+      margin-bottom: 65px;
+    }
   }
 
   &__offeredservices {
@@ -70,37 +72,47 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 120px;
+    @include media("<=phone") { margin-bottom: 65px; }
+    
     .heading {
       width: 50%;
+      @include media("<=phone") { width: 100%; }
       h3 {
         text-transform: uppercase;
         font-weight: lighter;
         font-size: 18px;
+        @include media("<=phone") { font-size: 14px; }
       }
       h2 {
         font-size: 3.5rem;
+        @include media("<=phone") { font-size: 1.5rem; }
       }
     }
     .offers {
       width: 50%;
+      @include media("<=phone") { width: 100%; margin-top: 25px; }
       p {
         font-size: 24px;
         line-height: 32px;
         margin-bottom: 20px;
+        @include media("<=phone") { font-size: 14px; line-height: 18px; margin-bottom: 10px; }
       }
     }
   }
 
   &__technologies {
+    @include media("<=phone") { width: 90%; }
     width: 70%;
     margin: auto;
     margin-bottom: 120px;
-
+    @include media("<=phone") { margin-bottom: 65px; }
     .slider {
       min-height: 20vh;
+      @include media("<=phone") { margin-top: -15px; }
       .tech {
         width: 100%;
         height: 20vh;
+        @include media("<=phone") { height: 10vh; }
         display: flex;
         align-items: center;
         justify-content: center;
@@ -115,14 +127,17 @@
     width: 80%;
     margin: auto;
     margin-bottom: 120px;
+    @include media("<=phone") { margin-bottom: 65px; }
     .slider {
       min-height: 20vh;
+      @include media("<=phone") { margin-top: -15px; }
       .works {
         width: 100%;
         height: 20vh;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        @include media("<=phone") { height: 10vh; }
         img {
           width: 50%;
         }

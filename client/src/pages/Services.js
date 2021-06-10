@@ -9,14 +9,6 @@ import Industries from "../components/Home/Industries";
 import Footer from "../components/Footer";
 
 // ASSETS
-import web from "../assets/services/banner/web.jpg";
-import software from "../assets/services/banner/software.jpg";
-import hardware from "../assets/services/banner/hardware.jpg";
-import branding from "../assets/services/banner/branding.jpg";
-import java from "../assets/services/tools/java.svg";
-import react from "../assets/services/tools/react.svg";
-import swift from "../assets/services/tools/swift.svg";
-import objectivec from "../assets/services/tools/objectivec.svg";
 import google from "../assets/tech-parteners/google.svg";
 import adobe from "../assets/tech-parteners/adobe.svg";
 import oddo from "../assets/tech-parteners/oddo.svg";
@@ -39,6 +31,34 @@ function Services() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+          rows: 3
+        }
+      }
+    ]
   };
 
   useEffect(() => {
@@ -60,12 +80,12 @@ function Services() {
         </div>
 
         {/* DESCRIPTION */}
-        {/* <div className="services__description">
+        <div className="services__description">
           <p>{desc}</p>
-        </div> */}
+        </div>
 
         {/* SERVICE */}
-        {/* <div className="services__offeredservices">
+        <div className="services__offeredservices">
           <div className="heading">
             <h3>What we can do</h3>
             <h2>Offered Services</h2>
@@ -75,10 +95,10 @@ function Services() {
               <p key={service}>{service}</p>
             ))}
           </div>
-        </div> */}
+        </div>
 
         {/* USED TECHNOLOGIES */}
-        {/* <div className="services__technologies">
+        <div className="services__technologies">
           <div className="common-heading">
             <h2>Techologies We Use</h2>
           </div>
@@ -87,34 +107,34 @@ function Services() {
               <Technologies tech={tool} />
             ))}
           </Slider>
-        </div> */}
+        </div>
 
         {/* INDUSTRIES */}
-        {/* <div className="services__industries">
+        <div className="services__industries">
           <Industries />
-        </div> */}
+        </div>
       </div>
 
       {/* WORKED WITH */}
-      {/* <div className="services__wrokwith">
+      <div className="services__wrokwith">
         <div className="common-heading">
           <h2>Who We’ve Worked WIth</h2>
         </div>
           <Slider {...settings} className="slider">
             <div className="works"><img src={oddo} alt="oddo" /></div>
+            <div className="works"><img src={oracle} alt="oracle" /></div>
             <div className="works"><img src={adobe} alt="Adobe" /></div>
             <div className="works"><img src={oracle} alt="oracle" /></div>
+            <div className="works"><img src={adobe} alt="Adobe" /></div>
             <div className="works"><img src={oddo} alt="oddo" /></div>
             <div className="works"><img src={adobe} alt="Adobe" /></div>
             <div className="works"><img src={oracle} alt="oracle" /></div>
             <div className="works"><img src={oddo} alt="oddo" /></div>
-            <div className="works"><img src={adobe} alt="Adobe" /></div>
-            <div className="works"><img src={oracle} alt="oracle" /></div>
             <div className="works"><img src={oddo} alt="oddo" /></div>
             <div className="works"><img src={adobe} alt="Adobe" /></div>
             <div className="works"><img src={oracle} alt="oracle" /></div>
           </Slider>
-      </div> */}
+      </div>
       <Footer />
     </>
   );
