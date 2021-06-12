@@ -94,6 +94,52 @@
 
   ///////////////////////////////////////////////////
   // HOME PARTNERS
+  &__services{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 120px;
+    @include media("<=phone") {width: 80%; margin-bottom: 55px; }
+
+    .container{
+      width: 100%;
+      display: flex;
+      margin-bottom: 3rem;
+      
+      .content{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        @include media("<=phone") { width: 100%; }
+        .logo{
+          width: 20%;
+          display: flex;
+          justify-content: center;
+          img{ width: 50%;  @include media("<=phone") { width: 20px; }}
+          @include media("<=phone") { width: 100%; margin-right: 10px; justify-content: start; margin-bottom: 10px;}
+        }
+        .text{
+          h3{
+            font-size: 2rem;
+            margin-bottom: 10px;
+            @include media("<=phone") { font-size: 1.2rem; }
+          }
+          p{
+            @include media("<=phone") { font-size: 14px; }
+          }
+        }
+      }
+      .blank{
+        width: 50%;
+        @include media("<=phone") { display: none; }
+      }
+    }
+
+    .content.left{ border-left: 2px solid var(--blue-color); @include media("<=phone") { border: none; } }
+    .content.right{ border-right: 2px solid var(--blue-color);  @include media("<=phone") { border: none; } }
+  }
+
+  ///////////////////////////////////////////////////
+  // HOME PARTNERS
   &__partners {
     width: 100%;
     padding: 0 15px;
@@ -119,7 +165,9 @@
   ///////////////////////////////////////////////////
   // HOME INDUSTTRIES
   &__industries {
+    background: #14142B;
     margin-bottom: 120px;
+    padding-top: 80px;
     @include media("<=phone") {
       margin-bottom: 55px;
     }
@@ -339,60 +387,6 @@
         &::before {
           border-color: var(--blue-color) transparent;
         }
-      }
-    }
-  }
-
-  ///////////////////////////////////////////////////
-  // HOME COMMON HEADING
-  .common-heading {
-    text-align: center;
-    margin-bottom: 72px;
-    @include media("<=phone") {
-      margin-bottom: 36px;
-    }
-
-    h2 {
-      display: inline-block;
-      position: relative;
-      @include media("<=phone") {
-        font-size: 17px;
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: -120px;
-        transform: translateY(-50%);
-        height: 3px;
-        width: 103px;
-        background: var(--text-color-white);
-        @include media("<=phone") {
-          width: 40px;
-          height: 1.5px;
-          left: -45px;
-        }
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: -120px;
-        transform: translateY(-50%);
-        height: 3px;
-        width: 103px;
-        background: var(--text-color-white);
-        @include media("<=phone") {
-          width: 40px;
-          height: 1.5px;
-          right: -45px;
-        }
-      }
-    }
-    p {
-      margin-top: 10px;
-      @include media("<=phone") {
-        font-size: 14px;
       }
     }
   }

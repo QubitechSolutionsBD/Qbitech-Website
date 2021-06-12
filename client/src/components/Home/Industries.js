@@ -28,20 +28,21 @@ const serve = [
 
 function Industries() {
   return (
-    <div className="home__industries">
+    <>
       <div className="common-heading">
         <h2>Industries we serve</h2>
       </div>
-
-      <div className="servefor">
-        {serve.map((s) => (
-          <div className="serve">
-            <img src={s.svg} alt="logo" />
-            <p>{s.text}</p>
-          </div>
-        ))}
+      <div className="home__industries">
+        <div className="servefor">
+          {serve.map((s) => (
+            <div className="serve">
+              <img src={s.svg} alt="logo" />
+              <p>{s.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
