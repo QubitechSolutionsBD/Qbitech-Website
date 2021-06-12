@@ -17,10 +17,12 @@ function NavForViewer(props) {
           </NavLink>
         </div>
         <div className="nav-items">
-          <NavLink to="/" exact={true}>Home</NavLink>
+          <NavLink to="/" exact={true}>
+            Home
+          </NavLink>
           <NavLink to="/none">Service</NavLink>
           <NavLink to="/none">Inductries</NavLink>
-          <NavLink to="/none">Case Studies</NavLink>
+          <NavLink to="/caseStudies">Case Studies</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/blog">Blog</NavLink>
           <NavLink to="/contact">Contact Us</NavLink>

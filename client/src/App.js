@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import CaseStudies from "./pages/CaseStudies";
 import Services from "./pages/Services";
 
 function App() {
@@ -18,10 +19,10 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/caseStudies" component={CaseStudies} />
           <Route exact path="/services/web" component={Services} />
           <Route exact path="/services/software" component={Services} />
           <Route exact path="/services/hardware" component={Services} />
-
         </Switch>
       </Router>
     </div>
