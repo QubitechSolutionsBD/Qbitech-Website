@@ -21,7 +21,7 @@ function NavForViewer(props) {
             Home
           </NavLink>
           <NavLink to="/none">Service</NavLink>
-          <NavLink to="/none">Inductries</NavLink>
+          <NavLink to="/industries">Industries</NavLink>
           <NavLink to="/caseStudies">Case Studies</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/blog">Blog</NavLink>
