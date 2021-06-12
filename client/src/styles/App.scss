@@ -12,6 +12,7 @@
 @import "./pages/Contact.scss";
 @import "./pages/About.scss";
 @import "./pages/CaseStudies.scss";
+@import "./pages/Services.scss";
 
 // SCSS FOR COMPONENTS
 @import "./components/Navbar.scss";
@@ -30,4 +31,59 @@ html {
   background: var(--primary-color);
   color: var(--text-color-white);
   font-family: var(--primary-font);
+}
+
+///////////////////////////////////////////////////
+// COMMON HEADING
+.common-heading {
+  text-align: center;
+  margin-bottom: 72px;
+  @include media("<=phone") {
+    margin-bottom: 36px;
+  }
+
+  h2 {
+    display: inline-block;
+    position: relative;
+    color: var(--blue-color);
+    @include media("<=phone") {
+      font-size: 17px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -120px;
+      transform: translateY(-50%);
+      height: 3px;
+      width: 103px;
+      background: var(--blue-color);
+      @include media("<=phone") {
+        width: 40px;
+        height: 1.5px;
+        left: -45px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -120px;
+      transform: translateY(-50%);
+      height: 3px;
+      width: 103px;
+      background: var(--blue-color);
+      @include media("<=phone") {
+        width: 40px;
+        height: 1.5px;
+        right: -45px;
+      }
+    }
+  }
+  p {
+    margin-top: 10px;
+    @include media("<=phone") {
+      font-size: 14px;
+    }
+  }
 }
