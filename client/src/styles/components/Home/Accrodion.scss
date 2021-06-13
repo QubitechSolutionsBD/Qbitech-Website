@@ -1,0 +1,32 @@
+.accrodion-root {
+  .MuiPaper-root {
+    background: transparent;
+    color: var(--text-color-white);
+    border: none;
+    svg{ color: #fff; transform: scale(1.2);}
+  }
+  .MuiPaper-elevation1 {
+    box-shadow: none;
+  }
+  .MuiAccordionSummary-content {
+    font-size: 16px;
+  }
+  .accordion-heading {
+    background: transparent;
+    font-size: 24px;
+    line-height: 32px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -30px;
+      height: 2px;
+      width: 20px;
+      background: var(--blue-color);
+      @include media("<=phone") {
+      }
+    }
+  }
+}

@@ -8,8 +8,10 @@ import Footer from "../components/Footer";
 import prothomalo from "../assets/media/prothomalo.png";
 import dailystar from "../assets/media/star.png";
 import telegraph from "../assets/media/telegraph.png";
+import Accrodion from "./Accrodion";
 
 function About() {
+
   const settings = {
     dots: true,
     infinite: true,
@@ -113,12 +115,13 @@ function About() {
             <h2>Offered Services</h2>
           </div>
           <div className="offers">
-            <p>BASIS Best Outsourcing Organization</p>
+            {/* <p>BASIS Best Outsourcing Organization</p>
             <p>Daily Star ICT Awards</p>
             <p>BASIS Award Winner 2014</p>
             <p>Code Warrior Challange 2014</p>
             <p>HSBC Exporter of the Year 2019</p>
-            <p>Kaggle-Bronze Winner 2019</p>
+            <p>Kaggle-Bronze Winner 2019</p> */}
+            <Accrodion />
           </div>
         </div>
       </div>
