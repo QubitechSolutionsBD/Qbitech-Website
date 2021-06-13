@@ -14,6 +14,7 @@ import Accrodion from "../components/Accrodion";
 
 // DATA FOR ABOUT PAGE
 import { settings, rewards } from "../components/About/Data";
+import Barchart from "../components/About/Barchart";
 
 function About() {
   return (
@@ -115,7 +116,9 @@ function About() {
               course.
             </p>
           </div>
-          <div className="chart"></div>
+          <div className="chart">
+            <Barchart />
+          </div>
         </div>
       </div>
       <Footer />
