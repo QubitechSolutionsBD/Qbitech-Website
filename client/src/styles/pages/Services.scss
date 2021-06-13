@@ -104,32 +104,6 @@
         width: 100%;
         margin-top: 25px;
       }
-      p {
-        font-size: 24px;
-        line-height: 32px;
-        margin-bottom: 20px;
-        position: relative;
-        @include media("<=phone") {
-          font-size: 14px;
-          line-height: 18px;
-          margin-bottom: 10px;
-          margin-left: 25px;
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: -30px;
-          border: solid;
-          border-color: transparent #fff;
-          border-width: 8px 0 8px 15px;
-          @include media("<=phone") {
-            border-width: 4px 0 4px 8px;
-            left: -20px;
-          }
-        }
-      }
     }
   }
 
