@@ -128,30 +128,6 @@
         width: 100%;
         margin-top: 25px;
       }
-      // p {
-      //   font-size: 24px;
-      //   line-height: 32px;
-      //   margin-bottom: 20px;
-      //   position: relative;
-      //   @include media("<=phone") {
-      //     font-size: 14px;
-      //     line-height: 18px;
-      //     margin-bottom: 10px;
-      //     margin-left: 25px;
-      //   }
-      //   &::before {
-      //     content: "";
-      //     position: absolute;
-      //     top: 50%;
-      //     transform: translateY(-50%);
-      //     left: -30px;
-      //     height: 2px;
-      //     width: 20px;
-      //     background: var(--blue-color);
-      //     @include media("<=phone") {
-      //     }
-      //   }
-      // }
     }
   }
 

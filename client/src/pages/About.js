@@ -2,77 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
+// COMPONENTS
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer";
 
+// ASSETS
 import prothomalo from "../assets/media/prothomalo.png";
 import dailystar from "../assets/media/star.png";
 import telegraph from "../assets/media/telegraph.png";
-import Accrodion from "./Accrodion";
+import Accrodion from "../components/Accrodion";
+
+// DATA FOR ABOUT PAGE
+import { settings, rewards } from "../components/About/Data";
 
 function About() {
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false,
-    autoplay: true,
-    speed: 900,
-    autoplaySpeed: 2500,
-    dotsClass: "slick-dots slick-thumb",
-
-    customPaging: (i) => {
-      return (
-        <div className="custom-dots">
-          <div className="box"></div>
-        </div>
-      );
-    },
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          rows: 2,
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <Navbar />
       <div className="about">
-        {/* Heading */}
+        {/* ============================== Heading ============================== */}
         <div className="about__heading">
-          <p>
-            Originality with versatile ideas for every sphere of the digital
-            world!
-          </p>
+          <p>Originality with versatile ideas for every sphere of the digital world!</p>
           <h1>About US</h1>
         </div>
 
-        {/* Story */}
+        {/* ============================== Story ============================== */}
         <div className="about__story">
           <div className="common-heading">
             <h2>Our Key Experiences</h2>
@@ -92,7 +46,7 @@ function About() {
           <Link to="/">Read More</Link>
         </div>
 
-        {/* Mission */}
+        {/* ============================== Mission ============================== */}
         <div className="about__mission">
           <div className="content">
             <div className="common-heading">
@@ -108,25 +62,19 @@ function About() {
           </div>
         </div>
 
-        {/* Services */}
+        {/* ============================== Services ============================== */}
         <div className="about__offeredservices">
           <div className="heading">
-            <h3>What we can do</h3>
-            <h2>Offered Services</h2>
+            <h3>Awards  And</h3>
+            <h2>Recognition</h2>
           </div>
           <div className="offers">
-            {/* <p>BASIS Best Outsourcing Organization</p>
-            <p>Daily Star ICT Awards</p>
-            <p>BASIS Award Winner 2014</p>
-            <p>Code Warrior Challange 2014</p>
-            <p>HSBC Exporter of the Year 2019</p>
-            <p>Kaggle-Bronze Winner 2019</p> */}
-            <Accrodion />
+            <Accrodion DATA={rewards} />
           </div>
         </div>
       </div>
 
-      {/* Media */}
+      {/* ============================== Media ============================== */}
       <div className="about__media">
         <div className="common-heading">
           <h2>Media</h2>
@@ -152,7 +100,7 @@ function About() {
         </div>
       </div>
 
-      {/* Growth */}
+      {/* ============================== Growth ============================== */}
       <div className="about__growth">
         <div className="common-heading">
           <h2>Company Growth</h2>
