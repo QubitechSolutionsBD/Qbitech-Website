@@ -50,7 +50,7 @@ function Services() {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
-        }
+        },
       },
       {
         breakpoint: 600,
@@ -58,22 +58,30 @@ function Services() {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-        }
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          rows: 2
-        }
-      }
-    ]
+          rows: 2,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
     const path = location.pathname.split("/")[2];
-    setAssetsForServices(path, setServices, setHeading, setBannerImage, setBannerText, setDesc, setTools);
+    setAssetsForServices(
+      path,
+      setServices,
+      setHeading,
+      setBannerImage,
+      setBannerText,
+      setDesc,
+      setTools
+    );
   }, [location.pathname]);
 
   return (
@@ -130,21 +138,47 @@ function Services() {
         <div className="common-heading">
           <h2>Who We’ve Worked WIth</h2>
         </div>
-          <Slider {...settings} className="slider">
-            <div className="works"><img src={oddo} alt="oddo" /></div>
-            <div className="works"><img src={oracle} alt="oracle" /></div>
-            <div className="works"><img src={adobe} alt="Adobe" /></div>
-            <div className="works"><img src={google} alt="google" /></div>
-            <div className="works"><img src={oracle} alt="oracle" /></div>
-            <div className="works"><img src={adobe} alt="Adobe" /></div>
-            <div className="works"><img src={google} alt="google" /></div>
-            <div className="works"><img src={adobe} alt="Adobe" /></div>
-            <div className="works"><img src={oracle} alt="oracle" /></div>
-            <div className="works"><img src={oddo} alt="oddo" /></div>
-            <div className="works"><img src={google} alt="google" /></div>
-            <div className="works"><img src={adobe} alt="Adobe" /></div>
-            <div className="works"><img src={oracle} alt="oracle" /></div>
-          </Slider>
+        <Slider {...settings} className="slider">
+          <div className="works">
+            <img src={oddo} alt="oddo" />
+          </div>
+          <div className="works">
+            <img src={oracle} alt="oracle" />
+          </div>
+          <div className="works">
+            <img src={adobe} alt="Adobe" />
+          </div>
+          <div className="works">
+            <img src={google} alt="google" />
+          </div>
+          <div className="works">
+            <img src={oracle} alt="oracle" />
+          </div>
+          <div className="works">
+            <img src={adobe} alt="Adobe" />
+          </div>
+          <div className="works">
+            <img src={google} alt="google" />
+          </div>
+          <div className="works">
+            <img src={adobe} alt="Adobe" />
+          </div>
+          <div className="works">
+            <img src={oracle} alt="oracle" />
+          </div>
+          <div className="works">
+            <img src={oddo} alt="oddo" />
+          </div>
+          <div className="works">
+            <img src={google} alt="google" />
+          </div>
+          <div className="works">
+            <img src={adobe} alt="Adobe" />
+          </div>
+          <div className="works">
+            <img src={oracle} alt="oracle" />
+          </div>
+        </Slider>
       </div>
       <Footer />
     </>
