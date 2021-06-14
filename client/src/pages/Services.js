@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Technologies from "../components/Services/Technologies";
 import Industries from "../components/Home/Industries";
+import Accrodion from "../components/Accrodion";
 import Footer from "../components/Footer";
 
 // ASSETS
@@ -14,7 +15,7 @@ import adobe from "../assets/tech-parteners/adobe.svg";
 import oddo from "../assets/tech-parteners/oddo.svg";
 import oracle from "../assets/tech-parteners/oracle.svg";
 import { down } from "../assets/SVG";
-import { setAssetsForServices } from "../assets/Func";
+import { settings, setAssetsForServices } from "../components/Services/Data";
 
 function Services() {
   const location = useLocation();
@@ -25,54 +26,10 @@ function Services() {
   const [desc, setDesc] = useState("");
   const [tools, setTools] = useState([]);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: false,
-    autoplay: true,
-    speed: 900,
-    autoplaySpeed: 2500,
-    dotsClass: "slick-dots slick-thumb",
-    customPaging: (i) => {
-      return (
-        <div className="custom-dots">
-          <div className="box"></div>
-        </div>
-      );
-    },
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          rows: 2,
-        },
-      },
-    ],
-  };
-
   useEffect(() => {
+    window.scrollTo(0, 0);
     const path = location.pathname.split("/")[2];
+    
     setAssetsForServices(
       path,
       setServices,
@@ -88,7 +45,7 @@ function Services() {
     <>
       <Navbar />
       <div className="services">
-        {/* BANNER */}
+        {/* ============================== BANNER ============================== */}
         <div className="services__banner" style={{ background: bannerImage }}>
           <div className="content">
             <h1>{heading}</h1>
@@ -97,25 +54,26 @@ function Services() {
           </div>
         </div>
 
-        {/* DESCRIPTION */}
+        {/* ============================== DESCRIPTION ============================== */}
         <div className="services__description">
           <p>{desc}</p>
         </div>
 
-        {/* SERVICE */}
+        {/* ============================== SERVICE ============================== */}
         <div className="services__offeredservices">
           <div className="heading">
             <h3>What we can do</h3>
             <h2>Offered Services</h2>
           </div>
           <div className="offers">
-            {services.map((service) => (
+            <Accrodion DATA={services} />
+            {/* {services.map((service) => (
               <p key={service}>{service}</p>
-            ))}
+            ))} */}
           </div>
         </div>
 
-        {/* USED TECHNOLOGIES */}
+        {/* ============================== USED TECHNOLOGIES ============================== */}
         <div className="services__technologies">
           <div className="common-heading">
             <h2>Techologies We Use</h2>
@@ -127,13 +85,13 @@ function Services() {
           </Slider>
         </div>
 
-        {/* INDUSTRIES */}
+        {/* ============================== INDUSTRIES ============================== */}
         <div className="services__industries">
           <Industries />
         </div>
       </div>
 
-      {/* WORKED WITH */}
+      {/* ============================== WORKED WITH ============================== */}
       <div className="services__wrokwith">
         <div className="common-heading">
           <h2>Who We’ve Worked WIth</h2>
