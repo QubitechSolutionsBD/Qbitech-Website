@@ -28,6 +28,7 @@ function Services() {
 
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const path = location.pathname.split("/")[2];
     setAssetsForServices(path, setServices, setHeading, setBannerImage, setBannerText, setDesc, setTools);
   }, [location.pathname]);
@@ -36,7 +37,7 @@ function Services() {
     <>
       <Navbar />
       <div className="services">
-        {/* BANNER */}
+        {/* ============================== BANNER ============================== */}
         <div className="services__banner" style={{ background: bannerImage }}>
           <div className="content">
             <h1>{heading}</h1>
@@ -45,12 +46,12 @@ function Services() {
           </div>
         </div>
 
-        {/* DESCRIPTION */}
+        {/* ============================== DESCRIPTION ============================== */}
         <div className="services__description">
           <p>{desc}</p>
         </div>
 
-        {/* SERVICE */}
+        {/* ============================== SERVICE ============================== */}
         <div className="services__offeredservices">
           <div className="heading">
             <h3>What we can do</h3>
@@ -64,7 +65,7 @@ function Services() {
           </div>
         </div>
 
-        {/* USED TECHNOLOGIES */}
+        {/* ============================== USED TECHNOLOGIES ============================== */}
         <div className="services__technologies">
           <div className="common-heading">
             <h2>Techologies We Use</h2>
@@ -76,13 +77,13 @@ function Services() {
           </Slider>
         </div>
 
-        {/* INDUSTRIES */}
+        {/* ============================== INDUSTRIES ============================== */}
         <div className="services__industries">
           <Industries />
         </div>
       </div>
 
-      {/* WORKED WITH */}
+      {/* ============================== WORKED WITH ============================== */}
       <div className="services__wrokwith">
         <div className="common-heading">
           <h2>Who We’ve Worked WIth</h2>

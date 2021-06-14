@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-// COMPONENTSD
+// COMPONENTS
 import Navbar from "../components/Navbar/Navbar";
 import Banner from "../components/Home/Banner";
 import Clients from "../components/Home/Clients";
@@ -14,6 +14,10 @@ import Services from "../components/Home/Services";
 import SuccessStories from "../components/Home/SuccessStories";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />

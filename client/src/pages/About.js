@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 // COMPONENTS
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer";
+import Barchart from "../components/About/Barchart";
+import Accrodion from "../components/Accrodion";
 
 // ASSETS
 import prothomalo from "../assets/media/prothomalo.png";
 import dailystar from "../assets/media/star.png";
 import telegraph from "../assets/media/telegraph.png";
-import Accrodion from "../components/Accrodion";
 
 // DATA FOR ABOUT PAGE
 import { settings, rewards } from "../components/About/Data";
-import Barchart from "../components/About/Barchart";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <Navbar />

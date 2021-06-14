@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// ASSETS & COMPONENTS
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer";
-import { down } from "../assets/SVG";
 import Helps from "../components/Industries/Helps";
 import Experience from "../components/Industries/Experience";
+import { down } from "../assets/SVG";
 
 function Industries() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
       <div className="industries">
-        {/* BANNER */}
+        {/* ============================== Banner ============================== */}
         <div className="industries__banner">
           <div className="content">
             <h1>Startups</h1>
@@ -21,13 +27,10 @@ function Industries() {
             <button>Explore {down}</button>
           </div>
         </div>
-
-        {/* HOW WE CAN HELP */}
+        {/* ============================== How we can help ============================== */}
         <Helps />
-
-        {/* Experience */}
+        {/* ============================== Experience ============================== */}
         <Experience />
-        
       </div>
       <Footer />
     </>
