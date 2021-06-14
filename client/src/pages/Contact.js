@@ -27,7 +27,8 @@ function Contact() {
             </Grid>
           </Grid>
         </Grid>
-        <LocationMap />
+        {<LocationMap />}
+
         <Footer />
       </div>
     </>

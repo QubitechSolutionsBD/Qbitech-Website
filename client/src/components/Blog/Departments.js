@@ -28,6 +28,13 @@ const Departments = () => {
           <Department data={data} />
         ))}
       </div>
+      <div className="blog__departments2">
+        {dataset.map((data) => (
+          <div className="smallIcons">
+            <img src={data.svg} alt="" />
+          </div>
+        ))}
+      </div>
     </>
   );
 };

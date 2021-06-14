@@ -12,9 +12,9 @@ const LiveEvent = ({ data }) => {
             <h3
               style={{
                 backgroundColor: "#4E4B66",
-                textAlign: "center",
+                // textAlign: "center",
                 height: "24px",
-                alignContent: "center",
+                // alignContent: "center",
                 paddingTop: "3px",
               }}
             >
