@@ -20,14 +20,17 @@ function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <>
       <Navbar />
       <div className="about">
         {/* ============================== Heading ============================== */}
         <div className="about__heading">
-          <p>Originality with versatile ideas for every sphere of the digital world!</p>
+          <p>
+            Originality with versatile ideas for every sphere of the digital
+            world!
+          </p>
           <h1>About US</h1>
         </div>
 
@@ -70,7 +73,7 @@ function About() {
         {/* ============================== Services ============================== */}
         <div className="about__offeredservices">
           <div className="heading">
-            <h3>Awards  And</h3>
+            <h3>Awards And</h3>
             <h2>Recognition</h2>
           </div>
           <div className="offers">
