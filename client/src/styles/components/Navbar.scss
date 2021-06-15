@@ -33,17 +33,28 @@
           transition: 0.4s;
           text-transform: uppercase;
           cursor: pointer;
-          display: flex; align-items: center; svg{ margin-left: 7px; }
+          display: flex;
+          align-items: center;
+          svg {
+            margin-left: 7px;
+          }
         }
         a:hover,
-        .dropdown:hover { color: var(--blue-color);}
-        a.active { color: var(--blue-color); }
-        a.contact{
+        .dropdown:hover {
+          color: var(--blue-color);
+        }
+        a.active {
+          color: var(--blue-color);
+        }
+        a.contact {
           border: 1px solid var(--text-color-white);
           padding: 5px 10px;
           height: 40px;
           transition: 0.4s;
-          &:hover{ color: var(--text-color-black); background: var(--text-color-white);}
+          &:hover {
+            color: var(--text-color-black);
+            background: var(--text-color-white);
+          }
         }
       }
       li.dropdown {
@@ -152,7 +163,33 @@
 }
 .side__drawer li {
   margin: 10px 0;
+
+  // accrodion
+  .MuiPaper-root {
+    background: transparent;
+    color: var(--text-color-white);
+    border: none;
+    svg { color: #fff; transform: scale(0.8); }
+    margin: -10px 0 -10px -15px;
+  }
+  .MuiAccordionDetails-root{
+    height: fit-content !important;
+    display: flex;
+    flex-direction: column;
+    a{
+      display: inline-block;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+  }
+  .MuiPaper-elevation1 { box-shadow: none; }
+  .accordion-heading {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 0;
+  }
 }
+
 .side__drawer li a {
   width: 100%;
   text-decoration: none;
@@ -189,7 +226,11 @@
 @media (max-width: 768px) {
   .navforviwer {
     padding: 0 20px;
-    .nav-items {display: none !important;}
-    .brand{display: none !important;}
+    .nav-items {
+      display: none !important;
+    }
+    .brand {
+      display: none !important;
+    }
   }
 }
