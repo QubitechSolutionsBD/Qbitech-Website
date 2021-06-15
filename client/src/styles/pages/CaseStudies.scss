@@ -97,25 +97,7 @@
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  @include media("<=semiDesktop") {
-    width: 85%;
-  }
-  @include media("<=tablet") {
-    width: 85%;
-    .top-text,
-    .detailC {
-      width: 90%;
-    }
-  }
-  @include media("<=phone") {
-    width: 100%;
-    .top-text {
-      width: 100%;
-    }
-    .detailC {
-      width: 100%;
-    }
-  }
+
   img {
     margin-bottom: 20px;
   }
@@ -137,7 +119,31 @@
     }
   }
 }
+@include media("<=semiDesktop") {
+}
+@include media("<=tablet") {
+  width: 85%;
+  .top-text,
+  .detailC {
+    width: 90%;
+  }
+}
+@include media("<=phone") {
+  .case-study {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .top-text {
+      width: 100%;
+    }
+    .detailC {
+      width: 100%;
+    }
+  }
+  
+}
 .snaps-container {
+  
   margin-bottom: 40px;
   width: 65%;
   display: flex;
