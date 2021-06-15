@@ -18,6 +18,7 @@ function Banner() {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 3000,
+    initialSlide: 1,
     dotsClass: "slick-dots slick-thumb",
     customPaging: (i) => {
       return (

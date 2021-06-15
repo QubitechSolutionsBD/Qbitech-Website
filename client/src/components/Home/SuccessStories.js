@@ -22,6 +22,7 @@ function SuccessStories() {
     slidesToScroll: 1,
     arrows: true,
     dotsClass: "slick-dots slick-thumb",
+    initialSlide: 1,
     customPaging: (i) => {
       return (
         <div className="custom-dots">
@@ -37,6 +38,7 @@ function SuccessStories() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    initialSlide: 1,
     arrows: false,
     fade: true
   };
