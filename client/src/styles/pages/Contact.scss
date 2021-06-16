@@ -21,6 +21,42 @@
       margin-bottom: 30px;
       margin-top: 60px;
     }
+    h4 {
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .interestIn {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .ig {
+        width: 33%;
+        margin-bottom: 10px;
+        label {
+          margin-left: 8px;
+        }
+      }
+      .ig2 {
+        margin-bottom: 10px;
+        label {
+          margin-left: 8px;
+        }
+      }
+    }
+    @include media("<=phone") {
+      .interestIn {
+        width: 100%;
+        .ig {
+          width: 90%;
+        }
+      }
+    }
     .contact-left {
       padding-left: 41px;
       @include media("<=semiDesktop") {
@@ -62,7 +98,7 @@
           font-size: 18px;
           line-height: 24px;
         }
-        input {
+        .textInput {
           padding-left: 10px;
           margin-top: 6px;
           margin-bottom: 18px;
@@ -100,5 +136,10 @@
   }
   &__locationMap {
     margin-bottom: 200px;
+    background-image: url('https://miro.medium.com/max/1600/1*e_Loq49BI4WmN7o9ItTADg.gif');
+    // background-image: url('https://assets.materialup.com/uploads/d897134f-48d1-4302-b3fd-ea045f3d4151/preview.gif');
+   
+    background-position: center;
+
   }
 }

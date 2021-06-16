@@ -6,7 +6,7 @@ const LiveEvent = ({ data }) => {
     <div className="liveEvent">
       <img src={data.cover} alt="" />
       <h1>{data.title}</h1>
-      <div className="techs my-3">
+      {/* <div className="techs my-3">
         {data.techs.map((tech) => (
           <div className="techs__item">
             <h3
@@ -22,7 +22,19 @@ const LiveEvent = ({ data }) => {
             </h3>
           </div>
         ))}
+      </div> */}
+
+      <div className="techContainer">
+      <h3 className="ash">AI</h3>
+      <h3 className="sky">IT</h3>
+      <h3 className="pink">Soft Dev</h3>
+      <h3 className="ash">AI</h3>
+      <h3 className="sky">IT</h3>
+      <h3 className="pink">Soft Dev</h3>
+      <h3 className="ash">AI</h3>
       </div>
+
+
 
       <p>{data.details}</p>
       <div style={{ textAlign: "center" }} className="more">

@@ -92,30 +92,121 @@
       }
     }
   }
+
+  ///////////////////////////////////////////////////Cases//////////////////////////
+  &__studiedCases {
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+    @include media("<=phone") {
+      margin-top: 3rem;
+      margin-bottom: 0;
+    }
+
+    .cases {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .case {
+        margin-bottom: 40px;
+        width: 30%;
+        text-align: center;
+        @include media("<=phone") {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+        @include media("<=semiDesktop") {
+          width: 45%;
+          margin-bottom: 30px;
+        }
+        @include media("<=tablet") {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        img {
+          @include media("<=phone") {
+            width: 50%;
+          }
+        }
+        .content {
+          cursor: pointer;
+          transition: 0.4s;
+          h3 {
+            font-size: 24px;
+            line-height: 24px;
+            margin: 24px 0;
+            @include media("<=phone") {
+              font-size: 16px;
+              line-height: 16px;
+              margin: 16px 0;
+            }
+          }
+          h4 {
+            display: block;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--text-color-white);
+            transition: 0.4s;
+            @include media("<=phone") {
+              padding-bottom: 10px;
+            }
+          }
+          p {
+            font-size: 20px;
+            line-height: 20px;
+            @include media("<=phone") {
+              font-size: 14px;
+              line-height: 14px;
+            }
+          }
+          &:hover {
+            color: var(--blue-color);
+          }
+          &:hover h4 {
+            border-bottom: 2px solid var(--blue-color);
+          }
+          .tags {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .tag {
+              margin-right: 10px;
+              font-size: 20px;
+              @include media("<=phone") {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  ////////
 }
+.caseInDetails {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  img {
+    width: 45%;
+    margin: 40px;
+    @include media("<=phone") {
+      width: 100%;
+    }
+  }
+}
+//////////
+
+///////////extra/////////
 .case-study {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  @include media("<=semiDesktop") {
-    width: 85%;
-  }
-  @include media("<=tablet") {
-    width: 85%;
-    .top-text,
-    .detailC {
-      width: 90%;
-    }
-  }
-  @include media("<=phone") {
-    width: 100%;
-    .top-text {
-      width: 100%;
-    }
-    .detailC {
-      width: 100%;
-    }
-  }
+
   img {
     margin-bottom: 20px;
   }
@@ -134,6 +225,28 @@
       margin-bottom: 36px;
       font-size: 26px;
       color: #26baf6;
+    }
+  }
+}
+@include media("<=semiDesktop") {
+}
+@include media("<=tablet") {
+  width: 85%;
+  .top-text,
+  .detailC {
+    width: 90%;
+  }
+}
+@include media("<=phone") {
+  .case-study {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .top-text {
+      width: 100%;
+    }
+    .detailC {
+      width: 100%;
     }
   }
 }
