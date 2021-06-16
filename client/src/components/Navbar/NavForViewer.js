@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { down } from "../../assets/SVG";
+import { down, rightArrow } from "../../assets/SVG";
 
 // components & assets
 import DrawerTogglerButton from "./DrawerTogglerButton";
@@ -42,7 +42,7 @@ function NavForViewer(props) {
           <li><NavLink to="/industries">Industries {down}</NavLink></li>
           <li><NavLink to="/caseStudies">Case Studies</NavLink></li>
           <li><NavLink to="/blog">Blog</NavLink></li>
-          <li><NavLink to="/contact" className="contact">Contact Us {"  "} &#8594; </NavLink></li>
+          <li><NavLink to="/contact" className="contact">Contact Us {rightArrow} </NavLink></li>
         </ul>
       </div>
 
