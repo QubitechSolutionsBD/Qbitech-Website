@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import line from "../assets/blog-svg/Line 15.svg";
-import cover from "../assets/case-studies/Cover.png";
+// import cover from "../assets/case-studies/Cover.png";
+import cover from "../assets/others/laptop2.png";
 import body from "../assets/case-studies/Body.svg";
 import Footer from "../components/Footer";
 import { Link, NavLink } from "react-router-dom";
@@ -40,6 +41,7 @@ const CaseStudies = () => {
           "As the world’s most popular music streaming service, Spotify gives fans on-demand access to millions of tracks via mobile, tablet and desktop devices. Whatever the activity or occasion, the right music is always at your fingertips. ",
       },
     ],
+    snap: cover,
     snaps: {
       sn1: cover,
       sn2: cover,
@@ -83,10 +85,8 @@ const CaseStudies = () => {
           },
         ],
         body: body,
-        snaps: {
-          sn1: cover,
-          sn2: cover,
-        },
+        snap: cover,
+        snaps: [cover, cover],
       },
     },
     {
@@ -126,10 +126,7 @@ const CaseStudies = () => {
           },
         ],
         body: body,
-        snaps: {
-          sn1: cover,
-          sn2: cover,
-        },
+        snaps: [cover, cover],
       },
     },
     {
@@ -182,7 +179,7 @@ const CaseStudies = () => {
           <h1 className="blog__topLine2">Case Studies</h1>
           <img className="blog__line" src={line} alt="" />
         </div>
-        <div className="caseStudies__cases">
+        {/* <div className="caseStudies__cases">
           {cases.map((cs) => (
             <div onClick={() => handleToCaseStudy(cs.case)} className="case">
               <img className="cover" src={cover} alt="" />
@@ -195,6 +192,25 @@ const CaseStudies = () => {
               <h4>{cs.serviceName}</h4>
             </div>
           ))}
+        </div> */}
+        <div className="caseStudies__studiedCases">
+          <div className="cases">
+            {cases.map((cs) => (
+              <div onClick={() => handleToCaseStudy(cs.case)} className="case">
+                <img src={cs.img} alt="" />
+                <div className="content">
+                  <h4>01</h4>
+                  <div className="tags">
+                    {cs.tags.map((tg) => (
+                      <div className="tag">{tg}</div>
+                    ))}
+                  </div>
+                  <h3>{cs.title}</h3>
+                  <p>{cs.serviceName}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <CaseStudy cd={caseDetails} />
