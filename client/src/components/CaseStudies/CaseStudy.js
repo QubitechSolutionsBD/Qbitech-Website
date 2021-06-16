@@ -20,9 +20,7 @@ const CaseStudy = ({ cd }) => {
             <p>{ds.dtext}</p>
           </div>
         ))}
-        <h3
-          style={{ fontSize: "26px", color: "#26BAF6", marginBottom: "80px" }}
-        >
+        <h3 style={{ fontSize: "26px", color: "#26BAF6", marginBottom: "10px" }}>
           Snaps
         </h3>
         {/* <div className="snaps-container">

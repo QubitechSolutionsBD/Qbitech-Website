@@ -188,14 +188,15 @@
 .caseInDetails {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 65%;
   flex-wrap: wrap;
   justify-content: space-around;
   img {
-    width: 45%;
+    width: 40%;
     margin: 40px;
     @include media("<=phone") {
       width: 100%;
+      margin: 10px;
     }
   }
 }
@@ -214,42 +215,57 @@
     width: 65%;
     font-size: 18px;
     margin-bottom: 100px;
+    @include media("<=phone") {
+      width: 100%;
+      margin-bottom: 35px;
+    }
   }
   .detailC {
     width: 65%;
+    @include media("<=phone") {
+      width: 100%;
+    }
     p {
       font-size: 18px;
       margin-bottom: 72px;
+      @include media("<=phone") {
+        margin-bottom: 30px;
+      }
     }
     h3 {
       margin-bottom: 36px;
       font-size: 26px;
       color: #26baf6;
+      @include media("<=phone") {
+        margin-bottom: 20px;
+      }
     }
   }
 }
-@include media("<=semiDesktop") {
-}
-@include media("<=tablet") {
-  width: 85%;
-  .top-text,
-  .detailC {
-    width: 90%;
-  }
-}
-@include media("<=phone") {
-  .case-study {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    .top-text {
-      width: 100%;
-    }
-    .detailC {
-      width: 100%;
-    }
-  }
-}
+// @include media("<=semiDesktop") {
+// }
+// @include media("<=tablet") {
+//   width: 85%;
+//   .top-text,
+//   .detailC {
+//     width: 90%;
+//   }
+// }
+// @include media("<=phone") {
+//   .case-study {
+//     width: 90%;
+//     margin-left: auto;
+//     margin-right: auto;
+//     .top-text {
+//       width: 100%;
+//     }
+//     .detailC {
+//       width: 100%;
+//     }
+//   }
+// }
+
+///////will be deleted/////
 .snaps-container {
   margin-bottom: 40px;
   width: 65%;
