@@ -35,25 +35,26 @@ function Banner() {
       <Slider {...settings} className="slider">
         <div className="content banner1">
           <h1>
-            <div>We Work With Latest</div>
-            <div>Technologies To Accelerate Your </div>
-            <div className="bold">Digital Transformation</div>
+            <div>We are here to</div>
+            <div className="bold">Empower</div>
+            <div>your venture to help you grow.</div>
           </h1>
         </div>
 
         <div className="content banner2">
           <h1>
-            <div>We Work With Latest</div>
-            <div>Technologies To Accelerate Your </div>
-            <div className="bold">Digital Transformation</div>
+            <div>We are</div>
+            <div className="bold">Passionate</div>
+            <div>
+              in developing modern-day solutions to your business needs.
+            </div>
           </h1>
         </div>
 
         <div className="content banner3">
           <h1>
-            <div>We Work With Latest</div>
-            <div>Technologies To Accelerate Your </div>
-            <div className="bold">Digital Transformation</div>
+            <div>Everything we do, everything we achieve is driven by.</div>
+            <div className="bold">Efficiency</div>
           </h1>
         </div>
       </Slider>
