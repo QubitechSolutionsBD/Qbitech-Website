@@ -11,13 +11,14 @@ function Services() {
       {/* container - web */}
       <div className="container">
         <div className="content left">
-          <div className="logo"><img src={web} alt="" /></div>
+          <div className="logo">
+            <img src={web} alt="" />
+          </div>
           <div className="text">
             <h3>Web Solutions</h3>
             <p>
-              We Design incredible platforms with custom made, user-friendly
-              design solutions that gives the users a truly meaningful
-              experience.
+              With elegant performance across every platform, our modern web
+              frameworks to give your business a one-stop web solution service.
             </p>
           </div>
         </div>
@@ -28,28 +29,31 @@ function Services() {
       <div className="container">
         <div className="blank"></div>
         <div className="content right">
-        <div className="logo"><img src={app} alt="" /></div>
+          <div className="logo">
+            <img src={app} alt="" />
+          </div>
           <div className="text">
             <h3>Software Solutions</h3>
             <p>
-              We Design incredible platforms with custom made, user-friendly
-              design solutions that gives the users a truly meaningful
-              experience.
+              Streamline your business needs through our comprehensive mobile
+              software solutions service to meet the needs of modern day
+              industry.
             </p>
           </div>
         </div>
       </div>
 
-    {/* container - hardware */}
+      {/* container - hardware */}
       <div className="container">
         <div className="content left">
-          <div className="logo"><img src={hardware} alt="" /></div>
+          <div className="logo">
+            <img src={hardware} alt="" />
+          </div>
           <div className="text">
             <h3>Hardware Solutions</h3>
             <p>
-              We Design incredible platforms with custom made, user-friendly
-              design solutions that gives the users a truly meaningful
-              experience.
+              Seamlessly integrate your ideas into IoT prototypes to simulate
+              the idea before going into the market among the consumers.
             </p>
           </div>
         </div>
@@ -60,13 +64,14 @@ function Services() {
       <div className="container">
         <div className="blank"></div>
         <div className="content right">
-        <div className="logo"><img src={marketing} alt="" /></div>
+          <div className="logo">
+            <img src={marketing} alt="" />
+          </div>
           <div className="text">
             <h3>Branding & Marketing Solutions</h3>
             <p>
-              We Design incredible platforms with custom made, user-friendly
-              design solutions that gives the users a truly meaningful
-              experience.
+              Incorporate modern branding & marketing strategies to channel your
+              brand in front of the right consumers through our services.
             </p>
           </div>
         </div>

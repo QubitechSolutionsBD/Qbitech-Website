@@ -37,19 +37,18 @@ function About() {
         {/* ============================== Story ============================== */}
         <div className="about__story">
           <div className="common-heading">
-            <h2>Our Key Experiences</h2>
+            <h2>Our Story</h2>
           </div>
           <p>
-            Pioneer Alpha is a software platform for smart cameras that are
-            aware of and react to their surroundings. The AnyConnect platform
-            enables the design, development, and deployment of smart cameras at
-            scale. AnyConnect customers such as AT&T, AVer, Philips, and Vidyo
-            have deployed millions of smart cameras and video devices based on
-            the PA platform. Pioneer Alpha was founded in 2016 by a team of
-            designers and developers who share a passion for connected devices,
-            smart things, and computer vision. AnyConnect is based in Singapore
-            with offices in Dhaka, San Francisco, Las Vegas, Macedonia, and
-            Tokyo.
+            Qubitech is formed around a young group of entrepreneurs with the
+            desire to streamline modern day developing practices in the
+            industry. Our interest in the software development sector is not
+            new. We have been involved in multitude of projects since the start
+            of our university days. We all have felt that our country is still
+            running on the obsolete software systems that has been rendered
+            useless in the ever-changing digital world. We want to introduce an
+            agile process to the industry ensuring the best quality service in
+            the quickest of time.
           </p>
           <Link to="/">Read More</Link>
         </div>
@@ -58,14 +57,12 @@ function About() {
         <div className="about__mission">
           <div className="content">
             <div className="common-heading">
-              <h2>Our Key Experiences</h2>
+              <h2>Our Mission</h2>
             </div>
             <p>
-              Pioneer Alpha is a software platform for smart cameras that are
-              aware of and react to their surroundings. The AnyConnect platform
-              enables the design, development, and deployment of smart cameras
-              at scale. AnyConnect customers such as AT&T, AVer, Philips, and
-              Vidyo have deployed millions of smart camera
+              Developing modern-day solutions to your business needs. and
+              explore every possible path, to achieve ffficiency. We are here to
+              Empower your venture to help you grow.
             </p>
           </div>
         </div>
