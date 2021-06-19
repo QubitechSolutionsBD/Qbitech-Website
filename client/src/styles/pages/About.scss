@@ -211,10 +211,12 @@
           width: 100%;
           min-height: 10vh;
           display: flex;
+          flex-direction: column;
           align-items: center;
-          img{ width: 60%; margin: auto;}
+          img{ width: 60%; margin: auto; margin-bottom: 10px;}
           @include media("<=phone") {
-            min-height: 8vh;
+            min-height: 12vh;
+            font-size: 10px;
           }
         }
       }

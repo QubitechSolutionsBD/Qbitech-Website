@@ -92,11 +92,20 @@ function About() {
                 <>
                   <div className="image">
                     {i % 3 === 0 ? (
-                      <img src={telegraph} alt="" />
+                      <>
+                        <img src={telegraph} alt="" />
+                        <div>21 MAY 2020</div>
+                      </>
                     ) : i % 2 === 0 ? (
-                      <img src={dailystar} alt="" />
+                      <>
+                        <img src={dailystar} alt="" />
+                        <div>21 MAY 2020</div>
+                      </>
                     ) : (
-                      <img src={prothomalo} alt="" />
+                      <>
+                        <img src={prothomalo} alt="" />
+                        <div>21 MAY 2020</div>
+                      </>
                     )}
                   </div>
                 </>
