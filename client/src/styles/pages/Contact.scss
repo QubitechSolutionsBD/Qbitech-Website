@@ -34,10 +34,22 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-
+      @include media("<=tablet") {
+        width: 100%;
+      }
       .ig {
         width: 33%;
         margin-bottom: 10px;
+        @include media("<=desktop") {
+          width: 45%;
+        }
+        @include media("<=tablet") {
+          width: 100%;
+        }
+        @include media("<=semiDesktop") {
+          width: 100%;
+        }
+
         label {
           margin-left: 8px;
         }
@@ -49,14 +61,7 @@
         }
       }
     }
-    @include media("<=phone") {
-      .interestIn {
-        width: 100%;
-        .ig {
-          width: 90%;
-        }
-      }
-    }
+
     .contact-left {
       padding-left: 41px;
       @include media("<=semiDesktop") {
@@ -136,10 +141,9 @@
   }
   &__locationMap {
     margin-bottom: 200px;
-    background-image: url('https://miro.medium.com/max/1600/1*e_Loq49BI4WmN7o9ItTADg.gif');
+    background-image: url("https://miro.medium.com/max/1600/1*e_Loq49BI4WmN7o9ItTADg.gif");
     // background-image: url('https://assets.materialup.com/uploads/d897134f-48d1-4302-b3fd-ea045f3d4151/preview.gif');
-   
-    background-position: center;
 
+    background-position: center;
   }
 }
