@@ -3,7 +3,7 @@
   &__topLine {
     font-size: 24px;
     margin-top: 55px;
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 91px;
     @include media("<=phone") {
       font-size: 18px;
@@ -149,6 +149,7 @@
         font-size: 18px;
         line-height: 24px;
         text-align: justify;
+        margin-bottom: 6px;
       }
       h3 {
         font-size: 14px;
@@ -170,5 +171,27 @@
         justify-content: center;
       }
     }
+  }
+}
+.techContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  h3 {
+    width: 22%;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  .ash {
+    background-color: #4e4b66;
+  }
+  .sky {
+    background-color: #26baf6;
+  }
+  .pink {
+    background-color: #e00ff0;
   }
 }

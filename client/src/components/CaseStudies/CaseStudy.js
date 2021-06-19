@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 const CaseStudy = ({ cd }) => {
   const cDetails = cd.details;
   console.log(cd.details);
+  console.log(cd.snaps);
   return (
     <>
       <Navbar />
@@ -24,7 +25,7 @@ const CaseStudy = ({ cd }) => {
         >
           Snaps
         </h3>
-        <div className="snaps-container">
+        {/* <div className="snaps-container">
           <div className="desktopView">
             <img className="cover" src={cd.snaps.sn1} alt="" />
             <img className="body" src={cd.body} alt="" />
@@ -33,6 +34,13 @@ const CaseStudy = ({ cd }) => {
             <img className="cover" src={cd.snaps.sn1} alt="" />
             <img className="body" src={cd.body} alt="" />
           </div>
+        </div> */}
+        <div className="caseInDetails">
+          {/* {cd.snaps.map((im) => (
+            <img className="body" src={im} alt="" />
+          ))} */}
+          <img className="body" src={cd.snap} alt="" />
+          <img className="body" src={cd.snap} alt="" />
         </div>
       </div>
     </>
