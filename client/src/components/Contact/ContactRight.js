@@ -1,5 +1,6 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
+const nodemailer = require("nodemailer");
 
 const ContactRight = () => {
   const [mail, setMail] = useState({
@@ -35,12 +36,46 @@ const ContactRight = () => {
     console.log(mail);
     console.log(mail.finalMessage);
   };
-  const handleSubmit = () => {};
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    // Generate test SMTP service account from ethereal.email
+    // Only needed if you don't have a real mail account for testing
+    let testAccount = await nodemailer.createTestAccount();
+
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+      host: "smtp.ethereal.email",
+      port: 587,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: testAccount.user, // generated ethereal user
+        pass: testAccount.pass, // generated ethereal password
+      },
+    });
+
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: mail.email, // sender address
+      to: "ruhanmdkr@gmail.com", // list of receivers
+      subject: "Message:", // Subject line
+      text: mail.finalMessage, // plain text body
+      html: "<b>Hello world?</b>", // html body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+    // Preview only available when sending through an Ethereal account
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+  }
+
   return (
     <>
       <h3>Or Make an Appointment</h3>
       <div className="contact-form">
-        <form action="" className="form-layout">
+        <form action="" onSubmit={handleSubmit} className="form-layout">
           <label for="name">Name</label>
           <input
             onChange={handleOnChange}
@@ -114,7 +149,7 @@ const ContactRight = () => {
             name="message"
             placeholder="Message"
           ></textarea>
-          <button>SUBMIT</button>
+          <button type="submit">SUBMIT</button>
         </form>
       </div>
     </>
