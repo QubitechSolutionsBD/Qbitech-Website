@@ -1,5 +1,225 @@
-.service{
+.service {
+  width: 100%;
+
+  // //////////////////////////////////////////////////////////////////////////////////////
+  // ===================================== OFFERS PART =====================================
+  &__offers {
+    width: 100%;
+    min-height: 145vh;
+    position: relative;
+
+    .content-heading {
+      width: 50%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--background-color-dark);
+      .heading {
+        width: 100%;
+        height: 100vh;
+        padding-left: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .circle {
+          width: 250px;
+          height: 250px;
+          background: var(--pink-color);
+          border-radius: 50%;
+          position: absolute;
+          top: -100px;
+          @include media("<=phone") {
+            width: 120px;
+            height: 120px;
+            top: -60px;
+            right: 50px;
+          }
+        }
+        h1 {
+          width: 100%;
+          letter-spacing: 3px;
+          font-size: 5rem;
+          line-height: 5rem;
+          font-family: var(--babas-font);
+          text-transform: uppercase;
+          color: var(--text-color-white);
+          @include media("<=phone") {
+            text-align: left;
+            font-size: 2.5rem;
+            line-height: 2.8rem;
+            letter-spacing: 2.5px;
+          }
+          div {
+            width: 100%;
+            height: 5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            position: relative;
+            @include media("<=phone") {
+              height: 2.5rem;
+              margin-bottom: 1rem;
+            }
+            span {
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+    .content-content {
+      width: 50%;
+      height: 145vh;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-right: 250px;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      padding-left: 100px;
+      background: var(--background-color-dark);
+      color: var(--text-color-white);
+      p {
+        margin-bottom: 20px;
+        font-size: 17px;
+        line-height: 25px;
+        text-align: justify;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        margin-top: 55px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--pink-color);
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+    .content-offers {
+      width: 50%;
+      height: 50vh;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-left: 250px;
+      padding-top: 100px;
+      p {
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+        font-weight: 400;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -25px;
+          transform: translateY(-50%);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--pink-color);
+        }
+      }
+    }
+  }
+
+  // //////////////////////////////////////////////////////////////////////////////////////
+  // ===================================== USED TECH PART =================================
+  &__technologies {
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+    padding: 120px 250px;
+
+    h1 {
+      width: 100%;
+      letter-spacing: 3px;
+      text-align: right;
+      font-size: 5rem;
+      line-height: 5rem;
+      font-family: var(--babas-font);
+      text-transform: uppercase;
+      color: var(--text-color-black);
+      @include media("<=phone") {
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+        letter-spacing: 2.5px;
+      }
+      div {
+        width: 100%;
+        height: 5rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        position: relative;
+        @include media("<=phone") {
+          height: 2.5rem;
+          margin-bottom: 1rem;
+        }
+        span {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+    .technologies{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .tech{
+            width: 14.6%;
+            margin: 10px 1%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{ height:60%; }
+            div{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 20px rgba(0,0,0,0.3);
+                font-weight: 400;
+            }
+        }
+    }
+  }
+
+  &__shortdesc{
+      min-height: 100vh;
+      width: 100%;
+      padding: 100px 250px;
+      border: 1px solid red;
+      h1{
+        width: 100%;
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+        @include media("<=phone") {
+          display: none;
+        }
+        div {
+          width: 100%;
+          height: 2.9rem;
+          margin-bottom: 0.8rem;
+          position: relative;
+          overflow: hidden;
+          span {
+            position: absolute;
+          }
+        }
+      }
+      p{
+          width: 80%;
+          font-size: 17px;
+          line-height: 25px;
+      }
+  }
 }
