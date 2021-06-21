@@ -15,207 +15,215 @@ export const aboutAnumation = () => {
       skewY: 7,
       stagger: { amount: 0.3 },
     })
-    .from("#aboutscroll", 0.8, { y: 30, opacity: 0, ease: "power4.out" })
+    .from("#aboutscroll", 0.8, { y: 30, opacity: 0, ease: "power4.out" });
 
-    // ---------------> who we are
-    gsap.from("#aboutwhoweareHeading", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#aboutwhoweareHeading",
-        start: "top 90%",
-      },
-    });
-    gsap.from("#aboutwhowearetext", 1.4, {
-      y: 200,
-      ease: "power4.out",
-      stagger: { amount: 0.5 },
-      scrollTrigger: {
-        trigger: "#aboutwhowearetext",
-        start: "top 75%",
-      },
-    });
+  // ---------------> who we are
+  gsap.from("#aboutwhoweareHeading", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#aboutwhoweareHeading",
+      start: "top 90%",
+    },
+  });
+  gsap.from("#aboutwhowearetext", 1.4, {
+    y: window.innerWidth >= 480 ? 200 : 300,
+    ease: "power4.out",
+    stagger: { amount: 0.5 },
+    scrollTrigger: {
+      trigger: "#aboutwhoweareHeading",
+      start: window.innerWidth >= 480 ? "top 75%" : "top 80%",
+    },
+  });
 
-    // ---------------> what we do
-    gsap.from("#aboutwhatwedoHeading", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#aboutwhatwedoHeading",
-        start: "top 90%",
-      },
-    });
-    gsap.from("#aboutwhatwedocircles", 1.3, {
-      scale: 0,
-      ease: "expo.inOut",
-      stagger: { amount: 0.5 },
-      scrollTrigger: {
-        trigger: "#aboutwhatwedoHeading",
-        start: "top 85%",
-      },
-    });
-    gsap.from("#aboutwhatwedoText", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      stagger: { amount: 0.5 },
-      scrollTrigger: {
-        trigger: "#aboutwhatwedoText",
-        start: "top 85%",
-      },
-    });
+  // ---------------> what we do
+  gsap.from("#aboutwhatwedoHeading", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#aboutwhatwedoHeading",
+      start: "top 90%",
+    },
+  });
+  gsap.from("#aboutwhatwedocircles", 1.3, {
+    scale: 0,
+    ease: "expo.inOut",
+    stagger: { amount: 0.5 },
+    scrollTrigger: {
+      trigger: "#aboutwhatwedoHeading",
+      start: "top 85%",
+    },
+  });
+  gsap.from("#aboutwhatwedoText", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    stagger: { amount: 0.5 },
+    scrollTrigger: {
+      trigger: "#aboutwhatwedoText",
+      start: "top 85%",
+    },
+  });
 
-    // ---------------> culture, values & belief
-    gsap.from("#aboutculturehead", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#aboutculturehead",
-        start: "top 80%",
-      },
-    });
-    gsap.from("#aboutculturecontenthead", 1.3, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#aboutculturecontenthead",
-        start: "top 75%",
-      },
-    });
-    gsap.from("#aboutculturecontenttext", 1.3, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      stagger: {amount: 0.3},
-      scrollTrigger: {
-        trigger: "#aboutculturecontenttext",
-        start: "top 70%",
-      },
-    });
+  // ---------------> culture, values & belief
+  gsap.from("#aboutpageculturecircle", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#aboutHeading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#aboutculturehead", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#aboutculturehead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#aboutculturecontenthead", 1.3, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#aboutculturecontenthead",
+      start: "top 75%",
+    },
+  });
+  gsap.from("#aboutculturecontenttext", 1.3, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#aboutculturecontenttext",
+      start: "top 70%",
+    },
+  });
 
-    // ---------------> trifecta
-    gsap.from("#abouttrifectahead", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#abouttrifectahead",
-        start: "top 80%",
-      },
-    });
-    gsap.from("#abouttrifectatext", 1.4, {
-      y: 100,
-      ease: "power4.out",
-      opacity: 0,
-      scrollTrigger: {
-        trigger: "#abouttrifectahead",
-        start: "top 80%",
-      },
-    });
-    gsap.from("#abouttrifectaoption", 1.3, {
-      y: 100,
-      ease: "power4.out",
-      opacity: 0,
-      stagger: {amount: 0.6},
-      scrollTrigger: {
-        trigger: "#abouttrifectahead",
-        start: "top 70%",
-      },
-    });
-    gsap.from("#abouttrifectaimage", 1.4, {
-      rotate: -30,
-      scale: 0,
-      ease: "expo.inOut",
-      stagger: {amount: 0.6},
-      scrollTrigger: {
-        trigger: "#abouttrifectahead",
-        start: "top 70%",
-      },
-    });
+  // ---------------> trifecta
+  gsap.from("#abouttrifectahead", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#abouttrifectahead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#abouttrifectatext", 1.4, {
+    y: 100,
+    ease: "power4.out",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#abouttrifectahead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#abouttrifectaoption", 1.3, {
+    y: 100,
+    ease: "power4.out",
+    opacity: 0,
+    stagger: { amount: 0.6 },
+    scrollTrigger: {
+      trigger: "#abouttrifectahead",
+      start: "top 70%",
+    },
+  });
+  gsap.from("#abouttrifectaimage", 1.4, {
+    rotate: -30,
+    scale: 0,
+    ease: "expo.inOut",
+    stagger: { amount: 0.6 },
+    scrollTrigger: {
+      trigger: "#abouttrifectahead",
+      start: "top 70%",
+    },
+  });
 
-    // ---------------> working process
-    gsap.from("#aboutprocesshead", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#aboutprocesshead",
-        start: "top 80%",
-      },
-    });
-    gsap.from("#aboutprocessplain", 1.4, {
-      y: 100,
-      ease: "power4.out",
-      opacity: 0,
-      scrollTrigger: {
-        trigger: "#aboutprocesshead",
-        start: "top 80%",
-      },
-    });
-    gsap.from("#aboutprocesslogo", 1.2, {
-      scale: 0,
-      ease: "expo.inOut",
-      stagger: {amount: 0.4},
-      scrollTrigger: {
-        trigger: "#aboutprocesshead",
-        start: "top 65%",
-      },
-    });
-    gsap.from("#aboutprocesslnumber", 1.3, {
-      x: 30,
-      opacity: 0,
-      ease: "expo.inOut",
-      stagger: {amount: 0.4},
-      scrollTrigger: {
-        trigger: "#aboutprocesshead",
-        start: "top 65%",
-      },
-    });
-    gsap.from("#aboutprocesscontents", 1.4, {
-      y: 50,
-      opacity: 0,
-      ease: "power4.out",
-      stagger: {amount: 0.4},
-      scrollTrigger: {
-        trigger: "#aboutprocesshead",
-        start: "top 60%",
-      },
-    });
+  // ---------------> working process
+  gsap.from("#aboutprocesshead", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#aboutprocesshead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#aboutprocessplain", 1.4, {
+    y: 100,
+    ease: "power4.out",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#aboutprocesshead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#aboutprocesslogo", 1.2, {
+    scale: 0,
+    ease: "expo.inOut",
+    stagger: { amount: 0.4 },
+    scrollTrigger: {
+      trigger: "#aboutprocesshead",
+      start: "top 65%",
+    },
+  });
+  gsap.from("#aboutprocesslnumber", 1.3, {
+    x: 30,
+    opacity: 0,
+    ease: "expo.inOut",
+    stagger: { amount: 0.4 },
+    scrollTrigger: {
+      trigger: "#aboutprocesshead",
+      start: "top 65%",
+    },
+  });
+  gsap.from("#aboutprocesscontents", 1.4, {
+    y: 50,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.4 },
+    scrollTrigger: {
+      trigger: "#aboutprocesshead",
+      start: "top 60%",
+    },
+  });
 
-    // ---------------> working process
-    gsap.from("#aboutteamhead", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#aboutteamhead",
-        start: "top 80%",
-      },
-    });
-    gsap.from("#aboutteamtext", 1.4, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#aboutteamtext",
-        start: "top 80%",
-      },
-    });
-    gsap.from("#aboutteamlink", 1.3, {
-      scale: 0,
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: "#aboutteamlink",
-        start: "top 80%",
-      },
-    });
+  // ---------------> working process
+  gsap.from("#aboutteamhead", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#aboutteamhead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#aboutteamtext", 1.4, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#aboutteamtext",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#aboutteamlink", 1.3, {
+    scale: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#aboutteamlink",
+      start: "top 80%",
+    },
+  });
 };

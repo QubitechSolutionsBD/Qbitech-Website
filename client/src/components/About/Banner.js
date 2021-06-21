@@ -1,25 +1,6 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-// REGISTER SCROLL-TRIGGER
-gsap.registerPlugin(ScrollTrigger);
+import React from "react";
 
 function Banner({ whoweareRef }) {
-  // ANIMATION
-  useEffect(() => {
-    gsap.from("#aboutHeading", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#aboutHeading",
-        start: "top 80%",
-      },
-    });
-  });
-
   const scrollToBottom = () => {
     whoweareRef.current.scrollIntoView({
       behavior: "smooth",

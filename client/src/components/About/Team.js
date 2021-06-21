@@ -20,6 +20,7 @@ function Team() {
         together.
       </p>
       <Link to="/" id="aboutteamlink">LEARN MORE</Link>
+      <Link to="/" id="aboutteamlink" className="mobile">LEARN MORE +</Link>
     </div>
   );
 }

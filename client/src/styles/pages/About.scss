@@ -343,8 +343,22 @@
     padding: 150px 250px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     @include media("<=phone") {
       padding: 50px 30px;
+    }
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: var(--pink-color);
+      position: absolute;
+      top: -90px;
+      left: -90px;
+      z-index: 0;
+      @include media("<=phone") {
+        display: none;
+      }
     }
     .heading {
       width: 50%;
@@ -430,6 +444,7 @@
     position: relative;
     @include media("<=phone") {
       padding: 50px 30px;
+      height: 100vh;
     }
 
     .head {
@@ -488,6 +503,7 @@
           @include media("<=phone") {
             font-size: 1.2rem;
             line-height: 1.8rem;
+            display: none;
           }
           &::after {
             content: "";
@@ -505,13 +521,13 @@
     }
     img {
       position: absolute;
-      width: 45%;
+      width: 35%;
       top: 150px;
       right: 200px;
       text-align: left;
       @include media("<=phone") {
         width: 75%;
-        top: 65%;
+        top: 50%;
         right: 15%;
       }
     }
@@ -637,7 +653,6 @@
     height: 90vh;
     padding: 50px 250px 150px 250px;
     @include media("<=phone") {
-      height: 100vh;
       padding: 50px 30px;
     }
     h1 {
@@ -703,9 +718,22 @@
       margin-left: auto;
       margin-top: 2rem;
       @include media("<=phone") {
-        width: 80px;
-        height: 80px;
-        font-size: 10px;
+        display: none;
+      }
+    }
+
+    a.mobile {
+      @include media("<=phone") {
+        width: fit-content;
+        height: fit-content;
+        background: transparent;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--pink-color);
+      }
+      @include media(">=phone") {
+        display: none;
       }
     }
   }

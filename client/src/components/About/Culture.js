@@ -4,6 +4,7 @@ function Culture() {
   return (
     <div className="about__culture">
       <div className="heading">
+        <div className="circle" id="aboutpageculturecircle"></div>
         <h1>
           <div><span id="aboutculturehead">OUR CULTURES,</span></div>
           <div><span id="aboutculturehead">VALUES AND</span></div>

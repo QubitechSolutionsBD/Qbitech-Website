@@ -17,8 +17,8 @@ function About() {
   const whoweareRef = useRef(null);
 
   useEffect(() => {
-    window.scrollTo(0,0);
-      aboutAnumation();
+    window.scrollTo(0, 0);
+    aboutAnumation();
   }, []);
 
   return (
