@@ -1,51 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom"
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import Circle from "../Circle";
-
-// REGISTER SCROLL-TRIGGER
-gsap.registerPlugin(ScrollTrigger);
 
 function About() {
-  const circleRef = useRef(null);
-
-  useEffect(() => {
-    gsap.from(circleRef.current, 1, {
-      scale: 0,
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: "#aboutHeading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#aboutHeading", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#aboutHeading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#abouttext", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      stagger: { amount: 0.5 },
-      scrollTrigger: {
-        trigger: "#abouttext",
-        start: "top 80%",
-      },
-    });
-  }, []);
-
   return (
     <div className="home__about">
       <div className="heading">
-        <Circle circleRef={circleRef} />
+      <div className="circle" id="homeaboutcircle"></div>
         <h3>
           <div><span id="aboutHeading">We are building</span></div>
           <div><span id="aboutHeading">the tech solutions from</span></div>

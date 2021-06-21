@@ -1,20 +1,15 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React from "react";
 
 // ASSETS
-import rocket from "../../assets/contributions/rocket.png";
-import health from "../../assets/contributions/healthcare.png";
-import cart from "../../assets/contributions/e-commerce.png";
-import coin from "../../assets/contributions/coin.png";
-import communication from "../../assets/contributions/communication.png";
-import fintech from "../../assets/contributions/fintech.png";
-import education from "../../assets/contributions/graduation-cap.png";
-import software from "../../assets/contributions/software.png";
-import star from "../../assets/contributions/star.png";
-
-// REGISTER GSAP SCROLL TRIGGER
-gsap.registerPlugin(ScrollTrigger);
+import rocket from "../../assets/pagehome/contributions/rocket.png";
+import health from "../../assets/pagehome/contributions/healthcare.png";
+import cart from "../../assets/pagehome/contributions/e-commerce.png";
+import coin from "../../assets/pagehome/contributions/coin.png";
+import communication from "../../assets/pagehome/contributions/communication.png";
+import fintech from "../../assets/pagehome/contributions/fintech.png";
+import education from "../../assets/pagehome/contributions/graduation-cap.png";
+import software from "../../assets/pagehome/contributions/software.png";
+import star from "../../assets/pagehome/contributions/star.png";
 
 // DATA
 const assets = [
@@ -75,53 +70,6 @@ const assets = [
 ];
 
 function Contributions() {
-  // ANIMATION
-  useEffect(() => {
-    gsap.from("#homecontributionhead", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 20,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#homecontributionhead",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#homecontributionlogo", 0.8, {
-      scale: 0,
-      stagger: { amount: 0.5 },
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: "#homecontributions",
-        start: "top 60%",
-      },
-    });
-
-    gsap.from("#homecontributionname", 0.8, {
-      opacity: 0,
-      y: 15,
-      stagger: { amount: 0.5 },
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: "#homecontributions",
-        start: "top 50%",
-      },
-    });
-
-    gsap.from("#homecontributiontext", 0.8, {
-      opacity: 0,
-      y: 15,
-      stagger: { amount: 0.5 },
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: "#homecontributions",
-        start: "top 45%",
-      },
-    });
-  }, []);
-
-  // JSX
   return (
     <div className="home__contribution">
       <h1>

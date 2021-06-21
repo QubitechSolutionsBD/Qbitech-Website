@@ -1,16 +1,11 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React from "react";
 import Slider from "react-slick";
 
 // ASSETS
-import client1 from "../../assets/client/client1.png";
-import client2 from "../../assets/client/client2.png";
-import client3 from "../../assets/client/client3.png";
-import quoto from "../../assets/client/quoto.png";
-
-// REGISTER SCROLL-TRIGGER
-gsap.registerPlugin(ScrollTrigger);
+import client1 from "../../assets/pagehome/client/client1.png";
+import client2 from "../../assets/pagehome/client/client2.png";
+import client3 from "../../assets/pagehome/client/client3.png";
+import quoto from "../../assets/pagehome/client/quoto.png";
 
 // DATA
 const allTestomonials = [
@@ -70,30 +65,6 @@ function Testomonials() {
       },
     ],
   };
-
-  // ANIMATIONS
-  useEffect(() => {
-    gsap.from("#hometestomonialheading", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#hometestomonialheading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#hometesmonialcard", 1.3, {
-      y: "-50vh",
-      ease: "power4.out",
-      stagger: { amount: 1 },
-      scrollTrigger: {
-        trigger: "#hometestomonialheading",
-        start: "top 50%",
-      },
-    });
-  }, []);
 
   return (
     <div className="home__testomonials">

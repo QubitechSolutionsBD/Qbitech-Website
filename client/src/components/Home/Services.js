@@ -1,59 +1,14 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { detailChangeAnim } from "../../animation/HomeAnim";
-
-gsap.registerPlugin(ScrollTrigger);
 
 function Services() {
   const [selected, setSelected] = useState(0);
   const [classSelect, setClassSelected] = useState(0);
-  const btnRef = useRef(null);
   const textRef = useRef(null);
   const contentRef = useRef(null);
 
-  useEffect(() => {
-    gsap.from(btnRef.current, 1, {
-      scale: 0,
-      ease: "expo.inOut",
-      delay: 10,
-      scrollTrigger: {
-        trigger: btnRef.current,
-        start: "top 70%",
-      },
-    });
-
-    gsap.from(textRef.current, 1, {
-      scale: 0,
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: textRef.current,
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#homeServiceHeading", 1.4, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#homeServiceHeading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#homeservicesmallheading", 1.4, {
-      opacity: 0,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#homeServiceHeading",
-        start: "top 60%",
-      },
-    });
-  }, []);
-
+  // update content with clicking the service button
   const updateContent = (value) => {
     setClassSelected(value);
     detailChangeAnim(setSelected, value, textRef, contentRef);
@@ -70,7 +25,7 @@ function Services() {
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More</Link>
+        <Link to="/">Learn More +</Link>
         
         <h1 className={classSelect === 1 ? "active" : ""} onClick={() => updateContent(1)} >
           <div>
@@ -81,7 +36,7 @@ function Services() {
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More</Link>
+        <Link to="/">Learn More +</Link>
 
         <h1 className={classSelect === 2 ? "active" : ""} onClick={() => updateContent(2)} >
           <div>
@@ -92,7 +47,7 @@ function Services() {
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More</Link>
+        <Link to="/">Learn More +</Link>
         
         <h1 className={classSelect === 3 ? "active" : ""} onClick={() => updateContent(3)} >
           <div>
@@ -103,7 +58,7 @@ function Services() {
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More</Link>
+        <Link to="/">Learn More +</Link>
       </div>
 
       {/* ============================================ text card ============================================ */}
@@ -132,7 +87,7 @@ function Services() {
       </div>
 
       {/* ============================================ round button ============================================ */}
-      <Link className="global" to="/" id="serviceLearnButton" ref={btnRef}>
+      <Link className="global" to="/" id="serviceLearnButton">
         Learn More
       </Link>
     </div>

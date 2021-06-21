@@ -2,6 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+// ///////////////////////////////////////////////////////////
 // OVERLAY ANIMATION FOR DESKTOP
 export const overlayAnimation = (completeAnimation) => {
   let tl = gsap.timeline();
@@ -20,6 +21,7 @@ export const overlayAnimation = (completeAnimation) => {
     });
 };
 
+// ///////////////////////////////////////////////////////////
 // OVERLAY ANIMATION FOR MOBILE DEVICES
 export const overlayAnimationMobile = (completeAnimation) => {
   let tl = gsap.timeline();
@@ -36,6 +38,7 @@ export const overlayAnimationMobile = (completeAnimation) => {
     });
 };
 
+// ///////////////////////////////////////////////////////////
 // HOME ANIMATION
 export const homeAnimation = () => {
   let tl = gsap.timeline();
@@ -47,8 +50,218 @@ export const homeAnimation = () => {
     skewY: 7,
     stagger: { amount: 0.3 },
   });
+
+  // ----------- about part
+  gsap.from("#homeaboutcircle", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#aboutHeading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#aboutHeading", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#aboutHeading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#abouttext", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    stagger: { amount: 0.5 },
+    scrollTrigger: {
+      trigger: "#abouttext",
+      start: "top 80%",
+    },
+  });
+
+  // ----------- Observance anim
+  gsap.from("#observanceHeading", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homeobservance",
+      start: "top 65%",
+    },
+  });
+
+  // ----------- services anim
+  gsap.from("#serviceLearnButton", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    delay: 0.7,
+    scrollTrigger: {
+      trigger:"#serviceLearnButton",
+      start: "top 70%",
+    },
+  });
+  gsap.from("#homepageservicetext", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#homepageservicetext",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeServiceHeading", 1.4, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homeServiceHeading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeservicesmallheading", 1.4, {
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#homeServiceHeading",
+      start: "top 60%",
+    },
+  });
+
+  // ----------- contributions anim
+  gsap.from("#homecontributionhead", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 20,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homecontributionhead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homecontributionlogo", 0.8, {
+    scale: 0,
+    stagger: { amount: 0.5 },
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#homecontributions",
+      start: "top 60%",
+    },
+  });
+  gsap.from("#homecontributionname", 0.8, {
+    opacity: 0,
+    y: 15,
+    stagger: { amount: 0.5 },
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#homecontributions",
+      start: "top 55%",
+    },
+  });
+  gsap.from("#homecontributiontext", 0.8, {
+    opacity: 0,
+    y: 15,
+    stagger: { amount: 0.5 },
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#homecontributions",
+      start: "top 50%",
+    },
+  });
+
+  // ----------- why anim
+  gsap.from("#homewhyheading", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homewhyheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homewhytext", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    stagger: { amount: 0.5 },
+    scrollTrigger: {
+      trigger: "#homewhyheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homewhybtn", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    delay: 1,
+    scrollTrigger: {
+      trigger: "#homewhyheading",
+      start: "top 60%",
+    },
+  });
+
+  // ----------- project anim
+  gsap.from("#homeprojectsheading", 1, {
+    x: -30,
+    opacity: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeprojectcard", 1, {
+    y: "-70vh",
+    ease: "expo.inOut",
+    stagger: { amount: 1 },
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeprojectbutton", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 40%",
+    },
+  });
+
+  // ----------- testomonial anim
+  gsap.from("#hometestomonialheading", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#hometestomonialheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#hometesmonialcard", 1.3, {
+    y: "-50vh",
+    ease: "power4.out",
+    stagger: { amount: 1 },
+    scrollTrigger: {
+      trigger: "#hometestomonialheading",
+      start: "top 50%",
+    },
+  });
+
+  // ----------- client anim
+  gsap.from("#homeclientprofile", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    stagger: {amount: 0.5},
+    scrollTrigger: {
+      trigger: "#homeclientprofile",
+      start: "top 80%",
+    },
+  });
 };
 
+// ///////////////////////////////////////////////////////////
 // SERVICE ANIMATION
 export const detailChangeAnim = (setSelected, value, textRef, contentRef) => {
   let tl = gsap.timeline();

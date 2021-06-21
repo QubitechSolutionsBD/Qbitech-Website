@@ -1,44 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "@material-ui/core";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-// REGISTER SCROLL-TRIGGER
-gsap.registerPlugin(ScrollTrigger);
 
 function Why() {
-  useEffect(() => {
-    gsap.from("#homewhyheading", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#homewhyheading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#homewhytext", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      stagger: { amount: 0.5 },
-      scrollTrigger: {
-        trigger: "#homewhyheading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#homewhybtn", 1, {
-      scale: 0,
-      ease: "expo.inOut",
-      delay: 10,
-      scrollTrigger: {
-        trigger: "#homewhyheading",
-        start: "top 50%",
-      },
-    });
-  }, []);
   return (
     <div className="home__why">
       {/* text */}

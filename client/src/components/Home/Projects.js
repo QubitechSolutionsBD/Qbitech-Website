@@ -1,14 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-// REGISTER SCROLL-TRIGGER
-gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
-  // SLIDER SETTINGS
   const settings = {
     dots: true,
     infinite: true,
@@ -25,39 +19,6 @@ function Projects() {
       );
     },
   };
-
-  // ANIMATION
-  useEffect(() => {
-    gsap.from("#homeprojectsheading", 1, {
-      x: -30,
-      opacity: 0,
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: "#homeprojectsheading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#homeprojectcard", 1, {
-      y: "-70vh",
-      ease: "expo.inOut",
-      stagger: { amount: 1 },
-      scrollTrigger: {
-        trigger: "#homeprojectsheading",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from("#homeprojectbutton", 1, {
-      scale: 0,
-      ease: "expo.inOut",
-      scrollTrigger: {
-        trigger: "#homeprojectsheading",
-        start: "top 40%",
-      },
-    });
-
-  }, []);
 
   return (
     <div className="home__projects">

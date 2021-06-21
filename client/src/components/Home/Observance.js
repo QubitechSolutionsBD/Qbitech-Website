@@ -50,16 +50,7 @@ function Observance() {
   };
 
   useEffect(() => {
-    gsap.from("#observanceHeading", 1.3, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
-      scrollTrigger: {
-        trigger: "#homeobservance",
-        start: "top 65%",
-      },
-    });
+    
   }, []);
 
   return (

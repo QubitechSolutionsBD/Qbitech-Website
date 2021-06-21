@@ -1,31 +1,13 @@
-import React, { useEffect } from 'react';
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React from 'react';
 
 // ASSETS
-import apple from "../../assets/client/partners/apple-logo.png";
-import github from "../../assets/client/partners/github.png";
-import google from "../../assets/client/partners/google.png";
-import microsoft from "../../assets/client/partners/windows-logo.png";
-import adobe from "../../assets/client/partners/adobe.png";
-
-// REGISTER SCROLL-TRIGGER
-gsap.registerPlugin(ScrollTrigger);
+import apple from "../../assets/pagehome/client/partners/apple-logo.png";
+import github from "../../assets/pagehome/client/partners/github.png";
+import google from "../../assets/pagehome/client/partners/google.png";
+import microsoft from "../../assets/pagehome/client/partners/windows-logo.png";
+import adobe from "../../assets/pagehome/client/partners/adobe.png";
 
 function Clients() {
-  // ANIMATION
-  useEffect(() => {
-    gsap.from("#homeclientprofile", 1, {
-      scale: 0,
-      ease: "expo.inOut",
-      stagger: {amount: 0.5},
-      scrollTrigger: {
-        trigger: "#homeclientprofile",
-        start: "top 80%",
-      },
-    });
-  }, []);
-
   return (
     <div className="home__clients">
       <img src={apple} alt="apple" id="homeclientprofile" />
