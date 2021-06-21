@@ -2,17 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./styles/App.scss";
 
-// PAGES
+// components
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import CaseStudies from "./pages/CaseStudies";
-import Services from "./pages/Services";
-
-// COMPONENTS
-import CaseStudy from "./components/CaseStudies/CaseStudy";
-import Industries from "./pages/Industries";
+import Service from "./pages/Service";
 
 function App() {
   return (
@@ -21,15 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/blog" component={Blog} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/caseStudies" component={CaseStudies} />
-          <Route exact path="/caseStudies/case" component={CaseStudy} />
-          <Route exact path="/industries" component={Industries} />
-          <Route exact path="/services/web" component={Services} />
-          <Route exact path="/services/software" component={Services} />
-          <Route exact path="/services/hardware" component={Services} />
-          <Route exact path="/services/marketing" component={Services} />
+          <Route exact path="/service/web-development" component={Service} />
         </Switch>
       </Router>
     </div>

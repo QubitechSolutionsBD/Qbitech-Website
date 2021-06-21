@@ -1,38 +1,40 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-// COMPONENTS
-import Navbar from "../components/Navbar/Navbar";
-import Banner from "../components/Home/Banner";
-import Clients from "../components/Home/Clients";
-import Features from "../components/Home/Features";
-import Industries from "../components/Home/Industries";
-import Insights from "../components/Home/Insights";
-import Partners from "../components/Home/Partners";
-import Testomonials from "../components/Home/Testomonials";
-import Footer from "../components/Footer";
-import Services from "../components/Home/Services";
-import SuccessStories from "../components/Home/SuccessStories";
+import {
+  overlayAnimation,
+  overlayAnimationMobile,
+} from "../animation/HomeAnim";
+import Overlay from "../components/Home/Overlay";
+import HomeContainer from "../components/Home/HomeContainer";
 
 function Home() {
+  const [animationComplete, setAnimationComplete] = useState(false);
+
+  const completeAnimation = () => {
+    setAnimationComplete(true);
+    window.sessionStorage.setItem("firstLoadDone", 1);
+  };
+
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (window.innerWidth <= 480) {
+      if (window.sessionStorage.getItem("firstLoadDone") == null) {
+        overlayAnimationMobile(completeAnimation);
+      } else {
+        setAnimationComplete(true);
+      }
+    } else {
+      if (window.sessionStorage.getItem("firstLoadDone") == null) {
+        overlayAnimation(completeAnimation);
+      } else {
+        setAnimationComplete(true);
+      }
+    }
   }, []);
 
   return (
     <>
-      <Navbar />
-      <div className="home">
-        <Banner />
-        <Features />
-        <Services />
-        <Industries />
-        <Insights />
-        <Clients />
-        <SuccessStories />
-        <Partners />
-        <Testomonials />
-      </div>
-      <Footer />
+      {animationComplete === false ? <Overlay /> : null}
+      <HomeContainer />
     </>
   );
 }

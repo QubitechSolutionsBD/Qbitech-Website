@@ -1,7 +1,7 @@
 // FONTS
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 // SCSS FOR VARIABLE AND BREAKPOINT
 @import "./variable.scss";
@@ -9,17 +9,13 @@
 
 // SCSS FOR PAGES
 @import "./pages/Home.scss";
-@import "./pages/Blog.scss";
-@import "./pages/Contact.scss";
 @import "./pages/About.scss";
-@import "./pages/CaseStudies.scss";
-@import "./pages/Services.scss";
-@import "./pages/Industries.scss";
+@import "./pages/Service.scss";
 
 // SCSS FOR COMPONENTS
 @import "./components/Navbar.scss";
 @import "./components/Footer.scss";
-@import "./components/Accrodion.scss";
+@import "./components/Overlay.scss";
 
 // FOR ALL COMPONENTS
 * {
@@ -31,62 +27,25 @@
 // SETUP WEBSITE BACKGROUND COLOR
 body,
 html {
-  background: var(--primary-color);
-  color: var(--text-color-white);
-  font-family: var(--primary-font);
-  font-weight: 300;
+  background: var(--background-color-light);
+  font-family: var(--poppins-font);
+  font-weight: 200;
 }
 
-// COMMON HEADING
-.common-heading {
-  text-align: center;
-  margin-bottom: 72px;
+// CIRCLE
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--pink-color);
+  // background: linear-gradient(
+  //   327deg,
+  //   rgba(224, 15, 240, 1) 28%,
+  //   rgba(99, 50, 163, 1) 68%,
+  //   rgba(69, 51, 136, 1) 83%
+  // );
   @include media("<=phone") {
-    margin-bottom: 36px;
-  }
-
-  h2 {
-    display: inline-block;
-    position: relative;
-    color: var(--blue-color);
-    @include media("<=phone") {
-      font-size: 17px;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -120px;
-      transform: translateY(-50%);
-      height: 3px;
-      width: 103px;
-      background: var(--blue-color);
-      @include media("<=phone") {
-        width: 40px;
-        height: 1.5px;
-        left: -45px;
-      }
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: -120px;
-      transform: translateY(-50%);
-      height: 3px;
-      width: 103px;
-      background: var(--blue-color);
-      @include media("<=phone") {
-        width: 40px;
-        height: 1.5px;
-        right: -45px;
-      }
-    }
-  }
-  p {
-    margin-top: 10px;
-    @include media("<=phone") {
-      font-size: 14px;
-    }
+    width: 60px;
+    height: 60px;
   }
 }

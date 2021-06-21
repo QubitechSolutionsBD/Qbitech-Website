@@ -1,12 +1,14 @@
 :root {
-    --primary-color: #0E0428;
+    --background-color-dark: #0E0428;
+    --background-color-light: #F2F2F2;
+    
     --text-color-black: #14142B;
     --text-color-ash: #4E4B66;
     --text-color-white: #FCFCFC;
     --pink-color: #E00FF0;
     --blue-color: #26BAF6;
     
-    --primary-font: 'Roboto', sans-serif;
-    // --primary-font: 'Quicksand', sans-serif;
-    --secondary-font: 'Noto Sans JP', sans-serif;
+    --poppins-font: 'Poppins', sans-serif;
+    --anton-font: 'Anton', sans-serif;
+    --babas-font: 'Bebas Neue', cursive;
 }

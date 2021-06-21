@@ -1,0 +1,26 @@
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: var(--background-color-light);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+
+  .block {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--background-color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 50%;
+    }
+  }
+}

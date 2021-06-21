@@ -1,81 +1,140 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { detailChangeAnim } from "../../animation/HomeAnim";
 
-import app from "../../assets/services/options/app.svg";
-import web from "../../assets/services/options/web.svg";
-import hardware from "../../assets/services/options/hardware.svg";
-import marketing from "../../assets/services/options/marketing.svg";
+gsap.registerPlugin(ScrollTrigger);
 
 function Services() {
+  const [selected, setSelected] = useState(0);
+  const [classSelect, setClassSelected] = useState(0);
+  const btnRef = useRef(null);
+  const textRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(btnRef.current, 1, {
+      scale: 0,
+      ease: "expo.inOut",
+      delay: 10,
+      scrollTrigger: {
+        trigger: btnRef.current,
+        start: "top 70%",
+      },
+    });
+
+    gsap.from(textRef.current, 1, {
+      scale: 0,
+      ease: "expo.inOut",
+      scrollTrigger: {
+        trigger: textRef.current,
+        start: "top 80%",
+      },
+    });
+
+    gsap.from("#homeServiceHeading", 1.4, {
+      y: 200,
+      ease: "power4.out",
+      skewY: 8,
+      stagger: { amount: 0.3 },
+      scrollTrigger: {
+        trigger: "#homeServiceHeading",
+        start: "top 80%",
+      },
+    });
+
+    gsap.from("#homeservicesmallheading", 1.4, {
+      opacity: 0,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#homeServiceHeading",
+        start: "top 60%",
+      },
+    });
+  }, []);
+
+  const updateContent = (value) => {
+    setClassSelected(value);
+    detailChangeAnim(setSelected, value, textRef, contentRef);
+  }
+
   return (
     <div className="home__services">
-      {/* container - web */}
-      <div className="container">
-        <div className="content left">
-          <div className="logo">
-            <img src={web} alt="" />
+      <h3 id="homeservicesmallheading">OUR SERVICES</h3>
+      <div className="links">
+        <h1 className={classSelect === 0 ? "active" : ""} onClick={() => updateContent(0)} >
+          <div><span id="homeServiceHeading">WEB DEVELOPMENT</span></div>
+        </h1>
+        <p>
+          We are constantly working to provide digital solutions to various
+          problems in your life. We are developing softwares, websites.
+        </p>
+        <Link to="/">Learn More</Link>
+        
+        <h1 className={classSelect === 1 ? "active" : ""} onClick={() => updateContent(1)} >
+          <div>
+            <span id="homeServiceHeading">SOFTWARE DEVELOPMENT</span>
           </div>
-          <div className="text">
-            <h3>Web Solutions</h3>
-            <p>
-              With elegant performance across every platform, our modern web
-              frameworks to give your business a one-stop web solution service.
-            </p>
+        </h1>
+        <p>
+          We are constantly working to provide digital solutions to various
+          problems in your life. We are developing softwares, websites.
+        </p>
+        <Link to="/">Learn More</Link>
+
+        <h1 className={classSelect === 2 ? "active" : ""} onClick={() => updateContent(2)} >
+          <div>
+            <span id="homeServiceHeading">HARDWARE DEVELOPMENT</span>
           </div>
-        </div>
-        <div className="blank"></div>
+        </h1>
+        <p>
+          We are constantly working to provide digital solutions to various
+          problems in your life. We are developing softwares, websites.
+        </p>
+        <Link to="/">Learn More</Link>
+        
+        <h1 className={classSelect === 3 ? "active" : ""} onClick={() => updateContent(3)} >
+          <div>
+            <span id="homeServiceHeading">BRANDING & MARKETING</span>
+          </div>
+        </h1>
+        <p>
+          We are constantly working to provide digital solutions to various
+          problems in your life. We are developing softwares, websites.
+        </p>
+        <Link to="/">Learn More</Link>
       </div>
 
-      {/* container */}
-      <div className="container">
-        <div className="blank"></div>
-        <div className="content right">
-          <div className="logo">
-            <img src={app} alt="" />
-          </div>
-          <div className="text">
-            <h3>Software Solutions</h3>
-            <p>
-              Streamline your business needs through our comprehensive mobile
-              software solutions service to meet the needs of modern day
-              industry.
+      {/* ============================================ text card ============================================ */}
+      <div className="text" ref={textRef}>
+        {
+          selected === 0
+          ? <p ref={contentRef}>
+              We are constantly working to provide web solutions to various
+              problems in your life. We are developing softwares, websites.
             </p>
-          </div>
-        </div>
+            : selected === 1
+            ? <p ref={contentRef}>
+                We are constantly working to provide software solutions to various
+                problems in your life. We are developing softwares, websites.
+              </p>
+            : selected === 2
+              ? <p ref={contentRef}>
+                  We are constantly working to provide hardare solutions to various
+                  problems in your life. We are developing softwares, websites.
+                </p>
+              : <p ref={contentRef}>
+                  We are constantly working to provide branding & marketing solutions to various
+                  problems in your life. We are developing softwares, websites.
+                </p>
+        }
       </div>
 
-      {/* container - hardware */}
-      <div className="container">
-        <div className="content left">
-          <div className="logo">
-            <img src={hardware} alt="" />
-          </div>
-          <div className="text">
-            <h3>Hardware Solutions</h3>
-            <p>
-              Seamlessly integrate your ideas into IoT prototypes to simulate
-              the idea before going into the market among the consumers.
-            </p>
-          </div>
-        </div>
-        <div className="blank"></div>
-      </div>
-
-      {/* container - branding */}
-      <div className="container">
-        <div className="blank"></div>
-        <div className="content right">
-          <div className="logo">
-            <img src={marketing} alt="" />
-          </div>
-          <div className="text">
-            <h3>Branding & Marketing Solutions</h3>
-            <p>
-              Incorporate modern branding & marketing strategies to channel your
-              brand in front of the right consumers through our services.
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* ============================================ round button ============================================ */}
+      <Link className="global" to="/" id="serviceLearnButton" ref={btnRef}>
+        Learn More
+      </Link>
     </div>
   );
 }

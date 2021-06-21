@@ -1,122 +1,142 @@
 ///////////////////////////////////////////////
 // FOOTER MAIN PART
 .footer {
-  width: 90%;
-  margin: auto;
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color-dark);
+  padding: 120px 250px 40px 250px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 10px solid var(--pink-color);
   @include media("<=phone") {
-    padding: 20px 0;
+    padding: 50px 30px;
+    height: fit-content;
   }
 
-  div {
-    width: 20%;
-    @include media("<=phone") {
-      width: 100%;
-      padding: 0 20px;
-      margin-bottom: 35px;
-    }
-    h3 {
-      font-size: 24px;
-      line-height: 24px;
-      margin-bottom: 35px;
-      @include media("<=phone") {
-        font-size: 17px;
-        line-height: 17px;
-        margin-bottom: 20px;
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .sitemap {
+      width: 20%;
+      @include media("<=phone") {width: 100%; margin-bottom: 40px;}
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+        color: var(--text-color-white);        
+        @include media("<=phone") {
+          font-size: 17px;
+          line-height: 28px;
+        }
+      }
+      a.active{
+        text-decoration: underline;
       }
     }
-    a {
-      text-decoration: none;
-      color: var(--text-color-white);
-      display: inline-block;
+    .infos {
+      width: 30%;
+      height: 60vh;
       display: flex;
       flex-direction: column;
-      font-weight: lighter;
-      font-size: 14px;
-      line-height: 24px;
-      transition: 0.4s;
-      &:hover {
-        font-weight: 500;
+      justify-content: space-between;
+      @include media("<=phone") {
+        width: 100%; height: fit-content; 
+        margin-bottom: 40px; display: block;
       }
-    }
-  }
-
-  &__company {
-    overflow: hidden;
-    img.logo {
-      margin-bottom: 10px;
-      margin-left: -30px;
-    }
-    p {
-      font-size: 15px;
-      color: var(--text-color-white);
-      font-weight: lighter;
+      .info {
+        @include media("<=phone") { margin-bottom: 15px; }
+        h3 {
+          color: var(--pink-color);
+          text-transform: uppercase;
+          font-weight: 200;
+          font-size: 16px;
+          @include media("<=phone") { font-size: 13px; }
+        }
+        p {
+          color: var(--text-color-white);
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+          font-weight: 400;
+          @include media("<=phone") {font-size: 17px; line-height: 28px;}
+        }
+      }
     }
     .social-links {
-      margin-top: 20px;
-      margin-left: -20px;
-      width: 70%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+      width: 30%;
+      height: fit-content;
+      @include media("<=phone") {width: 100%; margin-bottom: 40px;}
+      h3 {
+        color: var(--pink-color);
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 16px;
+        @include media("<=phone") { font-size: 13px; }
+      }
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+        color: var(--text-color-white);
+        @include media("<=phone") { font-size: 17px; line-height: 28px; }
+      }
 
-  &__contact {
-    p {
-      font-size: 14px;
-      line-height: 24px;
-    }
-  }
-}
-
-///////////////////////////////////////////////
-// FOOTER SECOND PART
-.footer-last {
-  height: 40px;
-  position: relative;
-  .border {
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include media("<=phone") {
-      height: 1.2px;
-    }
-    
-  }
-  .image {
-    background: var(--primary-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include media("<=phone") {
-      width: 25%;
-    }
-    img{
-      @include media("<=phone") {
-        width: 100%;
+      .gotoup{
+        background: var(--pink-color);
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.4s;
+        img{ width: 25px; transition: 0.4s; }
+        &:hover{
+          transform: scale(1.2);
+        }
+        &:hover img{
+          margin-top: -10px;
+        }
       }
     }
   }
-}
 
-///////////////////////////////////////////////
-// FOOTER COPYRIGHT TEXT
-.copyright{
-    margin-top: 20px;
-    padding: 20px 0;
-    text-align: center;
-    @include media("<=phone") {
-      margin-top: 10px;
-      padding: 20px 0;
-      font-size: 13px;
+  &__secondary{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    @include media("<=phone") { margin-top: 0; display: block; }
+    .logo{
+      width: 30%;
+      @include media("<=phone") { width: 100%; }
+      img{
+        @include media("<=phone") { margin-left: -30px; margin-bottom: 10px; }
+      }
     }
+    .copyright{
+      width: 50%;
+      color: var(--text-color-white);
+      font-size: 16px;
+      text-transform: uppercase;
+      @include media("<=phone") { width: 100%; font-size: 10px; margin-bottom: 50px; }
+    }
+  }
+
+  img.q{
+    height: 90%;
+    position: absolute;
+    right: -15%;
+    bottom: -30%;
+    @include media("<=phone") {height: 200px; right: -70px; bottom: -70px; }
+  }
 }
