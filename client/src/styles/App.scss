@@ -31,21 +31,3 @@ html {
   font-family: var(--poppins-font);
   font-weight: 200;
 }
-
-// CIRCLE
-.circle {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: var(--pink-color);
-  // background: linear-gradient(
-  //   327deg,
-  //   rgba(224, 15, 240, 1) 28%,
-  //   rgba(99, 50, 163, 1) 68%,
-  //   rgba(69, 51, 136, 1) 83%
-  // );
-  @include media("<=phone") {
-    width: 60px;
-    height: 60px;
-  }
-}

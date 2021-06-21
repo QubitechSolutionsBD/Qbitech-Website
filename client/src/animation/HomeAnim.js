@@ -128,6 +128,27 @@ export const homeAnimation = () => {
       start: "top 60%",
     },
   });
+  gsap.from("#homeservicetextformobile", 1.4, {
+    y: 50,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homeservicetextformobile",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeservicelinkformobile", 1.4, {
+    y: 50,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homeservicetextformobile",
+      start: "top 80%",
+    },
+  });
+
 
   // ----------- contributions anim
   gsap.from("#homecontributionhead", 1.3, {

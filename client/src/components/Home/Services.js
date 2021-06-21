@@ -21,44 +21,44 @@ function Services() {
         <h1 className={classSelect === 0 ? "active" : ""} onClick={() => updateContent(0)} >
           <div><span id="homeServiceHeading">WEB DEVELOPMENT</span></div>
         </h1>
-        <p>
+        <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More +</Link>
+        <Link to="/" id="homeservicelinkformobile">Learn More <span>+</span></Link>
         
         <h1 className={classSelect === 1 ? "active" : ""} onClick={() => updateContent(1)} >
           <div>
             <span id="homeServiceHeading">SOFTWARE DEVELOPMENT</span>
           </div>
         </h1>
-        <p>
+        <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More +</Link>
+        <Link to="/" id="homeservicelinkformobile">Learn More <span>+</span></Link>
 
         <h1 className={classSelect === 2 ? "active" : ""} onClick={() => updateContent(2)} >
           <div>
             <span id="homeServiceHeading">HARDWARE DEVELOPMENT</span>
           </div>
         </h1>
-        <p>
+        <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More +</Link>
+        <Link to="/" id="homeservicelinkformobile">Learn More <span>+</span></Link>
         
         <h1 className={classSelect === 3 ? "active" : ""} onClick={() => updateContent(3)} >
           <div>
             <span id="homeServiceHeading">BRANDING & MARKETING</span>
           </div>
         </h1>
-        <p>
+        <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various
           problems in your life. We are developing softwares, websites.
         </p>
-        <Link to="/">Learn More +</Link>
+        <Link to="/" id="homeservicelinkformobile">Learn More <span>+</span></Link>
       </div>
 
       {/* ============================================ text card ============================================ */}
