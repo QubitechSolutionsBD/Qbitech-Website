@@ -8,17 +8,19 @@ import Technologies from "../components/Service/Technologies";
 import Works from "../components/Service/Works";
 import { setupData } from "../components/Service/Data";
 import { useLocation } from "react-router-dom";
+import { serviceAnimation } from "../animation/ServiceAnim";
 
 function Service() {
   const [bannerHeading, setBannerHeading] = useState([]);
   const [bannerText, setBannerText] = useState("");
   const [offerHeading, setOfferHeading] = useState("");
-  const [offerText, setOfferText] = useState([]);
+  const [offerText, setOfferText] = useState("");
   const [offers, setOffers] = useState([]);
   const [technologies, setTechnologies] = useState([]);
   const [works, setWorks] = useState([]);
 
   const nextslideRef = useRef(null);
+  const techRef = useRef([]);
   const location = useLocation();
 
   useEffect(() => {
@@ -35,9 +37,13 @@ function Service() {
     );
   }, [location.pathname]);
 
+  useEffect(() => {
+    serviceAnimation(techRef);
+  }, []);
+
   return (
     <>
-      {/* <GlobalPageTransition /> */}
+      <GlobalPageTransition />
       <Navbar />
 
       <div className="service">
@@ -52,7 +58,7 @@ function Service() {
           offerText={offerText}
           offers={offers}
         />
-        <Technologies technologies={technologies} />
+        <Technologies technologies={technologies} techRef={techRef} />
         <Works works={works} />
       </div>
 

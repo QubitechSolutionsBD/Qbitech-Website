@@ -57,7 +57,7 @@ function Works({works}) {
 
             <div className="content">
                 <Slider {...settings} className="slider" ref={(slider) => (customSlider.current = slider)}>
-                    {works.map(work => <Work work={work} />)}
+                    {works.map((work, i) => <Work key={i} work={work} />)}
                 </Slider>
                 <div className="slider-btn-box">
                     <button onClick={() => customSlider.current.slickPrev()}> <img src={right} alt="" /> </button>

@@ -11,7 +11,7 @@ function GlobalBanner({ children, nextSlideRef, scrollBtnText }) {
 
   return (
     <div className="globalbanner">
-      <div className="circle" id="aboutcircle1"></div>
+      <div className="circle" id="globalBannerCircle1"></div>
 
       <div className="text">
         {/* heading */}

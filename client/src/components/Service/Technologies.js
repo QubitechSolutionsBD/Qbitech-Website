@@ -1,17 +1,17 @@
 import React from "react";
 
-function Technologies({ technologies }) {
+function Technologies({ technologies, techRef }) {
   return (
     <div className="service__technologies">
       <h1>
-        <div><span id="aboutwhatwedoHeading">USED</span></div>
-        <div><span id="aboutwhatwedoHeading">TECHNOLOGIES</span></div>
+        <div><span id="servicetechheading">USED</span></div>
+        <div><span id="servicetechheading">TECHNOLOGIES</span></div>
       </h1>
 
       <div className="technologies">
-        {technologies.map((tech) => (
-          <div className="tech">
-            <img src={tech} alt="" />
+        {technologies.map((tech, i) => (
+          <div className="tech" key={i}>
+            <img src={tech} alt="" ref={element => {techRef.current[i] = element;}} />
           </div>
         ))}
         <div className="tech">

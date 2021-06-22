@@ -37,7 +37,7 @@ function WhoWeAre({whoweareRef}) {
         </div>
       </div>
 
-      <div className="circle" id="aboutcircle2"></div>
+      <div className="circle" id="globalBannerCircle2"></div>
     </div>
   );
 }
