@@ -4,7 +4,7 @@ import Work from "./Work";
 import right from "../../assets/pageservice/down-arrow.png"
 import left from "../../assets/pageservice/up-arrow.png"
 
-function Works() {
+function Works({works}) {
     const customSlider = useRef();
 
     const settings = {
@@ -16,6 +16,32 @@ function Works() {
         initialSlide: 1,
         speed: 700,
         autoplaySpeed: 2500,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+          ]
       };
 
     return (
@@ -31,12 +57,7 @@ function Works() {
 
             <div className="content">
                 <Slider {...settings} className="slider" ref={(slider) => (customSlider.current = slider)}>
-                    <Work />
-                    <Work />
-                    <Work />
-                    <Work />
-                    <Work />
-                    <Work />
+                    {works.map(work => <Work work={work} />)}
                 </Slider>
                 <div className="slider-btn-box">
                     <button onClick={() => customSlider.current.slickPrev()}> <img src={right} alt="" /> </button>

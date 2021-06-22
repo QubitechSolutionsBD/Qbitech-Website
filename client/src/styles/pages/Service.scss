@@ -38,6 +38,10 @@
         width: 70%;
         font-size: 2rem;
         font-weight: 400;
+        @include media("<=phone") {
+          width: 100%;
+          font-size: 16px;
+        }
       }
     }
   }
@@ -48,6 +52,9 @@
     width: 100%;
     min-height: 145vh;
     position: relative;
+    @include media("<=phone") {
+      min-height: 215vh;
+    }
 
     .content-heading {
       width: 50%;
@@ -56,6 +63,7 @@
       top: 0;
       left: 0;
       background: var(--background-color-dark);
+      @include media("<=phone") { width: 100%; height: 25vh; }
       .heading {
         width: 100%;
         height: 100vh;
@@ -64,6 +72,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        @include media("<=phone") { height: 25vh; padding-left: 30px; margin-top: 30px; }
         .circle {
           width: 250px;
           height: 250px;
@@ -121,17 +130,37 @@
       padding-left: 100px;
       background: var(--background-color-dark);
       color: var(--text-color-white);
+      @include media("<=phone") {
+        width: 100%;
+        height: 150vh;
+        top: 24vh;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+      }
+
       p {
         margin-bottom: 20px;
         font-size: 16px;
         line-height: 25px;
         text-align: justify;
+        @include media("<=phone") {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 10px;
+        }
       }
       p.big {
         font-size: 2.2rem;
         line-height: 2.8rem;
         text-align: left;
         margin-bottom: 30px;
+        @include media("<=phone") {
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: 20px;
+        }
       }
       a {
         display: block;
@@ -143,6 +172,9 @@
         span {
           margin-left: 5px;
         }
+        @include media("<=phone") {
+          margin-top: 30px;
+        }
       }
     }
     .content-offers {
@@ -153,6 +185,12 @@
       left: 0;
       padding-left: 250px;
       padding-top: 100px;
+      @include media("<=phone") {
+        height: 40vh;
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 30px;
+      }
       p {
         font-size: 17px;
         line-height: 25px;
@@ -160,6 +198,12 @@
         margin-left: 5px;
         font-weight: 400;
         position: relative;
+        @include media("<=phone") {
+          font-size: 14px;
+          line-height: 20px;
+          margin-left: 30px;
+          margin-bottom: 15px;
+        }
         &::after {
           content: "";
           position: absolute;
@@ -181,6 +225,10 @@
     width: 100%;
     min-height: 100vh;
     padding: 120px 250px;
+    @include media("<=phone") {
+      padding: 0 30px;
+      min-height: 60vh;
+    }
 
     h1 {
       width: 100%;
@@ -224,6 +272,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include media("<=phone") {
+          width: 19%;
+          margin: 2.4%;
+          height: 10vh;
+        }
         img {
           height: 60%;
         }
@@ -236,6 +289,11 @@
           justify-content: center;
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
           font-weight: 400;
+          @include media("<=phone") {
+            width: 40px;
+            height: 40px;
+            font-size: 8px;
+          }
         }
       }
     }
@@ -253,6 +311,12 @@
       width: 35%;
       padding-left: 250px;
       padding-top: 120px;
+      @include media("<=phone") {
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 20px;
+        padding-right: 30px;
+      }
       h1 {
         width: 100%;
         letter-spacing: 3px;
@@ -287,16 +351,29 @@
       width: 65%;
       padding-top: 120px;
       overflow: hidden;
-      .slider {
+      @include media("<=phone") {
         width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      .slider {
+        width: calc(100% + 100px);
         min-height: 60vh;
         margin-left: 120px;
+        @include media("<=phone") {
+          margin-left: 0;
+          min-height: 40vh;
+          padding: 0 30px;
+        }
         .work {
           width: 100%;
           height: 60vh;
           display: flex;
           align-items: center;
           justify-content: center;
+          @include media("<=phone") {
+            height: 40vh;
+          }
           .container {
             width: 90%;
             height: 55vh;
@@ -309,6 +386,9 @@
             );
             border: 1px solid gray;
             border-radius: 10px;
+            @include media("<=phone") {
+              height: 35vh;
+            }
           }
         }
       }
@@ -316,6 +396,10 @@
         margin-top: 32px;
         margin-left: 120px;
         display: flex;
+        @include media("<=phone") {
+          margin-left: 30px;
+          margin-top: 10px;
+        }
         button {
           width: 60px;
           height: 60px;
@@ -328,6 +412,13 @@
           img{
             width: 30px;
             transform: rotate(90deg);
+            @include media("<=phone") {
+              width: 15px;
+            }
+          }
+          @include media("<=phone") {
+            height: 40px;
+            width: 40px;
           }
         }
       }

@@ -1,16 +1,14 @@
 import React from "react";
 import GlobalBanner from "../GlobalBanner";
 
-function Banner({ nextslideRef }) {
+function Banner({ nextslideRef, bannerHeading, bannerText }) {
   return (
     <GlobalBanner nextSlideRef={nextslideRef} scrollBtnText="Explore More">
       <h1>
-        <div><span id="servicebannerheading">WEB DEVELOPMENT</span></div>
+        <div><span id="servicebannerheading">{bannerHeading[0]}</span></div>
+        <div><span id="servicebannerheading">{bannerHeading[1]}</span></div>
       </h1>
-      <p>
-          With elegant performance across every platform, our modern web
-          frameworks to give your business a one-stop web solution service.
-        </p>
+      <p>{bannerText}</p>
     </GlobalBanner>
   );
 }
