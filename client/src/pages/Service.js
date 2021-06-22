@@ -5,7 +5,7 @@ import Banner from "../components/Service/Banner";
 import Footer from "../components/Footer";
 import Offers from "../components/Service/Offers";
 import Technologies from "../components/Service/Technologies";
-import ShortDesc from "../components/Service/ShortDesc";
+import Works from "../components/Service/Works";
 
 function Service() {
   const nextslideRef = useRef(null);
@@ -19,7 +19,7 @@ function Service() {
         <Banner nextslideRef={nextslideRef} />
         <Offers nextslideRef={nextslideRef} />
         <Technologies />
-        <ShortDesc />
+        <Works />
       </div>
 
       <Footer />

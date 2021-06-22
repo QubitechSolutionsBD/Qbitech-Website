@@ -19,17 +19,19 @@ function Offers({ nextslideRef }) {
       </div>
 
       <div className="content-content">
+        <p className="big">
+          We design & develop high-end marketing websites for ambitious brands.
+        </p>
         <p>
           Here at Qubitech we excel at giving you a one-stop web solution
           service to elevate your brand.{" "}
         </p>
         <p>
           Our development experts emphasize on charismatic look, intuitive
-          layout, UI/UX design and a responsive environment for clear cut
-          communication. Our primary focus is to elevate your brand through a
-          strong online presence. We begin our service through extensive brand
-          research so that we can find the perfect user experience that delivers
-          your brands persona.
+          layout. Our primary focus is to elevate your brand through a strong
+          online presence. We begin our service through extensive brand research
+          so that we can find the perfect user experience that delivers your
+          brands persona.
         </p>
         <p>
           Taking time in understanding your business needs & goals is the key to
@@ -47,9 +49,11 @@ function Offers({ nextslideRef }) {
           industries.
         </p>
         <p>
-          We also offer a very trusted and sophisticated, secured backend for
-          you. Where you can store your data and business logic for your own
-          business purpose and interact your customers.
+          We offer flexible services to ensure that your web platform is aligned
+          with your business initiatives and marketing goals. From custom code,
+          to seamless integration, to exclusive portal functionality, our
+          dedicated team of developers have the capabilities to take your
+          website to the next level.
         </p>
 
         <Link className="/">

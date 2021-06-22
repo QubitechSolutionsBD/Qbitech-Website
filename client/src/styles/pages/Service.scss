@@ -2,6 +2,47 @@
   width: 100%;
 
   // //////////////////////////////////////////////////////////////////////////////////////
+  // ===================================== BANNER PART =====================================
+  .globalbanner {
+    .text {
+      h1 {
+        width: 100%;
+        letter-spacing: 3px;
+        font-size: 7rem;
+        line-height: 7rem;
+        font-family: var(--babas-font);
+        text-transform: uppercase;
+        color: var(--text-color-black);
+        @include media("<=phone") {
+          text-align: left;
+          font-size: 2.5rem;
+          line-height: 2.8rem;
+          letter-spacing: 2.5px;
+        }
+        div {
+          width: 100%;
+          height: 7rem;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          position: relative;
+          @include media("<=phone") {
+            height: 2.5rem;
+            margin-bottom: 1rem;
+          }
+          span {
+            position: absolute;
+          }
+        }
+      }
+      p {
+        width: 70%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  // //////////////////////////////////////////////////////////////////////////////////////
   // ===================================== OFFERS PART =====================================
   &__offers {
     width: 100%;
@@ -82,9 +123,15 @@
       color: var(--text-color-white);
       p {
         margin-bottom: 20px;
-        font-size: 17px;
+        font-size: 16px;
         line-height: 25px;
         text-align: justify;
+      }
+      p.big {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        text-align: left;
+        margin-bottom: 30px;
       }
       a {
         display: block;
@@ -166,60 +213,124 @@
         }
       }
     }
-    .technologies{
-        width: 100%;
+    .technologies {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .tech {
+        width: 14.6%;
+        margin: 10px 1%;
+        height: 20vh;
         display: flex;
-        flex-wrap: wrap;
-        .tech{
-            width: 14.6%;
-            margin: 10px 1%;
-            height: 20vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img{ height:60%; }
-            div{
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 0 20px rgba(0,0,0,0.3);
-                font-weight: 400;
-            }
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 60%;
         }
+        div {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          font-weight: 400;
+        }
+      }
     }
   }
 
-  &__shortdesc{
-      min-height: 100vh;
-      width: 100%;
-      padding: 100px 250px;
-      border: 1px solid red;
-      h1{
+  // //////////////////////////////////////////////////////////////////////////////////////
+  // ===================================== WORKS PART =================================
+  &__works {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    .head {
+      width: 35%;
+      padding-left: 250px;
+      padding-top: 120px;
+      h1 {
         width: 100%;
-        font-weight: 400;
-        font-size: 2.6rem;
-        line-height: 2.6rem;
+        letter-spacing: 3px;
+        font-size: 5rem;
+        line-height: 5rem;
+        font-family: var(--babas-font);
+        text-transform: uppercase;
+        color: var(--text-color-black);
         @include media("<=phone") {
-          display: none;
+          text-align: left;
+          font-size: 2.5rem;
+          line-height: 2.8rem;
+          letter-spacing: 2.5px;
         }
         div {
           width: 100%;
-          height: 2.9rem;
-          margin-bottom: 0.8rem;
-          position: relative;
+          height: 5rem;
+          margin-bottom: 1rem;
           overflow: hidden;
+          position: relative;
+          @include media("<=phone") {
+            height: 2.5rem;
+            margin-bottom: 1rem;
+          }
           span {
             position: absolute;
           }
         }
       }
-      p{
-          width: 80%;
-          font-size: 17px;
-          line-height: 25px;
+    }
+    .content {
+      width: 65%;
+      padding-top: 120px;
+      overflow: hidden;
+      .slider {
+        width: 100%;
+        min-height: 60vh;
+        margin-left: 120px;
+        .work {
+          width: 100%;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .container {
+            width: 90%;
+            height: 55vh;
+            background: rgb(238, 238, 238);
+            background: linear-gradient(
+              198deg,
+              rgba(238, 238, 238, 1) 28%,
+              rgba(204, 204, 204, 1) 68%,
+              rgba(206, 206, 206, 1) 83%
+            );
+            border: 1px solid gray;
+            border-radius: 10px;
+          }
+        }
       }
+      .slider-btn-box {
+        margin-top: 32px;
+        margin-left: 120px;
+        display: flex;
+        button {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          margin-right: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          cursor: pointer;
+          img{
+            width: 30px;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
   }
 }

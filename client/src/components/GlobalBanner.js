@@ -1,6 +1,6 @@
 import React from "react";
 
-function GlobalBanner({ children, nextSlideRef }) {
+function GlobalBanner({ children, nextSlideRef, scrollBtnText }) {
   const scrollToBottom = () => {
     nextSlideRef.current.scrollIntoView({
       behavior: "smooth",
@@ -10,7 +10,7 @@ function GlobalBanner({ children, nextSlideRef }) {
   };
 
   return (
-    <div className="about__banner">
+    <div className="globalbanner">
       <div className="circle" id="aboutcircle1"></div>
 
       <div className="text">
@@ -21,7 +21,7 @@ function GlobalBanner({ children, nextSlideRef }) {
           <div className="view">
             <div>|</div>
           </div>
-          <div className="txt">Get to know us</div>
+          <div className="txt">{scrollBtnText}</div>
         </div>
       </div>
     </div>

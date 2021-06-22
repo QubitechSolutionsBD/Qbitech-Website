@@ -3,7 +3,7 @@ import GlobalBanner from "../GlobalBanner";
 
 function Banner({ whoweareRef }) {
   return (
-    <GlobalBanner nextSlideRef={whoweareRef}>
+    <GlobalBanner nextSlideRef={whoweareRef} scrollBtnText="Get to know us">
       <h1 className="desktop-view-heading">
         <div><span id="aboutbannerheading">A Rajshahi-based creative team working with{" "}</span></div>
         <div><span id="aboutbannerheading">ambitious tech companies around the world. Every{" "}</span></div>
