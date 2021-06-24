@@ -26,9 +26,6 @@ function Projects() {
         <div className="heading">
           <h2 id="homeprojectsheading">Case Studies</h2>
         </div>
-        <Link to="/" className="button" id="homeprojectbutton">
-          <div>JOURNEY</div> <div>THROUGH OUR</div> <div>CLIENT STORIES</div>
-        </Link>
         <Slider {...settings} className="slider">
           <div className="project">
             <div className="container" id="homeprojectcard"></div>

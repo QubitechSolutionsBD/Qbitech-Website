@@ -7,7 +7,6 @@ import About from "./About";
 import Observance from "./Observance";
 import Services from "./Services";
 import Contributions from "./Contributions";
-import Why from "./Why";
 import Projects from "./Projects";
 import Testomonials from "./Testomonials";
 import Clients from "./Clients";
@@ -28,13 +27,12 @@ function HomeContainer() {
       <div className="home">
         <Banner />
         <Services />
-        {/* <About /> */}
-        <Observance />
         <Contributions />
-        <Why />
-        <Projects />
+        <Observance />
         <Testomonials />
         <Clients />
+        {/* <About /> */}
+        <Projects />
       </div>
       <Footer />
     </>
