@@ -19,7 +19,8 @@ function Services() {
       <h3 id="homeservicesmallheading">OUR SERVICES</h3>
       <div className="links">
         <h1 className={classSelect === 0 ? "active" : ""} onClick={() => updateContent(0)} >
-          <div><span id="homeServiceHeading">WEB DEVELOPMENT</span></div>
+          <div className="headingnumber"><span>01</span></div>
+          <div className="headingtext"><span id="homeServiceHeading">WEB DEVELOPMENT</span></div>
         </h1>
         <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various
@@ -28,9 +29,8 @@ function Services() {
         <Link to="/" id="homeservicelinkformobile">Learn More <span>+</span></Link>
         
         <h1 className={classSelect === 1 ? "active" : ""} onClick={() => updateContent(1)} >
-          <div>
-            <span id="homeServiceHeading">SOFTWARE DEVELOPMENT</span>
-          </div>
+          <div className="headingnumber"><span>02</span></div>
+          <div className="headingtext"><span id="homeServiceHeading">SOFTWARE DEVELOPMENT</span></div>
         </h1>
         <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various
@@ -39,9 +39,8 @@ function Services() {
         <Link to="/" id="homeservicelinkformobile">Learn More <span>+</span></Link>
 
         <h1 className={classSelect === 2 ? "active" : ""} onClick={() => updateContent(2)} >
-          <div>
-            <span id="homeServiceHeading">HARDWARE DEVELOPMENT</span>
-          </div>
+          <div className="headingnumber"><span>03</span></div>
+          <div className="headingtext"><span id="homeServiceHeading">HARDWARE DEVELOPMENT</span></div>
         </h1>
         <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various
@@ -50,9 +49,8 @@ function Services() {
         <Link to="/" id="homeservicelinkformobile">Learn More <span>+</span></Link>
         
         <h1 className={classSelect === 3 ? "active" : ""} onClick={() => updateContent(3)} >
-          <div>
-            <span id="homeServiceHeading">BRANDING & MARKETING</span>
-          </div>
+          <div className="headingnumber"><span>04</span></div>
+          <div className="headingtext"><span id="homeServiceHeading">BRANDING & MARKETING</span></div>
         </h1>
         <p id="homeservicetextformobile">
           We are constantly working to provide digital solutions to various

@@ -27,12 +27,11 @@ export const overlayAnimationMobile = (completeAnimation) => {
   let tl = gsap.timeline();
   tl.to(".overlay .block img", 0.6, { opacity: 0, delay: 1.2 })
     .to(".overlay .block", 1.2, {
-      css: { borderRadius: 0, width: "110vw", height: "110vh" },
+      css: { borderRadius: 0, width: "100vw", height: "100vh" },
       ease: "expo.inOut",
     })
     .to(".overlay", 0, { css: { display: "block" } })
-    .to(".overlay .block", 1, { css: { height: "50vh" }, ease: "expo.inOut" })
-    .to(".overlay", 0, {
+    .to(".overlay", 0.3, {
       css: { display: "none" },
       onComplete: completeAnimation,
     });

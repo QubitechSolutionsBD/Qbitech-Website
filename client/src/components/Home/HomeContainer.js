@@ -27,9 +27,9 @@ function HomeContainer() {
       <Navbar />
       <div className="home">
         <Banner />
-        <About />
-        <Observance />
         <Services />
+        {/* <About /> */}
+        <Observance />
         <Contributions />
         <Why />
         <Projects />
