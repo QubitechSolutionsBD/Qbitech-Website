@@ -24,6 +24,7 @@ function Service() {
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const pathname = location.pathname.split("/")[2];
     setupData(
       pathname,
