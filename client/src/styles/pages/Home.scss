@@ -290,7 +290,7 @@
         }
         @include media("<=phone") {
           height: 2.5rem;
-          margin-bottom: 0.5rem;
+          margin-bottom: 5px;
         }
         span {
           position: absolute;
@@ -308,7 +308,7 @@
         margin-bottom: 35px;
         @include media("<=phone") {
           width: 100%;
-          margin-bottom: 24px;
+          margin-bottom: 35px;
         }
         .head {
           @include media("<=phone") {
@@ -332,6 +332,7 @@
             }
             @include media("<=phone") {
               font-size: 17px;
+              margin-bottom: 5px;
             }
           }
         }
@@ -342,7 +343,7 @@
             font-size: 13px;
           }
           @include media("<=phone") {
-            font-size: 13.5px;
+            font-size: 13px;
             text-align: left;
           }
         }
@@ -357,6 +358,10 @@
     min-height: 105vh;
     position: relative;
     background-color: var(--background-color-dark);
+    @include media("<=phone") {
+      width: 100%;
+      min-height: 90vh;
+    }
     .design {
       width: 60%;
       background: url("../../assets/pagehome/pattern.png") no-repeat center
@@ -371,7 +376,7 @@
       }
       @include media("<=phone") {
         width: 100%;
-        height: 50vh;
+        height: 30vh;
       }
     }
 
@@ -386,7 +391,7 @@
       @include media("<=phone") {
         width: 100%;
         right: 0;
-        top: 20vh;
+        top: 10vh;
         padding: 0 30px;
       }
       h1 {
@@ -420,7 +425,7 @@
           }
           @include media("<=phone") {
             height: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 5px;
           }
           span {
             position: absolute;
@@ -439,14 +444,12 @@
           width: 100%;
           margin-top: 20px;
           margin-left: 0;
+          min-height: 50vh;
         }
         .observe {
           width: 100%;
           height: 50vh;
           padding: 10px;
-          @include media("<=phone") {
-            padding: 5px;
-          }
           .container {
             height: 49vh;
             background: #2d224c;
@@ -484,6 +487,9 @@
           display: flex !important;
           align-items: center !important;
           height: 50px;
+          @include media("<=phone") {
+            height: 10px;
+          }
           li {
             height: 30px;
             width: 30px;
@@ -550,6 +556,11 @@
         margin-top: -25px;
         text-align: right;
         color: var(--text-color-white);
+        @include media("<=phone") {
+          margin-top: 5px;
+          font-size: 13px;
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -565,8 +576,9 @@
       padding: 100px 180px 0 180px;
     }
     @include media("<=phone") {
-      padding: 50px 30px 0 30px;
+      padding: 50px 0 0 0;
       min-height: 60vh;
+      overflow: hidden;
     }
 
     h1 {
@@ -587,6 +599,7 @@
         line-height: 3rem;
         letter-spacing: 2.5px;
         margin-bottom: 15px;
+        margin-right: 30px;
       }
       div {
         width: 100%;
@@ -600,7 +613,7 @@
         }
         @include media("<=phone") {
           height: 2.5rem;
-          margin-bottom: 0.5rem;
+          margin-bottom: 5px;
         }
         span {
           position: absolute;
@@ -632,18 +645,12 @@
       .testomonial {
         width: 100%;
         min-height: 45vh;
-        position: relative;
-        overflow: hidden;
-        @include media("<=phone") {
-          padding: 20px;
-        }
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
         .block {
           width: 80%;
           min-height: 40vh;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
           padding: 60px 40px;
           border-radius: 10px;
           background: var(--background-color-light);
@@ -654,7 +661,8 @@
             box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
           }
           @include media("<=phone") {
-            padding: 20px;
+            width: 95%;
+            padding: 36px;
             min-height: 35vh;
           }
 
@@ -785,20 +793,32 @@
           position: relative;
           @include media("<=phone") {
             height: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 5px;
           }
           span {
             position: absolute;
           }
         }
       }
-      a{
+      p{
+        @include media("<=phone") {
+          width: 95%;
+          font-size: 13.5px;
+          line-height: 20px;
+        }
+      }
+      a {
         display: block;
         margin-top: 20px;
         text-decoration: none;
         text-transform: uppercase;
         color: var(--pink-color);
         font-weight: 500;
+        @include media("<=phone") {
+          margin-top: 10px;
+          font-size: 13.5px;
+          font-weight: bold;
+        }
       }
     }
     .content {
@@ -825,6 +845,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
           @include media("<=phone") {
             height: 40vh;
           }
@@ -854,7 +875,7 @@
         display: flex;
         @include media("<=phone") {
           margin-left: 30px;
-          margin-top: 10px;
+          margin-top: 0;
         }
         button {
           width: 60px;

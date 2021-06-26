@@ -51,17 +51,17 @@ function Projects() {
       <div className="head">
         <h1>
           <div>
-            <span>Case</span>
+            <span id="homeprojectsheading">Case</span>
           </div>
           <div>
-            <span>Studies</span>
+            <span id="homeprojectsheading">Studies</span>
           </div>
         </h1>
-        <p>
+        <p id="homeprojectstext">
           Explore our recent selected projects and witness our full 360
           transformations come to life.
         </p>
-        <Link to="/">Explore More +</Link>
+        <Link to="/" id="homeprojectstext">Explore More +</Link>
       </div>
 
       <div className="content">
@@ -71,19 +71,19 @@ function Projects() {
           ref={(slider) => (customSlider.current = slider)}
         >
           <div className="work">
-            <div className="container">1</div>
+            <div className="container" id="homeprojectcard">1</div>
           </div>
           <div className="work">
-            <div className="container">2</div>
+            <div className="container" id="homeprojectcard">2</div>
           </div>
           <div className="work">
-            <div className="container">3</div>
+            <div className="container" id="homeprojectcard">3</div>
           </div>
           <div className="work">
-            <div className="container">4</div>
+            <div className="container" id="homeprojectcard">4</div>
           </div>
           <div className="work">
-            <div className="container">5</div>
+            <div className="container" id="homeprojectcard">5</div>
           </div>
         </Slider>
         <div className="slider-btn-box">

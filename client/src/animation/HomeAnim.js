@@ -197,9 +197,9 @@ export const homeAnimation = () => {
     },
   });
   gsap.from("#hometesmonialcard", 1.3, {
-    y: "-50vh",
+    scale: 0,
     ease: "power4.out",
-    stagger: { amount: 1 },
+    stagger: { amount: 1.3 },
     scrollTrigger: {
       trigger: "#hometestomonialheading",
       start: "top 50%",
@@ -219,18 +219,29 @@ export const homeAnimation = () => {
 
   // ----------- project anim
   gsap.from("#homeprojectsheading", 1, {
-    x: -30,
-    opacity: 0,
-    ease: "expo.inOut",
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#homeprojectsheading",
       start: "top 80%",
     },
   });
-  gsap.from("#homeprojectcard", 1, {
-    y: "-70vh",
+  gsap.from("#homeprojectstext", 1, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: {amount: 0.4},
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeprojectcard", 1.4, {
+    x: "118%",
     ease: "expo.inOut",
-    stagger: { amount: 1 },
+    stagger: { amount: 1.4 },
     scrollTrigger: {
       trigger: "#homeprojectsheading",
       start: "top 80%",
