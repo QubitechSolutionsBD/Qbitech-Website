@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 // COMPONENTS
 import Navbar from "../Navigation/Navbar";
 import Banner from "./Banner";
-import About from "./About";
 import Observance from "./Observance";
 import Services from "./Services";
 import Contributions from "./Contributions";
@@ -31,7 +30,6 @@ function HomeContainer() {
         <Observance />
         <Testomonials />
         <Clients />
-        {/* <About /> */}
         <Projects />
       </div>
       <Footer />
