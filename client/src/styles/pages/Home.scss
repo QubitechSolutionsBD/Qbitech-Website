@@ -748,70 +748,133 @@
   &__projects {
     width: 100%;
     min-height: 100vh;
-    // background: var(--background-color-dark);
+    display: flex;
+    flex-wrap: wrap;
     @include media("<=phone") {
       min-height: 65vh;
     }
-
-    .projects {
-      width: 80%;
-      height: 90vh;
-      margin-left: auto;
-      position: relative;
+    .head {
+      width: 35%;
+      padding-left: 250px;
+      padding-top: 120px;
       @include media("<=phone") {
-        height: 65vh;
-        width: calc(100% - 30px);
-        overflow: hidden;
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 20px;
+        padding-right: 30px;
       }
-
-      .heading {
-        position: absolute;
-        top: 50%;
-        left: -200px;
-        transform: translateY(-50%) rotate(-90deg);
+      h1 {
+        width: 100%;
+        letter-spacing: 3px;
+        font-size: 5rem;
+        line-height: 5rem;
+        font-family: var(--babas-font);
+        text-transform: uppercase;
+        color: var(--text-color-black);
         @include media("<=phone") {
-          left: 0;
-          top: 30px;
-          transform: translateY(0%);
+          text-align: left;
+          font-size: 2.5rem;
+          line-height: 2.8rem;
+          letter-spacing: 2.5px;
         }
-        h2 {
-          color: var(--text-color-black);
-          font-size: 2rem;
-          font-weight: 500;
-          text-transform: uppercase;
-          @include media("<=desktop") {
-            font-size: 1.7rem;
-          }
+        div {
+          width: 100%;
+          height: 5rem;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          position: relative;
           @include media("<=phone") {
-            font-size: 1rem;
-            font-weight: 500;
+            height: 2.5rem;
+            margin-bottom: 1rem;
+          }
+          span {
+            position: absolute;
           }
         }
+      }
+      a{
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--pink-color);
+        font-weight: 500;
+      }
+    }
+    .content {
+      width: 65%;
+      padding-top: 120px;
+      overflow: hidden;
+      @include media("<=phone") {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
       }
       .slider {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 90%;
-        height: 70vh;
-        overflow: hidden;
+        width: calc(100% + 100px);
+        min-height: 60vh;
+        margin-left: 120px;
         @include media("<=phone") {
-          width: 100%;
-          height: 40vh;
-          right: -40px;
+          margin-left: 0;
+          min-height: 40vh;
+          padding: 0 30px;
         }
-        .project {
-          height: 70vh;
+        .work {
           width: 100%;
-          padding: 0 40px;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           @include media("<=phone") {
-            padding: 10px;
+            height: 40vh;
           }
           .container {
-            height: 100%;
-            width: 100%;
-            background: #cccccc50;
+            width: 90%;
+            height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(238, 238, 238);
+            background: linear-gradient(
+              198deg,
+              rgba(238, 238, 238, 1) 28%,
+              rgba(204, 204, 204, 1) 68%,
+              rgba(206, 206, 206, 1) 83%
+            );
+            border-radius: 10px;
+            @include media("<=phone") {
+              height: 35vh;
+            }
+          }
+        }
+      }
+      .slider-btn-box {
+        margin-top: 32px;
+        margin-left: 120px;
+        display: flex;
+        @include media("<=phone") {
+          margin-left: 30px;
+          margin-top: 10px;
+        }
+        button {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          margin-right: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          cursor: pointer;
+          img {
+            width: 30px;
+            transform: rotate(90deg);
+            @include media("<=phone") {
+              width: 15px;
+            }
+          }
+          @include media("<=phone") {
+            height: 40px;
+            width: 40px;
           }
         }
       }
