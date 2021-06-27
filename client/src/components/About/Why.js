@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function WhatWedo() {
+function Why() {
   return (
-    <div className="about__whatwedo">
+    <div className="about__why">
       {/* design */}
       <div className="design">
         <div className="design__container">
@@ -28,24 +27,24 @@ function WhatWedo() {
       {/* content */}
       <div className="content">
         <h1>
-          <div><span id="aboutwhatwedoHeading">What</span></div>
-          <div><span id="aboutwhatwedoHeading">WE DO</span></div>
+          <div>
+            <span id="aboutwhatwedoHeading">Why</span>
+          </div>
+          <div>
+            <span id="aboutwhatwedoHeading">WE DO</span>
+          </div>
         </h1>
 
         <div className="text-container">
           <p id="aboutwhatwedoText">
-            We design and build award-winning products, brands and websites for
-            tech companies. It usually begins with a single project and leads to
-            us playing an ongoing role in our partners’ product and marketing
-            teams.
+            Qubitech introduces agile practices to renovate the outdated
+            development process existing around. We focus on providing solutions
+            to new, up & coming enterprises to help them grow in the process.
           </p>
-        </div>
-        <div className="text-container">
-          <Link to="/" id="aboutwhatwedoText">View Our Services +</Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default WhatWedo;
+export default Why;

@@ -63,6 +63,12 @@
     position: absolute;
     top: -214px;
     right: -214px;
+    @include media("<=desktop") {
+      width: 550px;
+      height: 550px;
+      right: -170px;
+      top: -170px;
+    }
     @include media("<=phone") {
       width: 300px;
       height: 300px;
@@ -76,6 +82,10 @@
     position: absolute;
     top: 150px;
     left: 250px;
+    @include media("<=desktop") {
+      left: 180px;
+      top: 120px;
+    }
     @include media("<=phone") {
       top: 50%;
       left: 30px;
@@ -87,6 +97,10 @@
       font-weight: 400;
       font-size: 2.6rem;
       line-height: 2.6rem;
+      @include media("<=desktop") {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
       @include media("<=phone") {
         display: none;
       }
@@ -96,6 +110,9 @@
         margin-bottom: 0.8rem;
         position: relative;
         overflow: hidden;
+        @include media("<=desktop") {
+          height: 2rem;
+        }
         span {
           position: absolute;
         }
@@ -126,6 +143,10 @@
         border: 2px solid var(--pink-color);
         color: var(--pink-color);
         font-weight: 400;
+        @include media("<=desktop") {
+          width: 30px;
+          height: 48px;
+        }
         @include media("<=phone") {
           width: 20px;
           height: 32px;
@@ -145,6 +166,9 @@
         font-size: 16px;
         color: var(--text-color-black);
         font-weight: 500;
+        @include media("<=desktop") {
+          font-size: 15px;
+        }
         @include media("<=phone") {
           font-size: 14px;
         }

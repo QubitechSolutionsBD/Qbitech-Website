@@ -3,11 +3,11 @@ import React, { useEffect, useRef } from "react";
 // COMPONENTS
 import Navbar from "../components/Navigation/Navbar";
 import Banner from "../components/About/Banner";
-import WhoWeAre from "../components/About/WhoWeAre";
-import WhatWedo from "../components/About/WhatWedo";
+import Who from "../components/About/Who";
+import Why from "../components/About/Why";
 import Culture from "../components/About/Culture";
 import Trifecta from "../components/About/Trifecta";
-import Process from "../components/About/Process";
+import How from "../components/About/How";
 import Team from "../components/About/Team";
 import Footer from "../components/Footer";
 import GlobalPageTransition from "../components/GlobalPageTransition";
@@ -27,11 +27,12 @@ function About() {
       <Navbar />
       <div className="about">
         <Banner whoweareRef={whoweareRef} />
-        <WhoWeAre whoweareRef={whoweareRef} />
-        <WhatWedo />
+        {/* <WhoWeAre whoweareRef={whoweareRef} /> */}
+        <Who />
+        <Why />
+        <How />
         <Culture />
         <Trifecta />
-        <Process />
         <Team />
       </div>
       <Footer />
@@ -40,3 +41,4 @@ function About() {
 }
 
 export default About;
+
