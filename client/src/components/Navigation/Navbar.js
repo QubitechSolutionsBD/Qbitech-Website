@@ -19,7 +19,7 @@ function Navbar() {
     if (openNav === true) {
       // Run open menu animation
       openNavigation();
-    } else if(openNav === false){
+    } else if (openNav === false) {
       // Close Open menu animation
       closeNavigation();
     }
@@ -27,7 +27,7 @@ function Navbar() {
 
   return (
     <>
-    {/* ============================================= global button ===================================== */}
+      {/* ============================================= global button ===================================== */}
       <div className="navigationbtn" onClick={navigationController}>
         <div className="line line1"></div>
         <div className="line line2"></div>
@@ -49,11 +49,21 @@ function Navbar() {
         <div className="menu" id="navigationmenu">
           {/* links */}
           <div className="menu__links">
-            <Link to="/" id="navigationmainlinks">WORK</Link>
-            <Link to="/" id="navigationmainlinks">SERVICE</Link>
-            <Link to="/about" id="navigationmainlinks">ABOUT</Link>
-            <Link to="/" id="navigationmainlinks">WHY</Link>
-            <Link to="/" id="navigationmainlinks">CONTACT</Link>
+            <Link to="/" id="navigationmainlinks">
+              WORK
+            </Link>
+            <Link to="/services" id="navigationmainlinks">
+              SERVICE
+            </Link>
+            <Link to="/about" id="navigationmainlinks">
+              ABOUT
+            </Link>
+            <Link to="/" id="navigationmainlinks">
+              WHY
+            </Link>
+            <Link to="/" id="navigationmainlinks">
+              CONTACT
+            </Link>
           </div>
           {/* contact links */}
           <div className="menu__contact">

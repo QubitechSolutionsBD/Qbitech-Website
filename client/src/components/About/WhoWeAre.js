@@ -1,9 +1,9 @@
 import React from "react";
 
-function WhoWeAre({whoweareRef}) {
+function WhoWeAre({ whoweareRef }) {
   return (
     <div className="about__whoweare" ref={whoweareRef}>
-        {/* heading */}
+      {/* heading */}
       <div className="heading">
         <h1>
           <div>
@@ -14,7 +14,7 @@ function WhoWeAre({whoweareRef}) {
           </div>
         </h1>
       </div>
-      
+
       {/* text */}
       <div className="text">
         <div className="text__container">
