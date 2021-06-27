@@ -6,6 +6,7 @@ import "./styles/App.scss";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Service from "./pages/Service";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -14,10 +15,23 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/services" component={Services} />
           <Route exact path="/service/web-development" component={Service} />
-          <Route exact path="/service/software-development" component={Service} />
-          <Route exact path="/service/hardware-development" component={Service} />
-          <Route exact path="/service/branding-and-marketing" component={Service} />
+          <Route
+            exact
+            path="/service/software-development"
+            component={Service}
+          />
+          <Route
+            exact
+            path="/service/hardware-development"
+            component={Service}
+          />
+          <Route
+            exact
+            path="/service/branding-and-marketing"
+            component={Service}
+          />
         </Switch>
       </Router>
     </div>
