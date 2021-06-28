@@ -15,4 +15,35 @@ export const servicesAnimation = () => {
       stagger: { amount: 0.3 },
     })
     .from("#aboutscroll", 0.8, { y: 30, opacity: 0, ease: "power4.out" });
+  /////////////////////////////
+  ///////////////////Our services///
+  gsap.from("#servicesourserviceshead", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#servicesourserviceshead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#servicesourservicestext", 1.4, {
+    y: 100,
+    ease: "power4.out",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#servicesourserviceshead",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#servicesourservicesimage", 1.4, {
+    rotate: -30,
+    scale: 0,
+    ease: "expo.inOut",
+    stagger: { amount: 0.6 },
+    scrollTrigger: {
+      trigger: "#servicesourserviceshead",
+      start: "top 70%",
+    },
+  });
 };

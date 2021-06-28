@@ -16,8 +16,10 @@ const OurServices = ({ ourserviceRef }) => {
           Basically we develop website software and implement hardware and
           marketing solutions for our customers.
         </p>
+        <br />
+        <a href="#">Learn More+</a>
       </div>
-      <img src={servicesImg} alt="" />
+      <img id="servicesourservicesimage" src={servicesImg} alt="" />
       <div className="circle" id="globalBannerCircle2"></div>
     </div>
   );

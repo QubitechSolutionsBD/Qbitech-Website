@@ -5,6 +5,8 @@ import Banner from "../components/Services/Banner";
 
 import { servicesAnimation } from "../animation/ServicesAnim";
 import OurServices from "../components/Services/OurServices";
+import Footer from "../components/Footer";
+import WebDevelopment from "../components/Services/WebDevelopment";
 const Services = () => {
   const ourserviceRef = useRef(null);
   useEffect(() => {
@@ -18,7 +20,7 @@ const Services = () => {
       <div className="services">
         <Banner ourserviceRef={ourserviceRef} />
         <OurServices ourserviceRef={ourserviceRef} />
-        
+        <WebDevelopment />
       </div>
     </>
   );
