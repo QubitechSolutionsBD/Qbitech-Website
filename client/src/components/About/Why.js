@@ -26,14 +26,17 @@ function Why() {
 
       {/* content */}
       <div className="content">
-        <h1>
-          <div>
-            <span id="aboutwhatwedoHeading">Why</span>
-          </div>
-          <div>
-            <span id="aboutwhatwedoHeading">WE DO</span>
-          </div>
-        </h1>
+        <div className="heading-container">
+          <div className="circle"></div>
+          <h1>
+            <div>
+              <span id="aboutwhatwedoHeading">Why</span>
+            </div>
+            <div>
+              <span id="aboutwhatwedoHeading">WE DO</span>
+            </div>
+          </h1>
+        </div>
 
         <div className="text-container">
           <p id="aboutwhatwedoText">

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import GlobalPageTransition from "../components/GlobalPageTransition";
+import GlobalPageTransition from "../components/Global/GlobalPageTransition";
 import Navbar from "../components/Navigation/Navbar";
 import Banner from "../components/Service/Banner";
 import Footer from "../components/Footer";

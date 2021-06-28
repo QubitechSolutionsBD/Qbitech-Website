@@ -1,8 +1,8 @@
 import React from "react";
 
-function Who() {
+function Who({whoweareRef}) {
   return (
-    <div className="about__about">
+    <div className="about__about" ref={whoweareRef}>
       <div className="heading">
       <div className="circle" id="homeaboutcircle"></div>
         <h3>
