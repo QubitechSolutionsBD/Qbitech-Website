@@ -5,19 +5,19 @@ function Offers({ nextslideRef, offerHeading, offerText, offers }) {
   return (
     <div className="service__offers" ref={nextslideRef}>
       <div className="offers">
-        {offers.map((offer) => (
-          <div className="offer">
-            <div className="circle">
-              <div className="circle-small"></div>
+        {offers.map((offer, i) => (
+          <div className="offer" key={i}>
+            <div className="circle" id="serviceoffercircle">
+              <div className="circle-small" id="serviceoffersmallcircle"></div>
             </div>
-            <div className="offer__name">{offer}</div>
+            <div className="offer__name" id="serviceofferoffer">{offer}</div>
           </div>
         ))}
       </div>
       <div className="texts">
-        <h2>{offerHeading}</h2>
-        <p>{offerText}</p>
-        <MoreButton text="lets talk" direction="left" link="/contact" />
+        <h2 id="serviceofferHeading">{offerHeading}</h2>
+        <p id="serviceofferText">{offerText}</p>
+        <MoreButton text="lets talk" direction="left" link="/contact" num="1" />
       </div>
     </div>
   );

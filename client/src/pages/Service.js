@@ -22,10 +22,12 @@ function Service() {
   const [offers, setOffers] = useState([]);
   const [technologies, setTechnologies] = useState([]);
   const [works, setWorks] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const nextslideRef = useRef(null);
   const techRef = useRef([]);
   const location = useLocation();
+  const workCardRef = useRef();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,7 +45,11 @@ function Service() {
   }, [location.pathname]);
 
   useEffect(() => {
-    serviceAnimation(techRef);
+    setTimeout(() => {
+      setLoading(false);
+      serviceAnimation(techRef, workCardRef);
+    }, 100);
+    setLoading(true);
   }, []);
 
   return (
@@ -51,21 +57,25 @@ function Service() {
       <GlobalPageTransition />
       <Navbar />
 
-      <div className="service">
-        <Banner
-          nextslideRef={nextslideRef}
-          bannerHeading={bannerHeading}
-          bannerText={bannerText}
-        />
-        <Offers
-          nextslideRef={nextslideRef}
-          offerHeading={offerHeading}
-          offerText={offerText}
-          offers={offers}
-        />
-        <Technologies technologies={technologies} techRef={techRef} />
-        <Works works={works} />
-      </div>
+      {!loading ? (
+        <div className="service">
+          <Banner
+            nextslideRef={nextslideRef}
+            bannerHeading={bannerHeading}
+            bannerText={bannerText}
+          />
+          <Offers
+            nextslideRef={nextslideRef}
+            offerHeading={offerHeading}
+            offerText={offerText}
+            offers={offers}
+          />
+          <Technologies technologies={technologies} techRef={techRef} />
+          <Works works={works} workCardRef={workCardRef} />
+        </div>
+      ) : <div className="loading">
+          <div>Loading</div>
+        </div>}
 
       <Footer />
     </>
