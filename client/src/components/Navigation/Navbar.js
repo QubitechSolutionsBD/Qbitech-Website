@@ -49,19 +49,16 @@ function Navbar() {
         <div className="menu" id="navigationmenu">
           {/* links */}
           <div className="menu__links">
-            <Link to="/" id="navigationmainlinks">
-              WORK
-            </Link>
-            <Link to="/services" id="navigationmainlinks">
-              SERVICE
-            </Link>
-            <Link to="/about" id="navigationmainlinks">
+          <Link to="/about" id="navigationmainlinks">
               ABOUT
             </Link>
-            <Link to="/" id="navigationmainlinks">
-              WHY
+            <Link to="/services" id="navigationmainlinks">
+              SERVICES
             </Link>
-            <Link to="/" id="navigationmainlinks">
+            <Link to="/case-studies" id="navigationmainlinks">
+              WORKS
+            </Link>
+            <Link to="/contact" id="navigationmainlinks">
               CONTACT
             </Link>
           </div>

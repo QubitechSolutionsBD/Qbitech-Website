@@ -6,18 +6,18 @@ import ObservanceDetail from "./ObservanceDetail";
 const dataset = [
   {
     id: 1,
-    head: "Understand the needs and discover the potential of technologies",
-    text: "We believe no matter what, you can't create an amazing software product without close cooperation between the Product Owner and the development team. Therefore, we see you as a crucial member of our Agile Team. That means you can expect full transparency in the project.",
+    head: "Empowering your Brand",
+    text: "We believe that modern enterprises require more than just goals & objectives. They need the proper planning to empower their brand into the market. Our team of experts ensure that your brand doesn’t miss the tiniest of details in going forward. We believe in a collaborative work environment with you.",
   },
   {
     id: 2,
-    head: "Understand the needs and discover the potential of technologies",
-    text: "We believe no matter what, you can't create an amazing software product without close cooperation between the Product Owner and the development team. Therefore, we see you as a crucial member of our Agile Team. That means you can expect full transparency in the project.",
+    head: "Modernizing the Outdated System",
+    text: "Although the world is moving on from one technology to another, we have observed that some still remain in the same old  outdated system. We believe that to keep pace with the world you need to renovate your systems accordingly. Our agile practices ensure best service & support with this intention in mind.",
   },
   {
     id: 3,
-    head: "Understand the needs and discover the potential of technologies",
-    text: "We believe no matter what, you can't create an amazing software product without close cooperation between the Product Owner and the development team. Therefore, we see you as a crucial member of our Agile Team. That means you can expect full transparency in the project.",
+    head: "Focusing on SMEs",
+    text: "Small & Mid-size Enterprises are the heart & soul of global economic development. But unfortunately they find it hard to grow due to multiple challenges. We want to help tailor these up & coming enterprises to meet the pressing needs of the modern day market.",
   },
 ];
 

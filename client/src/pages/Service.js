@@ -74,7 +74,7 @@ function Service() {
           <Works works={works} workCardRef={workCardRef} />
         </div>
       ) : <div className="loading">
-          <div>Loading</div>
+          <div>...</div>
         </div>}
 
       <Footer />
