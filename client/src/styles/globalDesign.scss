@@ -207,15 +207,10 @@
     height: 40px;
     border-radius: 50%;
     background: #cccccc30;
-    transition: 0.4s;
     @include media("<=phone") {
       width: 35px;
       height: 35px;
     }
-  }
-
-  &:hover .circle{
-    transform: scale(1.2);
   }
 }
 

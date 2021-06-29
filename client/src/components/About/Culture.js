@@ -6,17 +6,12 @@ function Culture() {
       <div className="heading">
         <div className="circle" id="aboutpageculturecircle"></div>
         <h1>
-          <div>
-            <span id="aboutculturehead">OUR CULTURES,</span>
-          </div>
-          <div>
-            <span id="aboutculturehead">VALUES AND</span>
-          </div>
-          <div>
-            <span id="aboutculturehead">BELIEFS</span>
-          </div>
+          <div><span id="aboutculturehead">OUR CULTURES,</span></div>
+          <div><span id="aboutculturehead">VALUES AND</span></div>
+          <div><span id="aboutculturehead">BELIEFS</span></div>
         </h1>
       </div>
+
       <div className="contents">
         <div className="content">
           {/* 1 */}

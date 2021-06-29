@@ -7,19 +7,19 @@ function Why() {
       <div className="design">
         <div className="design__container">
           <div className="row top">
-            <div className="smallcircle" id="aboutwhatwedocircles"></div>
-            <div className="bigcircle" id="aboutwhatwedocircles"></div>
-            <div className="smallcircle" id="aboutwhatwedocircles"></div>
+            <div className="smallcircle" id="aboutwhydesigncircles"></div>
+            <div className="bigcircle" id="aboutwhydesigncircles"></div>
+            <div className="smallcircle" id="aboutwhydesigncircles"></div>
           </div>
           <div className="row">
-            <div className="bigcircle" id="aboutwhatwedocircles"></div>
-            <div className="bigcircle" id="aboutwhatwedocircles"></div>
-            <div className="bigcircle" id="aboutwhatwedocircles"></div>
+            <div className="bigcircle" id="aboutwhydesigncircles"></div>
+            <div className="bigcircle" id="aboutwhydesigncircles"></div>
+            <div className="bigcircle" id="aboutwhydesigncircles"></div>
           </div>
           <div className="row below">
-            <div className="smallcircle" id="aboutwhatwedocircles"></div>
-            <div className="bigcircle" id="aboutwhatwedocircles"></div>
-            <div className="smallcircle" id="aboutwhatwedocircles"></div>
+            <div className="smallcircle" id="aboutwhydesigncircles"></div>
+            <div className="bigcircle" id="aboutwhydesigncircles"></div>
+            <div className="smallcircle" id="aboutwhydesigncircles"></div>
           </div>
         </div>
       </div>
@@ -27,19 +27,19 @@ function Why() {
       {/* content */}
       <div className="content">
         <div className="heading-container">
-          <div className="circle"></div>
+          <div className="circle" id="aboutwhyHeadingcircle"></div>
           <h1>
             <div>
-              <span id="aboutwhatwedoHeading">Why</span>
+              <span id="aboutwhyHeading">Why</span>
             </div>
             <div>
-              <span id="aboutwhatwedoHeading">WE DO</span>
+              <span id="aboutwhyHeading">WE DO</span>
             </div>
           </h1>
         </div>
 
         <div className="text-container">
-          <p id="aboutwhatwedoText">
+          <p id="aboutwhyText">
             Qubitech introduces agile practices to renovate the outdated
             development process existing around. We focus on providing solutions
             to new, up & coming enterprises to help them grow in the process.

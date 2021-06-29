@@ -255,36 +255,6 @@ export const homeAnimation = () => {
       start: "top 40%",
     },
   });
-
-
-  // ----------- about part (not used yet) ⚠️
-  gsap.from("#homeaboutcircle", 1, {
-    scale: 0,
-    ease: "expo.inOut",
-    scrollTrigger: {
-      trigger: "#aboutHeading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#aboutHeading", 1.3, {
-    y: 200,
-    ease: "power4.out",
-    skewY: 8,
-    stagger: { amount: 0.3 },
-    scrollTrigger: {
-      trigger: "#aboutHeading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#abouttext", 1.3, {
-    y: 200,
-    ease: "power4.out",
-    stagger: { amount: 0.5 },
-    scrollTrigger: {
-      trigger: "#abouttext",
-      start: "top 80%",
-    },
-  });
 };
 
 // ///////////////////////////////////////////////////////////

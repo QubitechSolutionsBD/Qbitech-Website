@@ -5,15 +5,11 @@ function Trifecta() {
   return (
     <div className="about__trifecta">
       <img src={trifecta} alt="" id="abouttrifectaimage" />
-      <div className="circle"></div>
+      <div className="circle" id="abouttrifectacircle"></div>
       <div className="head">
         <h1>
-          <div>
-            <span id="abouttrifectahead">Our</span>
-          </div>
-          <div>
-            <span id="abouttrifectahead">TRIFECTA</span>
-          </div>
+          <div><span id="abouttrifectahead">Our</span></div>
+          <div><span id="abouttrifectahead">TRIFECTA</span></div>
         </h1>
         <p id="abouttrifectatext">
           Qubitech intends to foster your passionate ideas & beliefs into

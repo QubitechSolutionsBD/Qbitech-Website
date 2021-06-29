@@ -4,15 +4,15 @@ function Who({whoweareRef}) {
   return (
     <div className="about__about" ref={whoweareRef}>
       <div className="heading">
-      <div className="circle" id="homeaboutcircle"></div>
+      <div className="circle" id="aboutwhocircle"></div>
         <h3>
-          <div><span id="aboutHeading">We are building</span></div>
-          <div><span id="aboutHeading">the tech solutions from</span></div>
+          <div><span id="aboutWhoHeading">We are building</span></div>
+          <div><span id="aboutWhoHeading">the tech solutions from</span></div>
         </h3>
         <h1 className="primary-heading">
-          <div><span id="aboutHeading">2020</span></div>
-          <div><span id="aboutHeading">to</span></div>
-          <div><span id="aboutHeading">2XXX</span></div>
+          <div><span id="aboutWhoHeading">2020</span></div>
+          <div><span id="aboutWhoHeading">to</span></div>
+          <div><span id="aboutWhoHeading">2XXX</span></div>
         </h1>
       </div>
       <div className="text">

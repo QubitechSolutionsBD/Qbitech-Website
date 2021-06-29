@@ -422,13 +422,34 @@
       p {
         color: var(--text-color-white);
         font-size: 2.5rem;
+        line-height: 2.5rem;
+        div{
+          width: 100%;
+          height: 2.5rem;
+          margin-bottom: 15px;
+          position: relative;
+          overflow: hidden;
+          span{
+            position: absolute;
+          }
+        }
         @include media("<=phone") {
+          display: none;
+        }
+      }
+      p.mobile{
+        @include media(">=phone") { display: none; }
+        @include media("<=phone") {
+          display: block;
           font-size: 13.5px;
-          text-align: justify;
+          line-height: 25px;
         }
       }
       .globalMoreButton {
-        margin-top: 20px;
+        margin-top: 40px;
+        @include media("<=phone") {
+          margin-top: 15px;
+        }
       }
     }
   }

@@ -12,7 +12,7 @@ function Banner({ whoweareRef }) {
         <div><span id="aboutbannerheading">grow faster.</span></div>
       </h1>
 
-      <h1 className="mobile-view-heading">
+      <h1 className="mobile-view-heading" id="aboutbannerheadingForMobile">
         A Rajshahi-based creative team working with ambitious tech companies
         around the world. Every day, we are developing tech solutions that help
         our partners stand out, connect with customers and grow faster.
