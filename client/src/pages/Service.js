@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+// Components
 import GlobalPageTransition from "../components/Global/GlobalPageTransition";
 import Navbar from "../components/Navigation/Navbar";
 import Banner from "../components/Service/Banner";
@@ -7,7 +10,8 @@ import Offers from "../components/Service/Offers";
 import Technologies from "../components/Service/Technologies";
 import Works from "../components/Service/Works";
 import { setupData } from "../components/Service/Data";
-import { useLocation } from "react-router-dom";
+
+// Animations
 import { serviceAnimation } from "../animation/ServiceAnim";
 
 function Service() {

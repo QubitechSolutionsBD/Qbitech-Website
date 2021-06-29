@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import {
-  overlayAnimation,
-  overlayAnimationMobile,
-} from "../animation/HomeAnim";
+// Components
 import Overlay from "../components/Home/Overlay";
 import HomeContainer from "../components/Home/HomeContainer";
+
+// Animations
+import { overlayAnimation, overlayAnimationMobile } from "../animation/HomeAnim";
 
 function Home() {
   const [animationComplete, setAnimationComplete] = useState(false);

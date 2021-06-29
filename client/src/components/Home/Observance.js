@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import ObservanceDetail from "./ObservanceDetail";
-
-gsap.registerPlugin(ScrollTrigger);
 
 // OBSERVANNCE CONTENT
 const dataset = [
@@ -48,10 +44,6 @@ function Observance() {
     },
     afterChange: (current) => setSlideNumber(current + 1),
   };
-
-  useEffect(() => {
-    
-  }, []);
 
   return (
     <div className="home__observance" id="homeobservance">

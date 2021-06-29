@@ -50,12 +50,8 @@ function Projects() {
     <div className="home__projects">
       <div className="head">
         <h1>
-          <div>
-            <span id="homeprojectsheading">Case</span>
-          </div>
-          <div>
-            <span id="homeprojectsheading">Studies</span>
-          </div>
+          <div><span id="homeprojectsheading">Case</span></div>
+          <div><span id="homeprojectsheading">Studies</span></div>
         </h1>
         <p id="homeprojectstext">
           Explore our recent selected projects and witness our full 360
