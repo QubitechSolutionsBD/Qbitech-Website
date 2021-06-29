@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
 
 // ASSETS
 import right from "../../assets/pageservice/down-arrow.png";
 import left from "../../assets/pageservice/up-arrow.png";
+import MoreButton from "../Global/MoreButton";
 
 function Projects() {
   const customSlider = useRef();
@@ -57,7 +57,7 @@ function Projects() {
           Explore our recent selected projects and witness our full 360
           transformations come to life.
         </p>
-        <Link to="/" id="homeprojectstext">Explore More +</Link>
+        <MoreButton text="Explore More" direction="left" link="/case-studies" back="light" />
       </div>
 
       <div className="content">

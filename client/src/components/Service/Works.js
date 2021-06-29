@@ -1,6 +1,11 @@
 import React, { useRef } from 'react';
 import Slider from "react-slick";
+
+// COMPONETS
 import Work from "./Work";
+import MoreButton from "../Global/MoreButton";
+
+// ASSETS
 import right from "../../assets/pageservice/down-arrow.png"
 import left from "../../assets/pageservice/up-arrow.png"
 
@@ -47,12 +52,20 @@ function Works({works}) {
     return (
         <div className="service__works">
             <div className="head">
-                <h1>
+                <h1 className="headingForDesktop">
                     <div><span>OUR</span></div>
                     <div><span>RECENT</span></div>
                     <div><span>WORKS</span></div>
                 </h1>
-                <p>View some of our selected recent works. View some of our selected recent works.</p>
+                <h1 className="headingForMobile">
+                    <div><span>OUR</span></div>
+                    <div><span>RECENT WORKS</span></div>
+                </h1>
+                <p>
+                  Explore our recent selected projects and witness our full 360
+                  transformations come to life.
+                </p>
+                <MoreButton text="Explore More" direction="left" link="/case-studies" back="light" />
             </div>
 
             <div className="content">
