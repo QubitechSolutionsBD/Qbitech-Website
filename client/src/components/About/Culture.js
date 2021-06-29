@@ -11,28 +11,19 @@ function Culture() {
           <div><span id="aboutculturehead">BELIEFS</span></div>
         </h1>
       </div>
+
       <div className="contents">
         <div className="content">
           {/* 1 */}
-          <h3 id="aboutculturecontenthead">Forward Thinking</h3>
+          <h3 id="aboutculturecontenthead">Keeping up With the World</h3>
           <p id="aboutculturecontenttext">
-            We pride ourselves on pushing the boundaries of digital design and
-            development. We combine relevant trends and best practices to build
-            platforms with longevity.
+            To keep up with the ever changing world we are always prepared to
+            adapt to the new technologies & trends into our systems &
+            development
           </p>
         </div>
 
         {/* 2 */}
-        <div className="content">
-          <h3 id="aboutculturecontenthead">Constant Growth</h3>
-          <p id="aboutculturecontenttext">
-            Our team is composed of ambitious creatives and strategists; each
-            member is dedicated to perfecting their craft and taking brands to
-            the next level.
-          </p>
-        </div>
-
-        {/* 3 */}
         <div className="content">
           <h3 id="aboutculturecontenthead">Pure Passion</h3>
           <p id="aboutculturecontenttext">
@@ -42,17 +33,7 @@ function Culture() {
           </p>
         </div>
 
-        {/* 4 */}
-        <div className="content">
-          <h3 id="aboutculturecontenthead">Great Character</h3>
-          <p id="aboutculturecontenttext">
-            More than skill, drive, or experience, great work is rooted in
-            character; hiring the right people and investing in personal
-            development is essential to our growth.
-          </p>
-        </div>
-
-        {/* 5 */}
+        {/* 3 */}
         <div className="content">
           <h3 id="aboutculturecontenthead">Self-Starting</h3>
           <p id="aboutculturecontenttext">
@@ -62,23 +43,31 @@ function Culture() {
           </p>
         </div>
 
-        {/* 6 */}
+        {/* 4 */}
         <div className="content">
-          <h3 id="aboutculturecontenthead">Stay Humble</h3>
+          <h3 id="aboutculturecontenthead">Growing Together</h3>
           <p id="aboutculturecontenttext">
-            We stand up for what we believe in, but never let ego get in the
-            way. The key to growth is to embrace feedback and from team members
-            and clients.
+            We believe that we can make a difference in taking new, up & coming
+            SMEs to the next level in fulfilling their goals.
           </p>
         </div>
 
-        {/* 7 */}
+        {/* 5 */}
         <div className="content">
-          <h3 id="aboutculturecontenthead">Work Hard, Play Hard</h3>
+          <h3 id="aboutculturecontenthead">Transparent Communication</h3>
           <p id="aboutculturecontenttext">
-            Sometimes the late nights, early mornings, and long design sprints
-            call for strong drinks with good company. We value hard work and
-            celebrate accordingly.
+            We are fully transparent in keeping clear cut communication with our
+            clients to help you monitor the process while achieving your target.
+          </p>
+        </div>
+
+        {/* 6 */}
+        <div className="content">
+          <h3 id="aboutculturecontenthead">Great Character</h3>
+          <p id="aboutculturecontenttext">
+            More than skill, drive, or experience, great work is rooted in
+            character; hiring the right people and investing in personal
+            development is essential to our growth.
           </p>
         </div>
       </div>

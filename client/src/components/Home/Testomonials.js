@@ -33,6 +33,14 @@ const allTestomonials = [
     clientName: "Stive Smith",
     designation: "CEO at BCD Production",
   },
+  {
+    id: 4,
+    image: client2,
+    heading: "Intuitive Design",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    clientName: "Eva Alexis",
+    designation: "CEO at CFG Limited",
+  },
 ];
 
 function Testomonials() {
@@ -40,9 +48,11 @@ function Testomonials() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     arrows: true,
     responsive: [
       {
@@ -58,8 +68,8 @@ function Testomonials() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          rows: 2,
-          dots: false,
+          initialSlide: 1,
+          centerMode: true,
           arrows: false,
         },
       },
@@ -69,8 +79,12 @@ function Testomonials() {
   return (
     <div className="home__testomonials">
       <h1>
-        <div><span id="hometestomonialheading">CLIENTS</span></div>
-        <div><span id="hometestomonialheading">TESTOMONIALS</span></div>
+        <div>
+          <span id="hometestomonialheading">CLIENTS</span>
+        </div>
+        <div>
+          <span id="hometestomonialheading">TESTOMONIALS</span>
+        </div>
       </h1>
       <img className="quoto" src={quoto} alt="" />
 

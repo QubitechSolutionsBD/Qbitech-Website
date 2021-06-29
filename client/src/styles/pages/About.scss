@@ -1,110 +1,166 @@
 .about {
   width: 100%;
 
-  // /////////////////////////////////////////////////////////////////////////////////////////
-  // ===================================== BANNER PART =====================================
-  // &__banner{}
-
-  // /////////////////////////////////////////////////////////////////////////////////////////
-  // ===================================== WHO WE ARE =====================================
-  &__whoweare {
+  // //////////////////////////////////////////////////////////////////////////////////////
+  // ===================================== WHO PART =====================================
+  &__about {
+    min-height: 100vh;
     width: 100%;
-    height: 100vh;
-    padding: 250px;
-    background: var(--background-color-dark);
+    padding: 200px 300px 120px 300px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    position: relative;
+    background: var(--background-color-dark);
+    @include media("<=desktop") {
+      padding: 150px 230px 190px 230px;
+    }
     @include media("<=phone") {
-      padding: 50px 30px;
+      min-height: 90vh;
+      padding: 80px 30px;
+      align-items: flex-start;
     }
 
     .heading {
       width: 40%;
+      position: relative;
       @include media("<=phone") {
         width: 100%;
-        margin-bottom: -20px;
       }
-      h1 {
-        width: 100%;
-        letter-spacing: 3px;
-        font-size: 5rem;
-        line-height: 5rem;
-        font-family: var(--babas-font);
-        text-transform: uppercase;
-        color: var(--text-color-white);
+      .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: var(--pink-color);
+        position: absolute;
+        top: -90px;
+        left: -90px;
+        z-index: 0;
         @include media("<=phone") {
-          text-align: left;
-          font-size: 2.5rem;
-          line-height: 2.8rem;
-          letter-spacing: 2.5px;
+          display: none;
+        }
+      }
+      h3 {
+        width: 100%;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: var(--text-color-white);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include media("<=desktop") {
+          font-size: 18px;
+          line-height: 18px;
+        }
+        @include media("<=phone") {
+          font-size: 13.5px;
+          line-height: 18px;
         }
         div {
           width: 100%;
-          height: 5rem;
-          margin-bottom: 1rem;
+          height: 1.8rem;
+          margin: 0.4rem 0;
           overflow: hidden;
           position: relative;
+          @include media("<=desktop") {
+            height: 18px;
+            margin: 0.3rem;
+          }
           @include media("<=phone") {
-            height: 2.5rem;
-            margin-bottom: 1rem;
+            height: 18px;
+            margin: 2px;
           }
           span {
             position: absolute;
           }
         }
       }
-    }
-    .text {
-      width: 60%;
-      @include media("<=phone") {
+      h1 {
         width: 100%;
-      }
-      &__container {
-        width: 100%;
-        height: fit-content;
-        margin-bottom: 10px;
-        overflow: hidden;
-        p {
-          font-size: 17px;
+        margin-top: 5rem;
+        font-size: 6rem;
+        font-family: var(--babas-font);
+        letter-spacing: 3px;
+        color: var(--text-color-white);
+        @include media("<=desktop") {
+          margin-top: 4.3rem;
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+        @include media("<=phone") {
+          margin-top: 3rem;
+          font-size: 2rem;
           line-height: 30px;
-          margin-bottom: 20px;
-          text-align: justify;
-          color: var(--text-color-white);
+          display: flex;
+          letter-spacing: 4px;
+        }
+        div {
+          width: 100%;
+          height: 7rem;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          position: relative;
+          @include media("<=desktop") {
+            height: 4rem;
+            margin-bottom: 0.5rem;
+          }
           @include media("<=phone") {
-            font-size: 14px;
-            line-height: 25px;
-            text-align: left;
+            width: 26%;
+            height: 2rem;
+            margin-bottom: 2px;
+          }
+          span {
+            width: fit-content;
+            position: absolute;
+          }
+          &:nth-child(2) {
+            @include media("<=phone") {
+              width: 15%;
+            }
           }
         }
       }
     }
-    .circle {
-      width: 250px;
-      height: 250px;
-      background: var(--pink-color);
-      border-radius: 50%;
-      position: absolute;
-      top: -100px;
+    .text {
+      width: 60%;
+      height: fit-content;
       @include media("<=phone") {
-        width: 120px;
-        height: 120px;
-        top: -60px;
-        right: 50px;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .text-content {
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+        p {
+          font-size: 16px;
+          line-height: 25px;
+          margin-bottom: 20px;
+          text-align: justify;
+          color: var(--text-color-white);
+          @include media("<=desktop") {
+            font-size: 14px;
+          }
+          @include media("<=phone") {
+            font-size: 13.5px;
+          }
+        }
       }
     }
   }
 
   // /////////////////////////////////////////////////////////////////////////////////////////
-  // ===================================== WHAT WE DO PART ===================================
-  &__whatwedo {
+  // ======================================== WHY PART =======================================
+  &__why {
     width: 100%;
-    height: 100vh;
-    padding: 250px;
+    height: 80vh;
+    padding: 100px 250px 0 250px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @include media("<=desktop") {
+      padding: 120px 180px;
+    }
     @include media("<=phone") {
       padding: 50px 30px;
       height: 60vh;
@@ -114,61 +170,84 @@
       @include media("<=phone") {
         width: 100%;
       }
-      h1 {
-        width: 100%;
-        letter-spacing: 3px;
-        text-align: right;
-        font-size: 5rem;
-        line-height: 5rem;
-        font-family: var(--babas-font);
-        text-transform: uppercase;
-        color: var(--text-color-black);
-        @include media("<=phone") {
-          text-align: left;
-          font-size: 2.5rem;
-          line-height: 2.8rem;
-          letter-spacing: 2.5px;
-        }
-        div {
-          width: 100%;
-          height: 5rem;
-          margin-bottom: 1rem;
-          overflow: hidden;
-          position: relative;
-          @include media("<=phone") {
-            height: 2.5rem;
-            margin-bottom: 1rem;
+      .heading-container {
+        position: relative;
+        .circle {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background: var(--pink-color-light);
+          position: absolute;
+          top: -90px;
+          right: -90px;
+          z-index: 0;
+          @include media("<=desktop") {
+            width: 120px;
+            height: 120px;
+            top: -75px;
+            right: -70px;
           }
-          span {
-            position: absolute;
-            right: 0;
+          @include media("<=phone") {
+            display: none;
+          }
+        }
+        h1 {
+          width: 100%;
+          letter-spacing: 3px;
+          text-align: right;
+          font-size: 5rem;
+          line-height: 5rem;
+          font-family: var(--babas-font);
+          text-transform: uppercase;
+          color: var(--text-color-black);
+          @include media("<=desktop") {
+            font-size: 4rem;
+            line-height: 4rem;
+          }
+          @include media("<=phone") {
+            text-align: left;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            letter-spacing: 2.5px;
+          }
+          div {
+            width: 100%;
+            height: 5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            position: relative;
+            @include media("<=desktop") {
+              height: 4rem;
+              margin-bottom: 10px;
+            }
+            @include media("<=phone") {
+              height: 2.5rem;
+              margin-bottom: 5px;
+            }
+            span {
+              position: absolute;
+              right: 0;
+            }
           }
         }
       }
-
       .text-container {
         width: 100%;
         height: fit-content;
         overflow: hidden;
-        p,
-        a {
+        p {
           font-size: 17px;
           line-height: 30px;
           margin-bottom: 20px;
           text-align: justify;
           color: var(--text-color-black);
-          @include media("<=phone") {
+          @include media("<=desktop") {
             font-size: 14px;
             line-height: 25px;
           }
-        }
-        a {
-          display: block;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-weight: bold;
-          color: var(--pink-color);
-          text-align: right;
+          @include media("<=phone") {
+            font-size: 13.5px;
+          }
         }
       }
     }
@@ -185,9 +264,10 @@
         left: 0;
         transform: translateY(-50%);
         @include media("<=phone") {
-          left: -20px;
+          width: 80%;
+          left: 0px;
           top: 50%;
-          transform: translateY(-85%);
+          transform: translateY(-75%);
         }
         .row {
           display: flex;
@@ -202,18 +282,26 @@
           .smallcircle {
             width: 60px;
             height: 60px;
+            @include media("<=desktop") {
+              width: 50px;
+              height: 50px;
+            }
             @include media("<=phone") {
-              width: 20px;
-              height: 20px;
+              width: 30px;
+              height: 30px;
             }
           }
           .bigcircle {
             width: 120px;
             height: 120px;
             margin: 5px;
+            @include media("<=desktop") {
+              width: 100px;
+              height: 100px;
+            }
             @include media("<=phone") {
-              width: 36px;
-              height: 36px;
+              width: 56px;
+              height: 56px;
             }
           }
         }
@@ -228,6 +316,210 @@
   }
 
   // /////////////////////////////////////////////////////////////////////////////////////////
+  // ========================================= HOW PART =====================================
+  &__process {
+    width: 100%;
+    height: 110vh;
+    padding: 120px 250px 250px 250px;
+    @include media("<=desktop") {
+      height: 115vh;
+      padding: 90px 180px 180px 180px;
+    }
+    @include media("<=phone") {
+      height: fit-content;
+      padding: 50px 30px;
+    }
+    h1 {
+      width: 100%;
+      letter-spacing: 3px;
+      font-size: 5rem;
+      line-height: 5rem;
+      font-family: var(--babas-font);
+      text-transform: uppercase;
+      color: var(--text-color-black);
+      @include media("<=desktop") {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+      @include media("<=phone") {
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        letter-spacing: 2.5px;
+      }
+      div {
+        width: 100%;
+        height: 5rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        position: relative;
+        @include media("<=desktop") {
+          height: 4rem;
+          margin-bottom: 10px;
+        }
+        @include media("<=phone") {
+          height: 2.5rem;
+          margin-bottom: 5px;
+        }
+        span {
+          position: absolute;
+        }
+      }
+    }
+
+    .processes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      .col {
+        width: 50%;
+        @include media("<=phone") {
+          width: 100%;
+        }
+        .process {
+          width: 90%;
+          display: flex;
+          align-items: flex-start;
+          margin-top: 2rem;
+          @include media("<=phone") {
+            width: 100%;
+          }
+          &__logo {
+            img {
+              height: 65px;
+              @include media("<=desktop") {
+                height: 50px;
+              }
+              @include media("<=phone") {
+                height: 30px;
+              }
+            }
+          }
+          &__number {
+            margin-left: 0px;
+            margin-right: -9px;
+            font-size: 6rem;
+            line-height: 6rem;
+            font-family: var(--babas-font);
+            font-weight: bold;
+            color: #cccccc90;
+            @include media("<=desktop") {
+              font-size: 5.5rem;
+              line-height: 5.5rem;
+            }
+            @include media("<=phone") {
+              font-size: 4rem;
+              line-height: 4rem;
+            }
+          }
+          &__text {
+            h3 {
+              font-size: 20px;
+              text-transform: uppercase;
+              @include media("<=desktop") {
+                font-size: 17px;
+              }
+              @include media("<=phone") {
+                font-size: 16px;
+              }
+            }
+            p {
+              font-size: 15px;
+              @include media("<=desktop") {
+                font-size: 14px;
+                line-height: 22px;
+              }
+              @include media("<=phone") {
+                font-size: 13.5px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // /////////////////////////////////////////////////////////////////////////////////////////
+  // ===================================== WHAT PART ===================================
+  &__what {
+    width: 100%;
+    min-height: 100vh;
+    padding: 200px 250px;
+    background: var(--background-color-dark);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include media("<=desktop") {
+      padding: 150px 180px;
+    }
+    @include media("<=phone") {
+      min-height: 60vh;
+      padding: 30px;
+    }
+    .content {
+      width: 100%;
+      h3 {
+        color: var(--text-color-white);
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+        font-weight: 200;
+        font-size: 16px;
+        @include media("<=phone") {
+          font-size: 14.5px;
+          margin-bottom: 13px;
+        }
+      }
+      p {
+        color: var(--text-color-white);
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        @include media("<=desktop") {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+        div {
+          width: 100%;
+          height: 2.7rem;
+          margin-bottom: 15px;
+          position: relative;
+          overflow: hidden;
+          @include media("<=desktop") {
+            height: 2.2rem;
+            margin-bottom: 15px;
+          }
+          span {
+            position: absolute;
+          }
+        }
+        @include media("<=phone") {
+          display: none;
+        }
+      }
+      p.mobile {
+        @include media(">=phone") {
+          display: none;
+        }
+        @include media("<=phone") {
+          display: block;
+          font-size: 13.5px;
+          line-height: 25px;
+        }
+      }
+      .globalMoreButton {
+        margin-top: 40px;
+        @include media("<=desktop") {
+          margin-top: 30px;
+        }
+        @include media("<=phone") {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  // /////////////////////////////////////////////////////////////////////////////////////////
   // ===================================== CULTURE PART ===================================
   &__culture {
     width: 100%;
@@ -236,6 +528,9 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    @include media("<=desktop") {
+      padding: 120px 180px;
+    }
     @include media("<=phone") {
       padding: 50px 30px;
     }
@@ -243,11 +538,17 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background: var(--pink-color);
+      background: var(--pink-color-light);
       position: absolute;
       top: -90px;
       left: -90px;
       z-index: 0;
+      @include media("<=desktop") {
+        width: 120px;
+        height: 120px;
+        top: -70px;
+        left: -70px;
+      }
       @include media("<=phone") {
         display: none;
       }
@@ -255,10 +556,12 @@
     .heading {
       width: 50%;
       height: 60vh;
+      margin-top: 25vh;
       position: sticky;
       top: 30vh;
       @include media("<=phone") {
         width: 100%;
+        margin-top: 0;
         position: static;
         height: fit-content;
       }
@@ -270,10 +573,14 @@
         font-family: var(--babas-font);
         text-transform: uppercase;
         color: var(--text-color-black);
+        @include media("<=desktop") {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
         @include media("<=phone") {
           text-align: left;
           font-size: 2.5rem;
-          line-height: 2.8rem;
+          line-height: 2.5rem;
           letter-spacing: 2.5px;
         }
         div {
@@ -282,9 +589,13 @@
           margin-bottom: 1rem;
           overflow: hidden;
           position: relative;
+          @include media("<=desktop") {
+            height: 4rem;
+            margin-bottom: 10px;
+          }
           @include media("<=phone") {
             height: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 5px;
           }
           span {
             position: absolute;
@@ -302,11 +613,18 @@
 
       .content {
         margin-bottom: 48px;
+        @include media("<=desktop") {
+          margin-bottom: 28px;
+        }
         h3 {
           font-weight: 500;
           font-size: 20px;
           margin-bottom: 10px;
           text-transform: uppercase;
+          @include media("<=desktop") {
+            font-size: 17px;
+            margin-bottom: 7px;
+          }
           @include media("<=phone") {
             font-size: 16px;
             margin-bottom: 6px;
@@ -317,6 +635,10 @@
           font-size: 17px;
           line-height: 30px;
           font-weight: 300;
+          @include media("<=desktop") {
+            font-size: 15px;
+            line-height: 25px;
+          }
           @include media("<=phone") {
             font-size: 14px;
             line-height: 24px;
@@ -330,19 +652,29 @@
   // ===================================== TRIFECTA PART ===================================
   &__trifecta {
     width: 100%;
-    height: 105vh;
-    padding: 120px 250px;
-    background: var(--background-color-dark);
+    height: 85vh;
     position: relative;
+    @include media("<=desktop") {
+      height: 90vh;
+    }
     @include media("<=phone") {
-      padding: 50px 30px;
-      height: 100vh;
+      padding: 50px 30px 0 30px;
+      height: 85vh;
     }
 
     .head {
       width: 40%;
+      position: absolute;
+      right: 250px;
+      top: 100px;
+      @include media("<=desktop") {
+        top: 100px;
+        right: 180px;
+      }
       @include media("<=phone") {
         width: 100%;
+        right: 30px;
+        top: 30px;
       }
       h1 {
         width: 100%;
@@ -350,12 +682,17 @@
         font-size: 5rem;
         line-height: 5rem;
         font-family: var(--babas-font);
+        text-align: right;
         text-transform: uppercase;
-        color: var(--text-color-white);
+        color: var(--text-color-black);
+        @include media("<=desktop") {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
         @include media("<=phone") {
           text-align: left;
           font-size: 2.5rem;
-          line-height: 2.8rem;
+          line-height: 2.5rem;
           letter-spacing: 2.5px;
         }
         div {
@@ -364,21 +701,34 @@
           margin-bottom: 1rem;
           overflow: hidden;
           position: relative;
+          @include media("<=desktop") {
+            height: 4rem;
+            margin-bottom: 10px;
+          }
           @include media("<=phone") {
             height: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 5px;
           }
           span {
             position: absolute;
+            right: 0;
           }
         }
       }
       p {
-        color: var(--text-color-white);
+        width: 80%;
+        margin-left: auto;
+        color: var(--text-color-black);
         font-size: 17px;
         line-height: 30px;
-        @include media("<=phone") {
+        text-align: right;
+        @include media("<=desktop") {
           font-size: 14px;
+          line-height: 25px;
+        }
+        @include media("<=phone") {
+          width: calc(100% - 50px);
+          font-size: 13.5px;
           line-height: 25px;
         }
       }
@@ -411,221 +761,39 @@
         }
       }
     }
-    img {
+    .circle {
       position: absolute;
-      width: 35%;
-      top: 150px;
-      right: 200px;
-      text-align: left;
-      @include media("<=phone") {
-        width: 75%;
-        top: 50%;
-        right: 15%;
-      }
-    }
-  }
-
-  // /////////////////////////////////////////////////////////////////////////////////////////
-  // ===================================== WORKING PROCESS PART ==============================
-  &__process {
-    width: 100%;
-    height: 100vh;
-    padding: 120px 230px;
-    @include media("<=phone") {
-      height: fit-content;
-      padding: 50px 30px;
-    }
-    h1 {
-      width: 100%;
-      letter-spacing: 3px;
-      font-size: 5rem;
-      line-height: 5rem;
-      font-family: var(--babas-font);
-      text-transform: uppercase;
-      color: var(--text-color-black);
-      @include media("<=phone") {
-        text-align: left;
-        font-size: 2.5rem;
-        line-height: 2.8rem;
-        letter-spacing: 2.5px;
-      }
-      div {
-        width: 100%;
-        height: 5rem;
-        margin-bottom: 1rem;
-        overflow: hidden;
-        position: relative;
-        @include media("<=phone") {
-          height: 2.5rem;
-          margin-bottom: 1rem;
-        }
-        span {
-          position: absolute;
-        }
-      }
-    }
-    .processes {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      .col {
-        width: 50%;
-        @include media("<=phone") {
-          width: 100%;
-        }
-        .plain,
-        .process {
-          width: 90%;
-          @include media("<=phone") {
-            width: 100%;
-          }
-        }
-        .plain {
-          p {
-            font-size: 15px;
-            margin-bottom: 5px;
-            @include media("<=phone") {
-              font-size: 13.5px;
-              line-height: 24px;
-              margin-bottom: 10px;
-            }
-          }
-        }
-        .process {
-          display: flex;
-          align-items: flex-start;
-          margin-top: 2rem;
-          &__logo {
-            img {
-              height: 65px;
-              @include media("<=phone") {
-                height: 30px;
-              }
-            }
-          }
-          &__number {
-            margin-left: 0px;
-            margin-right: -9px;
-            font-size: 6rem;
-            line-height: 6rem;
-            font-family: var(--babas-font);
-            font-weight: bold;
-            color: #cccccc90;
-            @include media("<=phone") {
-              font-size: 4rem;
-              line-height: 4rem;
-            }
-          }
-          &__text {
-            h3 {
-              font-size: 20px;
-              text-transform: uppercase;
-              @include media("<=phone") {
-                font-size: 16px;
-              }
-            }
-            p {
-              font-size: 15px;
-              @include media("<=phone") {
-                font-size: 13.5px;
-                line-height: 22px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // /////////////////////////////////////////////////////////////////////////////////////////
-  // ===================================== CREATIVE TEAM PART ==============================
-  &__team {
-    width: 100%;
-    height: 90vh;
-    padding: 50px 250px 150px 250px;
-    @include media("<=phone") {
-      padding: 50px 30px;
-    }
-    h1 {
-      text-align: right;
-      width: 100%;
-      letter-spacing: 3px;
-      font-size: 5rem;
-      line-height: 5rem;
-      font-family: var(--babas-font);
-      text-transform: uppercase;
-      color: var(--text-color-black);
-      @include media("<=phone") {
-        text-align: left;
-        font-size: 2.5rem;
-        line-height: 2.8rem;
-        letter-spacing: 2.5px;
-      }
-      div {
-        width: 100%;
-        height: 5rem;
-        margin-bottom: 1rem;
-        overflow: hidden;
-        position: relative;
-        @include media("<=phone") {
-          height: 2.5rem;
-          margin-bottom: 1rem;
-        }
-        span {
-          position: absolute;
-          right: 0;
-        }
-      }
-    }
-
-    p {
-      width: 80%;
-      margin-left: auto;
-      font-size: 17px;
-      line-height: 30px;
-      color: var(--text-color-black);
-      text-align: right;
-      @include media("<=phone") {
-        width: 100%;
-        font-size: 14px;
-        line-height: 25px;
-        text-align: justify;
-        margin-bottom: 10px;
-      }
-    }
-
-    a {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background: var(--pink-color);
-      color: var(--text-color-white);
-      text-decoration: none;
-      font-size: 17px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 400;
-      margin-left: auto;
-      margin-top: 2rem;
+      background: var(--pink-color-light);
+      right: 170px;
+      top: 10px;
+      @include media("<=desktop") {
+        width: 120px;
+        height: 120px;
+        top: 25px;
+        right: 100px;
+      }
       @include media("<=phone") {
         display: none;
       }
     }
-
-    a.mobile {
-      @include media("<=phone") {
-        width: fit-content;
-        height: fit-content;
-        background: transparent;
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--pink-color);
+    img {
+      position: absolute;
+      width: 40%;
+      bottom: 30%;
+      left: 200px;
+      text-align: left;
+      @include media("<=desktop") {
+        left: 150px;
+        bottom: 27%;
       }
-      @include media(">=phone") {
-        display: none;
+      @include media("<=phone") {
+        width: 85%;
+        bottom: 15%;
+        left: 51%;
+        transform: translateX(-50%);
       }
     }
   }

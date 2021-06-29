@@ -7,14 +7,19 @@ gsap.registerPlugin(ScrollTrigger);
 export const overlayAnimation = (completeAnimation) => {
   let tl = gsap.timeline();
   tl.to(".overlay .block", 1, { scale: 13, ease: "expo.inOut" })
-    .to(".overlay .block img", 0.7, {
-      scale: window.innerWidth > 1366 ? 0.778 : 0.624,
-      ease: "expo.inOut" 
-    }, "<")
-    .to(" .overlay .block img", 1, { 
+    .to(
+      ".overlay .block img",
+      0.7,
+      {
+        scale: window.innerWidth > 1366 ? 0.778 : 0.624,
+        ease: "expo.inOut",
+      },
+      "<"
+    )
+    .to(" .overlay .block img", 1, {
       x: window.innerWidth > 1366 ? 37.6 : 28.8,
-      ease: "expo.inOut" 
-    },)
+      ease: "expo.inOut",
+    })
     .to(".overlay", 0, {
       css: { display: "none" },
       onComplete: completeAnimation,
@@ -50,54 +55,13 @@ export const homeAnimation = () => {
     stagger: { amount: 0.3 },
   });
 
-  // ----------- about part
-  gsap.from("#homeaboutcircle", 1, {
-    scale: 0,
-    ease: "expo.inOut",
-    scrollTrigger: {
-      trigger: "#aboutHeading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#aboutHeading", 1.3, {
-    y: 200,
-    ease: "power4.out",
-    skewY: 8,
-    stagger: { amount: 0.3 },
-    scrollTrigger: {
-      trigger: "#aboutHeading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#abouttext", 1.3, {
-    y: 200,
-    ease: "power4.out",
-    stagger: { amount: 0.5 },
-    scrollTrigger: {
-      trigger: "#abouttext",
-      start: "top 80%",
-    },
-  });
-
-  // ----------- Observance anim
-  gsap.from("#observanceHeading", 1.3, {
-    y: 200,
-    ease: "power4.out",
-    skewY: 8,
-    stagger: { amount: 0.3 },
-    scrollTrigger: {
-      trigger: "#homeobservance",
-      start: "top 65%",
-    },
-  });
-
   // ----------- services anim
   gsap.from("#serviceLearnButton", 1, {
     scale: 0,
     ease: "expo.inOut",
     delay: 0.7,
     scrollTrigger: {
-      trigger:"#serviceLearnButton",
+      trigger: "#serviceLearnButton",
       start: "top 70%",
     },
   });
@@ -109,6 +73,16 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
+  gsap.from("#homeServiceNumber", 1, {
+    x: -100,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homeServiceHeading",
+      start: "top 80%",
+    },
+  });
   gsap.from("#homeServiceHeading", 1.4, {
     y: 200,
     ease: "power4.out",
@@ -117,6 +91,16 @@ export const homeAnimation = () => {
     scrollTrigger: {
       trigger: "#homeServiceHeading",
       start: "top 80%",
+    },
+  });
+  gsap.from("#homeservicetexttextt", 1, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homeServiceHeading",
+      start: "top 70%",
     },
   });
   gsap.from("#homeservicesmallheading", 1.4, {
@@ -147,7 +131,6 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-
 
   // ----------- contributions anim
   gsap.from("#homecontributionhead", 1.3, {
@@ -191,60 +174,14 @@ export const homeAnimation = () => {
   });
 
   // ----------- why anim
-  gsap.from("#homewhyheading", 1.3, {
+  gsap.from("#observanceHeading", 1.3, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
     stagger: { amount: 0.3 },
     scrollTrigger: {
-      trigger: "#homewhyheading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#homewhytext", 1.3, {
-    y: 200,
-    ease: "power4.out",
-    stagger: { amount: 0.5 },
-    scrollTrigger: {
-      trigger: "#homewhyheading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#homewhybtn", 1, {
-    scale: 0,
-    ease: "expo.inOut",
-    delay: 1,
-    scrollTrigger: {
-      trigger: "#homewhyheading",
-      start: "top 60%",
-    },
-  });
-
-  // ----------- project anim
-  gsap.from("#homeprojectsheading", 1, {
-    x: -30,
-    opacity: 0,
-    ease: "expo.inOut",
-    scrollTrigger: {
-      trigger: "#homeprojectsheading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#homeprojectcard", 1, {
-    y: "-70vh",
-    ease: "expo.inOut",
-    stagger: { amount: 1 },
-    scrollTrigger: {
-      trigger: "#homeprojectsheading",
-      start: "top 80%",
-    },
-  });
-  gsap.from("#homeprojectbutton", 1, {
-    scale: 0,
-    ease: "expo.inOut",
-    scrollTrigger: {
-      trigger: "#homeprojectsheading",
-      start: "top 40%",
+      trigger: "#homeobservance",
+      start: "top 65%",
     },
   });
 
@@ -260,9 +197,9 @@ export const homeAnimation = () => {
     },
   });
   gsap.from("#hometesmonialcard", 1.3, {
-    y: "-50vh",
+    scale: 0,
     ease: "power4.out",
-    stagger: { amount: 1 },
+    stagger: { amount: 1.3 },
     scrollTrigger: {
       trigger: "#hometestomonialheading",
       start: "top 50%",
@@ -273,17 +210,56 @@ export const homeAnimation = () => {
   gsap.from("#homeclientprofile", 1, {
     scale: 0,
     ease: "expo.inOut",
-    stagger: {amount: 0.5},
+    stagger: { amount: 0.5 },
     scrollTrigger: {
       trigger: "#homeclientprofile",
       start: "top 80%",
+    },
+  });
+
+  // ----------- project anim
+  gsap.from("#homeprojectsheading", 1, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeprojectstext", 1, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: {amount: 0.4},
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeprojectcard", 1.4, {
+    x: "118%",
+    ease: "expo.inOut",
+    stagger: { amount: 1.4 },
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#homeprojectbutton", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#homeprojectsheading",
+      start: "top 40%",
     },
   });
 };
 
 // ///////////////////////////////////////////////////////////
 // SERVICE ANIMATION
-export const detailChangeAnim = (setSelected, value, textRef, contentRef) => {
+export const detailChangeAnim = (textRef, contentRef) => {
   let tl = gsap.timeline();
 
   tl.to(contentRef.current, 0.5, {
@@ -309,8 +285,5 @@ export const detailChangeAnim = (setSelected, value, textRef, contentRef) => {
     .to(contentRef.current, 0.5, {
       opacity: 1,
       ease: "power4.out",
-      onComplete: () => {
-        setSelected(value);
-      },
     });
 };
