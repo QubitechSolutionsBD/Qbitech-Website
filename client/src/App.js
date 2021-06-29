@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Service from "./pages/Service";
 import Services from "./pages/Services";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/service/software-development" component={Service} />
           <Route exact path="/service/hardware-development" component={Service} />
           <Route exact path="/service/branding-and-marketing" component={Service} />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </div>
