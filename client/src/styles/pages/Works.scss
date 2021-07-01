@@ -1,0 +1,27 @@
+.works{
+    width: 100%;
+    min-height: 100vh;
+
+    .globalbanner{
+        .text{
+            top: 250px;
+        }
+    }
+
+    &__caseStudies{
+        width: 100%;
+        min-height: 100vh;
+        padding: 100px 250px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .case-study{
+            display: block;
+            width: 40%;
+            min-height: 70vh;
+            background-color: #fff;
+            margin-bottom: 10vh;
+        }
+    }
+}

@@ -9,6 +9,8 @@ import Service from "./pages/Service";
 import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
+import Works from "./pages/Works";
+import Work from "./pages/Work";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route exact path="/service/software-development" component={Service} />
           <Route exact path="/service/hardware-development" component={Service} />
           <Route exact path="/service/branding-and-marketing" component={Service} />
+          <Route exact path="/case-studies" component={Works} />
+          <Route exact path="/case-studies/:id" component={Work} />
           <Route exact path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
