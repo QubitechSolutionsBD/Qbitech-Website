@@ -1,50 +1,50 @@
 import React from "react";
 
-const WebDevelopment = () => {
+const SoftwareDevelopment = () => {
   return (
-    <div className="services__webdevelopment">
-      <h2 id="serviceswebdevelopmentnumber">01</h2>
+    <div className="services__softdevelopment">
+      <h2 id="servicessoftdevelopmentnumber">02</h2>
       <h1>
         <div>
-          <span id="serviceswebdevelopmenthead">Web</span>
+          <span id="servicessoftdevelopmenthead">Software</span>
         </div>
         <div>
-          <span id="serviceswebdevelopmenthead">Development</span>
+          <span id="servicessoftdevelopmenthead">Development</span>
         </div>
       </h1>
       <div>
         <div className="row">
-          <div id="webitemanim" className="item">
+          <div id="softitemanim" className="item">
             <div className="circle" id="globalBannerCircle2"></div>
             <div>
               <p>iOS APP DEVELOPMENT</p>
             </div>
           </div>
-          <div id="webitemanim" className="item">
+          <div id="softitemanim" className="item">
             <div className="circle" id="globalBannerCircle2"></div>
             <div>
               <p>ANDROID APP DEVELOPMENT</p>
             </div>
           </div>
-          <div id="webitemanim" className="item">
+          <div id="softitemanim" className="item">
             <div className="circle" id="globalBannerCircle2"></div>
             <div>
               <p>iOS APP DEVELOPMENT</p>
             </div>
           </div>
-          <div id="webitemanim" className="item">
+          <div id="softitemanim" className="item">
             <div className="circle" id="globalBannerCircle2"></div>
             <div>
               <p>iOS APP DEVELOPMENT</p>
             </div>
           </div>
-          <div id="webitemanim" className="item">
+          <div id="softitemanim" className="item">
             <div className="circle" id="globalBannerCircle2"></div>
             <div>
               <p>iOS App Development</p>
             </div>
           </div>
-          <div id="webitemanim" className="item">
+          <div id="softitemanim" className="item">
             <div className="circle" id="globalBannerCircle2"></div>
             <div>
               <p>iOS App Development</p>
@@ -57,4 +57,4 @@ const WebDevelopment = () => {
   );
 };
 
-export default WebDevelopment;
+export default SoftwareDevelopment;

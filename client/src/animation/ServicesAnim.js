@@ -46,4 +46,39 @@ export const servicesAnimation = () => {
       start: "top 70%",
     },
   });
+  /////////////////////////////////////////////////////
+  //////////////////////////Web Development///////////
+  gsap.from("#serviceswebdevelopmentnumber", 1.3, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswebdevelopmentnumber",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#serviceswebdevelopmenthead", 1.4, {
+    y: 200,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswebdevelopmentnumber",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#webitemanim", 1.3, {
+    y: 100,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswebdevelopmentnumber",
+      start: "top 80%",
+    },
+  });
+  /////////////////////////////////////////////////////
+  //////////////////////////Web Development///////////
 };

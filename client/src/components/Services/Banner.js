@@ -1,5 +1,5 @@
 import React from "react";
-import GlobalBanner from "../GlobalBanner";
+import GlobalBanner from "../Global/GlobalBanner";
 
 const Banner = ({ ourserviceRef }) => {
   return (
