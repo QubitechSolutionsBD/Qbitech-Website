@@ -65,11 +65,11 @@ function Navbar() {
           {/* contact links */}
           <div className="menu__contact">
             <div className="content">
-              <div className="contact">
+              <div className="contacts">
                 <p id="navigationaddress">qubitechbd@gmail.com</p>
                 <p id="navigationaddress">+880 1531709712</p>
               </div>
-              <div className="address">
+              <div className="addresses">
                 <p id="navigationaddress">8890 Talaimari</p>
                 <p id="navigationaddress">Rajshahi, Bangladesh</p>
               </div>

@@ -10,6 +10,7 @@ import { contactAnim } from "../animation/ContactAnim";
 
 function Contact() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     contactAnim();
   }, []);
 

@@ -135,8 +135,13 @@
         bottom: 0;
         right: 0;
 
-        .contact{
+        .contacts{
+          width: 100%;
           margin-bottom: 25px;
+          @include media("<=phone") {
+            width: 100%;
+            min-height: 80vh;
+          }
           p {
             width: fit-content;
             color: var(--pink-color);
@@ -151,7 +156,7 @@
             }
           }
         }
-        .address{
+        .addresses{
           p {
             color: var(--text-color-white);
             font-size: 16px;
