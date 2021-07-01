@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import lost from "../assets/pagenotfound/lost.svg";
 import MoreButton from "../components/Global/MoreButton";
+import lost from "../assets/pagenotfound/lost.svg";
 
 function NotFound() {
   return (
