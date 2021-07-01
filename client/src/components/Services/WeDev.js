@@ -20,6 +20,10 @@ const WeDev = () => {
           <span id="servicesdebdevhead">our clients.</span>
         </div>
       </h1>
+      <h2 className="wedevmobilehead">
+        We develop high-end marketing websites and stable architecture for
+        mobile and desktop applications for our clients.
+      </h2>
       <p>
         <div>
           <span>
@@ -34,6 +38,11 @@ const WeDev = () => {
           </span>
         </div>
       </p>
+      <h3>
+        From custom front-end to sophisticated back-end, our in-house
+        development team handles the heavy lifting to create an engaging
+        experience online.
+      </h3>
     </div>
   );
 };

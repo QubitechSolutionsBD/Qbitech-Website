@@ -127,10 +127,9 @@
       }
       @include media("<=phone") {
         text-align: left;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+        font-size: 3rem;
+        line-height: 3rem;
         letter-spacing: 2.5px;
-        margin-top: 0rem;
       }
     }
     h1 {
@@ -151,11 +150,11 @@
         font-size: 2.5rem;
         line-height: 2.5rem;
         letter-spacing: 2.5px;
-        margin-top: 3rem;
+        margin-top: 3.2rem;
       }
     }
     .row {
-      top: 160px;
+      top: 145px;
       position: relative;
       display: flex;
       flex-direction: row;
@@ -181,15 +180,15 @@
           background-color: rgb(141, 139, 143);
           border-radius: 50%;
           @include media("<=phone") {
-            height: 14px;
-            width: 14px;
+            height: 18px;
+            width: 18px;
           }
         }
         p {
           color: black;
           font-size: 20px;
           @include media("<=phone") {
-            font-size: 14px;
+            font-size: 18px;
           }
         }
       }
@@ -201,6 +200,10 @@
       font-weight: 500;
       font-size: 24px;
       font-weight: bold;
+      @include media("<=phone") {
+        margin-top: 120px;
+        font-size: 18px;
+      }
     }
   }
 
@@ -217,7 +220,9 @@
     flex-wrap: wrap;
     position: relative;
     @include media("<=phone") {
-      padding: 50px 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 30px;
     }
 
     h2 {
@@ -228,6 +233,17 @@
       color: #cccccc90;
       position: absolute;
       top: 0px;
+      @include media("<=desktop") {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+      @include media("<=phone") {
+        text-align: left;
+        font-size: 3rem;
+        line-height: 3rem;
+        letter-spacing: 2.5px;
+        top: -0.5rem;
+      }
     }
     h1 {
       letter-spacing: 3px;
@@ -238,6 +254,17 @@
       color: var(--text-color-black);
       margin-top: 0;
       position: absolute;
+      @include media("<=desktop") {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+      @include media("<=phone") {
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        letter-spacing: 2.5px;
+        margin-top: 0rem;
+      }
     }
     .row {
       top: 160px;
@@ -247,6 +274,10 @@
       justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
+      @include media("<=phone") {
+        top: 110px;
+      }
+
       .item {
         width: 50%;
         display: flex;
@@ -256,6 +287,7 @@
         margin-top: 50px;
         @include media("<=phone") {
           width: 100%;
+          margin-top: 20px;
         }
         .circle {
           margin-right: 15px;
@@ -263,10 +295,17 @@
           width: 20px;
           background-color: rgb(141, 139, 143);
           border-radius: 50%;
+          @include media("<=phone") {
+            height: 18px;
+            width: 18px;
+          }
         }
         p {
           color: black;
           font-size: 20px;
+          @include media("<=phone") {
+            font-size: 18pxs;
+          }
         }
       }
     }
@@ -277,6 +316,10 @@
       font-weight: 500;
       font-size: 24px;
       font-weight: bold;
+      @include media("<=phone") {
+        margin-top: 100px;
+        font-size: 18px;
+      }
     }
   }
   ////////////////////////////////////////////////////////////////////
@@ -289,7 +332,9 @@
     padding-right: 250px;
     padding-top: 250px;
     position: relative;
-
+    @include media("<=phone") {
+      padding: 50px 30px;
+    }
     background: var(--background-color-dark);
     h1 {
       color: white;
@@ -298,6 +343,19 @@
       line-height: 3rem;
       font-weight: 300;
       z-index: 5;
+      @include media("<=phone") {
+        display: none;
+      }
+    }
+    h2 {
+      display: none;
+      font-size: 1.7rem;
+      margin-top: 65px;
+      text-align: right;
+      color: white;
+      @include media("<=phone") {
+        display: flex;
+      }
     }
     p {
       color: white;
@@ -307,6 +365,19 @@
       font-weight: 300;
       z-index: 5;
       margin-top: 30px;
+      @include media("<=phone") {
+        display: none;
+      }
+    }
+    h3 {
+      font-size: 1.4rem;
+      display: none;
+      color: white;
+      text-align: right;
+      margin-top: 40px;
+      @include media("<=phone") {
+        display: block;
+      }
     }
     .circle {
       height: 170px;
@@ -317,6 +388,12 @@
       top: 140px;
       right: 180px;
       z-index: 0;
+      @include media("<=phone") {
+        top: -50px;
+        right: 40px;
+        height: 100px;
+        width: 100px;
+      }
     }
   }
   //////////////////////////////////////////////////////////////////
