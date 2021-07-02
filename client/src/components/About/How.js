@@ -10,12 +10,8 @@ function How() {
   return (
     <div className="about__process">
       <h1>
-        <div>
-          <span id="aboutprocesshead">Our</span>
-        </div>
-        <div>
-          <span id="aboutprocesshead">Working Process</span>
-        </div>
+        <div><span id="aboutprocesshead">Our</span></div>
+        <div><span id="aboutprocesshead">Working Process</span></div>
       </h1>
 
       <div className="processes">
@@ -25,9 +21,7 @@ function How() {
             <div className="process__logo">
               <img src={search} alt="" id="aboutprocesslogo" />
             </div>
-            <div className="process__number" id="aboutprocesslnumber">
-              1
-            </div>
+            <div className="process__number" id="aboutprocesslnumber">1</div>
             <div className="process__text" id="aboutprocesscontents">
               <h3>Evaluation</h3>
               <p>
@@ -36,14 +30,13 @@ function How() {
               </p>
             </div>
           </div>
+
           {/* 2 */}
           <div className="process">
             <div className="process__logo">
               <img src={design} alt="" id="aboutprocesslogo" />
             </div>
-            <div className="process__number" id="aboutprocesslnumber">
-              2
-            </div>
+            <div className="process__number" id="aboutprocesslnumber">2</div>
             <div className="process__text" id="aboutprocesscontents">
               <h3>Design</h3>
               <p>
@@ -59,9 +52,7 @@ function How() {
             <div className="process__logo">
               <img src={tools} alt="" id="aboutprocesslogo" />
             </div>
-            <div className="process__number" id="aboutprocesslnumber">
-              3
-            </div>
+            <div className="process__number" id="aboutprocesslnumber">3</div>
             <div className="process__text" id="aboutprocesscontents">
               <h3>Implementation</h3>
               <p>
@@ -78,9 +69,7 @@ function How() {
             <div className="process__logo">
               <img src={transfer} alt="" id="aboutprocesslogo" />
             </div>
-            <div className="process__number" id="aboutprocesslnumber">
-              4
-            </div>
+            <div className="process__number" id="aboutprocesslnumber">4</div>
             <div className="process__text" id="aboutprocesscontents">
               <h3>Feedback</h3>
               <p>
@@ -96,9 +85,7 @@ function How() {
             <div className="process__logo">
               <img src={rocket} alt="" id="aboutprocesslogo" />
             </div>
-            <div className="process__number" id="aboutprocesslnumber">
-              5
-            </div>
+            <div className="process__number" id="aboutprocesslnumber">5</div>
             <div className="process__text" id="aboutprocesscontents">
               <h3>Deployment</h3>
               <p>
@@ -113,9 +100,7 @@ function How() {
             <div className="process__logo">
               <img src={settings} alt="" id="aboutprocesslogo" />
             </div>
-            <div className="process__number" id="aboutprocesslnumber">
-              6
-            </div>
+            <div className="process__number" id="aboutprocesslnumber">6</div>
             <div className="process__text" id="aboutprocesscontents">
               <h3>Maintenance</h3>
               <p>

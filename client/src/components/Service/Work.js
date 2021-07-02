@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Work() {
+function Work({workCardRef}) {
     return (
-        <div className="work">
+        <div className="work" ref={workCardRef}>
             <div className="container">
             </div>
         </div>

@@ -36,7 +36,7 @@ const webdevelopmentData = {
   bannerHeading: ["Web", "Development"],
   bannerText:`With elegant performance across every platform, our modern web frameworks to give your business a one-stop web solution service.`,
   offerHeading:`We design & develop high-end marketing websites for ambitious brands.`,
-  offerTexts: `Here at Qubitech we excel at giving you a one-stop web solution service to elevate your brand.\n\nTaking time in understanding your business needs & goals is the key to ensure you get the best possible user interface. Our UI/UX team makes sure we go forward with your users in mind. Our development process ensures your website is perfectly visible & user-friendly on all screen sizes across all platforms & devices. So that, a busy customer never lose to view your website on a computer with a fully responsive experience across all devices.\n\nTaking time in understanding your business needs & goals is the key to ensure you get the best possible user interface. Our UI/UX team makes sure we go forward with your users in mind. Our development process ensures your website is perfectly visible & user-friendly on all screen sizes across all platforms & devices. So that, a busy customer never lose to view your website on a computer with a fully responsive experience across all devices.\n\nEven if you have an outdated website, we can create a professional looking website that can redefine your online presence. You can see from our portfolio what our dedicated team is capable of across all industries.\n\nWe offer flexible services to ensure that your web platform is aligned with your business initiatives and marketing goals. From custom code, to seamless integration, to exclusive portal functionality, our dedicated team of developers have the capabilities to take your website to the next level.`,
+  offerTexts: `Here at Qubitech we excel at giving you a one-stop web solution service to elevate your brand. Our development experts emphasize on charismatic look, intuitive layout, UI/UX design and a responsive environment for clear cut communication. Our primary focus is to elevate your brand through a strong online presence.\n\n We begin our service through extensive brand research so that we can find the perfect user experience that delivers your brand's persona. Our UI/UX team makes sure we go forward with your users in mind. Our development process ensures your website is perfectly visible, secured & user-friendly on all screen sizes across all platforms & devices. Once the website is built, we provide all time service & support for the maintenance of the site. Even if you have an outdated website, we can create a professional looking website that can redefine your online presence. You can see from our portfolio what our dedicated team is capable of across all industries.`,
   offers: [
     "FRONTEND DEVELOPMNET",
     "BACKEND DEVELOPMENT",
@@ -64,7 +64,7 @@ const softwaredevelopmentData = {
   bannerHeading: ["Software", "Development"],
   bannerText: `Streamline your business needs through our comprehensive mobile software solutions service to meet the needs of modern day industry.`,
   offerHeading: `We build high-end, secured iOS, android & desktop softwares for our clients.`,
-  offerTexts: `In a world where business is driven by the amalgamation of industry & commerce, overcoming real world contexts & challenges is the key trajectory to growth.\n\nA well-designed software solution will save a lot of time in the various steps used in your business, keep your tasks organized, and further improve your management system. All in all will give a huge advantage over the competition. We will shape your business as needed. To meet the modern day challenges of various enterprises & startups, we offer a large array of software applications.\n\nOur talented team of developers are ready to go beyond boundaries regardless of the platforms involved. Before going to the development phase, we will study your brand intensively with you so that any of your goals is not missed. Our communication is transparent with all our clients to capture all the information into the workflow.\n\nAfter all the information & design has been meet with, we go further to integrate your business model through an agile process. From iOS, android & desktop software development to creating native & cross platform design, we are here to seamlessly work together to help your business grow.`,
+  offerTexts: `In a world where business is driven by the amalgamation of industry & commerce, overcoming real world contexts & challenges is the key trajectory to growth. A well-designed software solution will save a lot of time in the various steps used in your business, keep your tasks organized, and further improve your management system. All in all will give a huge advantage over the competition. We will shape your business as needed. To meet the modern day challenges of various enterprises & startups, we offer a large array of software applications.\n\nOur talented team of developers are ready to go beyond boundaries regardless of the platforms involved. Before going to the development phase, we will study your brand intensively with you so that any of your goals is not missed. Our communication is transparent with all our clients to capture all the information into the workflow. After all the information & design has been meet with, we go further to integrate your business model through an agile process. From iOS, android & desktop software development to creating native & cross platform design, we are here to seamlessly work together to help your business grow.`,
   offers: [
     "iOS APP DEVELOPMNET",
     "ANDROID APP DEVELOPMENT",
@@ -91,16 +91,13 @@ const softwaredevelopmentData = {
 
 const hardwaredevelopmentData = {
   bannerHeading: ["Hardware", "Development"],
-  bannerText: `Streamline your business needs through our comprehensive mobile software solutions service to meet the needs of modern day industry.`,
-  offerHeading: `We build high-end, secured iOS, android & desktop softwares for our clients.`,
-  offerTexts: `In a world where business is driven by the amalgamation of industry & commerce, overcoming real world contexts & challenges is the key trajectory to growth.\n\nA well-designed software solution will save a lot of time in the various steps used in your business, keep your tasks organized, and further improve your management system. All in all will give a huge advantage over the competition. We will shape your business as needed. To meet the modern day challenges of various enterprises & startups, we offer a large array of software applications.\n\nOur talented team of developers are ready to go beyond boundaries regardless of the platforms involved. Before going to the development phase, we will study your brand intensively with you so that any of your goals is not missed. Our communication is transparent with all our clients to capture all the information into the workflow.\n\nAfter all the information & design has been meet with, we go further to integrate your business model through an agile process. From iOS, android & desktop software development to creating native & cross platform design, we are here to seamlessly work together to help your business grow.`,
+  bannerText: `Seamlessly integrate your ideas into IoT prototypes to simulate the idea before going into the market among the consumers.`,
+  offerHeading: `we combine your needs with our vast knowledge & experience in IoT Prototyping to help your brand.`,
+  offerTexts: `Everything begins with an idea. But ideas are worthless until you get them out of your head to see what can do. While you might plan out a business model surrounding your idea, you need to test the product to make sure there are no gaps in between.\n\nOur experienced team of experts are here to validate the idea before going into production with it. We help you identify the strengths & limitations of the product through audits, due diligence & real-life IoT prototyping. Internet of Things (IoT) introduces automating to your business model, increasing efficiency and accuracy.  It will add new value to your organization. You can say it’s like going from paper mail to emails. It’s cheaper, faster & it opens new doors of opportunity to your business. With Qubitech, we combine your idea with the latest technology with our vast knowledge & experience in IoT Prototyping to help empower your brand.`,
   offers: [
     "PRODUCT & IDEA PROTOTYPING",
     "IOT BASED MONITORING SYSTEM",
     "IOT BASED AUTOMOTION SYSTEM",
-    "DIGITAL SERVICE Ui DESIGN",
-    "NATIVE & CROSS PLATFORM DESIGN",
-    "UNITY GAME DEVELOPMENT",
   ],
   technologies: [
     arduino,
@@ -116,16 +113,16 @@ const hardwaredevelopmentData = {
 
 const brandingMarketing = {
   bannerHeading: ["Branding &", "Marketing"],
-  bannerText: `Streamline your business needs through our comprehensive mobile software solutions service to meet the needs of modern day industry.`,
-  offerHeading: `We build high-end, secured iOS, android & desktop softwares for our clients.`,
-  offerTexts: `In a world where business is driven by the amalgamation of industry & commerce, overcoming real world contexts & challenges is the key trajectory to growth.\n\nA well-designed software solution will save a lot of time in the various steps used in your business, keep your tasks organized, and further improve your management system. All in all will give a huge advantage over the competition. We will shape your business as needed. To meet the modern day challenges of various enterprises & startups, we offer a large array of software applications.\n\nOur talented team of developers are ready to go beyond boundaries regardless of the platforms involved. Before going to the development phase, we will study your brand intensively with you so that any of your goals is not missed. Our communication is transparent with all our clients to capture all the information into the workflow.\n\nAfter all the information & design has been meet with, we go further to integrate your business model through an agile process. From iOS, android & desktop software development to creating native & cross platform design, we are here to seamlessly work together to help your business grow.`,
+  bannerText: `Incorporate modern branding & marketing strategies to channel your brand in front of the right consumers through our services.`,
+  offerHeading: `We have structured a transformative brand marketing solution to attract, engage & elevate your brand.`,
+  offerTexts: `With the constantly evolving landscape of the digital era, finding the right marketing & branding strategy can be like finding a needle in a hay stack. Everything begins with your brand are: Who you are? What you believe in? You need set the right positioning of what your brand id, of what you believe in front of the right people.\n\n You need to go through a strategic approach to develop the necessary exposure for your brand. Modern people tend to ignore the interruptive marketing tactics in the internet. Content fueled digital marketing strategy has become more popular to build awareness & drive demand. We have structured a transformative brand marketing solution around this philosophy to best serve up & coming startups & businesses to set them apart from their competitions. Our interactive approach mixes research, analysis & creativity to build authentic & comprehensive digital marketing & branding experience. Here at Qubitech, we attract, engage and nurture the audiences to elevate your brand.`,
   offers: [
-    "PRODUCT & IDEA PROTOTYPING",
-    "IOT BASED MONITORING SYSTEM",
-    "IOT BASED AUTOMOTION SYSTEM",
-    "DIGITAL SERVICE Ui DESIGN",
-    "NATIVE & CROSS PLATFORM DESIGN",
-    "UNITY GAME DEVELOPMENT",
+    "BUILD A BRAND IDENTITY",
+    "DEVELOP BRAND STRATEGIES & GUIDLINE",
+    "REBRANDING ESTABLISHED BUSINESS",
+    "ESTABLISHING BRAND POSITION",
+    "MAPPING OUT A SOCIAL MEDIA STRATEGY",
+    "WRITING COPY FOR WEBSITES & OTHER\nDIGITAL ASSETS",
   ],
   technologies: [
     illustrator,

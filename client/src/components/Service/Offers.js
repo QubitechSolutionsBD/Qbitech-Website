@@ -1,27 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import MoreButton from "../Global/MoreButton";
 
 function Offers({ nextslideRef, offerHeading, offerText, offers }) {
   return (
     <div className="service__offers" ref={nextslideRef}>
-      <div className="content-heading">
-        <div className="heading">
-          <div className="circle" id="globalBannerCircle2"></div>
-          <h1>
-            <div><span id="serviceofferHeading">WHAT</span></div>
-            <div><span id="serviceofferHeading">WE OFFER</span></div>
-          </h1>
-        </div>
+      <div className="offers">
+        {offers.map((offer, i) => (
+          <div className="offer" key={i}>
+            <div className="circle" id="serviceoffercircle">
+              <div className="circle-small" id="serviceoffersmallcircle"></div>
+            </div>
+            <div className="offer__name" id="serviceofferoffer">{offer}</div>
+          </div>
+        ))}
       </div>
-
-      <div className="content-content">
-        <p className="big" id="serviceofferText">{offerHeading}</p>
+      <div className="texts">
+        <h2 id="serviceofferHeading">{offerHeading}</h2>
         <p id="serviceofferText">{offerText}</p>
-        <Link to="/">LETS TALK <span>+</span></Link>
-      </div>
-
-      <div className="content-offers">
-        {offers.map((offer, i) => <p key={i}>{offer}</p>)}
+        <MoreButton text="lets talk" direction="left" link="/contact" num="1" />
       </div>
     </div>
   );

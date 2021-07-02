@@ -15,10 +15,9 @@ function Footer() {
         <div className="sitemap">
           <NavLink to="/" exact={true}>HOME</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
-          <NavLink to="/none">WORK</NavLink>
-          <NavLink to="/none">SERVICES</NavLink>
-          <NavLink to="/none">TEAM</NavLink>
-          <NavLink to="/none">CONTACT</NavLink>
+          <NavLink to="/services">SERVICES</NavLink>
+          <NavLink to="/case-studies">WORKS</NavLink>
+          <NavLink to="/contact">CONTACT</NavLink>
         </div>
         <div className="infos">
           <div className="info">

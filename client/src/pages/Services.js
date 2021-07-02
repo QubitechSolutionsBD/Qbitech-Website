@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
+
+// Components
 import GlobalPageTransition from "../components/Global/GlobalPageTransition";
 import Navbar from "../components/Navigation/Navbar";
 import Banner from "../components/Services/Banner";
-import { servicesAnimation } from "../animation/ServicesAnim";
 import OurServices from "../components/Services/OurServices";
 import Footer from "../components/Footer";
 import WebDevelopment from "../components/Services/WebDevelopment";
@@ -12,12 +13,18 @@ import HardwareDevelopment from "../components/Services/HardwareDevelopment";
 import BrandingMarketing from "../components/Services/BrandingMarketing";
 import WeDev2 from "../components/Services/WeDev2";
 import OurHappyCustomer from "../components/Services/OurHappyCustomer";
+
+// Animation
+import { servicesAnimation } from "../animation/ServicesAnim";
+
 const Services = () => {
   const ourserviceRef = useRef(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     servicesAnimation();
   }, []);
+
   return (
     <>
       <GlobalPageTransition />

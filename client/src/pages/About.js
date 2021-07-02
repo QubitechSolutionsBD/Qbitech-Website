@@ -11,6 +11,8 @@ import Culture from "../components/About/Culture";
 import Trifecta from "../components/About/Trifecta";
 import Footer from "../components/Footer";
 import GlobalPageTransition from "../components/Global/GlobalPageTransition";
+
+// Animations
 import { aboutAnumation } from "../animation/AboutAnim";
 
 function About() {

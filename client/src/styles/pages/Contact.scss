@@ -1,0 +1,189 @@
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  padding: 150px 240px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  @include media("<=phone") {
+    padding: 30px;
+  }
+
+  &__form {
+    width: 50%;
+    min-height: calc(100vh - 240px);
+    position: relative;
+    @include media("<=phone") {
+      width: 100%;
+    }
+
+    .circle{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: var(--pink-color);
+      position: absolute;
+      top: -70px;
+      left: -70px;
+      @include media("<=phone") {
+        display: none;
+      }
+    }
+    h1 {
+      width: 100%;
+      letter-spacing: 3px;
+      font-size: 4rem;
+      line-height: 4rem;
+      font-family: var(--babas-font);
+      text-transform: uppercase;
+      color: var(--text-color-black);
+      @include media("<=phone") {
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+        letter-spacing: 1px;
+      }
+      div {
+        width: 100%;
+        height: 3.6rem;
+        margin-bottom: 5px;
+        overflow: hidden;
+        position: relative;
+        @include media("<=phone") {
+          height: 2.5rem;
+          margin-bottom: 5px;
+        }
+        span {
+          position: absolute;
+        }
+      }
+    }
+
+    form {
+      width: 100%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      .input-container {
+        width: 100%;
+        margin-bottom: 20px;
+        @include media("<=phone") {
+          margin-bottom: 10px;
+        }
+        input,
+        textarea {
+          width: 100%;
+          padding: 15px 20px;
+          font-size: 15px;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          font-family: var(--poppins-font);
+          background: #cccccc50;
+          color: var(--text-color-black);
+          @include media("<=phone") {
+            font-size: 13.5px;
+          }
+        }
+      }
+      button {
+        width: fit-content;
+        padding: 15px 40px;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        background: var(--background-color-dark);
+        border-radius: 30px;
+        color: var(--text-color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .textcontainer{
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          div{ margin: 0 5px; }
+        }
+        @include media("<=phone") {
+          font-size: 13.5px;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+
+  &__design {
+    width: 50%;
+    min-height: 50vh;
+    position: relative;
+    @include media("<=phone") {
+      width: 100%;
+      min-height: 65vh;
+    }
+    
+    .more-ways{
+      width: 100%;
+      padding: 50px 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include media("<=phone") {
+        padding: 0;
+      }
+      h1 {
+        width: 100%;
+        letter-spacing: 3px;
+        font-size: 4rem;
+        line-height: 4rem;
+        font-family: var(--babas-font);
+        text-transform: uppercase;
+        text-align: right;
+        color: var(--text-color-black);
+        @include media("<=phone") {
+          text-align: left;
+          font-size: 2.5rem;
+          line-height: 2.8rem;
+          letter-spacing: 2.5px;
+        }
+        div {
+          width: 100%;
+          height: 3.6rem;
+          margin-bottom: 5px;
+          overflow: hidden;
+          position: relative;
+          @include media("<=phone") {
+            height: 2.5rem;
+            margin-bottom: 10px;
+          }
+          span {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+
+      .block{
+        margin-top: 25px;
+        margin-bottom: 50px;
+        h2{
+          font-weight: 600;
+          text-align: right;
+          text-transform: uppercase;
+          font-size: 1rem;
+        }
+        p{
+          text-align: right;
+          font-size: 20px;
+          font-weight: 200;
+          @include media("<=phone") {
+            font-size: 13.5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -41,9 +41,10 @@ export const aboutAnumation = () => {
     },
   });
   gsap.from("#abouttext", 1.3, {
-    y: 200,
+    y: 300,
+    opacity: 0,
     ease: "power4.out",
-    stagger: { amount: 0.5 },
+    stagger: { amount: 0.7 },
     scrollTrigger: {
       trigger: "#abouttext",
       start: "top 80%",
@@ -149,6 +150,15 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   })
+  gsap.from("#aboutwhatheadmobile", 1, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#aboutwhatheadmobile",
+      start: "top 80%",
+    },
+  })
   gsap.from("#aboutwhathead", 1, {
     y: 100,
     opacity: 0,
@@ -159,20 +169,20 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   })
-  gsap.from("#globalMoreCircle", 1, {
+  gsap.from("#globalMoreCircle1", 1, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
-      trigger: "#globalMoreButton",
+      trigger: "#globalMoreButton1",
       start: "top 80%",
     },
   });
-  gsap.from("#globalMoreText", 1, {
+  gsap.from("#globalMoreText1", 1, {
     x: 50,
     opacity: 0,
     ease: "power4.out",
     scrollTrigger: {
-      trigger: "#globalMoreButton",
+      trigger: "#globalMoreButton1",
       start: "top 70%",
     },
   });

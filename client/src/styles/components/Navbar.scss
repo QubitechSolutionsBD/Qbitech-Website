@@ -10,14 +10,15 @@
   align-items: center;
   border-radius: 50%;
   background-color: #fff;
-  box-shadow: 0 0 20px #cccccc30;
+  box-shadow: 0 0 20px #cccccc !important;
   z-index: 50;
   cursor: pointer;
   @include media("<=phone") {
     width: 32px;
     height: 32px;
-    top: 3vh;
+    top: 5vh;
     right: 5vh;
+    box-shadow: 0 0 20px #cccccc !important;
   }
 
   .line{
@@ -48,7 +49,7 @@
   @include media("<=phone") {
     width: 25px;
     height: 25px;
-    top: calc(3vh + 5px);
+    top: calc(5vh + 5px);
     right: calc(5vh + 5px);
   }
 }
@@ -67,7 +68,7 @@
   @include media("<=phone") {
     width: 25px;
     height: 25px;
-    top: calc(3vh + 5px);
+    top: calc(5vh + 5px);
     right: calc(5vh + 5px);
   }
 }
@@ -85,7 +86,7 @@
   @include media("<=phone") {
     width: 10px;
     height: 10px;
-    top: calc(3vh + 5px);
+    top: calc(5vh + 5px);
     right: calc(5vh + 5px);
   }
 
@@ -100,9 +101,14 @@
     min-height: 50vh;
     padding: 0 100px 0 250px;
     display: none;
+    @include media("<=phone") {
+      padding: 0 30px 0 30px;
+      min-height: 70vh;
+    }
 
     &__links{
       width: 50%;
+      @include media("<=phone") {width: 100%;}
       a{
         display: block;
         text-decoration: none;
@@ -113,19 +119,28 @@
         font-family: var(--babas-font);
         transform: translate(0, -50);
         opacity: 0;
+        @include media("<=phone") {
+          font-size: 2.5rem;
+          line-height: 3rem;
+        }
       }
     }
 
     &__contact{
       width: 50%;
       position: relative;
+      @include media("<=phone") { width: 100%; }
       .content{
         position: absolute;
         bottom: 0;
         right: 0;
 
-        .contact{
+        .contacts{
+          width: 100%;
           margin-bottom: 25px;
+          @include media("<=phone") {
+            width: 100%;
+          }
           p {
             width: fit-content;
             color: var(--pink-color);
@@ -134,9 +149,13 @@
             border-bottom: 1px solid var(--pink-color);
             transform: translate(0, -10);
             opacity: 0;
+            @include media("<=phone") { 
+              font-size: 13px;
+              line-height: 22px;
+            }
           }
         }
-        .address{
+        .addresses{
           p {
             color: var(--text-color-white);
             font-size: 16px;
@@ -145,6 +164,10 @@
             letter-spacing: 1px;
             transform: translate(0, -10);
             opacity: 0;
+            @include media("<=phone") { 
+              font-size: 13px;
+              line-height: 22px;
+            }
           }
         }
       }

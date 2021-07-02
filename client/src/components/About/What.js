@@ -15,16 +15,12 @@ function What() {
         </p>
 
         {/* showed in mobile version */}
-        <p className="mobile">
+        <p className="mobile" id="aboutwhatheadmobile">
           We ensure the best practices in web applications, mobile applications,
           hardware prototyping and branding services to empower your brand for
           the challenges of today and tomorrow.
         </p>
-        <MoreButton
-          text="view our services"
-          direction="left"
-          link="/services"
-        />
+        <MoreButton text="view our services" direction="left" link="/services" num="1" />
       </div>
     </div>
   );

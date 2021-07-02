@@ -15,7 +15,6 @@ import Footer from "../Footer";
 import { homeAnimation } from "../../animation/HomeAnim";
 
 function HomeContainer() {
-  // APPLY ANIMATION
   useEffect(() => {
       homeAnimation();
   }, []);
