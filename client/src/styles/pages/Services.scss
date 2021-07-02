@@ -328,57 +328,74 @@
   &__wedev {
     width: 100%;
     height: 100vh;
-    padding-left: 250px;
-    padding-right: 250px;
-    padding-top: 250px;
     position: relative;
     @include media("<=phone") {
+      height: 50vh; // ⚠️ change
       padding: 50px 30px;
     }
     background: var(--background-color-dark);
-    h1 {
-      color: white;
-      text-align: right;
-      font-size: 2.3rem;
-      line-height: 3rem;
-      font-weight: 300;
-      z-index: 5;
+    
+    .heading-container{
+      width: calc(100% - 500px); // ⚠️ 100% - (left padding + right padding)
+      position: absolute;
+      top: 250px;
+      right: 250px;
       @include media("<=phone") {
+        width: calc(100% - 60px); // ⚠️ change
+        top: 0px; // ⚠️ change
+        right: 30px; // ⚠️ change
+      }
+      h1 {
+        color: white;
+        text-align: right;
+        font-size: 2.5rem; // ⚠️ change
+        line-height: 3rem;
+        font-weight: 300;
+        z-index: 5;
+        @include media("<=phone") {
+          display: none;
+        }
+      }
+      h2 {
         display: none;
+        font-size: 1.7rem;
+        margin-top: 65px;
+        text-align: right;
+        color: white;
+        @include media("<=phone") {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 17px; // ⚠️ change
+          font-weight: 400; // ⚠️ change
+        }
       }
-    }
-    h2 {
-      display: none;
-      font-size: 1.7rem;
-      margin-top: 65px;
-      text-align: right;
-      color: white;
-      @include media("<=phone") {
-        display: flex;
+      p {
+        color: white;
+        text-align: right;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 300;
+        z-index: 5;
+        margin-top: 30px;
+        @include media("<=phone") {
+          display: none;
+        }
       }
-    }
-    p {
-      color: white;
-      text-align: right;
-      font-size: 1.4rem;
-      line-height: 2rem;
-      font-weight: 300;
-      z-index: 5;
-      margin-top: 30px;
-      @include media("<=phone") {
+      h3 {
+        font-size: 1.4rem;
         display: none;
+        color: white;
+        text-align: right;
+        margin-top: 40px;
+        @include media("<=phone") {
+          display: block;
+          margin-top: 20px; // ⚠️ change
+          font-size: 13.5px; // ⚠️ change
+          font-weight: 300; // ⚠️ change
+        }
       }
     }
-    h3 {
-      font-size: 1.4rem;
-      display: none;
-      color: white;
-      text-align: right;
-      margin-top: 40px;
-      @include media("<=phone") {
-        display: block;
-      }
-    }
+
     .circle {
       height: 170px;
       width: 170px;
