@@ -145,6 +145,33 @@ export const servicesAnimation = () => {
       start: "top 85%",
     },
   });
+  /////////////////////////////////////////////////////
+  //////////////////We Dev/////////////////////////////
+  gsap.from("#serviceswedevhead", 1.3, {
+    y: 100,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswedevhead",
+      start: "top 85%",
+    },
+  });
+  gsap.from("#wedevtext", 1.3, {
+    delay: 0.7,
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswedevhead",
+      start: "top 85%",
+    },
+  });
+
+
 
   /////////////////////////////////////////////////////
   ////////////////////Hardware Development////////////
@@ -241,6 +268,31 @@ export const servicesAnimation = () => {
     skewY: 8,
     scrollTrigger: {
       trigger: "#servicesbrandingmarketinghead",
+      start: "top 85%",
+    },
+  });
+  /////////////////////////////////////////////////////////////////////
+  ////////////////////////////We Dev2/////////////////////////////////serviceswedev2head
+  gsap.from("#serviceswedev2head", 1.3, {
+    y: 100,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswedev2head",
+      start: "top 85%",
+    },
+  });
+  gsap.from("#wedev2text", 1.3, {
+    delay: 0.7,
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    skewY: 8,
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswedev2head",
       start: "top 85%",
     },
   });
