@@ -1,70 +1,105 @@
-.works{
+.works {
+  width: 100%;
+  min-height: 100vh;
+
+  .globalbanner {
+    .text {
+      top: 250px;
+      @include media("<=phone") {
+        top: 300px;
+      }
+    }
+  }
+
+  &__caseStudies {
     width: 100%;
     min-height: 100vh;
-
-    .globalbanner{
-        .text{
-            top: 250px;
-        }
+    padding: 100px 250px 0 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include media("<=phone") {
+      padding: 30px;
     }
 
-    &__caseStudies{
-        width: 100%;
-        min-height: 100vh;
-        padding: 100px 250px 0 250px;
+    .case-study {
+      text-decoration: none;
+      display: block;
+      width: 40%;
+      min-height: 70vh;
+      background-color: #fff;
+      margin-bottom: 20vh;
+      position: relative;
+      transition: 0.4s;
+      @include media("<=phone") {
+        width: 80%;
+        min-height: 50vh;
+        margin-bottom: 10vh;
+      }
+      .info {
+        width: 55%;
+        position: absolute;
+        top: 30vh;
+        right: -70px;
+        @include media("<=phone") {
+          width: 70%;
+          right: -60px;
+        }
+        h2 {
+          font-family: var(--babas-font);
+          color: var(--text-color-black);
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          letter-spacing: 1.2px;
+          text-align: right;
+          @include media("<=phone") {
+            font-size: 2rem;
+            line-height: 2rem;
+          }
+        }
+        p {
+          color: var(--text-color-black);
+          text-align: right;
+        }
+      }
+
+      .button {
+        text-decoration: none;
+        color: var(--text-color-white);
+        background-color: var(--pink-color);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        font-weight: 500;
+        position: absolute;
+        right: -60px;
+        bottom: 100px;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        transform: scale(0);
+      }
 
-        .case-study{
-            text-decoration: none;
-            display: block;
-            width: 40%;
-            min-height: 70vh;
-            background-color: #fff;
-            margin-bottom: 20vh;
-            position: relative;
-            .info{
-                width: 55%;
-                position: absolute;
-                top: 30vh;
-                right: -70px;
-                h2{
-                    font-family: var(--babas-font);
-                    color: var(--text-color-black);
-                    font-size: 2.5rem;
-                    line-height: 2.5rem;
-                    letter-spacing: 1.2px;
-                    text-align: right;
-                }
-                p{
-                    color: var(--text-color-black);
-                    text-align: right;
-                }
-            }
-
-            a.button{
-                text-decoration: none;
-                color: var(--text-color-white);
-                background-color: var(--pink-color);
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                font-weight: 500;
-                position: absolute;
-                right: -60px;
-                bottom: 100px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                transition: 0.5s;
-                transform: scale(0);
-            }
-
-            &:hover a.button{
-                transform: scale(1);
-            }
+      &:hover .button {
+        transform: scale(1);
+        @include media("<=phone") {
+          transform: scale(0);
         }
+      }
+
+      .cardoverlay{
+        width: 100%;
+        height: 70vh;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: var(--text-color-black);
+        @include media("<=phone") {
+          height: 50vh;
+        }
+      }
     }
+  }
 }
