@@ -85,14 +85,14 @@ function WebTemp({ id }) {
       </div>
 
       {/* =========================== A PAGE =========================== */}
-      {/* <div className="apage">
+      <div className="apage">
         <div className="image">
           <img src={imageOfapage} alt="" />
         </div>
-      </div> */}
+      </div>
 
       {/* =========================== SOLUTION =========================== */}
-      {/* <div className="solution">
+      <div className="solution">
         <div className="textblock">
           <div className="text">
             <h3>Solutions</h3>
@@ -106,10 +106,10 @@ function WebTemp({ id }) {
             <img src={tabletImage} alt="" />
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* =========================== MOBILE VIEWS =========================== */}
-      {/* <div className="mobileview">
+      <div className="mobileview">
         <div className="image">
           <img src={mobileImage1} alt="" />
         </div>
@@ -119,28 +119,28 @@ function WebTemp({ id }) {
         <div className="image">
           <img src={mobileImage3} alt="" />
         </div>
-      </div> */}
+      </div>
 
       {/* =========================== ALL VIEWS =========================== */}
-      {/* <div
+      <div
         className="allviews"
         style={{
           background: `url(${collapsedImage}) no-repeat center center / cover`,
         }}
-      ></div> */}
+      ></div>
 
       {/* =========================== FONT & COLORS =========================== */}
-      {/* <div className="fontandcolor">
+      <div className="fontandcolor">
         <div className="fonts">
           <img src={fonts} alt="" />
         </div>
         <div className="colors">
           <img src={colors} alt="" />
         </div>
-      </div> */}
+      </div>
 
       {/* =========================== MORE PROJECTS =========================== */}
-      {/* <div className="more">
+      <div className="more">
         <h1>MORE WORKS</h1>
 
         <div className="works">
@@ -160,7 +160,7 @@ function WebTemp({ id }) {
             </Link>
           ))}
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
