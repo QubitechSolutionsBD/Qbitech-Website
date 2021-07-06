@@ -35,6 +35,7 @@ export const works = [
       { id: 2, name: "BPA", service: "Web Development" },
       { id: 3, name: "Currency Helper", service: "App Development" },
     ],
+    usedcolors: ["#0C59F2", "#07F2F2", "#858BF2", "#F2F2EB"]
   },
   {
     id: 2,
@@ -84,7 +85,8 @@ export const setupDataForWeb = (
   setCollapsedImage,
   setFonts,
   setColors,
-  setMoreWorks
+  setMoreWorks,
+  setUsedColors
 ) => {
   setName(works[id - 1].name);
   setService(works[id - 1].service);
@@ -103,6 +105,7 @@ export const setupDataForWeb = (
   setFonts(works[id - 1].fonts);
   setColors(works[id - 1].colors);
   setMoreWorks(works[id - 1].moreworks);
+  setUsedColors(works[id - 1].usedcolors)
 };
 
 export const findType = (id, setType) => {

@@ -20,6 +20,7 @@ function WebTemp({ id }) {
   const [fonts, setFonts] = useState(null);
   const [colors, setColors] = useState(null);
   const [moreworks, setMoreWorks] = useState([]);
+  const [usedColors, setUsedColors] = useState([]);
 
   const overlayRef = useRef([]);
   const overlayBoxRef = useRef([]);
@@ -27,6 +28,8 @@ function WebTemp({ id }) {
 
   // SETUP NECSESSARY DATA
   useEffect(() => {
+    window.scrollTo(0, 0);
+    
     setupDataForWeb(
       id,
       setName,
@@ -45,7 +48,8 @@ function WebTemp({ id }) {
       setCollapsedImage,
       setFonts,
       setColors,
-      setMoreWorks
+      setMoreWorks,
+      setUsedColors
     );
   }, [id]);
 
@@ -56,16 +60,19 @@ function WebTemp({ id }) {
       {/* =========================== BANNER =========================== */}
       <div className="webBanner">
         <div className="webBanner__contentblock">
-          <h1>{name}</h1>
-          <div className="service">
-            <h3>SERVICE</h3>
-            <p>{service}</p>
-          </div>
-          <div className="roles">
-            <h3>ROLES</h3>
-            {roles.map((role) => (
-              <p>{role}</p>
-            ))}
+          <div className="circle" style={{background: `${usedColors[1]}`}}></div>
+          <div className="content">
+            <h1>{name}</h1>
+            <div className="service">
+              <h3>SERVICE</h3>
+              <p>{service}</p>
+            </div>
+            <div className="roles">
+              <h3>ROLES</h3>
+              {roles.map((role) => (
+                <p>{role}</p>
+              ))}
+            </div>
           </div>
         </div>
         <div className="webBanner__imageblock">
@@ -77,6 +84,60 @@ function WebTemp({ id }) {
 
       {/* =========================== COMAPNY DESC =========================== */}
       <div className="company">
+        <div className="design__container">
+          <div className="row top">
+            <div
+              className="smallcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+            <div
+              className="bigcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+            <div
+              className="smallcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+          </div>
+          <div className="row">
+            <div
+              className="bigcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+            <div
+              className="bigcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+            <div
+              className="bigcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+          </div>
+          <div className="row below">
+            <div
+              className="smallcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+            <div
+              className="bigcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+            <div
+              className="smallcircle"
+              id="aboutwhydesigncircles"
+              style={{ border: `2px solid ${usedColors[0]}` }}
+            ></div>
+          </div>
+        </div>
+
         <div className="content">
           <h3>ABOUT CLIENT</h3>
           <h1>{comapnyDescHead}</h1>
@@ -145,11 +206,24 @@ function WebTemp({ id }) {
 
         <div className="works">
           {moreworks.map((work) => (
-            <Link to={`/case-studies/${work.id}`} className="case-study" key={work.id}>
-              <div className="cardoverlay" ref={(el) => (overlayRef.current[work.id] = el)}>
-                <div className="box" ref={(el) => (overlayBoxRef.current[work.id] = el)}></div>
+            <Link
+              to={`/case-studies/${work.id}`}
+              className="case-study"
+              key={work.id}
+            >
+              <div
+                className="cardoverlay"
+                ref={(el) => (overlayRef.current[work.id] = el)}
+              >
+                <div
+                  className="box"
+                  ref={(el) => (overlayBoxRef.current[work.id] = el)}
+                ></div>
               </div>
-              <div className="info" ref={(el) => (itemHead.current[work.id] = el)}>
+              <div
+                className="info"
+                ref={(el) => (itemHead.current[work.id] = el)}
+              >
                 <h2>{work.name}</h2>
                 <p>{work.service}</p>
               </div>
