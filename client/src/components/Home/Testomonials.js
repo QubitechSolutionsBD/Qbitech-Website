@@ -56,11 +56,11 @@ function Testomonials() {
     arrows: true,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 950,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
@@ -79,19 +79,14 @@ function Testomonials() {
   return (
     <div className="home__testomonials">
       <h1>
-        <div>
-          <span id="hometestomonialheading">CLIENTS</span>
-        </div>
-        <div>
-          <span id="hometestomonialheading">TESTOMONIALS</span>
-        </div>
+        <div><span id="hometestomonialheading">CLIENTS</span></div>
+        <div><span id="hometestomonialheading">TESTOMONIALS</span></div>
       </h1>
       <img className="quoto" src={quoto} alt="" />
 
       <Slider {...settings} className="slider">
         {allTestomonials.map((testomonil) => (
-          // <Testomonial testomonil={t} key={t.id} />
-          <div className="testomonial">
+          <div className="testomonial" key={testomonil.id}>
             <div className="block" id="hometesmonialcard">
               {/* client */}
               <div className="client">
