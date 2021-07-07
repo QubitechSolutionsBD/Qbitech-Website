@@ -17,7 +17,7 @@ const OurServices = ({ ourserviceRef }) => {
           marketing solutions for our customers.
         </p>
         <br />
-        <a href="#">Learn More+</a>
+        <a href="/services">Learn More+</a>
       </div>
       <img id="servicesourservicesimage" src={servicesImg} alt="" />
       <div className="circle" id="globalBannerCircle2"></div>

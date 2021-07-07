@@ -18,12 +18,12 @@ const WeDev = () => {
           </div>
         </h1>
 
-        <h2 className="wedevmobilehead">
+        <h2 id="wedevmobilehead">
           We develop high-end marketing websites and stable architecture for
           mobile and desktop applications for our clients.
         </h2>
 
-        <p>
+        <h4>
           <div id="wedevtext">
             <span>
               From custom front-end to sophisticated back-end, our in-house
@@ -36,7 +36,7 @@ const WeDev = () => {
               online.
             </span>
           </div>
-        </p>
+        </h4>
 
         <h3>
           From custom front-end to sophisticated back-end, our in-house
