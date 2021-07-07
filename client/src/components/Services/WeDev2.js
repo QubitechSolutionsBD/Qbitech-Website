@@ -20,7 +20,7 @@ const WeDev2 = () => {
           We develop high-end marketing websites and stable architecture for
           mobile and desktop applications for ur clients.
         </h2>
-        <p>
+        <h4>
           <div id="wedev2text">
             <span>
               From custom front-end to sophisticated back-end, our in-house
@@ -33,7 +33,7 @@ const WeDev2 = () => {
               online.
             </span>
           </div>
-        </p>
+        </h4>
         <h3>
           From custom front-end to sophisticated back-end, our in-house
           development team handles the heavy lifting to create an engaging
