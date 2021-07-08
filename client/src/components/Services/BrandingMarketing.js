@@ -43,7 +43,7 @@ const BrandingMarketing = () => {
       <div className="hdhiplink">
         <p id="branditem">
           {" "}
-          <a href="#" id="brandankor">
+          <a href="/services" id="brandankor">
             Learn More+
           </a>
         </p>

@@ -43,7 +43,7 @@ const HardwareDevelopment = () => {
       <div className="hdhiplink">
         <p id="harditem">
           {" "}
-          <a href="#" id="hardankor">
+          <a href="/services" id="hardankor">
             Learn More+
           </a>
         </p>

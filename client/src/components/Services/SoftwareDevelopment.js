@@ -52,7 +52,7 @@ const SoftwareDevelopment = () => {
           </div>
         </div>
       </div>
-      <a href="#" id="softankor">
+      <a href="/services" id="softankor">
         Learn More+
       </a>
     </div>
