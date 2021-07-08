@@ -23,10 +23,9 @@
       left: 50%;
       transform: translateX(-50%);
       @include media("<=phone") {
-        margin-left: 0;
-        width: 78%;
         margin: auto;
-        height: 25vh;
+        height: 35vh;
+        top: 5%;
       }
       img {
         height: 100%;
@@ -40,6 +39,9 @@
       top: 25%;
       left: 50%;
       transform: translateX(-50%);
+      @include media("<=phone") {
+        display: none;
+      }
     }
     .circle2 {
       width: 120px;
@@ -48,6 +50,9 @@
       position: absolute;
       bottom: 50px;
       right: 150px;
+      @include media("<=phone") {
+        display: none;
+      }
     }
     .circle3 {
       width: 60px;
@@ -56,6 +61,10 @@
       position: absolute;
       top: 100px;
       left: -30px;
+      @include media("<=phone") {
+        top: -30px;
+        left: 30px;
+      }
     }
   }
   &__contentblock {
@@ -124,10 +133,7 @@
       top: 65px;
       left: 100px;
       @include media("<=phone") {
-        width: 60px;
-        height: 60px;
-        top: calc(60vh + 5px);
-        left: 50px;
+        display: none;
       }
     }
   }
@@ -160,8 +166,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @include media("<=phone") {
-      height: 25vh;
-      width: 44.6vh;
+      height: 35vh;
     }
     img {
       height: 100%;
@@ -174,8 +179,7 @@
     left: 50%;
     transform: translateX(-50%);
     @include media("<=phone") {
-      height: 25vh;
-      width: 44.6vh;
+      height: 40vh;
     }
     img {
       height: 100%;
@@ -189,6 +193,9 @@
     position: absolute;
     right: 280px;
     bottom: 50px;
+    @include media("<=phone") {
+      display: none;
+    }
   }
   .circle2 {
     width: 120px;
@@ -197,6 +204,12 @@
     position: absolute;
     left: 15%;
     top: 35%;
+    @include media("<=phone") {
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      left: 30px;
+    }
   }
   .circle3 {
     width: 90px;
@@ -205,6 +218,12 @@
     position: absolute;
     left: 60%;
     top: 50px;
+    @include media("<=phone") {
+      width: 45px;
+      height: 45px;
+      left: 80%;
+      top: 80%;
+    }
   }
 }
 
@@ -261,10 +280,19 @@
     width: 45%;
     padding-left: 150px;
     padding-top: 100px;
+    @include media("<=phone") {
+      width: 100%;
+      padding-top: 0;
+      padding-left: 10px;
+      margin-top: -20px;
+    }
 
     .feature {
       margin-bottom: 25px;
       display: flex;
+      @include media("<=phone") {
+        margin-bottom: 15px;
+      }
 
       .circle1 {
         width: 30px;
@@ -274,11 +302,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include media("<=phone") {
+          height: 15px;
+          width: 15px;
+        }
         .circle2 {
           width: 20px;
           height: 20px;
           border-radius: 50%;
+          @include media("<=phone") {
+            height: 8px;
+            width: 8px;
+          }
         }
+      }
+      .text {
+        font-size: 13.5px;
       }
     }
   }
@@ -292,7 +331,7 @@
   display: flex;
   flex-wrap: wrap;
   @include media("<=phone") {
-    padding: 60px 30px;
+    padding: 0 30px;
   }
 
   .imageblock {
@@ -310,18 +349,6 @@
       overflow: hidden;
       @include media("<=phone") {
         height: 45vh;
-        width: 36vh;
-      }
-      &__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 75vh;
-        width: 60vh; // 1.25 aspect ratio (wrong)
-        background: var(--background-color-dark);
-        @include media("<=phone") {
-          height: 45vh;
-        }
       }
       img {
         height: 100%;
@@ -366,16 +393,18 @@
         @include media("<=phone") {
           font-size: 13.5px;
           line-height: 22px;
+          text-align: justify;
         }
       }
     }
   }
 }
 
-
-
 /////////////////////////////////////////////////////////////////////////////////////
 // ================================== MORE WORKS ===============================
-.more{
-    padding-top: 150px;
+.more {
+  padding-top: 150px;
+  @include media("<=phone") {
+    padding-top: 60px;
+  }
 }

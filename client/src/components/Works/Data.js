@@ -44,7 +44,7 @@ export const works = [
   },
   {
     id: 2,
-    name: "OPIX PET",
+    name: "ORIX PET",
     type: "app",
     service: "App development",
     rolls: ["UI-UX DESIGN", "APP DESIGN", "ADOPTION SYSTEM", "STRATEGY"],
