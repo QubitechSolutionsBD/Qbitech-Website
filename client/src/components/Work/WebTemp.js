@@ -1,6 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { setupDataForWeb } from "../Works/Data";
+import GlobalPageTransition from "../Global/GlobalPageTransition";
+
+// ANIMATIONS
+import { webTemplateAnimation } from "../../animation/WorkAnim";
 
 function WebTemp({ id }) {
   const [name, setName] = useState("");
@@ -19,17 +23,14 @@ function WebTemp({ id }) {
   const [collapsedImage, setCollapsedImage] = useState(null);
   const [fonts, setFonts] = useState(null);
   const [colors, setColors] = useState(null);
-  const [moreworks, setMoreWorks] = useState([]);
+  const [moreworks, setMoreWorks] = useState([{}, {}]);
   const [usedColors, setUsedColors] = useState([]);
-
-  const overlayRef = useRef([]);
-  const overlayBoxRef = useRef([]);
-  const itemHead = useRef([]);
 
   // SETUP NECSESSARY DATA
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+    webTemplateAnimation();
+
     setupDataForWeb(
       id,
       setName,
@@ -49,25 +50,32 @@ function WebTemp({ id }) {
       setFonts,
       setColors,
       setMoreWorks,
-      setUsedColors
+      setUsedColors,
     );
   }, [id]);
 
-  console.log(moreworks);
-
   return (
     <>
+      <GlobalPageTransition />
       {/* =========================== BANNER =========================== */}
       <div className="webBanner">
         <div className="webBanner__contentblock">
-          <div className="circle" style={{background: `${usedColors[1]}`}}></div>
+          {/* circle - for design purpose */}
+          <div
+            className="circle"
+            style={{ background: `${usedColors[1]}` }}
+            id="webTemplatebannercircle"
+          ></div>
           <div className="content">
-            <h1>{name}</h1>
-            <div className="service">
+            {/* project name */}
+            <h1 id="webtemplateprojectname">{name}</h1>
+            {/* project service */}
+            <div className="service" id="webtemplateotherblock">
               <h3>SERVICE</h3>
               <p>{service}</p>
             </div>
-            <div className="roles">
+            {/* project - roles */}
+            <div className="roles" id="webtemplateotherblock">
               <h3>ROLES</h3>
               {roles.map((role) => (
                 <p>{role}</p>
@@ -75,8 +83,8 @@ function WebTemp({ id }) {
             </div>
           </div>
         </div>
-        <div className="webBanner__imageblock">
-          <div className="image">
+        <div className="webBanner__imageblock" id="webtemplatebannerimageblock">
+          <div className="image" id="webtempbannerimage">
             <img src={bannerImage} alt="" />
           </div>
         </div>
@@ -138,46 +146,51 @@ function WebTemp({ id }) {
           </div>
         </div>
 
-        <div className="content">
-          <h3>ABOUT CLIENT</h3>
-          <h1>{comapnyDescHead}</h1>
-          <p>{comapnyDescText}</p>
+        <div className="content" id="webtempcomapnycontent">
+          <h3 id="webtempcomapny">ABOUT CLIENT</h3>
+          <h1 id="webtempcomapny">{comapnyDescHead}</h1>
+          <p id="webtempcomapny">{comapnyDescText}</p>
         </div>
       </div>
 
       {/* =========================== A PAGE =========================== */}
-      <div className="apage">
-        <div className="image">
-          <img src={imageOfapage} alt="" />
+      <div className="apage" id="webtempapage">
+        <div className="apage__overlay" id="webtempapageoverlay"></div>
+        <div className="apage__image">
+          <img src={imageOfapage} alt="" id="webtempapageimage" />
         </div>
       </div>
 
       {/* =========================== SOLUTION =========================== */}
       <div className="solution">
         <div className="textblock">
-          <div className="text">
-            <h3>Solutions</h3>
-            <h1>{solutiondescHead}</h1>
-            <p>{solutiondescText}</p>
+          <div className="text" id="webtempsolutioncontent">
+            <h3 id="webtempsolution">Solutions</h3>
+            <h1 id="webtempsolution">{solutiondescHead}</h1>
+            <p id="webtempsolution">{solutiondescText}</p>
           </div>
         </div>
 
         <div className="imageblock">
-          <div className="image">
+          <div className="image" id="webtempsolutionimage">
+            <div
+              className="image__overlay"
+              id="webtempsolutionimageoverlay"
+            ></div>
             <img src={tabletImage} alt="" />
           </div>
         </div>
       </div>
 
       {/* =========================== MOBILE VIEWS =========================== */}
-      <div className="mobileview">
-        <div className="image">
+      <div className="mobileview" id="wetempmobileview">
+        <div className="image" id="webtempmobiles">
           <img src={mobileImage1} alt="" />
         </div>
-        <div className="image">
+        <div className="image" id="webtempmobiles">
           <img src={mobileImage2} alt="" />
         </div>
-        <div className="image">
+        <div className="image" id="webtempmobiles">
           <img src={mobileImage3} alt="" />
         </div>
       </div>
@@ -188,7 +201,10 @@ function WebTemp({ id }) {
         style={{
           background: `url(${collapsedImage}) no-repeat center center / cover`,
         }}
-      ></div>
+        id="webtempallviews"
+      >
+        <div className="allviews__overlay" id="webtempallviewsoverlay"></div>
+      </div>
 
       {/* =========================== FONT & COLORS =========================== */}
       <div className="fontandcolor">
@@ -205,34 +221,39 @@ function WebTemp({ id }) {
         <h1>MORE WORKS</h1>
 
         <div className="works">
-          {moreworks.map((work) => (
-            <Link
-              to={`/case-studies/${work.id}`}
-              className="case-study"
-              key={work.id}
-            >
-              <div
-                className="cardoverlay"
-                ref={(el) => (overlayRef.current[work.id] = el)}
-              >
-                <div
-                  className="box"
-                  ref={(el) => (overlayBoxRef.current[work.id] = el)}
-                ></div>
+            <Link to={`/case-studies/${moreworks[0].id}`} className="case-study">
+              {/* overlay */}
+              <div className="cardoverlay" id="moreworksoverlay">
+                <div className="box"></div>
               </div>
-              <div
-                className="info"
-                ref={(el) => (itemHead.current[work.id] = el)}
-              >
-                <h2>{work.name}</h2>
-                <p>{work.service}</p>
+              {/* name */}
+              <div className="info" id="moreworksworkname">
+                <h2>{moreworks[0].name}</h2>
+                <p>{moreworks[0].service}</p>
               </div>
-              <div to={`/case-studies/${work.id}`} className="button">
+              {/* button */}
+              <div to={`/case-studies/${moreworks[0].id}`} className="button">
                 <div>VIEW</div>
                 <div>PROJECT</div>
               </div>
             </Link>
-          ))}
+
+            <Link to={`/case-studies/${moreworks[1].id}`} className="case-study">
+              {/* overlay */}
+              <div className="cardoverlay" id="moreworksoverlay">
+                <div className="box"></div>
+              </div>
+              {/* name */}
+              <div className="info" id="moreworksworkname">
+                <h2>{moreworks[1].name}</h2>
+                <p>{moreworks[1].service}</p>
+              </div>
+              {/* button */}
+              <div to={`/case-studies/${moreworks[1].id}`} className="button">
+                <div>VIEW</div>
+                <div>PROJECT</div>
+              </div>
+            </Link>
         </div>
       </div>
     </>

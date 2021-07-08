@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
+
+// COMPONENTS
+import GlobalPageTransition from "../components/Global/GlobalPageTransition";
 import Navbar from "../components/Navigation/Navbar";
 import Banner from "../components/Works/Banner";
-import Footer from "../components/Footer";
-import GlobalPageTransition from "../components/Global/GlobalPageTransition";
-
-// Animations
-import { worksAnumation } from "../animation/WorksAnim";
 import CaseStudies from "../components/Works/CaseStudies";
+import Footer from "../components/Footer";
+
+// ANIMATIONS
+import { worksAnumation } from "../animation/WorksAnim";
 
 function Works() {
     const nextSlideRef = useRef(null);

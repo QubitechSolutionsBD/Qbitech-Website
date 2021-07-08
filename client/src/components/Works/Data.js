@@ -43,27 +43,107 @@ export const works = [
     type: "web",
     service: "Web development",
     rolls: ["UI-UX DESIGN", "WEBSITE DESIGN", "RESPONSIVENESS", "STRATEGY"],
+    comapnyDescHead: "Transforming Dentistry through AI",
+    comapnyDescText:
+      "Videa Health is on a quest to transform dentistry by applying AI to X-ray analysis, unlocking breakthroughs in clinical outcomes and economics for dentists and insurers. They apply AI in X-ray and other analysis to unlock insights to give a efficient clinical outcomes.",
+    solutionHead: "Engaging animations for the enterprise landscape",
+    solutionText:
+      "To provide a modernized, elevated web experience for Instabase’s forward-thinking audience, the company’s new corporate site utilizes playful animations and interactions to keep users engaged. Delightful motion is paired with simple copy to tell a more humanized brand story.",
+    bannerImage: p1,
+    setImageOfapage: p3,
+    tabImage: p2,
+    mobileImage1: p4,
+    mobileImage2: p5,
+    mobileImage3: p6,
+    collapsedImage: p7,
+    fonts: p8,
+    colors: p9,
+    moreworks: [
+      { id: 2, name: "BPA", service: "Web Development" },
+      { id: 3, name: "Currency Helper", service: "App Development" },
+    ],
+    usedcolors: ["#0C59F2", "#07F2F2", "#858BF2", "#F2F2EB"]
   },
   {
     id: 3,
     name: "Currency Helper",
-    type: "app",
-    service: "APP development",
+    type: "web",
+    service: "Web development",
     rolls: ["UI-UX DESIGN", "WEBSITE DESIGN", "RESPONSIVENESS", "STRATEGY"],
+    comapnyDescHead: "Transforming Dentistry through AI",
+    comapnyDescText:
+      "Videa Health is on a quest to transform dentistry by applying AI to X-ray analysis, unlocking breakthroughs in clinical outcomes and economics for dentists and insurers. They apply AI in X-ray and other analysis to unlock insights to give a efficient clinical outcomes.",
+    solutionHead: "Engaging animations for the enterprise landscape",
+    solutionText:
+      "To provide a modernized, elevated web experience for Instabase’s forward-thinking audience, the company’s new corporate site utilizes playful animations and interactions to keep users engaged. Delightful motion is paired with simple copy to tell a more humanized brand story.",
+    bannerImage: p1,
+    setImageOfapage: p3,
+    tabImage: p2,
+    mobileImage1: p4,
+    mobileImage2: p5,
+    mobileImage3: p6,
+    collapsedImage: p7,
+    fonts: p8,
+    colors: p9,
+    moreworks: [
+      { id: 2, name: "BPA", service: "Web Development" },
+      { id: 3, name: "Currency Helper", service: "App Development" },
+    ],
+    usedcolors: ["#0C59F2", "#07F2F2", "#858BF2", "#F2F2EB"]
   },
   {
     id: 4,
     name: "Bingo",
-    type: "game",
-    service: "Game development",
+    type: "web",
+    service: "Web development",
     rolls: ["UI-UX DESIGN", "WEBSITE DESIGN", "RESPONSIVENESS", "STRATEGY"],
+    comapnyDescHead: "Transforming Dentistry through AI",
+    comapnyDescText:
+      "Videa Health is on a quest to transform dentistry by applying AI to X-ray analysis, unlocking breakthroughs in clinical outcomes and economics for dentists and insurers. They apply AI in X-ray and other analysis to unlock insights to give a efficient clinical outcomes.",
+    solutionHead: "Engaging animations for the enterprise landscape",
+    solutionText:
+      "To provide a modernized, elevated web experience for Instabase’s forward-thinking audience, the company’s new corporate site utilizes playful animations and interactions to keep users engaged. Delightful motion is paired with simple copy to tell a more humanized brand story.",
+    bannerImage: p1,
+    setImageOfapage: p3,
+    tabImage: p2,
+    mobileImage1: p4,
+    mobileImage2: p5,
+    mobileImage3: p6,
+    collapsedImage: p7,
+    fonts: p8,
+    colors: p9,
+    moreworks: [
+      { id: 2, name: "BPA", service: "Web Development" },
+      { id: 3, name: "Currency Helper", service: "App Development" },
+    ],
+    usedcolors: ["#0C59F2", "#07F2F2", "#858BF2", "#F2F2EB"]
   },
   {
     id: 5,
     name: "Call Of Duty",
-    type: "game",
+    type: "web",
     service: "Web development",
     rolls: ["UI-UX DESIGN", "WEBSITE DESIGN", "RESPONSIVENESS", "STRATEGY"],
+    comapnyDescHead: "Transforming Dentistry through AI",
+    comapnyDescText:
+      "Videa Health is on a quest to transform dentistry by applying AI to X-ray analysis, unlocking breakthroughs in clinical outcomes and economics for dentists and insurers. They apply AI in X-ray and other analysis to unlock insights to give a efficient clinical outcomes.",
+    solutionHead: "Engaging animations for the enterprise landscape",
+    solutionText:
+      "To provide a modernized, elevated web experience for Instabase’s forward-thinking audience, the company’s new corporate site utilizes playful animations and interactions to keep users engaged. Delightful motion is paired with simple copy to tell a more humanized brand story.",
+    bannerImage: p1,
+    setImageOfapage: p3,
+    tabImage: p2,
+    mobileImage1: p4,
+    mobileImage2: p5,
+    mobileImage3: p6,
+    collapsedImage: p7,
+    fonts: p8,
+    colors: p9,
+    moreworks: [
+      { id: 2, name: "BPA", service: "Web Development" },
+      { id: 3, name: "Currency Helper", service: "App Development" },
+    ],
+    usedcolors: ["#0C59F2", "#07F2F2", "#858BF2", "#F2F2EB"]
   },
 ];
 

@@ -9,6 +9,9 @@ import Footer from "../components/Footer";
 // TYPE SELECTION FUNC
 import {findType} from "../components/Works/Data";
 
+// ASSETS
+import loadingring from "../assets/loading-ring.gif";
+
 function Work() {
     const location = useLocation();
     const [loading, setLoading] = useState(false);
@@ -17,10 +20,12 @@ function Work() {
 
     // SETUP PROJECT TYPE FOR CONDITIONAL RENDERING
     useEffect(() => {
+        window.scrollTo(0, 0);
+
         const docid = location.pathname.split("/")[2];
         setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 1000);
         setLoading(true);
         setId(docid);
         findType(docid, setType);
@@ -43,7 +48,10 @@ function Work() {
                                 : type === 'marketing'
                                     ? <WebTemp id={id} />
                                     : null
-                : "Loading"
+                : <div className="loading">
+                    <img src={loadingring} alt="" />
+                    <h3>LOADING</h3>
+                </div>
             }
         </div>
         <Footer />
