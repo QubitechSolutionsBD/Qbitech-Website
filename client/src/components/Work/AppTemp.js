@@ -89,6 +89,7 @@ function AppTemp({ id }) {
           <div
             className="circle1"
             style={{ background: `${usedColors[0]}` }}
+            id="apptemplatebannerimagecircles"
           ></div>
           <div className="image" id="apptempbannerimage">
             <img src={bannerImage} alt="" />
@@ -96,10 +97,12 @@ function AppTemp({ id }) {
           <div
             className="circle2"
             style={{ background: `${usedColors[0]}` }}
+            id="apptemplatebannerimagecircles"
           ></div>
           <div
             className="circle3"
             style={{ background: `${usedColors[0]}` }}
+            id="apptemplatebannerimagecircles"
           ></div>
         </div>
       </div>
@@ -160,10 +163,10 @@ function AppTemp({ id }) {
           </div>
         </div>
 
-        <div className="content" id="webtempcomapnycontent">
-          <h3 id="webtempcomapny">ABOUT THE APP</h3>
-          <h1 id="webtempcomapny">{comapnyDescHead}</h1>
-          <p id="webtempcomapny">{comapnyDescText}</p>
+        <div className="content" id="apptempcomapnycontent">
+          <h3 id="apptempcomapny">ABOUT THE APP</h3>
+          <h1 id="apptempcomapny">{comapnyDescHead}</h1>
+          <p id="apptempcomapny">{comapnyDescText}</p>
         </div>
       </div>
 

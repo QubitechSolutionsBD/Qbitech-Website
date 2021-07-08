@@ -158,4 +158,30 @@ export const appTemplateAnimation = () => {
   let tl = gsap.timeline();
   tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
+    .from("#apptemplatebannerimageblock", 1, { height: 0, ease: "expo.inOut", })
+    .from("#apptemplatebannerimagecircles", 1, { scale: 0, stagger: {amount: 0.4}, ease: "expo.inOut" })
+    .from("#apptempbannerimage", 0.8, { x: "160%", ease: "expo.inOut" })
+    .from("#appTemplatebannercircle", 1, { scale: 0, ease: "expo.inOut" }, "<")
+    .from("#apptemplateprojectname", 0.5,{y: 50, opacity: 0, ease: "power4.out",},"<")
+    .from("#apptemplateotherblock", 0.5, {y: 60, opacity: 0, ease: "power4.out", stagger: {amount: 0.4},})
+
+    gsap.from("#aboutwhydesigncircles", 1, {
+      scale: 0,
+      ease: "expo.inOut",
+      stagger: { amount: 0.4 },
+      scrollTrigger: {
+        trigger: "#apptempcomapnycontent",
+        start: "top 90%",
+      },
+    });
+    gsap.from("#apptempcomapny", 1, {
+      y: 50,
+      opacity: 0,
+      ease: "power4.out",
+      stagger: { amount: 0.7 },
+      scrollTrigger: {
+        trigger: "#apptempcomapnycontent",
+        start: "top 70%",
+      },
+    });
 }
