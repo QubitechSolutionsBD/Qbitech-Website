@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 // COMPONENTS
 import Navbar from "../components/Navigation/Navbar";
 import WebTemp from '../components/Work/WebTemp';
+import AppTemp from '../components/Work/AppTemp';
 import Footer from "../components/Footer";
 
 // TYPE SELECTION FUNC
@@ -40,7 +41,7 @@ function Work() {
                 ? type === 'web'
                     ? <WebTemp id={id} />
                     : type === 'app'
-                        ? <WebTemp id={id} />
+                        ? <AppTemp id={id} />
                         : type === 'game'
                             ? <WebTemp id={id} />
                             : type === 'harware'

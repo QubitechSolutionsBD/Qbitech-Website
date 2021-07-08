@@ -451,6 +451,7 @@
   }
 
   .works {
+    height: fit-content;
     margin-top: 75px;
     display: flex;
     flex-wrap: wrap;
@@ -464,7 +465,6 @@
       width: 40%;
       height: 70vh;
       background-color: #fff;
-      margin-bottom: 20vh;
       position: relative;
       transition: 0.4s;
       @include media("<=phone") {
