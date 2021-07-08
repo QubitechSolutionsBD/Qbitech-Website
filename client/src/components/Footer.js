@@ -9,6 +9,10 @@ function Footer() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
+  const openMail = () => {
+    window.open('mailto:qubitechsolutions@gmail.com')
+  }
+
   return (
     <div className="footer">
       <div className="footer__main">
@@ -22,15 +26,15 @@ function Footer() {
         <div className="infos">
           <div className="info">
             <h3>PHONE</h3>
-            <p>+880 1531 709712</p>
+            <p>(+880) 1774254696</p>
           </div>
           <div className="info">
             <h3>ENQURIES</h3>
-            <p>qbitech@gmail.com</p>
+            <p onClick={openMail} style={{cursor: "pointer"}}>qubitechsolutions@gmail.com</p>
           </div>
           <div className="info">
             <h3>ADDRESS</h3>
-            <p>8890 Talaimari.</p>
+            <p>Talaimari, Boalia</p>
             <p>Rajshahi Bangladesh</p>
           </div>
         </div>

@@ -46,7 +46,7 @@
       }
     }
     .infos {
-      width: 30%;
+      width: 40%;
       height: 60vh;
       display: flex;
       flex-direction: column;
@@ -68,7 +68,7 @@
           @include media("<=desktop") { font-size: 15px; }
           @include media("<=phone") { font-size: 13px; }
         }
-        p {
+        p, a {
           color: var(--text-color-white);
           font-size: 1.8rem;
           line-height: 2.8rem;
@@ -76,10 +76,14 @@
           @include media("<=desktop") { font-size: 1.4rem; line-height: 2.4rem; } 
           @include media("<=phone") {font-size: 17px; line-height: 28px;}
         }
+        a{
+          text-decoration: none;
+          font-size: 1.5rem;
+        }
       }
     }
     .social-links {
-      width: 30%;
+      width: 20%;
       height: fit-content;
       @include media("<=phone") {width: 100%; margin-bottom: 40px;}
       h3 {
@@ -150,10 +154,10 @@
   }
 
   img.q{
-    height: 90%;
+    height: 70%;
     position: absolute;
-    right: -15%;
-    bottom: -30%;
+    right: -10%;
+    bottom: -10%;
     @include media("<=desktop") {
       height: 80%;
       right: -15%;

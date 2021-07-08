@@ -71,6 +71,10 @@ function Contact() {
     }
   };
 
+  const openMail = () => {
+    window.open('mailto:qubitechsolutions@gmail.com')
+  }
+
   return (
     <>
       <GlobalPageTransition />
@@ -163,14 +167,14 @@ function Contact() {
 
             <div className="block" id="contactmoreinfo">
               <h2>Come say Hey</h2>
-              <p>701 Talaimari, Boalia</p>
+              <p>Talaimari, Boalia</p>
               <p>Rajshahi, Bangladesh</p>
             </div>
 
             <div className="block" id="contactmoreinfo">
               <h2>Get in touch</h2>
-              <p>PHONE: (+880) 1531709712</p>
-              <p>EMAIL: qubitechbd@gmail.com</p>
+              <p>PHONE: (+880) 1774254696</p>
+              <p onClick={openMail} style={{cursor: "pointer"}}>EMAIL: qubitechsolutions@gmail.com</p>
             </div>
           </div>
         </div>
