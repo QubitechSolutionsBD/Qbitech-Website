@@ -1,3 +1,4 @@
+import { Hidden } from "@material-ui/core";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -9,7 +10,7 @@ export const servicesAnimation = () => {
     .from("#globalBannerCircle1", 0.8, { scale: 0, ease: "expo.inOut" })
     .from("#globalBannerCircle2", 0.8, { scale: 0, ease: "expo.inOut" })
     .from("#servicesbannerheading", 1, {
-      y: 100,
+      y: 120,
       ease: "power4.out",
       skewY: 7,
       stagger: { amount: 0.3 },
@@ -59,11 +60,10 @@ export const servicesAnimation = () => {
   /////////////////////////////////////////////////////
   //////////////////////////Web Development///////////
   gsap.from("#serviceswebdevelopmenthead", 1.3, {
-    x: 200,
+    y: 200,
     ease: "power4.out",
-    opacity: 0,
     skewY: 8,
-    stagger: { amount: 0.5 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceswebdevelopmenthead",
       start: "top 80%",
@@ -71,11 +71,10 @@ export const servicesAnimation = () => {
   });
   gsap.from("#webitemcircle", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: 200,
+    y: 200,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceswebdevelopmenthead",
       start: "top 85%",
@@ -83,11 +82,10 @@ export const servicesAnimation = () => {
   });
   gsap.from("#webitem", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: 200,
+    y: 200,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceswebdevelopmenthead",
       start: "top 85%",
@@ -95,11 +93,12 @@ export const servicesAnimation = () => {
   });
 
   gsap.from("#webankor", 1.4, {
-    delay: 0.8,
+    delay: 1.2,
+    overflow: "hidden",
     opacity: 0,
-    x: 300,
+    display: "none",
+    x: 130,
     ease: "power4.out",
-    skewY: 8,
     scrollTrigger: {
       trigger: "#serviceswebdevelopmenthead",
       start: "top 85%",
@@ -109,11 +108,10 @@ export const servicesAnimation = () => {
   /////////////////////////////////////////////////////
   //////////////////////////Software Development///////////
   gsap.from("#servicessoftwaredevelopmenthead", 1.3, {
-    x: 200,
+    y: 200,
     ease: "power4.out",
-    opacity: 0,
     skewY: 8,
-    stagger: { amount: 0.5 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#servicessoftwaredevelopmenthead",
       start: "top 80%",
@@ -121,11 +119,11 @@ export const servicesAnimation = () => {
   });
   gsap.from("#softcircle", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: 200,
+
+    y: 200,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#servicessoftwaredevelopmenthead",
       start: "top 85%",
@@ -133,11 +131,10 @@ export const servicesAnimation = () => {
   });
   gsap.from("#softitem", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: 200,
+    y: 120,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#servicessoftwaredevelopmenthead",
       start: "top 85%",
@@ -145,11 +142,12 @@ export const servicesAnimation = () => {
   });
 
   gsap.from("#softankor", 1.4, {
-    delay: 0.8,
+    delay: 1.2,
+    overflow: "hidden",
     opacity: 0,
-    x: 300,
+    display: "none",
+    x: 130,
     ease: "power4.out",
-    skewY: 8,
     scrollTrigger: {
       trigger: "#servicessoftwaredevelopmenthead",
       start: "top 85%",
@@ -158,10 +156,9 @@ export const servicesAnimation = () => {
   /////////////////////////////////////////////////////
   //////////////////We Dev/////////////////////////////
   gsap.from("#serviceswedevhead", 1.3, {
-    y: 100,
+    y: 120,
     ease: "power4.out",
-    opacity: 0,
-    skewY: 8,
+
     stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceswedevhead",
@@ -169,10 +166,22 @@ export const servicesAnimation = () => {
     },
   });
   gsap.from("#wedevmobilehead", 1.3, {
-    y: 100,
+    y: 120,
     ease: "power4.out",
     opacity: 0,
-    skewY: 8,
+
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#wedevmobilehead",
+      start: "top 85%",
+    },
+  });
+  gsap.from("#wedevmobiletext", 1.3, {
+    delay: 0.3,
+    y: 120,
+    ease: "power4.out",
+    opacity: 0,
+
     stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#wedevmobilehead",
@@ -181,10 +190,10 @@ export const servicesAnimation = () => {
   });
   gsap.from("#wedevtext", 1.3, {
     delay: 0.7,
-    y: 100,
+    y: 120,
     opacity: 0,
     ease: "power4.out",
-    skewY: 8,
+
     stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceswedevhead",
@@ -195,11 +204,10 @@ export const servicesAnimation = () => {
   /////////////////////////////////////////////////////
   ////////////////////Hardware Development////////////
   gsap.from("#serviceshardwaredevelopmenthead", 1.3, {
-    x: -200,
+    y: 200,
     ease: "power4.out",
-    opacity: 0,
     skewY: 8,
-    stagger: { amount: 0.5 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceshardwaredevelopmenthead",
       start: "top 80%",
@@ -207,11 +215,10 @@ export const servicesAnimation = () => {
   });
   gsap.from("#hardcircle", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: -200,
+    y: 120,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceshardwaredevelopmenthead",
       start: "top 85%",
@@ -219,23 +226,23 @@ export const servicesAnimation = () => {
   });
   gsap.from("#harditem", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: -200,
+    y: 120,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceshardwaredevelopmenthead",
       start: "top 85%",
     },
   });
 
-  gsap.from("#hardankor", 1.4, {
-    delay: 0.8,
+  gsap.from("#hardankor", 1.3, {
+    delay: 1.2,
+    overflow: "hidden",
     opacity: 0,
-    x: -300,
+    display: "none",
+    x: -130,
     ease: "power4.out",
-    skewY: 8,
     scrollTrigger: {
       trigger: "#servicessoftwaredevelopmenthead",
       start: "top 85%",
@@ -244,11 +251,10 @@ export const servicesAnimation = () => {
   /////////////////////////////////////////////////////////////
   /////////////////////Branding Solutions/////////////////////
   gsap.from("#servicesbrandingmarketinghead", 1.3, {
-    x: -200,
+    y: 200,
     ease: "power4.out",
-    opacity: 0,
     skewY: 8,
-    stagger: { amount: 0.5 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#servicesbrandingmarketinghead",
       start: "top 80%",
@@ -256,11 +262,10 @@ export const servicesAnimation = () => {
   });
   gsap.from("#brandcircle", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: -200,
+    y: 120,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#servicesbrandingmarketinghead",
       start: "top 85%",
@@ -268,11 +273,10 @@ export const servicesAnimation = () => {
   });
   gsap.from("#branditem", 1.4, {
     delay: 0.7,
-    opacity: 0,
-    x: -200,
+    y: 120,
     ease: "power4.out",
     skewY: 8,
-    stagger: { amount: 0.4 },
+    stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#servicesbrandingmarketinghead",
       start: "top 85%",
@@ -280,11 +284,12 @@ export const servicesAnimation = () => {
   });
 
   gsap.from("#brandankor", 1.4, {
-    delay: 0.8,
+    delay: 1.2,
+    overflow: "hidden",
     opacity: 0,
-    x: -300,
+    display: "none",
+    x: -130,
     ease: "power4.out",
-    skewY: 8,
     scrollTrigger: {
       trigger: "#servicesbrandingmarketinghead",
       start: "top 85%",
@@ -296,7 +301,30 @@ export const servicesAnimation = () => {
     y: 100,
     ease: "power4.out",
     opacity: 0,
-    skewY: 8,
+
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswedev2head",
+      start: "top 85%",
+    },
+  });
+  gsap.from("#wedev2mobilehead", 1.3, {
+    y: 120,
+    ease: "power4.out",
+    opacity: 0,
+
+    stagger: { amount: 0.3 },
+    scrollTrigger: {
+      trigger: "#serviceswedev2head",
+      start: "top 85%",
+    },
+  });
+  gsap.from("#wedev2mobiletext", 1.3, {
+    delay: 0.3,
+    y: 120,
+    ease: "power4.out",
+    opacity: 0,
+
     stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceswedev2head",
@@ -308,7 +336,7 @@ export const servicesAnimation = () => {
     y: 100,
     opacity: 0,
     ease: "power4.out",
-    skewY: 8,
+
     stagger: { amount: 0.3 },
     scrollTrigger: {
       trigger: "#serviceswedev2head",
