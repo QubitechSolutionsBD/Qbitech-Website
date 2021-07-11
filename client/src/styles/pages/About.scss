@@ -6,28 +6,31 @@
   &__about {
     min-height: 100vh;
     width: 100%;
-    padding: 200px 300px 120px 300px;
+    padding: 200px 300px 130px 300px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     background: var(--background-color-dark);
     @include media("<=1620px") {
-      padding: 185px 270px;
+      padding: 200px 270px 130px 270px;
     }
     @include media("<=1520px") {
-      padding: 165px 260px ;
+      padding: 170px 250px 110px 250px;
     }
     @include media("<=desktop") {
       padding: 150px 230px 190px 230px;
     }
     @include media("<=1260px") {
-      padding: 125px 145px;
+      padding: 140px 150px 90px 150px;
     }
     @include media("<=semiDesktop") {
-      padding: 70px 130px;
+      padding: 130px 140px 90px 140px;
     }
-    @include media("<=phone") {
-      padding: 30px;
+    @include media("<=950px") {
+      padding: 90px 130px 70px 130px;
+    }
+    @include media("<=900px") {
+      padding: 90px 100px 70px 100px;
     }
     @include media("<=phone") {
       min-height: 90vh;
@@ -38,7 +41,7 @@
     .heading {
       width: 40%;
       position: relative;
-      @include media("<=phone") {
+      @include media("<=900px") {
         width: 100%;
       }
       .circle {
@@ -50,6 +53,32 @@
         top: -90px;
         left: -90px;
         z-index: 0;
+        @include media("<=1620px") {
+          width: 140px;
+          height: 140px;
+        }
+        @include media("<=1520px") {
+          width: 130px;
+          height: 130px;
+        }
+        @include media("<=desktop") {
+          width: 120px;
+          height: 120px;
+        }
+        @include media("<=1260px") {
+          width: 110px;
+          height: 110px;
+          top: -70px;
+          left: -70px;
+        }
+        @include media("<=semiDesktop") {
+          width: 100px;
+          height: 100px;
+        }
+        @include media("<=900px") {
+          left: -50px;
+          top: -70px;
+        }
         @include media("<=phone") {
           display: none;
         }
@@ -97,16 +126,40 @@
         font-family: var(--babas-font);
         letter-spacing: 3px;
         color: var(--text-color-white);
+        @include media("<=1608px") {
+          font-size: 4.7rem;
+          line-height: 4.7rem;
+        }
+        @include media("<=1508px") {
+          font-size: 4.5rem;
+          line-height: 4.5rem;
+        }
         @include media("<=desktop") {
           margin-top: 4.3rem;
           font-size: 4rem;
           line-height: 4rem;
         }
+        @include media("<=1260px") {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+        }
+        @include media("<=semiDesktop") {
+          font-size: 3.3rem;
+          line-height: 3.3rem;
+        }
+        @include media("<=900px") {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+          display: flex;
+        }
+        @include media("<=700px") {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
         @include media("<=phone") {
           margin-top: 3rem;
           font-size: 2rem;
           line-height: 30px;
-          display: flex;
           letter-spacing: 4px;
         }
         div {
@@ -115,9 +168,29 @@
           margin-bottom: 1rem;
           overflow: hidden;
           position: relative;
+          @include media("<=1608px") {
+            height: 4.7rem;
+            margin-bottom: 5px;
+          }
+          @include media("<=1508px") {
+            height: 4.5rem;
+          }
           @include media("<=desktop") {
             height: 4rem;
             margin-bottom: 0.5rem;
+          }
+          @include media("<=1260px") {
+            height: 3.5rem;
+          }
+          @include media("<=1000px") {
+            height: 3.3rem;
+          }
+          @include media("<=900px") {
+            height: 3.5rem;
+            width: 19%;
+          }
+          @include media("<=800px") {
+            width: 21%;
           }
           @include media("<=phone") {
             width: 26%;
@@ -129,6 +202,12 @@
             position: absolute;
           }
           &:nth-child(2) {
+            @include media("<=900px") {
+              width: 11%;
+            }
+            @include media("<=800") {
+              width: 13%;
+            }
             @include media("<=phone") {
               width: 15%;
             }
@@ -139,6 +218,10 @@
     .text {
       width: 60%;
       height: fit-content;
+      @include media("<=900px") {
+        width: 100%;
+        margin-top: -100px;
+      }
       @include media("<=phone") {
         width: 100%;
         margin-top: 10px;
@@ -173,8 +256,28 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @include media("<=1620px") {
+      padding: 100px 230px;
+    }
+    @include media("<=1520px") {
+      padding: 100px 200px;
+    }
     @include media("<=desktop") {
       padding: 120px 180px;
+    }
+    @include media("<=1260px") {
+      padding: 130px 145px;
+    }
+    @include media("<=semiDesktop") {
+      padding: 130px 140px;
+    }
+    @include media("<=950px") {
+      padding: 140px 130px;
+    }
+    @include media("<=900px") {
+      padding: 0 100px;
+      align-items: start;
+      height: 70vh;
     }
     @include media("<=phone") {
       padding: 50px 30px;
@@ -182,7 +285,7 @@
     }
     .content {
       width: 40%;
-      @include media("<=phone") {
+      @include media("<=900px") {
         width: 100%;
       }
       .heading-container {
@@ -196,11 +299,35 @@
           top: -90px;
           right: -90px;
           z-index: 0;
+          @include media("<=1620px") {
+            width: 140px;
+            height: 140px;
+          }
+          @include media("<=1520px") {
+            width: 130px;
+            height: 130px;
+            top: -75px;
+            right: -75px;
+          }
           @include media("<=desktop") {
             width: 120px;
             height: 120px;
-            top: -75px;
             right: -70px;
+          }
+          @include media("<=1260px") {
+            width: 110px;
+            height: 110px;
+            top: -65px;
+            right: -70px;
+          }
+          @include media("<=semiDesktop") {
+            width: 100px;
+            height: 100px;
+            top: -50px;
+          }
+          @include media("<=900px") {
+            top: -65px;
+            right: -50px;
           }
           @include media("<=phone") {
             display: none;
@@ -215,9 +342,33 @@
           font-family: var(--babas-font);
           text-transform: uppercase;
           color: var(--text-color-black);
+          @include media("<=1608px") {
+            font-size: 4.6rem;
+            line-height: 4.6rem;
+          }
+          @include media("<=1508px") {
+            font-size: 4.3rem;
+            line-height: 4.3rem;
+          }
           @include media("<=desktop") {
             font-size: 4rem;
             line-height: 4rem;
+          }
+          @include media("<=1260px") {
+            font-size: 3.4rem;
+            line-height: 3.4rem;
+          }
+          @include media("<=semiDesktop") {
+            font-size: 3.1rem;
+            line-height: 3.1rem;
+          }
+          @include media("<=900px") {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+          }
+          @include media("<=700px") {
+            font-size: 2.9rem;
+            line-height: 2.9rem;
           }
           @include media("<=phone") {
             text-align: left;
@@ -231,9 +382,25 @@
             margin-bottom: 1rem;
             overflow: hidden;
             position: relative;
+            @include media("<=1608px") {
+              height: 4.6rem;
+              margin-bottom: 5px;
+            }
+            @include media("<=1508px") {
+              height: 4.3rem;
+            }
             @include media("<=desktop") {
               height: 4rem;
-              margin-bottom: 10px;
+              margin-bottom: 0.5rem;
+            }
+            @include media("<=1260px") {
+              height: 3.4rem;
+            }
+            @include media("<=1000px") {
+              height: 3.1rem;
+            }
+            @include media("<=900px") {
+              height: 3.4rem;
             }
             @include media("<=phone") {
               height: 2.5rem;
@@ -269,7 +436,7 @@
     .design {
       position: relative;
       width: 60%;
-      @include media("<=phone") {
+      @include media("<=900px") {
         width: 100%;
       }
       &__container {
@@ -278,6 +445,13 @@
         top: 50%;
         left: 0;
         transform: translateY(-50%);
+        @include media("<=1200px") {
+          width: 90%;
+        }
+        @include media("<=900px") {
+          left: 0px;
+          top: 80%;
+        }
         @include media("<=phone") {
           width: 80%;
           left: 0px;
@@ -301,9 +475,17 @@
               width: 50px;
               height: 50px;
             }
-            @include media("<=phone") {
+            @include media("<=1200") {
+              width: 40px;
+              height: 40px;
+            }
+            @include media("<=750px") {
               width: 30px;
               height: 30px;
+            }
+            @include media("<=phone") {
+              width: 20px;
+              height: 20px;
             }
           }
           .bigcircle {
@@ -313,6 +495,22 @@
             @include media("<=desktop") {
               width: 100px;
               height: 100px;
+            }
+            @include media("<=1260px") {
+              width: 90px;
+              height: 90px;
+            }
+            @include media("<=900px") {
+              width: 80px;
+              height: 80px;
+            }
+            @include media("<=850px") {
+              width: 70px;
+              height: 70px;
+            }
+            @include media("<=750px") {
+              width: 65px;
+              height: 65px;
             }
             @include media("<=phone") {
               width: 56px;
@@ -336,12 +534,30 @@
     width: 100%;
     height: 110vh;
     padding: 120px 250px 250px 250px;
+    @include media("<=1620px") {
+      padding: 110px 230px 230px 230px;
+    }
+    @include media("<=1520px") {
+      padding: 100px 200px 200px 200px;
+    }
     @include media("<=desktop") {
       height: 115vh;
       padding: 90px 180px 180px 180px;
     }
-    @include media("<=phone") {
+    @include media("<=1260px") {
+      padding: 80px 145px 145px 145px;
       height: fit-content;
+    }
+    @include media("<=semiDesktop") {
+      padding: 50px 135px 135px 135px;
+    }
+    @include media("<=950px") {
+      padding: 20px 130px 130px 130px;
+    }
+    @include media("<=900px") {
+      padding: 0 100px 100px 100px;
+    }
+    @include media("<=phone") {
       padding: 50px 30px;
     }
     h1 {
@@ -352,12 +568,35 @@
       font-family: var(--babas-font);
       text-transform: uppercase;
       color: var(--text-color-black);
+      @include media("<=1608px") {
+        font-size: 4.6rem;
+        line-height: 4.6rem;
+      }
+      @include media("<=1508px") {
+        font-size: 4.3rem;
+        line-height: 4.3rem;
+      }
       @include media("<=desktop") {
         font-size: 4rem;
         line-height: 4rem;
       }
+      @include media("<=1260px") {
+        font-size: 3.4rem;
+        line-height: 3.4rem;
+      }
+      @include media("<=semiDesktop") {
+        font-size: 3.1rem;
+        line-height: 3.1rem;
+      }
+      @include media("<=900px") {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+      }
+      @include media("<=700px") {
+        font-size: 2.9rem;
+        line-height: 2.9rem;
+      }
       @include media("<=phone") {
-        text-align: left;
         font-size: 2.5rem;
         line-height: 2.5rem;
         letter-spacing: 2.5px;
@@ -368,9 +607,25 @@
         margin-bottom: 1rem;
         overflow: hidden;
         position: relative;
+        @include media("<=1608px") {
+          height: 4.6rem;
+          margin-bottom: 5px;
+        }
+        @include media("<=1508px") {
+          height: 4.3rem;
+        }
         @include media("<=desktop") {
           height: 4rem;
-          margin-bottom: 10px;
+          margin-bottom: 0.5rem;
+        }
+        @include media("<=1260px") {
+          height: 3.4rem;
+        }
+        @include media("<=1000px") {
+          height: 3.1rem;
+        }
+        @include media("<=900px") {
+          height: 3.4rem;
         }
         @include media("<=phone") {
           height: 2.5rem;
@@ -389,7 +644,7 @@
       justify-content: space-between;
       .col {
         width: 50%;
-        @include media("<=phone") {
+        @include media("<=900px") {
           width: 100%;
         }
         .process {
@@ -466,8 +721,25 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @include media("<=1620px") {
+      padding: 180px 230px;
+    }
+    @include media("<=1520px") {
+      padding: 160px 200px;
+    }
     @include media("<=desktop") {
       padding: 150px 180px;
+    }
+    @include media("<=1260px") {
+      padding: 140px 155px;
+      min-height: 90vh;
+    }
+    @include media("<=semiDesktop") {
+      padding: 130px 140px;
+    }
+    @include media("<=950px") {
+      padding: 120px 130px;
+      min-height: 80vh;
     }
     @include media("<=phone") {
       min-height: 60vh;
@@ -481,6 +753,10 @@
         margin-bottom: 25px;
         font-weight: 200;
         font-size: 16px;
+        @include media("<=1266px") {
+          font-size: 15px;
+          margin-bottom: 15px;
+        }
         @include media("<=phone") {
           font-size: 14.5px;
           margin-bottom: 13px;
@@ -508,16 +784,32 @@
             position: absolute;
           }
         }
-        @include media("<=phone") {
+        @include media("<=1266px") {
           display: none;
         }
       }
       p.mobile {
-        @include media(">=phone") {
+        @include media(">=1266px") {
           display: none;
         }
-        @include media("<=phone") {
+        @include media("<=1266px") {
           display: block;
+          font-size: 1.9rem;
+          line-height: 2.9rem;
+        }
+        @include media("<=1166px") {
+          font-size: 1.8rem;
+          line-height: 2.7rem;
+        }
+        @include media("<=1066px") {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
+        @include media("<=966px") {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+        }
+        @include media("<=phone") {
           font-size: 13.5px;
           line-height: 25px;
         }
@@ -543,8 +835,23 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    @include media("<=1620px") {
+      padding: 140px 230px;
+    }
+    @include media("<=1520px") {
+      padding: 130px 200px;
+    }
     @include media("<=desktop") {
       padding: 120px 180px;
+    }
+    @include media("<=1260px") {
+      padding: 100px 145px;
+    }
+    @include media("<=semiDesktop") {
+      padding: 90px 140px;
+    }
+    @include media("<=950px") {
+      padding: 80px 130px;
     }
     @include media("<=phone") {
       padding: 50px 30px;
@@ -558,11 +865,35 @@
       top: -90px;
       left: -90px;
       z-index: 0;
+      @include media("<=1620px") {
+        width: 140px;
+        height: 140px;
+      }
+      @include media("<=1520px") {
+        width: 130px;
+        height: 130px;
+        top: -75px;
+        left: -75px;
+      }
       @include media("<=desktop") {
         width: 120px;
         height: 120px;
-        top: -70px;
         left: -70px;
+      }
+      @include media("<=1260px") {
+        width: 110px;
+        height: 110px;
+        top: -65px;
+        left: -70px;
+      }
+      @include media("<=semiDesktop") {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+      }
+      @include media("<=900px") {
+        top: 80px;
+        left: 70px;
       }
       @include media("<=phone") {
         display: none;
@@ -574,11 +905,14 @@
       margin-top: 25vh;
       position: sticky;
       top: 30vh;
-      @include media("<=phone") {
+      @include media("<=900px") {
         width: 100%;
-        margin-top: 0;
+        margin-top: 70px;
         position: static;
         height: fit-content;
+      }
+      @include media("<=phone") {
+        margin-top: 0;
       }
       h1 {
         width: 100%;
@@ -588,9 +922,33 @@
         font-family: var(--babas-font);
         text-transform: uppercase;
         color: var(--text-color-black);
+        @include media("<=1608px") {
+          font-size: 4.6rem;
+          line-height: 4.6rem;
+        }
+        @include media("<=1508px") {
+          font-size: 4.3rem;
+          line-height: 4.3rem;
+        }
         @include media("<=desktop") {
           font-size: 4rem;
           line-height: 4rem;
+        }
+        @include media("<=1260px") {
+          font-size: 3.4rem;
+          line-height: 3.4rem;
+        }
+        @include media("<=semiDesktop") {
+          font-size: 3.1rem;
+          line-height: 3.1rem;
+        }
+        @include media("<=900px") {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+        }
+        @include media("<=700px") {
+          font-size: 2.9rem;
+          line-height: 2.9rem;
         }
         @include media("<=phone") {
           text-align: left;
@@ -604,9 +962,25 @@
           margin-bottom: 1rem;
           overflow: hidden;
           position: relative;
+          @include media("<=1608px") {
+            height: 4.6rem;
+            margin-bottom: 5px;
+          }
+          @include media("<=1508px") {
+            height: 4.3rem;
+          }
           @include media("<=desktop") {
             height: 4rem;
-            margin-bottom: 10px;
+            margin-bottom: 0.5rem;
+          }
+          @include media("<=1260px") {
+            height: 3.4rem;
+          }
+          @include media("<=1000px") {
+            height: 3.1rem;
+          }
+          @include media("<=900px") {
+            height: 3.4rem;
           }
           @include media("<=phone") {
             height: 2.5rem;
@@ -621,7 +995,7 @@
     .contents {
       width: 50%;
       height: fit-content;
-      @include media("<=phone") {
+      @include media("<=900px") {
         width: 100%;
         margin-top: 2rem;
       }
@@ -672,6 +1046,12 @@
     @include media("<=desktop") {
       height: 90vh;
     }
+    @include media("<=1266px") {
+      height: 70vh;
+    }
+    @include media("<=900px") {
+      height: 90vh;
+    }
     @include media("<=phone") {
       padding: 50px 30px 0 30px;
       height: 85vh;
@@ -682,9 +1062,27 @@
       position: absolute;
       right: 250px;
       top: 100px;
+      @include media("<=1620px") {
+        right: 230px;
+      }
+      @include media("<=1520px") {
+        right: 200px;
+      }
       @include media("<=desktop") {
-        top: 100px;
         right: 180px;
+      }
+      @include media("<=1260px") {
+        right: 140px;
+      }
+      @include media("<=semiDesktop") {
+        top: 80px;
+        right: 140px;
+      }
+      @include media("<=950px") {
+        right: 130px;
+      }
+      @include media("<=900px") {
+        width: 100%;
       }
       @include media("<=phone") {
         width: 100%;
@@ -700,9 +1098,33 @@
         text-align: right;
         text-transform: uppercase;
         color: var(--text-color-black);
+        @include media("<=1608px") {
+          font-size: 4.6rem;
+          line-height: 4.6rem;
+        }
+        @include media("<=1508px") {
+          font-size: 4.3rem;
+          line-height: 4.3rem;
+        }
         @include media("<=desktop") {
           font-size: 4rem;
           line-height: 4rem;
+        }
+        @include media("<=1260px") {
+          font-size: 3.4rem;
+          line-height: 3.4rem;
+        }
+        @include media("<=semiDesktop") {
+          font-size: 3.1rem;
+          line-height: 3.1rem;
+        }
+        @include media("<=900px") {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+        }
+        @include media("<=700px") {
+          font-size: 2.9rem;
+          line-height: 2.9rem;
         }
         @include media("<=phone") {
           text-align: left;
@@ -716,9 +1138,25 @@
           margin-bottom: 1rem;
           overflow: hidden;
           position: relative;
+          @include media("<=1608px") {
+            height: 4.6rem;
+            margin-bottom: 5px;
+          }
+          @include media("<=1508px") {
+            height: 4.3rem;
+          }
           @include media("<=desktop") {
             height: 4rem;
-            margin-bottom: 10px;
+            margin-bottom: 0.5rem;
+          }
+          @include media("<=1260px") {
+            height: 3.4rem;
+          }
+          @include media("<=1000px") {
+            height: 3.1rem;
+          }
+          @include media("<=900px") {
+            height: 3.4rem;
           }
           @include media("<=phone") {
             height: 2.5rem;
@@ -784,11 +1222,39 @@
       background: var(--pink-color-light);
       right: 170px;
       top: 10px;
+      @include media("<=1620px") {
+        width: 140px;
+        height: 140px;
+        right: 140px;
+      }
+      @include media("<=1520px") {
+        width: 130px;
+        height: 130px;
+        top: 15px;
+        right: 130px;
+      }
       @include media("<=desktop") {
         width: 120px;
         height: 120px;
         top: 25px;
         right: 100px;
+      }
+      @include media("<=1260px") {
+        width: 110px;
+        height: 110px;
+        right: 80px;
+      }
+      @include media("<=semiDesktop") {
+        width: 100px;
+        height: 100px;
+        top: 13px;
+      }
+      @include media("<=950px") {
+        right: 70px;
+      }
+      @include media("<=900px") {
+        top: 17px;
+        right: 70px;
       }
       @include media("<=phone") {
         display: none;
@@ -804,9 +1270,17 @@
         left: 150px;
         bottom: 27%;
       }
+      @include media("<=1266px") {
+        left: 150px;
+        bottom: 40%;
+      }
+      @include media("<=900px") {
+        width: 50%;
+        bottom: 15%;
+        left: 250px;
+      }
       @include media("<=phone") {
         width: 85%;
-        bottom: 15%;
         left: 51%;
         transform: translateX(-50%);
       }

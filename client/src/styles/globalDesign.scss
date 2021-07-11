@@ -69,6 +69,12 @@
       right: -170px;
       top: -170px;
     }
+    @include media("<=900px") {
+      width: 450px;
+      height: 450px;
+      top: -120px;
+      right: -120px;
+    }
     @include media("<=phone") {
       width: 300px;
       height: 300px;
@@ -82,9 +88,26 @@
     position: absolute;
     top: 150px;
     left: 250px;
+    @include media("<=1620px") {
+      left: 230px;
+    }
+    @include media("<=1520px") {
+      left: 200px;
+    }
     @include media("<=desktop") {
       left: 180px;
       top: 120px;
+    }
+    @include media("<=1260px") {
+      top: 180px;
+      left: 145px;
+    }
+    @include media("<=semiDesktop") {
+      left: 140px;
+      top: 200px;
+    }
+    @include media("<=900px") {
+      left: 100px;
     }
     @include media("<=phone") {
       top: 50%;
@@ -97,11 +120,15 @@
       font-weight: 400;
       font-size: 2.6rem;
       line-height: 2.6rem;
+      @include media("<=1550px") {
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+      }
       @include media("<=desktop") {
         font-size: 2rem;
         line-height: 2rem;
       }
-      @include media("<=phone") {
+      @include media("<=1266px") {
         display: none;
       }
       div {
@@ -110,8 +137,11 @@
         margin-bottom: 0.8rem;
         position: relative;
         overflow: hidden;
+        @include media("<=1550px") {
+          height: 2.5rem;
+        }
         @include media("<=desktop") {
-          height: 2rem;
+          height: 2.2rem;
         }
         span {
           position: absolute;
@@ -119,10 +149,24 @@
       }
     }
     h1.mobile-view-heading {
-      @include media(">=phone") {
+      @include media(">=1266px") {
         display: none;
       }
-      width: 100%;
+      @include media("<=1266px") {
+        width: calc(100% - 290px);
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+      @include media("<=1000px") {
+        width: calc(100% - 260px);
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+      }
+      @include media("<=900px") {
+        width: calc(100% - 200px);
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 2rem;
