@@ -2,8 +2,8 @@ import gsap from "gsap";
 
 let tl = gsap.timeline();
 export const openNavigation = () => {
-    tl.to("#navigationoverlay2", 0.6, { scale: 70, ease: "expo.inOut" })
-       .to("#navigationoverlay1", 0.4, { scale: 70, ease: "expo.inOut" })
+    tl.to("#navigationoverlay2", 0.6, { scale: window.innerWidth <= 1366 ? 100 : 70, ease: "expo.inOut" })
+       .to("#navigationoverlay1", 0.4, { scale: window.innerWidth <= 1366 ? 100 : 70, ease: "expo.inOut" })
        .to("#navigationContainer", 0, { css: {display: "block"}})
        .to("#navigationContainer", 0.4, { width: "90%", height: "80vh", ease: "expo.inOut" }, "<")
        .to("#brand", 0.3, { opacity: 1, ease: "power4.out" })

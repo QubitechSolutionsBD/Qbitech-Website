@@ -11,8 +11,23 @@
     flex-wrap: wrap;
     align-items: center;
     background: var(--background-color-dark);
+    @include media("<=1620px") {
+      padding: 185px 270px;
+    }
+    @include media("<=1520px") {
+      padding: 165px 260px ;
+    }
     @include media("<=desktop") {
       padding: 150px 230px 190px 230px;
+    }
+    @include media("<=1260px") {
+      padding: 125px 145px;
+    }
+    @include media("<=semiDesktop") {
+      padding: 70px 130px;
+    }
+    @include media("<=phone") {
+      padding: 30px;
     }
     @include media("<=phone") {
       min-height: 90vh;
