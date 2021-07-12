@@ -1,113 +1,230 @@
-.notfound{
-    width: 100%;
-    height: 100vh;
-    padding: 150px 250px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    @include media("<=phone") {
-        padding: 40px;
-    }
+.notfound {
+  width: 100%;
+  height: 100vh;
+  padding: 150px 250px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  @include media("<=1620px") {
+    padding: 140px 230px;
+  }
+  @include media("<=1520px") {
+    padding: 130px 200px;
+  }
+  @include media("<=desktop") {
+    padding: 120px 180px;
+  }
+  @include media("<=1260px") {
+    padding: 100px 145px;
+  }
+  @include media("<=semiDesktop") {
+    padding: 90px 130px;
+  }
+  @include media("<=phone") {
+    padding: 40px;
+  }
 
-    .text{
-        width: 50%;
-        @include media("<=phone") {
-            width: 100%;
-            height: 60vh;
-        }
-        h1{
-            font-family: var(--babas-font);
-            font-size: 10rem;
-            line-height: 10rem;
-            letter-spacing: 15px;
-            color: var(--text-color-black);
-            @include media("<=phone") {
-                font-size: 5rem;
-                line-height: 5rem;
-                letter-spacing: 7px;
-            }
-        }
-        h2{
-            font-family: var(--babas-font);
-            font-size: 5rem;
-            line-height: 5rem;
-            color: var(--text-color-black);
-            @include media("<=phone") {
-                font-size: 2.5rem;
-                line-height: 2.5rem;
-            }
-        }
-        p{
-            margin-top: 20px;
-            width: 80%;
-            font-size: 17px;
-            @include media("<=phone") {
-                width: 100%;
-                font-size: 14px;
-                line-height: 25px;
-            }
-        }
-        .globalMoreButton{
-            margin-top: 20px;
-            @include media("<=phone") {
-                margin-top: 10px;
-            }
-        }
-        .circleheading{
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: var(--pink-color);
-            margin-bottom: -6rem;
-            margin-left: 10rem;
-            @include media("<=phone") {
-                height: 70px;
-                width: 70px;
-                margin-bottom: -3.5rem;
-                margin-left: 80px;
-            }
-        }
+  .text {
+    width: 50%;
+    @include media("<=960px") {
+      width: 100%;
+      height: 60vh;
     }
-    .image{
-        width: 50%;
-        @include media("<=phone") {
-            width: 100%;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        img{
-            height: 50vh;
-            @include media("<=phone") {
-                height: 35vh;
-            }
-        }
+    h1 {
+      font-family: var(--babas-font);
+      font-size: 10rem;
+      line-height: 10rem;
+      letter-spacing: 15px;
+      color: var(--text-color-black);
+      @include media("<=1620px") {
+        font-size: 9rem;
+        line-height: 9rem;
+        letter-spacing: 14px;
+      }
+      @include media("<=1520px") {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
+      @include media("<=desktop") {
+        font-size: 7rem;
+        line-height: 7rem;
+        letter-spacing: 12px;
+      }
+      @include media("<=1260px") {
+        font-size: 6rem;
+        line-height: 6rem;
+      }
+      @include media("<=semiDesktop") {
+        font-size: 5rem;
+        line-height: 5rem;
+        letter-spacing: 10px;
+      }
+      @include media("<=phone") {
+        letter-spacing: 7px;
+      }
     }
-    .circle1{
-        width: 700px;
-        height: 700px;
-        border-radius: 50%;
-        border: 2px dashed var(--pink-color);
-        position: absolute;
-        bottom: -350px;
-        right: -350px;
-        @include media("<=phone") {
-            display: none;
-        }
+    h2 {
+      font-family: var(--babas-font);
+      font-size: 5rem;
+      line-height: 5rem;
+      color: var(--text-color-black);
+      @include media("<=1620px") {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+      }
+      @include media("<=1520px") {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+      @include media("<=desktop") {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+      }
+      @include media("<=1260px") {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      @include media("<=semiDesktop") {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+      }
     }
-    .circle2{
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        border: 2px dashed var(--pink-color);
-        position: absolute;
-        top: -150px;
-        left: 15%;
-        @include media("<=phone") {
-            display: none;
-        }
+    p {
+      margin-top: 20px;
+      width: 80%;
+      font-size: 17px;
+      @include media("<=1460px") {
+        font-size: 16px;
+        margin-top: 18px;
+      }
+      @include media("<=desktop") {
+        font-size: 15.5px;
+        margin-top: 16px;
+      }
+      @include media("<=phone") {
+        width: 100%;
+        font-size: 14px;
+        line-height: 25px;
+      }
     }
+    .globalMoreButton {
+      margin-top: 20px;
+      @include media("<=phone") {
+        margin-top: 10px;
+      }
+    }
+    .circleheading {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--pink-color);
+      margin-bottom: -6rem;
+      margin-left: 10rem;
+      @include media("<=1620px") {
+        width: 110px;
+        height: 110px;
+        margin-bottom: -5rem;
+        margin-left: 9.5rem;
+      }
+      @include media("<=1520px") {
+        width: 100px;
+        height: 100px;
+        margin-bottom: -4.5rem;
+        margin-left: 8.5rem;
+      }
+      @include media("<=desktop") {
+        margin-bottom: -4.5rem;
+        margin-left: 7.5rem;
+      }
+      @include media("<=1260px") {
+        margin-bottom: -4rem;
+        margin-left: 6.5rem;
+      }
+      @include media("<=semiDesktop") {
+        width: 90px;
+        height: 90px;
+        margin-bottom: -4rem;
+        margin-left: 6rem;
+      }
+      @include media("<=900px") {
+        top: -65px;
+        left: -50px;
+      }
+      @include media("<=phone") {
+        height: 70px;
+        width: 70px;
+        margin-bottom: -3.5rem;
+        margin-left: 80px;
+      }
+    }
+  }
+  .image {
+    width: 50%;
+    @include media("<=960px") {
+      width: 100%;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      height: 50vh;
+      @include media("<=1260px") {
+        height: 45vh;
+      }
+      @include media("<=1160px") {
+        height: 40vh;
+      }
+      @include media("<=semiDesktop") {
+        height: 37vh;
+      }
+      @include media("<=phone") {
+        height: 35vh;
+      }
+    }
+  }
+  .circle1 {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 2px dashed var(--pink-color);
+    position: absolute;
+    bottom: -350px;
+    right: -350px;
+    @include media("<=desktop") {
+      width: 600px;
+      height: 600px;
+      bottom: -300px;
+      right: -300px;
+    }
+    @include media("<=960px") {
+      width: 500px;
+      height: 500px;
+      bottom: -250px;
+      right: -250px;
+    }
+    @include media("<=phone") {
+      display: none;
+    }
+  }
+  .circle2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px dashed var(--pink-color);
+    position: absolute;
+    top: -150px;
+    left: 15%;
+    @include media("<=desktop") {
+      width: 200px;
+      height: 200px;
+      top: -100px;
+      left: 10%;
+    }
+    @include media("<=phone") {
+      display: none;
+    }
+  }
 }

@@ -6,15 +6,32 @@
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
+  @include media("<=1620px") {
+    padding: 100px 230px;
+  }
+  @include media("<=1520px") {
+    padding: 100px 200px;
+  }
+  @include media("<=desktop") {
+    padding: 100px 180px;
+  }
+  @include media("<=1260px") {
+    padding: 90px 145px;
+  }
+  @include media("<=semiDesktop") {
+    padding: 70px 130px;
+  }
+  @include media("<=900px") {
+    padding: 120px 130px 50px 130px;
+  }
   @include media("<=phone") {
     padding: 30px;
   }
-
   &__form {
     width: 50%;
     min-height: calc(100vh - 240px);
     position: relative;
-    @include media("<=phone") {
+    @include media("<=900px") {
       width: 100%;
     }
 
@@ -26,6 +43,25 @@
       position: absolute;
       top: -70px;
       left: -70px;
+      @include media("<=1620px") {
+        width: 110px;
+        height: 110px;
+      }
+      @include media("<=1520px") {
+        width: 100px;
+        height: 100px;
+        top: -65px;
+        left: -60px;
+      }
+      @include media("<=semiDesktop") {
+        width: 90px;
+        height: 90px;
+        top: -50px;
+      }
+      @include media("<=900px") {
+        top: -65px;
+        left: -50px;
+      }
       @include media("<=phone") {
         display: none;
       }
@@ -38,6 +74,34 @@
       font-family: var(--babas-font);
       text-transform: uppercase;
       color: var(--text-color-black);
+      @include media("<=1608px") {
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+      }
+      @include media("<=1508px") {
+        font-size: 3.3rem;
+        line-height: 3.3rem;
+      }
+      @include media("<=desktop") {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      @include media("<=1260px") {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+      }
+      @include media("<=semiDesktop") {
+        font-size: 2.1rem;
+        line-height: 2.1rem;
+      }
+      @include media("<=900px") {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+      }
+      @include media("<=700px") {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+      }
       @include media("<=phone") {
         text-align: left;
         font-size: 2.5rem;
@@ -50,6 +114,25 @@
         margin-bottom: 5px;
         overflow: hidden;
         position: relative;
+        @include media("<=1608px") {
+          height: 3.6rem;
+          margin-bottom: 5px;
+        }
+        @include media("<=1508px") {
+          height: 3.3rem;
+        }
+        @include media("<=desktop") {
+          height: 3rem;
+        }
+        @include media("<=1260px") {
+          height: 2.4rem;
+        }
+        @include media("<=1000px") {
+          height: 2.1rem;
+        }
+        @include media("<=900px") {
+          height: 2.4rem;
+        }
         @include media("<=phone") {
           height: 2.5rem;
           margin-bottom: 5px;
@@ -82,6 +165,10 @@
           font-family: var(--poppins-font);
           background: #cccccc50;
           color: var(--text-color-black);
+          @include media("<=desktop") {
+            padding: 12px 18px;
+            font-size: 14px;
+          }
           @include media("<=phone") {
             font-size: 13.5px;
           }
@@ -123,7 +210,7 @@
     width: 50%;
     min-height: 50vh;
     position: relative;
-    @include media("<=phone") {
+    @include media("<=900px") {
       width: 100%;
       min-height: 65vh;
     }
@@ -134,9 +221,6 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      @include media("<=phone") {
-        padding: 0;
-      }
       h1 {
         width: 100%;
         letter-spacing: 3px;
@@ -146,6 +230,34 @@
         text-transform: uppercase;
         text-align: right;
         color: var(--text-color-black);
+        @include media("<=1608px") {
+          font-size: 3.6rem;
+          line-height: 3.6rem;
+        }
+        @include media("<=1508px") {
+          font-size: 3.3rem;
+          line-height: 3.3rem;
+        }
+        @include media("<=desktop") {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+        @include media("<=1260px") {
+          font-size: 2.4rem;
+          line-height: 2.4rem;
+        }
+        @include media("<=semiDesktop") {
+          font-size: 2.1rem;
+          line-height: 2.1rem;
+        }
+        @include media("<=900px") {
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+        }
+        @include media("<=700px") {
+          font-size: 1.9rem;
+          line-height: 1.9rem;
+        }
         @include media("<=phone") {
           text-align: left;
           font-size: 2.5rem;
@@ -158,6 +270,25 @@
           margin-bottom: 5px;
           overflow: hidden;
           position: relative;
+          @include media("<=1608px") {
+            height: 3.6rem;
+            margin-bottom: 5px;
+          }
+          @include media("<=1508px") {
+            height: 3.3rem;
+          }
+          @include media("<=desktop") {
+            height: 3rem;
+          }
+          @include media("<=1260px") {
+            height: 2.4rem;
+          }
+          @include media("<=1000px") {
+            height: 2.1rem;
+          }
+          @include media("<=900px") {
+            height: 2.4rem;
+          }
           @include media("<=phone") {
             height: 2.5rem;
             margin-bottom: 10px;
@@ -172,6 +303,15 @@
       .block{
         margin-top: 25px;
         margin-bottom: 50px;
+        @include media("<=1566px") {
+          margin-bottom: 40px;
+        }
+        @include media("<=desktop") {
+          margin-bottom: 30px;
+        }
+        @include media("<=semiDesktop") {
+          margin-bottom: 20px;
+        }
         h2{
           font-weight: 600;
           text-align: right;
@@ -182,6 +322,15 @@
           text-align: right;
           font-size: 20px;
           font-weight: 200;
+          @include media("<=1566px") {
+            font-size: 18px;
+          }
+          @include media("<=desktop") {
+            font-size: 16px;
+          }
+          @include media("<=semiDesktop") {
+            font-size: 14.5px;
+          }
           @include media("<=phone") {
             font-size: 13.5px;
           }
