@@ -1,4 +1,4 @@
-import { Hidden } from "@material-ui/core";
+// import { Hidden } from "@material-ui/core";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);

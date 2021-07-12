@@ -45,6 +45,8 @@ function Service() {
   }, [location.pathname]);
 
   useEffect(() => {
+    window.focus();
+    window.scrollTo(0, 0);
     setTimeout(() => {
       setLoading(false);
       serviceAnimation(techRef, workCardRef);
