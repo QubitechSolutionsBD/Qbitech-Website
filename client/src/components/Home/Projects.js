@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 // ASSETS
 import right from "../../assets/pageservice/down-arrow.png";
@@ -66,19 +67,19 @@ function Projects() {
           ref={(slider) => (customSlider.current = slider)}
         >
           <div className="work">
-            <div className="container" id="homeprojectcard">1</div>
+            <Link to="/case-studies/1" className="container" id="homeprojectcard">1</Link>
           </div>
           <div className="work">
-            <div className="container" id="homeprojectcard">2</div>
+            <Link to="/case-studies/2" className="container" id="homeprojectcard">2</Link>
           </div>
           <div className="work">
-            <div className="container" id="homeprojectcard">3</div>
+            <Link to="/case-studies/1" className="container" id="homeprojectcard">3</Link>
           </div>
           <div className="work">
-            <div className="container" id="homeprojectcard">4</div>
+            <Link to="/case-studies/2" className="container" id="homeprojectcard">4</Link>
           </div>
           <div className="work">
-            <div className="container" id="homeprojectcard">5</div>
+            <Link to="/case-studies/1" className="container" id="homeprojectcard">5</Link>
           </div>
         </Slider>
         <div className="slider-btn-box">

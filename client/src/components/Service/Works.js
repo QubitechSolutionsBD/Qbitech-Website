@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 // COMPONETS
 import MoreButton from "../Global/MoreButton";
@@ -72,19 +73,19 @@ function Works({ works, workCardRef }) {
       <div className="content">
         <Slider {...settings} className="slider" ref={(slider) => (customSlider.current = slider)}>
             <div className="work">
-              <div className="container" id="serviceprojectcard"></div>
+              <Link to="/case-studies/1" className="container" id="serviceprojectcard"></Link>
             </div>
             <div className="work">
-              <div className="container" id="serviceprojectcard"></div>
+              <Link to="/case-studies/2" className="container" id="serviceprojectcard"></Link>
             </div>
             <div className="work">
-              <div className="container" id="serviceprojectcard"></div>
+              <Link to="/case-studies/1" className="container" id="serviceprojectcard"></Link>
             </div>
             <div className="work">
-              <div className="container" id="serviceprojectcard"></div>
+              <Link to="/case-studies/2" className="container" id="serviceprojectcard"></Link>
             </div>
             <div className="work">
-              <div className="container" id="serviceprojectcard"></div>
+              <Link to="/case-studies/1" className="container" id="serviceprojectcard"></Link>
             </div>
         </Slider>
         <div className="slider-btn-box">
