@@ -4,7 +4,7 @@ import { setupDataForApp } from "../Works/Data";
 import GlobalPageTransition from "../Global/GlobalPageTransition";
 
 // ANIMATIONS
-import { appTemplateAnimation } from "../../animation/WorkAnim";
+import { appTemplateScrollTriggerAnim, appTemplateStarterAnim } from "../../animation/WorkAnim";
 
 function AppTemp({ id }) {
   const [name, setName] = useState("");
@@ -27,8 +27,10 @@ function AppTemp({ id }) {
 
   // SETUP NECSESSARY DATA
   useEffect(() => {
+    window.focus();
     window.scrollTo(0, 0);
-    appTemplateAnimation();
+    setTimeout(() => { appTemplateScrollTriggerAnim();}, 100);
+    appTemplateStarterAnim();
 
     setupDataForApp(
       id,
@@ -173,50 +175,35 @@ function AppTemp({ id }) {
       {/* =========================== APP VIEW - 1 =========================== */}
       <div
         className="appview1"
-        id="webtempapage"
+        id="appTempapage"
         style={{ background: `${usedColors[1]}` }}
       >
-        {/* <div className="appview1__overlay" id="webtempapageoverlay"></div> */}
-        <div
-          className="circle1"
-          style={{ background: `${usedColors[0]}` }}
-        ></div>
-        <div
-          className="circle2"
-          style={{ background: `${usedColors[0]}` }}
-        ></div>
-        <div
-          className="circle3"
-          style={{ background: `${usedColors[0]}` }}
-        ></div>
+        <div className="appview1__overlay" id="appTempapageoverlay"></div>
+        <div className="circle1" style={{ background: `${usedColors[0]}` }}></div>
+        <div className="circle2" style={{ background: `${usedColors[0]}` }}></div>
+        <div className="circle3" style={{ background: `${usedColors[0]}` }}></div>
         <div className="appview1__image">
-          <img src={imageSetOne} alt="" id="webtempapageimage" />
+          <img src={imageSetOne} alt="" id="appTempapageimage" />
         </div>
       </div>
 
       {/* =========================== SOLUTION =========================== */}
       <div className="appsolution">
         <div className="solutions">
-          <div className="text" id="webtempsolutioncontent">
-            <h3 id="webtempsolution">Solutions & FEATURES</h3>
-            <h1 id="webtempsolution">{solutiondescHead}</h1>
-            <p id="webtempsolution">{solutiondescText}</p>
+          <div className="text" id="appTempsolutioncontent">
+            <h3 id="appTempsolution">Solutions & FEATURES</h3>
+            <h1 id="appTempsolution">{solutiondescHead}</h1>
+            <p id="appTempsolution">{solutiondescText}</p>
           </div>
         </div>
 
-        <div className="features">
-          {features.map((feature) => (
-            <div className="feature">
-              <div
-                className="circle1"
-                style={{ background: `${usedColors[2]}` }}
-              >
-                <div
-                  className="circle2"
-                  style={{ background: `${usedColors[0]}` }}
-                ></div>
+        <div className="features" id="appTempFeatures">
+          {features.map((feature, i) => (
+            <div className="feature" key={i}>
+              <div className="circle1" style={{ background: `${usedColors[2]}` }} id="appTempBigCircle">
+                <div className="circle2" style={{ background: `${usedColors[0]}` }} id="appTempSmallCircle"></div>
               </div>
-              <div className="text">{feature}</div>
+              <div className="text" id="appTempFeature">{feature}</div>
             </div>
           ))}
         </div>
@@ -225,40 +212,26 @@ function AppTemp({ id }) {
       {/* =========================== ACHIEVEMENTS =========================== */}
       <div className="appachievement">
         <div className="imageblock">
-          <div className="image" id="webtempsolutionimage">
-            {/* <div className="image__overlay" id="webtempsolutionimageoverlay"></div> */}
+          <div className="image" id="appTempAchiveimage">
             <img src={imageSetTwo} alt="" />
           </div>
         </div>
 
-        <div className="textblock">
-          <div className="text" id="webtempsolutioncontent">
-            <h3 id="webtempsolution">ACHIEVEMENT</h3>
-            <h1 id="webtempsolution">{achievementHead}</h1>
-            <p id="webtempsolution">{achievementText}</p>
+        <div className="textblock" id="">
+          <div className="text" id="appTempachievecontent">
+            <h3 id="appTempachieve">ACHIEVEMENT</h3>
+            <h1 id="appTempachieve">{achievementHead}</h1>
+            <p id="appTempachieve">{achievementText}</p>
           </div>
         </div>
       </div>
 
       {/* =========================== APP VIEW - 2 =========================== */}
-      <div
-        className="appview1"
-        id="webtempapage"
-        style={{ background: `${usedColors[1]}` }}
-      >
-        {/* <div className="appview1__overlay" id="webtempapageoverlay"></div> */}
-        <div
-          className="circle1"
-          style={{ background: `${usedColors[0]}` }}
-        ></div>
-        <div
-          className="circle2"
-          style={{ background: `${usedColors[0]}` }}
-        ></div>
-        <div
-          className="circle3"
-          style={{ background: `${usedColors[0]}` }}
-        ></div>
+      <div className="appview1" id="appTempapage2" style={{ background: `${usedColors[1]}` }}>
+        <div className="appview1__overlay" id="appTempapageoverlay2"></div>
+        <div className="circle1" style={{ background: `${usedColors[0]}` }}></div>
+        <div className="circle2" style={{ background: `${usedColors[0]}` }}></div>
+        <div className="circle3" style={{ background: `${usedColors[0]}` }}></div>
         <div className="appview2__image">
           <img src={imageSetThree} alt="" id="webtempapageimage" />
         </div>

@@ -3,6 +3,40 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// =========================================== MORE PROJECT ========================================
+export const moreProjectShow = () => {
+  gsap.from("#moreworksoverlay", {
+    css: {width: "0%"},
+    ease: "power4.out",
+    duration: 1.4,
+    scrollTrigger: {
+      trigger: "#moreworksoverlay",
+      start: "top 90%",
+    },
+  });
+  gsap.to("#moreworksoverlay", {
+    css: {height: 0},
+    ease: "power4.out",
+    duration: 1.4,
+    scrollTrigger: {
+      trigger: "#moreworksoverlay",
+      start: window.innerWidth > 480 ? "top 35%" : "top 50%",
+    },
+  });
+  gsap.from("#moreworksworkname", 1, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#moreworksworkname",
+      start: "top 70%",
+    },
+  });
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// =========================================== WEB TEMPLATE ========================================
 export const webTemplateAnimation = () => {
   let tl = gsap.timeline();
   tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
@@ -35,14 +69,6 @@ export const webTemplateAnimation = () => {
   });
 
   // ---------> a page
-  //   gsap.from("#webtempapageoverlay", 1.4, {
-  //     height: 0,
-  //     ease: "expo.inOut",
-  //     scrollTrigger: {
-  //       trigger: "#webtempapage",
-  //       start: "top 80%",
-  //     },
-  //   });
   gsap.to("#webtempapageoverlay", 1.4, {
     y: "100%",
     ease: "expo.inOut",
@@ -123,38 +149,15 @@ export const webTemplateAnimation = () => {
     },
   });
 
-// -----------------> more projects
-    gsap.from("#moreworksoverlay", {
-      css: {width: "0%"},
-      ease: "power4.out",
-      duration: 1.4,
-      scrollTrigger: {
-        trigger: "#moreworksoverlay",
-        start: "top 90%",
-      },
-    });
-    gsap.to("#moreworksoverlay", {
-      css: {height: 0},
-      ease: "power4.out",
-      duration: 1.4,
-      scrollTrigger: {
-        trigger: "#moreworksoverlay",
-        start: window.innerWidth > 480 ? "top 35%" : "top 50%",
-      },
-    });
-    gsap.from("#moreworksworkname", 1, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#moreworksworkname",
-        start: "top 70%",
-      },
-    });
+  // ---------> more works
+  moreProjectShow();
 };
 
 
-export const appTemplateAnimation = () => {
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// =========================================== APP TEMPLATE ========================================
+export const appTemplateStarterAnim = () => {
   let tl = gsap.timeline();
   tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
@@ -164,7 +167,7 @@ export const appTemplateAnimation = () => {
     .from("#appTemplatebannercircle", 1, { scale: 0, ease: "expo.inOut" }, "<")
     .from("#apptemplateprojectname", 0.5,{y: 50, opacity: 0, ease: "power4.out",},"<")
     .from("#apptemplateotherblock", 0.5, {y: 60, opacity: 0, ease: "power4.out", stagger: {amount: 0.4},})
-
+    // ---------> about company
     gsap.from("#aboutwhydesigncircles", 1, {
       scale: 0,
       ease: "expo.inOut",
@@ -184,4 +187,108 @@ export const appTemplateAnimation = () => {
         start: "top 70%",
       },
     });
+
+    // ---------> app view - 1
+    gsap.from("#appTempapageoverlay", 1.4, {
+      height: 0,
+      ease: "expo.inOut",
+      scrollTrigger: {
+        trigger: "#appTempapage",
+        start: "top 80%",
+      },
+    });
+  gsap.to("#appTempapageoverlay", 1.4, {
+    y: "100%",
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#appTempapage",
+      start: "top 20%",
+    },
+  });
+}
+export const appTemplateScrollTriggerAnim = () => {
+  // ---------> Solutions & Features
+  gsap.from("#appTempsolution", 1, {
+    y: 50,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.7 },
+    scrollTrigger: {
+      trigger: "#appTempsolutioncontent",
+      start: "top 70%",
+    },
+  });
+  gsap.from("#appTempBigCircle", 1, {
+    scale: 0,
+    ease: "expo.inOut",
+    stagger: {amount: 0.4},
+    scrollTrigger: {
+      trigger: "#appTempFeatures",
+      start: "top 80%",
+    },
+  }); 
+  gsap.to("#appTempSmallCircle", 1, {
+    scale: 1,
+    ease: "expo.inOut",
+    stagger: {amount: 0.4},
+    delay: 0.4,
+    scrollTrigger: {
+      trigger: "#appTempFeatures",
+      start: "top 80%",
+    },
+  });
+  gsap.from("#appTempFeature", 1, {
+    x: 100,
+    opacity: 0,
+    ease: "expo.inOut",
+    stagger: {amount: 0.4},
+    delay: 0.4,
+    scrollTrigger: {
+      trigger: "#appTempFeatures",
+      start: "top 80%",
+    },
+  });
+
+  // ---------> Achievements
+  gsap.from("#appTempachieve", 1, {
+    y: 50,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.7 },
+    scrollTrigger: {
+      trigger: "#appTempachievecontent",
+      start: "top 70%",
+    },
+  });
+  gsap.from("#appTempAchiveimage", 1, {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    stagger: { amount: 0.7 },
+    scrollTrigger: {
+      trigger: "#appTempAchiveimage",
+      start: "top 55%",
+    },
+  });
+
+  // ---------> app view - 2
+  gsap.from("#appTempapageoverlay2", 1.4, {
+    height: 0,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#appTempapage2",
+      start: "top 80%",
+    },
+  });
+  gsap.to("#appTempapageoverlay2", 1.4, {
+    y: "100%",
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: "#appTempapage2",
+      start: "top 20%",
+    },
+  });
+
+  // ---------> more works
+  moreProjectShow();
 }
