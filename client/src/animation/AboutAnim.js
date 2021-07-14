@@ -5,24 +5,24 @@ gsap.registerPlugin(ScrollTrigger);
 // INTRO - OVERLAY ANIMATION DESKTOP
 export const aboutAnumation = () => {
   let tl = gsap.timeline();
-  tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
+  tl.to("#globalpagetransition", 0.7, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
     .from("#globalBannerCircle1", 0.8, { scale: 0, ease: "expo.inOut" })
-    .from("#aboutbannerheading", 1, {
+    .from("#aboutbannerheading", 0.8, {
       y: 100,
       ease: "power4.out",
       skewY: 7,
       stagger: { amount: 0.3 },
-    })
-    .from("#aboutbannerheadingForMobile", 1, {
+    }, "<")
+    .from("#aboutbannerheadingForMobile", 0.8, {
       y: 100,
       opacity: 0,
       ease: "power4.out",
     }, "<")
-    .from("#aboutscroll", 0.8, { y: 30, opacity: 0, ease: "power4.out" });
+    .from("#aboutscroll", 0.5, { y: 30, opacity: 0, ease: "power4.out" });
 
   // ---------------> who we are
-  gsap.from("#aboutwhocircle", 1, {
+  gsap.from("#aboutwhocircle", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -30,7 +30,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#aboutWhoHeading", 1.3, {
+  gsap.from("#aboutWhoHeading", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -40,11 +40,11 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#abouttext", 1.3, {
+  gsap.from("#abouttext", 0.8, {
     y: 300,
     opacity: 0,
     ease: "power4.out",
-    stagger: { amount: 0.7 },
+    stagger: { amount: 0.5 },
     scrollTrigger: {
       trigger: "#abouttext",
       start: "top 80%",
@@ -52,7 +52,7 @@ export const aboutAnumation = () => {
   });
 
   // ---------------> why we do
-  gsap.from("#aboutwhyHeadingcircle", 1, {
+  gsap.from("#aboutwhyHeadingcircle", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -60,7 +60,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#aboutwhyHeading", 1.3, {
+  gsap.from("#aboutwhyHeading", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -70,7 +70,7 @@ export const aboutAnumation = () => {
       start: "top 90%",
     },
   });
-  gsap.from("#aboutwhydesigncircles", 1.3, {
+  gsap.from("#aboutwhydesigncircles", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     stagger: { amount: 0.5 },
@@ -79,7 +79,7 @@ export const aboutAnumation = () => {
       start: "top 85%",
     },
   });
-  gsap.from("#aboutwhyText", 1.3, {
+  gsap.from("#aboutwhyText", 0.8, {
     y: 200,
     ease: "power4.out",
     stagger: { amount: 0.5 },
@@ -90,7 +90,7 @@ export const aboutAnumation = () => {
   });
 
   // ---------------> How we do
-  gsap.from("#aboutprocesshead", 1.3, {
+  gsap.from("#aboutprocesshead", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -100,7 +100,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#aboutprocessplain", 1.4, {
+  gsap.from("#aboutprocessplain", 0.8, {
     y: 100,
     ease: "power4.out",
     opacity: 0,
@@ -109,7 +109,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#aboutprocesslogo", 1.2, {
+  gsap.from("#aboutprocesslogo", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     stagger: { amount: 0.4 },
@@ -118,7 +118,7 @@ export const aboutAnumation = () => {
       start: "top 65%",
     },
   });
-  gsap.from("#aboutprocesslnumber", 1.3, {
+  gsap.from("#aboutprocesslnumber", 0.8, {
     x: 30,
     opacity: 0,
     ease: "expo.inOut",
@@ -128,7 +128,7 @@ export const aboutAnumation = () => {
       start: "top 65%",
     },
   });
-  gsap.from("#aboutprocesscontents", 1.4, {
+  gsap.from("#aboutprocesscontents", 0.8, {
     y: 50,
     opacity: 0,
     ease: "power4.out",
@@ -140,7 +140,7 @@ export const aboutAnumation = () => {
   });
 
   // ---------------> what we do
-  gsap.from("#aboutwhattext", 1, {
+  gsap.from("#aboutwhattext", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 7,
@@ -150,7 +150,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   })
-  gsap.from("#aboutwhatheadmobile", 1, {
+  gsap.from("#aboutwhatheadmobile", 0.8, {
     y: 100,
     opacity: 0,
     ease: "power4.out",
@@ -159,7 +159,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   })
-  gsap.from("#aboutwhathead", 1, {
+  gsap.from("#aboutwhathead", 0.8, {
     y: 100,
     opacity: 0,
     ease: "expo.inOut",
@@ -169,7 +169,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   })
-  gsap.from("#globalMoreCircle1", 1, {
+  gsap.from("#globalMoreCircle1", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -177,7 +177,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#globalMoreText1", 1, {
+  gsap.from("#globalMoreText1", 0.8, {
     x: 50,
     opacity: 0,
     ease: "power4.out",
@@ -188,7 +188,7 @@ export const aboutAnumation = () => {
   });
   
   // ---------------> culture, values & belief
-  gsap.from("#aboutpageculturecircle", 1, {
+  gsap.from("#aboutpageculturecircle", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -196,7 +196,7 @@ export const aboutAnumation = () => {
       start: "top 70%",
     },
   });
-  gsap.from("#aboutculturehead", 1.3, {
+  gsap.from("#aboutculturehead", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -206,7 +206,7 @@ export const aboutAnumation = () => {
       start: "top 70%",
     },
   });
-  gsap.from("#aboutculturecontenthead", 1.3, {
+  gsap.from("#aboutculturecontenthead", 0.8, {
     y: 100,
     opacity: 0,
     ease: "power4.out",
@@ -215,7 +215,7 @@ export const aboutAnumation = () => {
       start: "top 75%",
     },
   });
-  gsap.from("#aboutculturecontenttext", 1.3, {
+  gsap.from("#aboutculturecontenttext", 0.8, {
     y: 100,
     opacity: 0,
     ease: "power4.out",
@@ -227,7 +227,7 @@ export const aboutAnumation = () => {
   });
 
   // ---------------> trifecta
-  gsap.from("#abouttrifectacircle", 1, {
+  gsap.from("#abouttrifectacircle", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -235,7 +235,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#abouttrifectahead", 1.3, {
+  gsap.from("#abouttrifectahead", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -245,7 +245,7 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#abouttrifectatext", 1.4, {
+  gsap.from("#abouttrifectatext", 0.8, {
     y: 100,
     ease: "power4.out",
     opacity: 0,
@@ -254,17 +254,17 @@ export const aboutAnumation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#abouttrifectaoption", 1.3, {
+  gsap.from("#abouttrifectaoption", 0.8, {
     y: 100,
     ease: "power4.out",
     opacity: 0,
-    stagger: { amount: 0.6 },
+    stagger: { amount: 0.5 },
     scrollTrigger: {
       trigger: "#abouttrifectahead",
       start: "top 70%",
     },
   });
-  gsap.from("#abouttrifectaimage", 1.4, {
+  gsap.from("#abouttrifectaimage", 0.8, {
     rotate: -30,
     scale: 0,
     ease: "expo.inOut",

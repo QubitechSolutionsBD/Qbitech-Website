@@ -47,16 +47,16 @@ export const overlayAnimationMobile = (completeAnimation) => {
 export const homeAnimation = () => {
   let tl = gsap.timeline();
 
-  tl.from(".line span", 1.3, {
+  tl.from(".line span", 0.8, {
     y: 100,
     ease: "power4.out",
-    delay: 1.7,
+    delay: 1.6,
     skewY: 7,
     stagger: { amount: 0.3 },
   });
 
   // ----------- services anim
-  gsap.from("#serviceLearnButton", 1, {
+  gsap.from("#serviceLearnButton", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     delay: 0.7,
@@ -65,7 +65,7 @@ export const homeAnimation = () => {
       start: "top 70%",
     },
   });
-  gsap.from("#homepageservicetext", 1, {
+  gsap.from("#homepageservicetext", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -73,7 +73,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homeServiceNumber", 1, {
+  gsap.from("#homeServiceNumber", 0.8, {
     x: -100,
     opacity: 0,
     ease: "power4.out",
@@ -83,7 +83,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homeServiceHeading", 1.4, {
+  gsap.from("#homeServiceHeading", 1, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -93,7 +93,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homeservicetexttextt", 1, {
+  gsap.from("#homeservicetexttextt", 0.8, {
     y: 100,
     opacity: 0,
     ease: "power4.out",
@@ -103,7 +103,7 @@ export const homeAnimation = () => {
       start: "top 70%",
     },
   });
-  gsap.from("#homeservicesmallheading", 1.4, {
+  gsap.from("#homeservicesmallheading", 1, {
     opacity: 0,
     ease: "power4.out",
     scrollTrigger: {
@@ -111,7 +111,7 @@ export const homeAnimation = () => {
       start: "top 60%",
     },
   });
-  gsap.from("#homeservicetextformobile", 1.4, {
+  gsap.from("#homeservicetextformobile", 1, {
     y: 50,
     opacity: 0,
     ease: "power4.out",
@@ -121,7 +121,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homeservicelinkformobile", 1.4, {
+  gsap.from("#homeservicelinkformobile", 1, {
     y: 50,
     opacity: 0,
     ease: "power4.out",
@@ -133,7 +133,7 @@ export const homeAnimation = () => {
   });
 
   // ----------- contributions anim
-  gsap.from("#homecontributionhead", 1.3, {
+  gsap.from("#homecontributionhead", 0.7, {
     y: 200,
     ease: "power4.out",
     skewY: 20,
@@ -143,7 +143,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homecontributionlogo", 0.8, {
+  gsap.from("#homecontributionlogo", 0.7, {
     scale: 0,
     stagger: { amount: 0.5 },
     ease: "expo.inOut",
@@ -152,7 +152,7 @@ export const homeAnimation = () => {
       start: "top 60%",
     },
   });
-  gsap.from("#homecontributionname", 0.8, {
+  gsap.from("#homecontributionname", 0.7, {
     opacity: 0,
     y: 15,
     stagger: { amount: 0.5 },
@@ -162,7 +162,7 @@ export const homeAnimation = () => {
       start: "top 55%",
     },
   });
-  gsap.from("#homecontributiontext", 0.8, {
+  gsap.from("#homecontributiontext", 0.7, {
     opacity: 0,
     y: 15,
     stagger: { amount: 0.5 },
@@ -186,7 +186,7 @@ export const homeAnimation = () => {
   });
 
   // ----------- testomonial anim
-  gsap.from("#hometestomonialheading", 1.3, {
+  gsap.from("#hometestomonialheading", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -196,7 +196,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#hometesmonialcard", 1.3, {
+  gsap.from("#hometesmonialcard", 0.8, {
     scale: 0,
     ease: "power4.out",
     stagger: { amount: 1.3 },
@@ -207,7 +207,7 @@ export const homeAnimation = () => {
   });
 
   // ----------- client anim
-  gsap.from("#homeclientprofile", 1, {
+  gsap.from("#homeclientprofile", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     stagger: { amount: 0.5 },
@@ -218,7 +218,7 @@ export const homeAnimation = () => {
   });
 
   // ----------- project anim
-  gsap.from("#homeprojectsheading", 1, {
+  gsap.from("#homeprojectsheading", 0.8, {
     y: 200,
     ease: "power4.out",
     skewY: 8,
@@ -228,7 +228,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homeprojectstext", 1, {
+  gsap.from("#homeprojectstext", 0.8, {
     y: 100,
     opacity: 0,
     ease: "power4.out",
@@ -238,7 +238,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homeprojectcard", 1.4, {
+  gsap.from("#homeprojectcard", 1, {
     x: "118%",
     ease: "expo.inOut",
     stagger: { amount: 1.4 },
@@ -247,7 +247,7 @@ export const homeAnimation = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#homeprojectbutton", 1, {
+  gsap.from("#homeprojectbutton", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -263,27 +263,13 @@ export const detailChangeAnim = (textRef, contentRef) => {
   let tl = gsap.timeline();
 
   tl.to(contentRef.current, 0.5, {
+    y: -10,
     opacity: 0,
     ease: "power4.out",
   })
-    .to(textRef.current, 0, {
-      css: { padding: 0 },
-      ease: "expo.inOut",
-    })
-    .to(textRef.current, 1, {
-      width: 0,
-      ease: "expo.inOut",
-    })
-    .to(textRef.current, 1, {
-      width: "24%",
-      ease: "expo.inOut",
-    })
-    .to(textRef.current, 0, {
-      css: { padding: "20px" },
-      ease: "expo.inOut",
-    })
-    .to(contentRef.current, 0.5, {
-      opacity: 1,
-      ease: "power4.out",
-    });
+  .to(contentRef.current, 0.5, {
+    y: 0,
+    opacity: 1,
+    ease: "power4.out",
+  });
 };

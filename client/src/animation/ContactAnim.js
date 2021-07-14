@@ -4,12 +4,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const contactAnim = () => {
     let tl = gsap.timeline();
-  tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
+  tl.to("#globalpagetransition", 0.7, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
-    .from("#contactcircle", 1, {
+    .from("#contactcircle", 0.8, {
       scale: 0,
       ease: "expo.inOut",
-    }).from("#contactHeading", 1.3, {
+    }).from("#contactHeading", 0.8, {
       y: 200,
       ease: "power4.out",
       skewY: 8,
@@ -29,7 +29,7 @@ export const contactAnim = () => {
       y: 70,
       ease: "power4.out",
     })
-    .from("#contactmoreinfo", 1, {
+    .from("#contactmoreinfo", 0.9, {
       y: 100,
       opacity: 0,
       ease: "power4.out",
