@@ -5,20 +5,15 @@ gsap.registerPlugin(ScrollTrigger);
 // SERVICE PAGE ANIMATIONS
 export const serviceAnimation = (techRef) => {
   let tl = gsap.timeline();
-  tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
+  tl.to("#globalpagetransition", 0.7, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
     .from("#globalBannerCircle1", 0.8, { scale: 0, ease: "expo.inOut" })
-    .from("#servicebannerheading", 1, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 7,
-      stagger: { amount: 0.3 },
-    })
-    .from("#servicebannertext", 0.8, { y: 100, opacity: 0, ease: "power4.out",})
-    .from("#aboutscroll", 0.6, { y: 30, opacity: 0, ease: "power4.out" });
+    .from("#servicebannerheading", 0.8, { y: 200, ease: "power4.out", skewY: 7, stagger: { amount: 0.3 }, }, "<")
+    .from("#servicebannertext", 0.6, { y: 100, opacity: 0, ease: "power4.out",})
+    .from("#aboutscroll", 0.6, { y: 30, opacity: 0, ease: "power4.out" },);
 
     // ---------------- offers anim
-      gsap.from("#serviceoffercircle", 1, {
+      gsap.from("#serviceoffercircle", 0.8, {
         scale: 0,
         ease: "expo.inOut",
         stagger: {amount: 0.4},
@@ -27,7 +22,7 @@ export const serviceAnimation = (techRef) => {
           start: "top 80%",
         },
       }); 
-    gsap.to("#serviceoffersmallcircle", 1, {
+    gsap.to("#serviceoffersmallcircle", 0.8, {
       scale: 1,
       ease: "expo.inOut",
       stagger: {amount: 0.4},
@@ -37,7 +32,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 80%",
       },
     });
-    gsap.from("#serviceofferoffer", 1, {
+    gsap.from("#serviceofferoffer", 0.8, {
       x: 100,
       opacity: 0,
       ease: "expo.inOut",
@@ -48,7 +43,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 80%",
       },
     });
-    gsap.from("#serviceofferHeading", 1.3, {
+    gsap.from("#serviceofferHeading", 0.8, {
       y: 100,
       opacity: 0,
       ease: "power4.out",
@@ -57,7 +52,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 80%",
       },
     });
-    gsap.from("#serviceofferText", 1.4, {
+    gsap.from("#serviceofferText", 1, {
       opacity: 0,
       y: window.innerWidth >= 480 ? 200 : 300,
       ease: "power4.out",
@@ -67,7 +62,7 @@ export const serviceAnimation = (techRef) => {
         start: window.innerWidth >= 480 ? "top 75%" : "top 80%",
       },
     });
-    gsap.from("#globalMoreCircle1", 1, {
+    gsap.from("#globalMoreCircle1", 0.8, {
       scale: 0,
       ease: "expo.inOut",
       scrollTrigger: {
@@ -75,7 +70,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 80%",
       },
     });
-    gsap.from("#globalMoreText1", 1, {
+    gsap.from("#globalMoreText1", 0.8, {
       x: 50,
       opacity: 0,
       ease: "power4.out",
@@ -85,7 +80,7 @@ export const serviceAnimation = (techRef) => {
       },
     });
     // ---------------- tech anim
-    gsap.from("#servicetechheading", 1.3, {
+    gsap.from("#servicetechheading", 0.8, {
       y: 200,
       ease: "power4.out",
       skewY: 8,
@@ -95,7 +90,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 90%",
       },
     });
-    gsap.from(techRef.current, 1.3, {
+    gsap.from(techRef.current, 0.8, {
       scale: 0,
       ease: "expo.inOut",
       stagger: { amount: 0.3 },
@@ -106,7 +101,7 @@ export const serviceAnimation = (techRef) => {
     });
 
     // ---------------- recent works
-    gsap.from("#serviceprojectheadd", 1.3, {
+    gsap.from("#serviceprojectheadd", 0.8, {
       y: 200,
       ease: "power4.out",
       skewY: 8,
@@ -116,7 +111,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 80%",
       },
     });
-    gsap.from("#serviceprojecttext", 1.3, {
+    gsap.from("#serviceprojecttext", 0.8, {
       y: 100,
       opacity: 0,
       ease: "power4.out",
@@ -126,7 +121,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 80%",
       },
     });
-    gsap.from("#serviceprojectcard", 1.3, {
+    gsap.from("#serviceprojectcard", 0.8, {
       x: "118%",
       ease: "expo.inOut",
       stagger: { amount: 1.4 },
@@ -135,7 +130,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 70%",
       },
     });
-    gsap.from("#globalMoreCircle2", 1, {
+    gsap.from("#globalMoreCircle2", 0.8, {
       scale: 0,
       ease: "expo.inOut",
       scrollTrigger: {
@@ -143,7 +138,7 @@ export const serviceAnimation = (techRef) => {
         start: "top 80%",
       },
     });
-    gsap.from("#globalMoreText2", 1, {
+    gsap.from("#globalMoreText2", 0.8, {
       x: 50,
       opacity: 0,
       ease: "power4.out",
