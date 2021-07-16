@@ -9,7 +9,7 @@ export const moreProjectShow = () => {
   gsap.from("#moreworksoverlay", {
     css: {width: "0%"},
     ease: "power4.out",
-    duration: 1.4,
+    duration: 1,
     scrollTrigger: {
       trigger: "#moreworksoverlay",
       start: "top 90%",
@@ -18,7 +18,7 @@ export const moreProjectShow = () => {
   gsap.to("#moreworksoverlay", {
     css: {height: 0},
     ease: "power4.out",
-    duration: 1.4,
+    duration: 1,
     scrollTrigger: {
       trigger: "#moreworksoverlay",
       start: window.innerWidth > 480 ? "top 35%" : "top 50%",
@@ -39,16 +39,16 @@ export const moreProjectShow = () => {
 // =========================================== WEB TEMPLATE ========================================
 export const webTemplateAnimation = () => {
   let tl = gsap.timeline();
-  tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
+  tl.to("#globalpagetransition", 0.7, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
-    .from("#webtemplatebannerimageblock", 0.8, { height: 0, ease: "expo.inOut", })
-    .from("#webtempbannerimage", 1, { x: "110%", ease: "expo.inOut" })
-    .from("#webTemplatebannercircle", 1, { scale: 0, ease: "expo.inOut" })
-    .from("#webtemplateprojectname", 0.5,{y: 50, opacity: 0, ease: "power4.out",},"<")
-    .from("#webtemplateotherblock", 0.5, {y: 60, opacity: 0, ease: "power4.out", stagger: {amount: 0.4},});
+    .from("#webtemplatebannerimageblock", 0.7, { height: 0, ease: "expo.inOut", })
+    .from("#webtemplateprojectname", 0.5,{y: 50, opacity: 0, ease: "power4.out",}, "<")
+    .from("#webtempbannerimage", 0.7, { x: "110%", ease: "expo.inOut" })
+    .from("#webTemplatebannercircle", 0.7, { scale: 0, ease: "expo.inOut" })
+    .from("#webtemplateotherblock", 0.5, {y: 60, opacity: 0, ease: "power4.out", stagger: {amount: 0.4},}, "<");
 
   // ---------> company desc
-  gsap.from("#aboutwhydesigncircles", 1, {
+  gsap.from("#aboutwhydesigncircles", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     stagger: { amount: 0.4 },
@@ -57,7 +57,7 @@ export const webTemplateAnimation = () => {
       start: "top 90%",
     },
   });
-  gsap.from("#webtempcomapny", 1, {
+  gsap.from("#webtempcomapny", 0.8, {
     y: 50,
     opacity: 0,
     ease: "power4.out",
@@ -69,7 +69,7 @@ export const webTemplateAnimation = () => {
   });
 
   // ---------> a page
-  gsap.to("#webtempapageoverlay", 1.4, {
+  gsap.to("#webtempapageoverlay", 1, {
     y: "100%",
     ease: "expo.inOut",
     scrollTrigger: {
@@ -93,7 +93,7 @@ export const webTemplateAnimation = () => {
   });
 
   // --------------> soltution
-  gsap.from("#webtempsolution", 1, {
+  gsap.from("#webtempsolution", 0.8, {
     y: 50,
     opacity: 0,
     ease: "power4.out",
@@ -103,7 +103,7 @@ export const webTemplateAnimation = () => {
       start: "top 70%",
     },
   });
-  gsap.from("#webtempsolutionimageoverlay", 1, {
+  gsap.from("#webtempsolutionimageoverlay", 0.8, {
     height: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -118,7 +118,7 @@ export const webTemplateAnimation = () => {
       start: "top 40%",
     },
   });
-  gsap.to("#webtempsolutionimageoverlay", 1, {
+  gsap.to("#webtempsolutionimageoverlay", 0.8, {
     x: "100%",
     ease: "expo.inOut",
     scrollTrigger: {
@@ -128,7 +128,7 @@ export const webTemplateAnimation = () => {
   });
 
   //  --------------> mobile view
-  gsap.from("#webtempmobiles", 1.4, {
+  gsap.from("#webtempmobiles", 1, {
     y: 150,
     opacity: 0,
     ease: "expo.inOut",
@@ -140,7 +140,7 @@ export const webTemplateAnimation = () => {
   });
 
   //   -----------------> Overview
-  gsap.to("#webtempallviewsoverlay", 1.4, {
+  gsap.to("#webtempallviewsoverlay", 1, {
     height: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -159,16 +159,16 @@ export const webTemplateAnimation = () => {
 // =========================================== APP TEMPLATE ========================================
 export const appTemplateStarterAnim = () => {
   let tl = gsap.timeline();
-  tl.to("#globalpagetransition", 1, { scale: 3000, ease: "expo.inOut" })
+  tl.to("#globalpagetransition", 0.7, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
-    .from("#apptemplatebannerimageblock", 1, { height: 0, ease: "expo.inOut", })
-    .from("#apptemplatebannerimagecircles", 1, { scale: 0, stagger: {amount: 0.4}, ease: "expo.inOut" })
+    .from("#apptemplatebannerimageblock", 0.7, { height: 0, ease: "expo.inOut", })
+    .from("#apptemplatebannerimagecircles", 0.7, { scale: 0, stagger: {amount: 0.4}, ease: "expo.inOut" })
     .from("#apptempbannerimage", 0.8, { x: "160%", ease: "expo.inOut" })
-    .from("#appTemplatebannercircle", 1, { scale: 0, ease: "expo.inOut" }, "<")
+    .from("#appTemplatebannercircle", 0.8, { scale: 0, ease: "expo.inOut" }, "<")
     .from("#apptemplateprojectname", 0.5,{y: 50, opacity: 0, ease: "power4.out",},"<")
     .from("#apptemplateotherblock", 0.5, {y: 60, opacity: 0, ease: "power4.out", stagger: {amount: 0.4},})
     // ---------> about company
-    gsap.from("#aboutwhydesigncircles", 1, {
+    gsap.from("#aboutwhydesigncircles", 0.8, {
       scale: 0,
       ease: "expo.inOut",
       stagger: { amount: 0.4 },
@@ -177,7 +177,7 @@ export const appTemplateStarterAnim = () => {
         start: "top 90%",
       },
     });
-    gsap.from("#apptempcomapny", 1, {
+    gsap.from("#apptempcomapny", 0.8, {
       y: 50,
       opacity: 0,
       ease: "power4.out",
@@ -189,7 +189,7 @@ export const appTemplateStarterAnim = () => {
     });
 
     // ---------> app view - 1
-    gsap.from("#appTempapageoverlay", 1.4, {
+    gsap.from("#appTempapageoverlay", 1, {
       height: 0,
       ease: "expo.inOut",
       scrollTrigger: {
@@ -197,7 +197,7 @@ export const appTemplateStarterAnim = () => {
         start: "top 80%",
       },
     });
-  gsap.to("#appTempapageoverlay", 1.4, {
+  gsap.to("#appTempapageoverlay", 1, {
     y: "100%",
     ease: "expo.inOut",
     scrollTrigger: {
@@ -206,9 +206,11 @@ export const appTemplateStarterAnim = () => {
     },
   });
 }
+
+
 export const appTemplateScrollTriggerAnim = () => {
   // ---------> Solutions & Features
-  gsap.from("#appTempsolution", 1, {
+  gsap.from("#appTempsolution", 0.8, {
     y: 50,
     opacity: 0,
     ease: "power4.out",
@@ -218,7 +220,7 @@ export const appTemplateScrollTriggerAnim = () => {
       start: "top 70%",
     },
   });
-  gsap.from("#appTempBigCircle", 1, {
+  gsap.from("#appTempBigCircle", 0.8, {
     scale: 0,
     ease: "expo.inOut",
     stagger: {amount: 0.4},
@@ -227,7 +229,7 @@ export const appTemplateScrollTriggerAnim = () => {
       start: "top 80%",
     },
   }); 
-  gsap.to("#appTempSmallCircle", 1, {
+  gsap.to("#appTempSmallCircle", 0.8, {
     scale: 1,
     ease: "expo.inOut",
     stagger: {amount: 0.4},
@@ -237,7 +239,7 @@ export const appTemplateScrollTriggerAnim = () => {
       start: "top 80%",
     },
   });
-  gsap.from("#appTempFeature", 1, {
+  gsap.from("#appTempFeature", 0.8, {
     x: 100,
     opacity: 0,
     ease: "expo.inOut",
@@ -250,7 +252,7 @@ export const appTemplateScrollTriggerAnim = () => {
   });
 
   // ---------> Achievements
-  gsap.from("#appTempachieve", 1, {
+  gsap.from("#appTempachieve", 0.8, {
     y: 50,
     opacity: 0,
     ease: "power4.out",
@@ -260,7 +262,7 @@ export const appTemplateScrollTriggerAnim = () => {
       start: "top 70%",
     },
   });
-  gsap.from("#appTempAchiveimage", 1, {
+  gsap.from("#appTempAchiveimage", 0.8, {
     y: 100,
     opacity: 0,
     ease: "power4.out",
@@ -272,7 +274,7 @@ export const appTemplateScrollTriggerAnim = () => {
   });
 
   // ---------> app view - 2
-  gsap.from("#appTempapageoverlay2", 1.4, {
+  gsap.from("#appTempapageoverlay2", 1, {
     height: 0,
     ease: "expo.inOut",
     scrollTrigger: {
@@ -280,7 +282,7 @@ export const appTemplateScrollTriggerAnim = () => {
       start: "top 80%",
     },
   });
-  gsap.to("#appTempapageoverlay2", 1.4, {
+  gsap.to("#appTempapageoverlay2", 1, {
     y: "100%",
     ease: "expo.inOut",
     scrollTrigger: {
