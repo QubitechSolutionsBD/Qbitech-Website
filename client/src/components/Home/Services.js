@@ -13,7 +13,7 @@ function Services() {
     setClassSelected(value);
     setTimeout(() => {
       setSelected(value);
-    }, 1000);
+    }, 500);
     detailChangeAnim(textRef, contentRef);
   };
 
