@@ -23,7 +23,7 @@ const dataset = [
 
 // OBSERVANCE FUNC
 function Observance() {
-  const [slideNumber, setSlideNumber] = useState(2);
+  const [slideNumber, setSlideNumber] = useState(1);
 
   const settings = {
     dots: true,
@@ -31,7 +31,7 @@ function Observance() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 700,
     autoplaySpeed: 2500,
     dotsClass: "slick-dots slick-thumb",

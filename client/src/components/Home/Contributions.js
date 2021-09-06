@@ -16,7 +16,7 @@ const assets = [
   {
     id: 1,
     image: education,
-    head: "Education",
+    head: "EduTech",
     text: "Qubitech assists in interactive programs that yield higher levels of engagement to serve eLearning needs of students & institutes.",
   },
   {

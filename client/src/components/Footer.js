@@ -1,8 +1,12 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+// ASSETS
 import arrow from "../assets/pageAbout/up-arrow.png"
 import qbitech from "../assets/qbitech.png";
+import facebook from "../assets/footer/facebook.png";
+import instagram from "../assets/footer/instagram.png";
+import linkedin from "../assets/footer/linkedin.png";
+import twitter from "../assets/footer/twitter.png";
 
 function Footer() {
   const scrollToTop = () => {
@@ -40,10 +44,10 @@ function Footer() {
         </div>
         <div className="social-links">
           <h3>FOLLOW</h3>
-          <Link to="/">LINKED IN</Link>
-          <Link to="/">TWITTER</Link>
-          <Link to="/">FACEBOOK</Link>
-          <Link to="/">INSTAGRAM</Link>
+          <Link to="/"><img src={linkedin} alt="Linkedin" /></Link>
+          <Link to="/"><img src={twitter} alt="Linkedin" /></Link>
+          <Link to="/"><img src={facebook} alt="Linkedin" /></Link>
+          <Link to="/"><img src={instagram} alt="Linkedin" /></Link>
 
           <div className="gotoup" onClick={scrollToTop}>
             <img src={arrow} alt="" />
@@ -57,8 +61,6 @@ function Footer() {
           ©️️ 2021 All right reserve to Qbitech
         </div>
       </div>
-
-      <img src={logo} alt="" className="q" />
     </div>
   );
 }

@@ -53,7 +53,15 @@ function Testomonials() {
     autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
+    dotsClass: "slick-dots slick-thumb",
+    customPaging: (i) => {
+      return (
+        <div className="custom-dots">
+          <div className="box"></div>
+        </div>
+      );
+    },
     responsive: [
       {
         breakpoint: 950,
