@@ -10,8 +10,8 @@ function How() {
   return (
     <div className="about__process">
       <h1>
-        <div><span id="aboutprocesshead">Our</span></div>
-        <div><span id="aboutprocesshead">Working Process</span></div>
+        <div><span id="aboutprocesshead">HOW</span></div>
+        <div><span id="aboutprocesshead">WE DO IT</span></div>
       </h1>
 
       <div className="processes">

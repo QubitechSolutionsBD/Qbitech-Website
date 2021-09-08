@@ -30,7 +30,7 @@ function Why() {
           <div className="circle" id="aboutwhyHeadingcircle"></div>
           <h1>
             <div><span id="aboutwhyHeading">Why</span></div>
-            <div><span id="aboutwhyHeading">WE DO</span></div>
+            <div><span id="aboutwhyHeading">WE DO IT</span></div>
           </h1>
         </div>
 

@@ -5,7 +5,7 @@ function Who({whoweareRef}) {
     <div className="about__about" ref={whoweareRef}>
       <div className="heading">
       <div className="circle" id="aboutwhocircle"></div>
-        <h3>
+        {/* <h3>
           <div><span id="aboutWhoHeading">We are building</span></div>
           <div><span id="aboutWhoHeading">the tech solutions from</span></div>
         </h3>
@@ -13,6 +13,10 @@ function Who({whoweareRef}) {
           <div><span id="aboutWhoHeading">2020</span></div>
           <div><span id="aboutWhoHeading">to</span></div>
           <div><span id="aboutWhoHeading">2XXX</span></div>
+        </h1> */}
+        <h1 className="primary-heading">
+          <div><span id="aboutWhoHeading">WHO</span></div>
+          <div><span id="aboutWhoHeading">WE ARE</span></div>
         </h1>
       </div>
       <div className="text">
