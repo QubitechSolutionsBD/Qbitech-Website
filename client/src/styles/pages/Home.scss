@@ -1269,6 +1269,13 @@
 
   // ////////////////////////////////////////////////////////////////////////////////////////////
   // ===================================== PARTENRS PART =====================================
+  h2.client__head{
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
   &__clients {
     width: 100%;
     padding: 0 250px 50px 250px;

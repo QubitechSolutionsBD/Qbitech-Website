@@ -6,7 +6,6 @@ import qbitech from "../assets/qbitech.png";
 import facebook from "../assets/footer/facebook.png";
 import instagram from "../assets/footer/instagram.png";
 import linkedin from "../assets/footer/linkedin.png";
-import twitter from "../assets/footer/twitter.png";
 
 function Footer() {
   const scrollToTop = () => {
@@ -34,7 +33,7 @@ function Footer() {
           </div>
           <div className="info">
             <h3>ENQURIES</h3>
-            <p onClick={openMail} style={{cursor: "pointer"}}>qubitechsolutions@gmail.com</p>
+            <p onClick={openMail} style={{cursor: "pointer"}}>qubitechsolutions @gmail.com</p>
           </div>
           <div className="info">
             <h3>ADDRESS</h3>
@@ -44,10 +43,9 @@ function Footer() {
         </div>
         <div className="social-links">
           <h3>FOLLOW</h3>
+          <Link to="/"><img src={facebook} alt="Facebook" /></Link>
+          <Link to="/"><img src={instagram} alt="Instgram" /></Link>
           <Link to="/"><img src={linkedin} alt="Linkedin" /></Link>
-          <Link to="/"><img src={twitter} alt="Linkedin" /></Link>
-          <Link to="/"><img src={facebook} alt="Linkedin" /></Link>
-          <Link to="/"><img src={instagram} alt="Linkedin" /></Link>
 
           <div className="gotoup" onClick={scrollToTop}>
             <img src={arrow} alt="" />
@@ -58,7 +56,7 @@ function Footer() {
       <div className="footer__secondary">
         <div className="logo"><img src={qbitech} alt="Qbitech" /></div>
         <div className="copyright">
-          ©️️ 2021 All right reserve to Qbitech
+          ©️️ All right reserved to Qubitech | 2021
         </div>
       </div>
     </div>

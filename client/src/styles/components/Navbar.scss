@@ -111,12 +111,12 @@
   .brand{
     height: 5vh;
     margin-bottom: 100px;
-    img{ height: 100%; opacity: 0; }
+    img{ height: 10vh; opacity: 0; }
   }
 
   .menu{
     width: 100%;
-    min-height: 50vh;
+    min-height: 60vh;
     padding: 0 100px 0 250px;
     display: none;
     @include media("<=phone") {
@@ -126,6 +126,7 @@
 
     &__links{
       width: 50%;
+      margin-top: 3rem;
       @include media("<=phone") {width: 100%;}
       a{
         display: block;
@@ -133,13 +134,18 @@
         color: var(--text-color-white);
         font-size: 5rem;
         line-height: 5.5rem;
+        margin-bottom: 1rem;
         letter-spacing: 4px;
         font-family: var(--babas-font);
         transform: translate(0, -50);
+        transition: 0.4s;
         opacity: 0;
         @include media("<=phone") {
           font-size: 2.5rem;
           line-height: 3rem;
+        }
+        &:hover{
+          color: #ccc;
         }
       }
     }
@@ -150,7 +156,7 @@
       @include media("<=phone") { width: 100%; }
       .content{
         position: absolute;
-        bottom: 0;
+        bottom: 4.4rem;
         right: 0;
 
         .contacts{

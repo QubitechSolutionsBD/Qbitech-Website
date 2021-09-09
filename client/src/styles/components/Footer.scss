@@ -8,8 +8,21 @@
   position: relative;
   overflow: hidden;
   border-bottom: 10px solid var(--pink-color);
+  @include media("<=1620px") {
+    padding: 110px 230px 45px 230px;
+  }
+  @include media("<=1520px") {
+    padding: 100 200px 40px 200px;
+  }
   @include media("<=desktop") {
     padding: 100px 180px 40px 180px;
+  }
+  @include media("<=1260px") {
+    padding: 90px 145px 90px 145px;
+    height: 80vh;
+  }
+  @include media("<=semiDesktop") {
+    padding: 85px 110px 30px 110px;
   }
   @include media("<=phone") {
     padding: 50px 30px;
@@ -35,7 +48,11 @@
         @include media("<=desktop") {
           font-size: 1.4rem;
           line-height: 2.4rem;
-        }   
+        }
+        @include media("<=1200px") {
+          font-size: 1.1rem;
+          line-height: 2.2rem;
+        }
         @include media("<=phone") {
           font-size: 17px;
           line-height: 28px;
@@ -53,7 +70,10 @@
       justify-content: space-between;
       @include media("<=desktop") {
         height: 50vh;
-      } 
+      }
+      @include media("<=1200px") {
+        height: 40vh;
+      }
       @include media("<=phone") {
         width: 100%; height: fit-content; 
         margin-bottom: 40px; display: block;
@@ -73,7 +93,8 @@
           font-size: 1.8rem;
           line-height: 2.8rem;
           font-weight: 400;
-          @include media("<=desktop") { font-size: 1.4rem; line-height: 2.4rem; } 
+          @include media("<=desktop") { font-size: 1.4rem; line-height: 2.4rem; }
+          @include media("<=1200px") { font-size: 1.1rem; line-height: 2.2rem; }
           @include media("<=phone") {font-size: 17px; line-height: 28px;}
         }
         a{
@@ -91,6 +112,7 @@
         text-transform: uppercase;
         font-weight: 500;
         font-size: 16px;
+        margin-bottom: 2rem;
         @include media("<=phone") { font-size: 13px; }
       }
       a {
@@ -101,13 +123,14 @@
         font-weight: 500;
         line-height: 2.8rem;
         color: var(--text-color-white);
-        @include media("<=desktop") { font-size: 1.4rem; line-height: 2.4rem; } 
+        @include media("<=desktop") { font-size: 1.4rem; line-height: 2.4rem; }
+        @include media("<=1200px") { font-size: 1.1rem; line-height: 2.2rem; }
         @include media("<=phone") { font-size: 17px; line-height: 28px; }
         img{
           width: 3rem;
-          margin-top: 2rem;
-          margin-right: 10px;
+          margin-right: 20px;
           transition: 0.4s;
+          @include media("<=desktop") { width: 2rem; margin-right: 10px; }        
         }
         &:hover img{
           transform: scale(1.2);
