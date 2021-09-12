@@ -142,6 +142,10 @@
         }
       }
     }
+    p.cnt_text{
+      margin-top: 1rem;
+      @include media("<=phone") { font-size: 13px; }
+    }
 
     form {
       width: 100%;
@@ -151,11 +155,15 @@
       .input-container {
         width: 100%;
         margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         @include media("<=phone") {
           margin-bottom: 10px;
         }
         input,
-        textarea {
+        textarea,
+        select {
           width: 100%;
           padding: 15px 20px;
           font-size: 15px;
@@ -173,6 +181,88 @@
             font-size: 13.5px;
           }
         }
+        .input_50{
+          width: 49%;
+          &:not(:last-child){
+            @include media("<=phone") { margin-bottom: 10px; }
+          }
+          @include media("<=phone") { width: 100%; }
+        }
+        // Check box
+        .checkbox{
+          background: #cccccc50;
+          margin-top: 10px;
+          border-radius: 5px;
+          display: flex;
+          @include media("<=phone") { margin-top: 0; }
+          .logo{
+            width: 20%;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            div{
+              width: 45px; height: 45px; border-radius: 5px; background: #cccccc50;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: center;
+              display: flex; align-items: center; justify-content: center;
+              img{
+                width: 65%;
+              }
+            }
+          }
+          .checkBoxCont{
+            padding: 15px 20px 15px 20px;
+            input{
+              padding: 0;
+              height: initial;
+              width: initial;
+              margin-bottom: 0;
+              display: none;
+              cursor: pointer;
+            }
+            label {
+              position: relative;
+              cursor: pointer;
+              font-size: 14px;
+            }
+            label:before {
+              content:'';
+              -webkit-appearance: none;
+              background-color: transparent;
+              border: 2px solid var(--background-color-dark);
+              border-radius: 5px;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+              padding: 10px;
+              display: inline-block;
+              position: relative;
+              vertical-align: middle;
+              cursor: pointer;
+              margin-right: 10px;
+            }          
+            input:checked + label:after{
+              content: '';
+              display: block;
+              position: absolute;
+              top: 2px;
+              left: 9px;
+              width: 5px;
+              height: 10px;
+              border: solid var(--text-color-white);
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+            }
+            input:checked + label:before{
+              background: var(--background-color-dark);;
+            }
+          }
+        }
+      }
+      .container_wrapper{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        p{ @include media("<=phone") { font-size: 13px; margin-top: 10px; margin-bottom: 10px; } }
       }
       button {
         width: fit-content;

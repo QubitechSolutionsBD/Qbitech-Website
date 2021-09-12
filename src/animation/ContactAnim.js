@@ -21,6 +21,12 @@ export const contactAnim = () => {
       ease: "power4.out",
       stagger: { amount: 0.3 },
     })
+    .from("#contactSecondaryText", 0.8, {
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      stagger: { amount: 0.3 },
+    }, "<")
     .from("#contactbutton", 0.6, {
       css: { padding: 0, width: 0 },
       ease: "expo.inOut",

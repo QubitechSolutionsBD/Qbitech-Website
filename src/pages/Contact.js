@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
-import emailjs from "emailjs-com";
-
+// import emailjs from "emailjs-com";
 // COMPONENTS
 import Navbar from "../components/Navigation/Navbar";
 import Footer from "../components/Footer";
 import GlobalPageTransition from "../components/Global/GlobalPageTransition";
-
 // ANIMATIONS
 import { contactAnim } from "../animation/ContactAnim";
+// IMAGES
+// import web from "../assets/pageContact/web.png";
+// import app from "../assets/pageContact/apps.png";
+// import chip from "../assets/pageContact/chip.png";
+// import marketing from "../assets/pageContact/marketing.png";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [message, setMessage] = useState("");
+  const [url, setUrl] = useState("");
+  const [budget, setBudget] = useState("");
+  const [services, setServices] = useState([]);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,7 +30,7 @@ function Contact() {
   }, []);
 
   const validationCheck = () => {
-    if (name && email && mobile && message) {
+    if (name && email && mobile) {
       if (mobile.length > 0 && mobile[0] === "0" && mobile[1] === "1") {
         return true;
       } else {
@@ -37,43 +43,74 @@ function Contact() {
     }
   };
 
+  // /////////////////////////////////////////////////////////////////////
+  // HANDLE CHECK BOX
+  const handleCheckBox = (field) => {
+    let found = 0;
+    let selectedServices = services;
+
+    if (selectedServices.length > 0)
+    {
+      selectedServices.forEach((service) => {
+        if (service === field) { found = 1; }
+      });
+      if (found === 0) { selectedServices.push(field);} 
+      else { selectedServices = selectedServices.filter((s) => s !== field);}
+    } 
+    else
+    {
+      selectedServices.push(field);
+    }
+    setServices(selectedServices);
+  };
+
+  // /////////////////////////////////////////////////////////////////////
+  // CLEAR ALL FIELDS
   const clearAllFields = () => {
     setError("");
     setName("");
     setEmail("");
     setMobile("");
     setMessage("");
+    setUrl("");
+    setServices([]);
   };
 
   const sendMail = (e) => {
     e.preventDefault();
     if (validationCheck()) {
       setLoading(true);
-      emailjs
-        .sendForm(
-          "service_iax6jgh",
-          "template_iim055q",
-          e.target,
-          "user_XQffkUYrfTtC2jfhBA1Ee"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            clearAllFields();
-            setSuccessMessage(true);
-            setLoading(false);
-          },
-          (error) => {
-            console.log(error.text);
-            setLoading(false);
-          }
-        );
+      // emailjs
+      //   .sendForm(
+      //     "service_iax6jgh",
+      //     "template_iim055q",
+      //     e.target,
+      //     "user_XQffkUYrfTtC2jfhBA1Ee"
+      //   )
+      //   .then(
+      //     () => {
+      //       clearAllFields();
+      //       setSuccessMessage(true);
+      //       setLoading(false);
+      //     },
+      //     () => {
+      //       setLoading(false);
+      //     }
+      //   );
+      console.log(name);
+      console.log(email);
+      console.log(mobile);
+      console.log(url);
+      console.log(budget);
+      console.log(services);
+      clearAllFields();
+      setSuccessMessage(true);
     }
   };
 
   const openMail = () => {
-    window.open('mailto:qubitechsolutions@gmail.com')
-  }
+    window.open("mailto:qubitechsolutions@gmail.com");
+  };
 
   return (
     <>
@@ -90,13 +127,17 @@ function Contact() {
               <span id="contactHeading">YOUR PROJECT</span>
             </div>
           </h1>
-
+          <p className="cnt_text" id="contactSecondaryText">
+            If you are a vendor or interested in partnering with Qubitech
+            solutions outside of our services PLEASE email
+            qubitechsolutions@gmail.com. We do not accept vendor submissions on
+            this form
+          </p>
           <form onSubmit={sendMail}>
             <div className="input-container">
               <input
                 id="contactinputfields"
                 type="text"
-                name="from_name"
                 placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -105,28 +146,115 @@ function Contact() {
             <div className="input-container">
               <input
                 id="contactinputfields"
+                className="input_50"
                 type="email"
-                name="from_email"
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-            </div>
-            <div className="input-container">
               <input
                 id="contactinputfields"
+                className="input_50"
                 type="text"
-                name="from_number"
                 placeholder="Phone Number"
                 value={mobile}
                 onChange={(e) => setMobile(e.target.value)}
               />
             </div>
             <div className="input-container">
+              <input
+                id="contactinputfields"
+                className="input_50"
+                type="text"
+                placeholder="Company URL"
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+              />
+              <select
+                id="contactinputfields"
+                className="input_50"
+                placeholder="Phone Number"
+                value={budget}
+                onChange={(e) => setBudget(e.target.value)}
+              >
+                <option value="" disabled selected>
+                  Budget
+                </option>
+                <option value="30,000">30,000 ৳</option>
+                <option value="50,000">50,000 ৳</option>
+                <option value=">= 50,000">more than 50,000 ৳</option>
+                <option value="20,000">Not Sure</option>
+              </select>
+            </div>
+            {/* Check box */}
+            <div className="container_wrapper">
+              <p id="contactSecondaryText">Services you are interested in</p>
+              <div className="input-container">
+                <div className="input_50 checkbox" id="contactinputfields">
+                  {/* <div className="logo">
+                    <div><img src={web} alt="web" /></div>
+                  </div> */}
+                  <div className="checkBoxCont">
+                    <input
+                      type="checkbox"
+                      value="Web Development"
+                      id="web"
+                      onChange={() => {
+                        handleCheckBox("Web Developing");
+                      }}
+                    />
+                    <label htmlFor="web">Web Development</label>
+                  </div>
+                </div>
+                <div className="input_50 checkbox" id="contactinputfields">
+                  {/* <div className="logo">
+                    <div><img src={app} alt="app" /></div>
+                  </div> */}
+                  <div className="checkBoxCont">
+                    <input
+                      type="checkbox"
+                      value="App Development"
+                      id="app"
+                      onChange={() => {
+                        handleCheckBox("App Developing");
+                      }}
+                    />
+                    <label htmlFor="app">App Development</label>
+                  </div>
+                </div>
+                <div className="input_50 checkbox" id="contactinputfields">
+                  {/* <div className="logo">
+                    <div><img src={chip} alt="chip" /></div>
+                  </div> */}
+                  <div className="checkBoxCont">
+                    <input
+                      type="checkbox"
+                      value="Hardware Development"
+                      id="hardware"
+                    />
+                    <label htmlFor="hardware">Hardware Development</label>
+                  </div>
+                </div>
+                <div className="input_50 checkbox" id="contactinputfields">
+                  {/* <div className="logo">
+                    <div><img src={marketing} alt="marketing" /></div>
+                  </div> */}
+                  <div className="checkBoxCont">
+                    <input
+                      type="checkbox"
+                      value="Branding & Marketing"
+                      id="branding"
+                    />
+                    <label htmlFor="branding">Branding & Marketing</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="input-container">
               <textarea
                 id="contactinputfields"
-                placeholder="Tell us about your project (scope, timeline, budget, etc)"
-                rows="10"
+                placeholder="What can we help you with?"
+                rows="5"
                 cols="50"
                 value={message}
                 name="message"
@@ -174,7 +302,9 @@ function Contact() {
             <div className="block" id="contactmoreinfo">
               <h2>Get in touch</h2>
               <p>PHONE: (+880) 1774254696</p>
-              <p onClick={openMail} style={{cursor: "pointer"}}>EMAIL: qubitechsolutions@gmail.com</p>
+              <p onClick={openMail} style={{ cursor: "pointer" }}>
+                EMAIL: qubitechsolutions@gmail.com
+              </p>
             </div>
           </div>
         </div>
