@@ -31,6 +31,7 @@ function Navbar() {
       <div className="navigationbtn" onClick={navigationController}>
         <div className="line line1"></div>
         <div className="line line2"></div>
+        <div className="line line2"></div>
       </div>
 
       {/* ============================================= overlay blocks ===================================== */}
@@ -49,7 +50,7 @@ function Navbar() {
         <div className="menu" id="navigationmenu">
           {/* links */}
           <div className="menu__links">
-          <Link to="/about" id="navigationmainlinks">
+            <Link to="/about" id="navigationmainlinks">
               ABOUT
             </Link>
             <Link to="/services" id="navigationmainlinks">
@@ -66,11 +67,11 @@ function Navbar() {
           <div className="menu__contact">
             <div className="content">
               <div className="contacts">
-                <p id="navigationaddress">qubitechsolutions@gmail.com</p>
-                <p id="navigationaddress">(+880) 1774254696</p>
+                <p id="navigationaddress">info@qubitechbd.com</p>
+                <p id="navigationaddress">+8801701027534</p>
               </div>
               <div className="addresses">
-                <p id="navigationaddress">Talaimari, Boalia</p>
+                <p id="navigationaddress">Talaimari, Boalia, Kazla 6204</p>
                 <p id="navigationaddress">Rajshahi, Bangladesh</p>
               </div>
             </div>

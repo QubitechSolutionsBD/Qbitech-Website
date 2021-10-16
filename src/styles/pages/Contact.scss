@@ -35,7 +35,7 @@
       width: 100%;
     }
 
-    .circle{
+    .circle {
       width: 120px;
       height: 120px;
       border-radius: 50%;
@@ -142,9 +142,11 @@
         }
       }
     }
-    p.cnt_text{
+    p.cnt_text {
       margin-top: 1rem;
-      @include media("<=phone") { font-size: 13px; }
+      @include media("<=phone") {
+        font-size: 13px;
+      }
     }
 
     form {
@@ -181,38 +183,50 @@
             font-size: 13.5px;
           }
         }
-        .input_50{
+        .input_50 {
           width: 49%;
-          &:not(:last-child){
-            @include media("<=phone") { margin-bottom: 10px; }
+          &:not(:last-child) {
+            @include media("<=phone") {
+              margin-bottom: 10px;
+            }
           }
-          @include media("<=phone") { width: 100%; }
+          @include media("<=phone") {
+            width: 100%;
+          }
         }
         // Check box
-        .checkbox{
+        .checkbox {
           background: #cccccc50;
           margin-top: 10px;
           border-radius: 5px;
           display: flex;
-          @include media("<=phone") { margin-top: 0; }
-          .logo{
+          @include media("<=phone") {
+            margin-top: 0;
+          }
+          .logo {
             width: 20%;
             margin-right: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            div{
-              width: 45px; height: 45px; border-radius: 5px; background: #cccccc50;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: center;
-              display: flex; align-items: center; justify-content: center;
-              img{
+            div {
+              width: 45px;
+              height: 45px;
+              border-radius: 5px;
+              background: #cccccc50;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
                 width: 65%;
               }
             }
           }
-          .checkBoxCont{
+          .checkBoxCont {
             padding: 15px 20px 15px 20px;
-            input{
+            input {
               padding: 0;
               height: initial;
               width: initial;
@@ -226,21 +240,22 @@
               font-size: 14px;
             }
             label:before {
-              content:'';
+              content: "";
               -webkit-appearance: none;
               background-color: transparent;
               border: 2px solid var(--background-color-dark);
               border-radius: 5px;
-              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+                inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
               padding: 10px;
               display: inline-block;
               position: relative;
               vertical-align: middle;
               cursor: pointer;
               margin-right: 10px;
-            }          
-            input:checked + label:after{
-              content: '';
+            }
+            input:checked + label:after {
+              content: "";
               display: block;
               position: absolute;
               top: 2px;
@@ -251,41 +266,58 @@
               border-width: 0 2px 2px 0;
               transform: rotate(45deg);
             }
-            input:checked + label:before{
-              background: var(--background-color-dark);;
+            input:checked + label:before {
+              background: var(--background-color-dark);
             }
           }
         }
       }
-      .container_wrapper{
+      .container_wrapper {
         width: 100%;
         padding: 0;
         margin-bottom: 20px;
         border-radius: 5px;
-        p{ @include media("<=phone") { font-size: 13px; margin-top: 10px; margin-bottom: 10px; } }
+        p {
+          @include media("<=phone") {
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
       }
       button {
         width: fit-content;
         min-height: 45px;
-        padding: 15px 40px;
-        font-size: 15px;
+        padding: 11px 20px;
+        font-size: 18px;
         line-height: 15px;
         font-weight: 500;
         text-transform: uppercase;
         outline: none;
         border: none;
-        background: var(--background-color-dark);
-        border-radius: 30px;
-        color: var(--text-color-white);
+        background: var(--pink-color);
+        // background: var(--background-color-dark);
+        // border-radius: 30px;
+        border-radius: 5px;
+        // color: var(--text-color-white);
+        color: #f2f2f2;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        .textcontainer{
+        // transform: scale(1);
+        // transition: 0.2s all ease-in-out;
+        // &:hover {
+        //   transform: scale(1.02);
+        //   transition: 0.2s all ease-in-out;
+        // }
+        .textcontainer {
           display: flex;
           align-items: center;
           overflow: hidden;
-          div{ margin: 0 5px; }
+          div {
+            margin: 0 5px;
+          }
         }
         @include media("<=phone") {
           font-size: 13.5px;
@@ -304,8 +336,8 @@
       width: 100%;
       min-height: 65vh;
     }
-    
-    .more-ways{
+
+    .more-ways {
       width: 100%;
       padding: 50px 0;
       position: absolute;
@@ -390,7 +422,7 @@
         }
       }
 
-      .block{
+      .block {
         margin-top: 25px;
         margin-bottom: 50px;
         @include media("<=1566px") {
@@ -402,16 +434,16 @@
         @include media("<=semiDesktop") {
           margin-bottom: 20px;
         }
-        h2{
+        h2 {
           font-weight: 600;
           text-align: right;
           text-transform: uppercase;
           font-size: 1rem;
         }
-        p{
+        p {
           text-align: right;
           font-size: 20px;
-          font-weight: 200;
+          // font-weight: 200;
           @include media("<=1566px") {
             font-size: 18px;
           }

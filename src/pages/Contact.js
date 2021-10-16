@@ -11,6 +11,7 @@ import { contactAnim } from "../animation/ContactAnim";
 // import app from "../assets/pageContact/apps.png";
 // import chip from "../assets/pageContact/chip.png";
 // import marketing from "../assets/pageContact/marketing.png";
+import arrowImg from "../assets/up-arrow.png";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -49,16 +50,18 @@ function Contact() {
     let found = 0;
     let selectedServices = services;
 
-    if (selectedServices.length > 0)
-    {
+    if (selectedServices.length > 0) {
       selectedServices.forEach((service) => {
-        if (service === field) { found = 1; }
+        if (service === field) {
+          found = 1;
+        }
       });
-      if (found === 0) { selectedServices.push(field);} 
-      else { selectedServices = selectedServices.filter((s) => s !== field);}
-    } 
-    else
-    {
+      if (found === 0) {
+        selectedServices.push(field);
+      } else {
+        selectedServices = selectedServices.filter((s) => s !== field);
+      }
+    } else {
       selectedServices.push(field);
     }
     setServices(selectedServices);
@@ -178,12 +181,14 @@ function Contact() {
                 onChange={(e) => setBudget(e.target.value)}
               >
                 <option value="" disabled selected>
-                  Budget
+                  Budget (USD)
                 </option>
-                <option value="30,000">30,000 ৳</option>
-                <option value="50,000">50,000 ৳</option>
-                <option value=">= 50,000">more than 50,000 ৳</option>
-                <option value="20,000">Not Sure</option>
+                <option value="300-750">$300 - $750 </option>
+                <option value="750-1500">$750 - $1,500 </option>
+                <option value="1500-3500">$1,500 - $3,500 </option>
+                <option value="3500-10000">$3,500 - $10,000 </option>
+                <option value=">= 10,000">$10,000+ </option>
+                <option value="NaN">Not Sure</option>
               </select>
             </div>
             {/* Check box */}
@@ -269,8 +274,12 @@ function Contact() {
             <button id="contactbutton">
               {!loading ? (
                 <div className="textcontainer">
-                  <div id="contactbuttontext">Submit</div>
-                  <div id="contactbuttontext">+</div>
+                  <div id="contactbuttontext" style={{ fontWeight: "bold" }}>
+                    Submit
+                  </div>
+                  <div className="contactbuttonicon">
+                    <img src={arrowImg} alt="" />
+                  </div>
                 </div>
               ) : (
                 <div className="textcontainer">
@@ -295,15 +304,15 @@ function Contact() {
 
             <div className="block" id="contactmoreinfo">
               <h2>Come say Hey</h2>
-              <p>Talaimari, Boalia</p>
+              <p>Talaimari, Boalia, Kazla 6204</p>
               <p>Rajshahi, Bangladesh</p>
             </div>
 
             <div className="block" id="contactmoreinfo">
               <h2>Get in touch</h2>
-              <p>PHONE: (+880) 1774254696</p>
+              <p>PHONE: +8801701027534</p>
               <p onClick={openMail} style={{ cursor: "pointer" }}>
-                EMAIL: qubitechsolutions@gmail.com
+                EMAIL: info@qubitechbd.com
               </p>
             </div>
           </div>
