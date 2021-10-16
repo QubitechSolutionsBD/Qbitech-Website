@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 // ASSETS
 import arrow from "../assets/pageAbout/up-arrow.png";
-import qbitech from "../assets/qbitech.png";
+import qbitech from "../assets/qubitechBd.png";
 import facebook from "../assets/footer/facebook.png";
 import instagram from "../assets/footer/instagram.png";
 import linkedin from "../assets/footer/linkedin.png";

@@ -109,9 +109,16 @@
   }
 
   .brand{
-    height: 5vh;
+    height: 10vh;
     margin-bottom: 100px;
-    img{ height: 10vh; opacity: 0; }
+    margin-left: 5%;
+    img{
+      height: 10vh; opacity: 0;
+      @include media("<=phone") {
+        height: 7vh;
+        margin-bottom: 50px;
+      }
+    }
   }
 
   .menu{
@@ -127,7 +134,10 @@
     &__links{
       width: 50%;
       margin-top: 3rem;
-      @include media("<=phone") {width: 100%;}
+      @include media("<=phone") {
+        width: 100%;
+        margin-top: 0;
+      }
       a{
         display: block;
         text-decoration: none;
@@ -143,6 +153,7 @@
         @include media("<=phone") {
           font-size: 2.5rem;
           line-height: 3rem;
+          margin-bottom: 0.5rem;
         }
         &:hover{
           color: #ccc;

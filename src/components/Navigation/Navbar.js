@@ -4,7 +4,7 @@ import {
   openNavigation,
   closeNavigation,
 } from "../../animation/NavigationAnim";
-import logo from "../../assets/qbitech.png";
+import logo from "../../assets/qubitechBd.png";
 
 function Navbar() {
   const [openNav, setOpenNav] = useState(false);
@@ -12,6 +12,11 @@ function Navbar() {
   // NAVIGATION CONTROLLER
   const navigationController = () => {
     setOpenNav(!openNav);
+  };
+
+  // OPEN MAIL
+  const openMail = () => {
+    window.open("mailto:qubitechsolutions@gmail.com");
   };
 
   // NAVIGATION ANIMATION
@@ -67,7 +72,13 @@ function Navbar() {
           <div className="menu__contact">
             <div className="content">
               <div className="contacts">
-                <p id="navigationaddress">info@qubitechbd.com</p>
+                <p
+                  id="navigationaddress"
+                  onClick={openMail}
+                  style={{ cursor: "pointer" }}
+                >
+                  info@qubitechbd.com
+                </p>
                 <p id="navigationaddress">+8801701027534</p>
               </div>
               <div className="addresses">
