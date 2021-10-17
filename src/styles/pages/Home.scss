@@ -184,7 +184,6 @@
 
     .links {
       h1 {
-        width: 70%;
         display: flex;
         align-items: flex-start;
         font-family: var(--babas-font);
@@ -202,6 +201,7 @@
         @include media("<=phone") {
           width: 100%;
           flex-direction: column;
+          border: 1px solid transparent;
         }
         .headingnumber {
           width: 5%;
@@ -301,6 +301,7 @@
       p {
         color: var(--text-color-black);
         margin-bottom: 1rem;
+        margin-top: -15px;
         font-size: 13.5px;
         @include media(">=900px") {
           display: none;
@@ -1273,8 +1274,11 @@
     text-align: center;
     font-size: 20px;
     font-weight: normal;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     text-transform: uppercase;
+    @include media("<=phone") {
+      font-size: 16px;
+    }
   }
   &__clients {
     width: 100%;
@@ -1298,7 +1302,7 @@
       padding: 0 130px 30px 130px;
     }
     @include media("<=phone") {
-      padding: 30px 30px 50px 30px;
+      padding: 10px 30px 10px 30px;
     }
     img {
       width: 100px;
@@ -1341,6 +1345,7 @@
     }
     @include media("<=phone") {
       min-height: 65vh;
+      margin-top: 2rem;
     }
     .head {
       width: 35%;

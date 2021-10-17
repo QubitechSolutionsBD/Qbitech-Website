@@ -33,7 +33,13 @@ function Contact() {
   const validationCheck = () => {
     if (name && email && mobile) {
       if (mobile.length > 0 && mobile[0] === "0" && mobile[1] === "1") {
-        return true;
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(re.test(String(email).toLowerCase())){
+          return true;
+        } else{
+          setError("Invalid Email.");
+          return false;
+        }
       } else {
         setError("Invalid Phone number.");
         return false;
@@ -130,12 +136,6 @@ function Contact() {
               <span id="contactHeading">YOUR PROJECT</span>
             </div>
           </h1>
-          <p className="cnt_text" id="contactSecondaryText">
-            If you are a vendor or interested in partnering with Qubitech
-            solutions outside of our services PLEASE email
-            qubitechsolutions@gmail.com. We do not accept vendor submissions on
-            this form
-          </p>
           <form onSubmit={sendMail}>
             <div className="input-container">
               <input
@@ -310,9 +310,9 @@ function Contact() {
 
             <div className="block" id="contactmoreinfo">
               <h2>Get in touch</h2>
-              <p>PHONE: +8801701027534</p>
+              <p><a href="tel:+8801701027534">+8801701027534</a></p>
               <p onClick={openMail} style={{ cursor: "pointer" }}>
-                EMAIL: info@qubitechbd.com
+                info@qubitechbd.com
               </p>
             </div>
           </div>

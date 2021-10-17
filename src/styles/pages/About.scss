@@ -170,6 +170,7 @@
           margin-bottom: 1rem;
           overflow: hidden;
           position: relative;
+          
           @include media("<=1608px") {
             height: 4.7rem;
             margin-bottom: 5px;
@@ -211,7 +212,7 @@
               width: 13%;
             }
             @include media("<=phone") {
-              width: 15%;
+              width: 100%; // <-- changed
             }
           }
         }
@@ -283,7 +284,7 @@
     }
     @include media("<=phone") {
       padding: 50px 30px;
-      height: 60vh;
+      height: 80vh;
     }
     .content {
       width: 40%;
