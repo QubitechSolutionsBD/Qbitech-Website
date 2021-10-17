@@ -14,7 +14,7 @@ function Who({whoweareRef}) {
           <div><span id="aboutWhoHeading">to</span></div>
           <div><span id="aboutWhoHeading">2XXX</span></div>
         </h1> */}
-        <h1 className="primary-heading">
+        <h1>
           <div><span id="aboutWhoHeading">WHO</span></div>
           <div><span id="aboutWhoHeading">WE ARE</span></div>
         </h1>

@@ -52,7 +52,7 @@ function Observance() {
       <div className="content">
         <h1>
           <div><span id="observanceHeading">WHY</span></div>
-          <div><span id="observanceHeading">QBITECH?!</span></div>
+          <div><span id="observanceHeading">QUBITECH?!</span></div>
         </h1>
 
         <Slider {...settings} className="slider">
