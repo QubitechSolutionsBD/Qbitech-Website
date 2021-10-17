@@ -111,12 +111,12 @@
   .brand{
     height: 10vh;
     margin-bottom: 100px;
-    // margin-left: 5%;
     img{
       height: 10vh; opacity: 0;
       @include media("<=phone") {
         height: 7vh;
         margin-bottom: 50px;
+        margin-left: 25px;
       }
     }
   }

@@ -149,6 +149,7 @@
       }
     }
     h1.mobile-view-heading {
+      display: none;
       @include media(">=1266px") {
         display: none;
       }
@@ -163,9 +164,17 @@
         line-height: 2.8rem;
       }
       @include media("<=900px") {
+        display: block;
         width: calc(100% - 200px);
         font-size: 1.6rem;
         line-height: 2.6rem;
+      }
+      @include media("<=phone") {
+        display: block;
+        width: calc(100% - 20px);
+        margin: auto;
+        font-size: 1.3rem;
+        line-height: 2rem;
       }
       font-weight: 400;
       font-size: 1.2rem;
@@ -217,7 +226,9 @@
           font-size: 14px;
         }
       }
-
+      @include media("<=phone") {
+        margin-left: 10px;
+      }
       &:hover .view div {
         animation-name: scrollBelow;
         animation-duration: 1s;
