@@ -310,7 +310,7 @@ function Contact() {
 
             <div className="block" id="contactmoreinfo">
               <h2>Get in touch</h2>
-              <p>+8801701027534</p>
+              <p><a href="tel:+8801701027534">+8801701027534</a></p>
               <p onClick={openMail} style={{ cursor: "pointer" }}>
                 info@qubitechbd.com
               </p>
