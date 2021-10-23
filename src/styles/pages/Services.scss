@@ -125,7 +125,8 @@
     }
     @include media("<=phone") {
       padding: 50px 30px;
-      height: 85vh;
+      height: 120vh;
+      margin-top: -10px;
     }
 
     h2 {
@@ -219,27 +220,9 @@
           font-size: 20px;
 
           @include media("<=phone") {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
-      }
-    }
-    a {
-      overflow: hidden;
-      margin-top: 60px;
-      text-decoration: none;
-      color: #e00ff0;
-      font-weight: 500;
-      font-size: 24px;
-      font-weight: bold;
-      @include media("<=desktop") {
-        margin-top: 220px;
-        font-size: 20px;
-      }
-
-      @include media("<=phone") {
-        margin-top: 160px;
-        font-size: 18px;
       }
     }
   }
@@ -266,7 +249,8 @@
       padding-left: 30px;
       padding-right: 30px;
       padding-top: 30px;
-      height: 80vh;
+      margin-top: -20vh;
+      height: 120vh;
     }
 
     h2 {
@@ -324,7 +308,7 @@
         top: 140px;
       }
       @include media("<=phone") {
-        top: 110px;
+        top: 80px;
       }
 
       .item {
@@ -360,25 +344,9 @@
           color: black;
           font-size: 20px;
           @include media("<=phone") {
-            font-size: 18pxs;
+            font-size: 16px;
           }
         }
-      }
-    }
-    a {
-      margin-top: 40px;
-      text-decoration: none;
-      color: #e00ff0;
-      font-weight: 500;
-      font-size: 24px;
-      font-weight: bold;
-      @include media("<=desktop") {
-        margin-top: 230px;
-        font-size: 20px;
-      }
-      @include media("<=phone") {
-        margin-top: 150px;
-        font-size: 18px;
       }
     }
   }
@@ -395,6 +363,7 @@
     @include media("<=phone") {
       height: 50vh; //  ⚠️change
       padding: 50px 30px;
+      margin-top: -30vh;
     }
     background: var(--background-color-dark);
 
@@ -496,7 +465,8 @@
     overflow: hidden;
     @include media("<=phone") {
       padding: 50px 30px;
-      height: 85vh;
+      height: 100vh;
+      margin-top: -45vh;
     }
     h2 {
       position: absolute;
@@ -549,7 +519,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: right;
-      margin-top: 30px;
       width: 100%;
       .item {
         width: 50%;
@@ -570,7 +539,7 @@
 
           font-size: 20px;
           @include media("<=phone") {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
         .circle {
@@ -586,17 +555,14 @@
         }
       }
     }
-    a {
+    .hdhiplink{
+      display: inline-block;
+      margin-top: 50px;
       position: absolute;
-      padding-top: 50px;
-      right: 0px;
-      text-decoration: none;
-      color: #e00ff0;
-      font-weight: 500;
-      font-size: 24px;
-      font-weight: bold;
+      right: 250px;
       @include media("<=phone") {
-        font-size: 18px;
+        margin-top: 20px;
+        right: 25px;
       }
     }
   }
@@ -613,7 +579,7 @@
     //border: 1px solid blueviolet;
     @include media("<=phone") {
       padding: 50px 30px;
-      height: 85vh;
+      margin-top: -10vh;
     }
     h2 {
       position: absolute;
@@ -666,7 +632,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: right;
-      margin-top: 30px;
+      margin-top: 0px;
       width: 100%;
       .item {
         overflow: hidden;
@@ -687,7 +653,7 @@
 
           font-size: 20px;
           @include media("<=phone") {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
         .circle {
@@ -703,17 +669,14 @@
         }
       }
     }
-    a {
+    .hdhiplink{
+      display: inline-block;
+      margin-top: 50px;
       position: absolute;
-      padding-top: 50px;
-      right: 0px;
-      text-decoration: none;
-      color: #e00ff0;
-      font-weight: 500;
-      font-size: 24px;
-      font-weight: bold;
+      right: 250px;
       @include media("<=phone") {
-        font-size: 18px;
+        margin-top: 20px;
+        right: 25px;
       }
     }
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import MoreButton from "../Global/MoreButton";
 
 const HardwareDevelopment = () => {
   return (
@@ -15,38 +16,21 @@ const HardwareDevelopment = () => {
       <div>
         <div className="row">
           <div id="hardwareitemanim" className="item">
-            <p id="harditem">iOS APP DEVELOPMENT</p>
+            <p id="harditem">PRODUCTS & IDEA PROTOTYPING</p>
             <div className="circle" id="hardcircle"></div>
           </div>
           <div id="hardwareitemanim" className="item">
-            <p id="harditem">ANDROID APP DEVELOPMENT</p>
+            <p id="harditem">IOT BASED MONITORING SYSTEM</p>
             <div className="circle" id="hardcircle"></div>
           </div>
           <div id="hardwareitemanim" className="item">
-            <p id="harditem">iOS APP DEVELOPMENT</p>
-            <div className="circle" id="hardcircle"></div>
-          </div>
-          <div id="hardwareitemanim" className="item">
-            <p id="harditem">iOS APP DEVELOPMENT</p>
-            <div className="circle" id="hardcircle"></div>
-          </div>
-          <div id="hardwareitemanim" className="item">
-            <p id="harditem">iOS App Development</p>
-            <div className="circle" id="hardcircle"></div>
-          </div>
-          <div id="hardwareitemanim" className="item">
-            <p id="harditem">iOS App Development</p>
+          <p id="harditem">IOT BASED AUTOMOTION SYSTEM</p>
             <div className="circle" id="hardcircle"></div>
           </div>
         </div>
       </div>
       <div className="hdhiplink">
-        <p id="harditem">
-          {" "}
-          <a href="/services" id="hardankor">
-            Learn More+
-          </a>
-        </p>
+        <MoreButton text="Learn More" direction="right" link="/service/hardware-development" back="light" />
       </div>
     </div>
   );

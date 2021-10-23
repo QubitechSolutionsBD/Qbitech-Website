@@ -1,4 +1,5 @@
 import React from "react";
+import MoreButton from "../Global/MoreButton";
 
 const BrandingMarketing = () => {
   return (
@@ -15,38 +16,46 @@ const BrandingMarketing = () => {
       <div>
         <div className="row">
           <div id="brandingmarketingitemanim" className="item">
-            <p id="branditem">iOS APP DEVELOPMENT</p>
+            <p id="branditem">BUILD A BRAND IDENTITY</p>
             <div className="circle" id="brandcircle"></div>
           </div>
           <div id="brandingmarketingitemanim" className="item">
-            <p id="branditem">ANDROID APP DEVELOPMENT</p>
+            <p id="branditem">DEVELOP BRAND STRATEGIES & GUIDLINE</p>
             <div className="circle" id="brandcircle"></div>
           </div>
           <div id="brandingmarketingitemanim" className="item">
-            <p id="branditem">iOS APP DEVELOPMENT</p>
+            <p id="branditem">REBRANDING ESTABLISHED BUSINESS</p>
             <div className="circle" id="brandcircle"></div>
           </div>
           <div id="brandingmarketingitemanim" className="item">
-            <p id="branditem">iOS APP DEVELOPMENT</p>
+            <p id="branditem">ESTABLISHING BRAND POSITION</p>
             <div className="circle" id="brandcircle"></div>
           </div>
           <div id="brandingmarketingitemanim" className="item">
-            <p id="branditem">iOS App Development</p>
+            <p id="branditem">MAPPING OUT A SOCIAL MEDIA STRATEGY</p>
             <div className="circle" id="brandcircle"></div>
           </div>
           <div id="brandingmarketingitemanim" className="item">
-            <p id="branditem">iOS App Development</p>
+            <p id="branditem">
+              WRITING COPY FOR WEBSITES
+            </p>
+            <div className="circle" id="brandcircle"></div>
+          </div>
+          <div id="brandingmarketingitemanim" className="item">
+            <p id="branditem">
+               OTHER DIGITAL ASSETS
+            </p>
             <div className="circle" id="brandcircle"></div>
           </div>
         </div>
       </div>
       <div className="hdhiplink">
-        <p id="branditem">
-          {" "}
-          <a href="/services" id="brandankor">
-            Learn More+
-          </a>
-        </p>
+        <MoreButton
+          text="Learn More"
+          direction="right"
+          link="/service/branding-and-marketing"
+          back="light"
+        />
       </div>
     </div>
   );

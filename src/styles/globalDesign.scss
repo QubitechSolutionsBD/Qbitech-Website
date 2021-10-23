@@ -286,6 +286,7 @@
 }
 .globalMoreButton.right {
   a {
+    margin-right: -20px;
     span {
       margin-right: 10px;
       @include media("<=phone") {
