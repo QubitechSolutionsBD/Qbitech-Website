@@ -127,8 +127,8 @@ const brandingMarketing = {
   technologies: [
     illustrator,
     photoshop,
-    xd,
     premierpro,
+    xd,
     afterEffects,
     facebook,
     instagram,
