@@ -1,541 +1,116 @@
-////////////////////////////////////////////////////////////////////////////////////////
-// ================================= BANNER ==================================
 .webBanner {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  @include media("<=phone") {
-    min-height: 100vh;
-  }
-
-  &__imageblock {
-    width: 55%;
-    height: 110vh;
-    background: var(--background-color-dark);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    @include media("<=phone") {
-      width: 100%;
-      height: 40vh;
-    }
-    .image {
-      width: 110%;
-      height: 65vh;
-      margin-left: 150px;
-      @include media("<=phone") {
-        margin-left: 0;
-        width: 78%;
-        margin: auto;
-        height: 25vh;
-      }
-      img {
-        height: 100%;
-      }
-    }
-  }
-  &__contentblock {
-    width: 45%;
-    padding: 150px 100px 250px 150px;
-    position: relative;
-    @include media("<=phone") {
-      width: 100%;
-      padding: 60px 30px;
-      height: 65vh;
-    }
-    .content {
-      position: absolute;
-      top: 150px;
-      left: 150px;
-      @include media("<=phone") {
-        top: 60px;
-        left: 30px;
-      }
-      h1 {
-        font-family: var(--babas-font);
-        font-size: 4rem;
-        line-height: 4rem;
-        letter-spacing: 2px;
-        color: var(--text-color-black);
-        @include media("<=phone") {
-          font-size: 2.2rem;
-          line-height: 2.2rem;
-          letter-spacing: 1px;
-        }
-      }
-      h3 {
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 14px;
-        color: gray;
-        margin-bottom: 15px;
-        @include media("<=phone") {
-          margin-bottom: 8px;
-          font-size: 12px;
-        }
-      }
-      p {
-        font-size: 17px;
-        line-height: 30px;
-        color: var(--text-color-black);
-        text-transform: uppercase;
-        @include media("<=phone") {
-          font-size: 13.5px;
-          line-height: 25px;
-        }
-      }
-      .service,
-      .roles {
-        margin-top: 70px;
-        @include media("<=phone") {
-          margin-top: 30px;
-        }
-      }
-    }
-    .circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 550%;
-      position: absolute;
-      top: 65px;
-      left: 100px;
-      @include media("<=phone") {
-        width: 60px;
-        height: 60px;
-        top: calc(60vh + 5px);
-        left: 50px;
-      }
-    }
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////
-// ================================= COMAPNY OVERVIEW ==================================
-.company {
-  width: 100%;
-  min-height: 80vh;
-  padding: 150px 250px;
-  position: relative;
-  @include media("<=phone") {
-    padding: 60px 30px;
-    min-height: 55vh;
-  }
-
-  .content {
-    width: 60%;
-    margin-left: auto;
-    @include media("<=phone") {
-      width: 100%;
-    }
-    h3 {
-      text-align: right;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 14px;
-      color: gray;
-      margin-bottom: 15px;
-      @include media("<=phone") {
-        font-size: 12px;
-        margin-bottom: 8px;
-        text-align: left;
-      }
-    }
-    h1 {
-      text-align: right;
-      font-size: 2.5rem;
-      font-weight: 400;
-      margin-bottom: 15px;
-      @include media("<=phone") {
-        font-size: 1.25rem;
-        margin-bottom: 8px;
-        text-align: left;
-      }
-    }
-    p {
-      text-align: right;
-      font-size: 17px;
-      line-height: 30px;
-      @include media("<=phone") {
-        font-size: 14px;
-        line-height: 22px;
-        text-align: justify;
-      }
-    }
-  }
-
-  .design__container {
-    position: absolute;
-    top: -25vh;
-    left: 100px;
-    width: 30%;
-    @include media("<=phone") {
-      width: 60%;
-      top: -9vh;
-      left: 150px;
-    }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      .smallcircle,
-      .bigcircle {
-        border-radius: 50%;
-        border: 2px solid var(--pink-color);
-      }
-      .smallcircle {
-        width: 60px;
-        height: 60px;
-        @include media("<=phone") {
-          width: 14px;
-          height: 14px;
-        }
-      }
-      .bigcircle {
-        width: 120px;
-        height: 120px;
-        margin: 5px;
-        @include media("<=phone") {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-    .row.top {
-      align-items: flex-end;
-    }
-    .row.below {
-      align-items: flex-start;
-    }
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////
-// ================================= A PAGE ==================================
-.apage {
-  width: 100%;
-  height: 100vh;
-  background: var(--background-color-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  @include media("<=phone") {
-    height: 40vh;
-  }
-
-  &__overlay{
+  &__banner {
     width: 100%;
     height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--background-color-dark);
-    z-index: 10;
-  }
-
-  &__image {
-    height: 80vh;
-    width: 142vh;
-    @include media("<=phone") {
-      height: 25vh;
-      width: 44.6vh;
-    }
-    img {
-      height: 100%;
-      width: 100%;
-      display: none;
-    }
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////
-// ===================================== SOLUTION ======================================
-.solution {
-  width: 100%;
-  min-height: 100vh;
-  padding: 150px 250px;
-  display: flex;
-  flex-wrap: wrap;
-  @include media("<=phone") {
-    padding: 60px 30px;
-  }
-
-  .imageblock {
-    width: 55%;
+    background-color: var(--background-color-dark);
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    @include media("<=phone") {
-      width: 100%;
-      justify-content: center;
-    }
     .image {
-      height: 75vh;
-      width: 60vh; // 1.25 aspect ratio (wrong)
+      width: 60%;
       position: relative;
-      overflow: hidden;
-      @include media("<=phone") {
-        height: 45vh;
-        width: 36vh;
-      }
-      &__overlay{
+      .bigCircle {
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background-color: #4e4b6660;
         position: absolute;
-        top: 0;
-        left: 0;
-        height: 75vh;
-        width: 60vh; // 1.25 aspect ratio (wrong)
-        background: var(--background-color-dark);
-      @include media("<=phone") {
-        height: 45vh;
-        width: 36vh;
-      }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       img {
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-      }
-    }
-  }
-  .textblock {
-    width: 45%;
-    @include media("<=phone") {
-      width: 100%;
-      margin-bottom: 60px;
-    }
-    .text {
-      h3 {
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 14px;
-        color: gray;
-        margin-bottom: 15px;
-        @include media("<=phone") {
-          font-size: 12px;
-          margin-bottom: 8px;
-        }
-      }
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 400;
-        margin-bottom: 15px;
-        @include media("<=phone") {
-          font-size: 1.25rem;
-          margin-bottom: 8px;
-        }
-      }
-      p {
-        text-align: justify;
-        font-size: 17px;
-        line-height: 30px;
-        @include media("<=phone") {
-          font-size: 13.5px;
-          line-height: 22px;
-        }
-      }
-    }
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////
-// =================================== MOBILE VIEWS ===================================
-.mobileview {
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 250px 150px 250px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  @include media("<=phone") {
-    padding: 30px;
-    min-height: 30vh;
-  }
-
-  .image {
-    width: 25%;
-    min-height: 55vh;
-    @include media("<=phone") {
-      min-height: 30vh;
-    }
-    img {
-      width: 100%;
-    }
-    &:nth-child(odd) {
-      margin-top: 80px;
-    }
-  }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////
-// =================================== ALL VIEWS ===================================
-.allviews {
-  width: 100%;
-  height: 110vh;
-  position: relative;
-  @include media("<=phone") {
-    height: 50vh;
-  }
-  &__overlay{
-    width: 100%;
-    height: 110vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: var(--background-color-dark);
-    @include media("<=phone") {
-      height: 50vh;
-    }
-  }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////
-// ================================== FONTS & COLORS ===============================
-.fontandcolor {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 100px 200px;
-  @include media("<=phone") {
-    padding: 30px;
-  }
-  .fonts {
-    width: 50%;
-    padding: 40px;
-    @include media("<=phone") {
-      width: 100%;
-      padding: 0;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  .colors {
-    width: 50%;
-    padding: 40px;
-    @include media("<=phone") {
-      width: 100%;
-      padding: 0;
-    }
-    img {
-      width: 100%;
-    }
-  }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////
-// ================================== MORE WORKS ===============================
-.more {
-  width: 100%;
-  min-height: 100vh;
-  padding-left: 250px;
-  padding-right: 250px;
-  @include media("<=phone") {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  h1 {
-    font-family: var(--babas-font);
-    font-size: 4rem;
-    line-height: 4rem;
-    letter-spacing: 2px;
-    color: var(--text-color-black);
-    @include media("<=phone") {
-      font-size: 2.2rem;
-      line-height: 2.2rem;
-      letter-spacing: 1px;
-    }
-  }
-
-  .works {
-    height: fit-content;
-    margin-top: 75px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @include media("<=phone") {
-      margin-top: 32px;
-    }
-    .case-study {
-      text-decoration: none;
-      display: block;
-      width: 40%;
-      height: 70vh;
-      background-color: #fff;
-      position: relative;
-      transition: 0.4s;
-      @include media("<=phone") {
-        width: 80%;
-        height: 50vh;
-        margin-bottom: 10vh;
-      }
-      .info {
-        width: 55%;
+        width: 700px;
         position: absolute;
-        top: 20vh;
-        right: -70px;
-        @include media("<=phone") {
-          width: 70%;
-          right: -60px;
-        }
-        h2 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .name {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      .wrapper {
+        width: 85%;
+        h1 {
+          letter-spacing: 5px;
+          font-size: 7rem;
+          line-height: 7rem;
           font-family: var(--babas-font);
-          color: var(--text-color-black);
-          font-size: 2.5rem;
-          line-height: 2.5rem;
-          letter-spacing: 1.2px;
-          text-align: right;
-          @include media("<=phone") {
-            font-size: 2rem;
-            line-height: 2rem;
-          }
+          text-transform: uppercase;
+          color: var(--text-color-white);
         }
         p {
-          color: var(--text-color-black);
-          text-align: right;
-        }
-      }
-
-      .button {
-        text-decoration: none;
-        color: var(--text-color-white);
-        background-color: var(--pink-color);
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        font-weight: 500;
-        position: absolute;
-        right: -60px;
-        bottom: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: 0.5s;
-        transform: scale(0);
-      }
-
-      &:hover .button {
-        transform: scale(1);
-        @include media("<=phone") {
-          transform: scale(0);
-        }
-      }
-
-      .cardoverlay{
-        width: 100%;
-        height: 70vh;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background: var(--text-color-black);
-        @include media("<=phone") {
-          height: 50vh;
+          width: 100%;
+          font-size: 20px;
+          font-family: var(--poppins-font);
+          line-height: 32px;
+          color: var(--text-color-white);
         }
       }
     }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 200px 180px 100px 180px;
+    display: flex;
+
+    .items {
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: 50%;
+        height: fit-content;
+        margin-bottom: 5rem;
+        h3 {
+          text-transform: uppercase;
+          font-size: 16px;
+          letter-spacing: 2px;
+        }
+        p {
+          font-size: 16px;
+          font-family: var(--poppins-font);
+        }
+      }
+    }
+
+    .toolList {
+      width: 30%;
+      h3 {
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: var(--babas-font);
+        letter-spacing: 2px;
+      }
+      .tools {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        .tool {
+          width: 60px;
+          height: 60px;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__solutions{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 180px;
+      .solutions{
+          width: 50%;
+      }
+      .impacts{
+          width: 50%;
+      }
   }
 }
