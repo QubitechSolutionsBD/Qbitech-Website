@@ -302,7 +302,7 @@
         color: var(--text-color-black);
         margin-bottom: 1rem;
         margin-top: -15px;
-        font-size: 13.5px;
+        font-size: var(--mobile-paragraph-size);
         @include media(">=900px") {
           display: none;
         }
@@ -312,7 +312,7 @@
         color: var(--pink-color);
         margin-top: -10px;
         margin-bottom: 2rem;
-        font-size: 13.5px;
+        font-size: var(--mobile-paragraph-size);
         text-decoration: none;
         font-weight: bold;
         text-transform: uppercase;
@@ -637,7 +637,7 @@
             font-size: 13.5px;
           }
           @include media("<=phone") {
-            font-size: 13px;
+            font-size: var(--mobile-paragraph-size);
             text-align: left;
           }
         }
@@ -846,7 +846,7 @@
                 line-height: 24px;
               }
               @include media("<=phone") {
-                font-size: 13px;
+                font-size: var(--mobile-paragraph-size);
               }
             }
           }
@@ -926,7 +926,7 @@
         color: var(--text-color-white);
         @include media("<=phone") {
           margin-top: 5px;
-          font-size: 13px;
+          font-size: var(--mobile-paragraph-size);
           margin-right: 10px;
         }
       }
@@ -1192,7 +1192,7 @@
                 line-height: 18px;
               }
               @include media("<=phone") {
-                font-size: 12px;
+                font-size: var(--mobile-paragraph-size);
               }
             }
           }
@@ -1460,7 +1460,7 @@
         }
         @include media("<=phone") {
           width: 95%;
-          font-size: 13.5px;
+          font-size: var(--mobile-paragraph-size);
           line-height: 20px;
         }
       }

@@ -456,7 +456,7 @@
             font-size: 14.5px;
           }
           @include media("<=phone") {
-            font-size: 13.5px;
+            font-size: var(--mobile-paragraph-size);
           }
           a{
             text-decoration: none;

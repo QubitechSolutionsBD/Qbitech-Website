@@ -243,7 +243,7 @@
             font-size: 14px;
           }
           @include media("<=phone") {
-            font-size: 13.5px;
+            font-size: var(--mobile-paragraph-size);
           }
         }
       }
@@ -431,7 +431,7 @@
             line-height: 25px;
           }
           @include media("<=phone") {
-            font-size: 13.5px;
+            font-size: var(--mobile-paragraph-size);
           }
         }
       }
@@ -707,7 +707,7 @@
                 line-height: 22px;
               }
               @include media("<=phone") {
-                font-size: 13.5px;
+                font-size: var(--mobile-paragraph-size);
                 line-height: 22px;
               }
             }
@@ -816,7 +816,7 @@
           line-height: 2.8rem;
         }
         @include media("<=phone") {
-          font-size: 13.5px;
+          font-size: var(--mobile-paragraph-size);
           line-height: 25px;
         }
       }
@@ -1035,7 +1035,7 @@
             line-height: 25px;
           }
           @include media("<=phone") {
-            font-size: 14px;
+            font-size: var(--mobile-paragraph-size);
             line-height: 24px;
           }
         }
@@ -1194,7 +1194,7 @@
       .options {
         margin-top: 2rem;
         @include media("<=phone") {
-          margin-top: 1rem;
+          font-size: var(--mobile-paragraph-size);
         }
         p {
           position: relative;
@@ -1202,7 +1202,7 @@
           font-size: 1.8rem;
           line-height: 2.8rem;
           @include media("<=phone") {
-            font-size: 1.2rem;
+            font-size: var(--mobile-paragraph-size);
             line-height: 1.8rem;
             display: none;
           }
@@ -1289,6 +1289,7 @@
         width: 85%;
         left: 51%;
         transform: translateX(-50%);
+        bottom: 0;
       }
     }
   }
