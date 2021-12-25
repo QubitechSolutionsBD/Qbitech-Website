@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 // COMPONENTS
 import Navbar from "../components/Navigation/Navbar";
 import WebTemp from '../components/Work/WebTemp';
+import WebTemp2 from '../components/Work/WebTemp2';
 import AppTemp from '../components/Work/AppTemp';
 import Footer from "../components/Footer";
 
@@ -39,7 +40,7 @@ function Work() {
             {
                 !loading 
                 ? type === 'web'
-                    ? <WebTemp id={id} />
+                    ? <WebTemp2 id={id} />
                     : type === 'app'
                         ? <AppTemp id={id} />
                         : type === 'game'
@@ -55,7 +56,7 @@ function Work() {
                 </div>
             }
         </div>
-        <Footer />
+        {/* <Footer /> */}
         </>
     )
 }

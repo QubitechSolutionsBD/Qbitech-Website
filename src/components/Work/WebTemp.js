@@ -1,22 +1,17 @@
-import React, { useEffect } from "react";
-// import { Link } from "react-router-dom";
-// import { setupDataForWeb } from "../Works/Data";
+import React, { useEffect, useState } from "react";
+import { works } from "../Works/Data";
 import GlobalPageTransition from "../Global/GlobalPageTransition";
-import bannerImage from "../../assets/pageCaseStudy/oboshor/bannerImage.png";
-import reactLogo from "../../assets/pageservice/react.png";
-import nodeLogo from "../../assets/pageservice/node.png";
-import reduxtLogo from "../../assets/pageservice/redux.png";
-import firebaseLogo from "../../assets/pageservice/firebase.png";
-import mongoLogo from "../../assets/pageservice/mongo.png";
-import vscodeLogo from "../../assets/pageservice/vscode.png";
 
 // ANIMATIONS
 // import { webTemplateAnimation } from "../../animation/WorkAnim";
 
 function WebTemp({ id }) {
+  const [data, setData] = useState(null);
+
   // SETUP NECSESSARY DATA
   useEffect(() => {
     window.scrollTo(0, 0);
+    setData(works[id - 1]);
     // webTemplateAnimation();
   }, [id]);
 
@@ -27,16 +22,12 @@ function WebTemp({ id }) {
         <div className="webBanner__banner">
           <div className="image">
             <div className="bigCircle"></div>
-            <img src={bannerImage} alt="obosor" />
+            <img src={data && data.bannerImage} alt="obosor" />
           </div>
           <div className="name">
             <div className="wrapper">
-              <h1>Obosor</h1>
-              <p>
-                an on-demand streaming service for rather unconventional movies,
-                created under the umbrella of a major german television network.
-                while working.
-              </p>
+              <h1>{data && data.name}</h1>
+              <p>{data && data.ShortDescription}</p>
             </div>
           </div>
         </div>
@@ -46,53 +37,63 @@ function WebTemp({ id }) {
           <div className="items">
             <div className="item">
               <h3>Timeline</h3>
-              <p>July 2021</p>
+              <p>{data && data.timeline}</p>
             </div>
             <div className="item">
               <h3>Clients</h3>
-              <p>Obosor</p>
+              <p>{data && data.client}</p>
             </div>
             <div className="item">
               <h3>Deliverables</h3>
-              <p>Identity, Web, E-commerce, System, Interaction</p>
+              <p>
+                {data &&
+                  data.deliverables.map((d) => (
+                    <span key={Math.random()}>{d}</span>
+                  ))}
+              </p>
             </div>
             <div className="item">
               <h3>Industry</h3>
-              <p>Mediengrupper rtl</p>
+              <p>{data && data.industry}</p>
             </div>
           </div>
 
           <div className="toolList">
             <h3>Tools</h3>
             <div className="tools">
-              <div className="tool">
-                <img src={reactLogo} alt="" />
-              </div>
-              <div className="tool">
-                <img src={reduxtLogo} alt="" />
-              </div>
-              <div className="tool">
-                <img src={nodeLogo} alt="" />
-              </div>
-              <div className="tool">
-                <img src={firebaseLogo} alt="" />
-              </div>
-              <div className="tool">
-                <img src={mongoLogo} alt="" />
-              </div>
-              <div className="tool">
-                <img src={vscodeLogo} alt="" />
-              </div>
+              {data &&
+                data.tools.map((tool) => (
+                  <div className="tool" key={Math.random()}>
+                    <img src={tool} alt="tool" />
+                  </div>
+                ))}
             </div>
           </div>
         </div>
 
-        <div className="webBanner__solutions">
-          <div className="solutions">
-            Solutions
+        <div className="webBanner__images">
+          <div className="heading">
+            <h1>Solutions</h1>
+            <p>{data && data.solutions}</p>
           </div>
-          <div className="impacts">
-            Impacts
+          <div className="line line-1">
+            {data &&
+              data.desktopImages1.map((di) => (
+                <img key={Math.random()} src={di} alt="" />
+              ))}
+          </div>
+          <div className="line line-2">
+            {data &&
+              data.desktopImages2.map((di) => (
+                <img key={Math.random()} src={di} alt="" />
+              ))}
+          </div>
+        </div>
+
+        <div className="webBanner__images">
+          <div className="heading">
+            <h1>Impacts</h1>
+            <p>{data && data.solutions}</p>
           </div>
         </div>
       </div>

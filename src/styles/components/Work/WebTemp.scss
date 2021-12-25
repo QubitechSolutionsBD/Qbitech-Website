@@ -6,23 +6,14 @@
     display: flex;
     .image {
       width: 60%;
+      height: 100vh;
       position: relative;
-      .bigCircle {
-        width: 600px;
-        height: 600px;
-        border-radius: 50%;
-        background-color: #4e4b6660;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
       img {
-        width: 700px;
+        width: 800px;
         position: absolute;
-        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 0;
+        transform: translateX(-50%);
       }
     }
     .name {
@@ -52,7 +43,7 @@
 
   &__content {
     width: 100%;
-    padding: 200px 180px 100px 180px;
+    padding: 250px 200px 100px 200px;
     display: flex;
 
     .items {
@@ -101,16 +92,394 @@
     }
   }
 
-  &__solutions{
-      width: 100%;
+  &__images {
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 50px;
+    overflow: hidden;
+
+    .heading {
+      margin-bottom: 5rem;
+      padding: 0 200px;
+      h1 {
+        font-size: 5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: var(--babas-font);
+      }
+      p {
+        width: 70%;
+        font-family: 16px;
+        line-height: 32px;
+      }
+    }
+
+    .line {
+      width: 120%;
+      margin-bottom: 40px;
+      display: flex;
+      img {
+        width: 20%;
+        margin: 0 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+    }
+    .line-1 {
+      margin-left: -15%;
+    }
+    .line-2 {
+      margin-left: -20%;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+.webtemp {
+  &__banner {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color-dark);
+    display: flex;
+    .image {
+      width: 60%;
+      height: 100vh;
+      position: relative;
+      img {
+        width: 800px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+    }
+    .name {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      .wrapper {
+        width: 85%;
+        h1 {
+          letter-spacing: 5px;
+          font-size: 7rem;
+          line-height: 7rem;
+          font-family: var(--babas-font);
+          text-transform: uppercase;
+          color: var(--text-color-white);
+        }
+        p {
+          width: 100%;
+          font-size: 20px;
+          font-family: var(--poppins-font);
+          line-height: 32px;
+          color: var(--text-color-white);
+        }
+      }
+    }
+  }
+
+  &__description {
+    width: 100%;
+    height: 100vh;
+    padding: 200px 200px;
+    @include media("<=phone") {
+      display: none;
+    }
+
+    .items {
       display: flex;
       flex-wrap: wrap;
-      padding: 0 180px;
-      .solutions{
-          width: 50%;
+      .item {
+        width: 40%;
+        margin-bottom: 5rem;
+        margin-right: 2rem;
+        h5 {
+          font-size: 11.5px;
+          letter-spacing: 2px;
+        }
+        p {
+          font-size: 17px;
+        }
+        .tools {
+          margin-top: 2rem;
+          display: flex;
+          flex-wrap: wrap;
+          .tool {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
       }
-      .impacts{
-          width: 50%;
+    }
+  }
+
+  &__images {
+    @include media("<=phone") {
+      display: none;
+    }
+    width: 100%;
+    overflow: hidden;
+    .image1,
+    .image3 {
+      width: calc(100% - 300px);
+      margin: auto;
+      min-height: 90vh;
+      border-radius: 20px;
+      background: #ededed;
+      img {
+        width: 100%;
       }
+    }
+    .image2, .image4 {
+      width: calc(100% + 150px);
+      min-height: 100vh;
+      margin-top: 100px;
+      position: relative;
+      img {
+        width: 70%;
+        position: absolute;
+        top: 0;
+      }
+      img.img1 {
+        width: calc(70% - 70px);
+        left: -150px;
+      }
+      img.img2 {
+        width: 50%;
+        right: -250px;
+      }
+    }
+    .image4{
+      img.img1 {
+        width: 50%;
+        left: -250px;
+      }
+      img.img2 {
+        width: calc(70% - 70px);
+        right: -150px;
+      }
+    }
+  }
+
+  &__solutions {
+    @include media("<=phone") {
+      display: none;
+    }
+    width: 100%;
+    min-height: 100vh;
+    padding: 250px 250px 100px 250px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    @include media("<=1620px") {
+      padding: 140px 230px;
+    }
+    @include media("<=1520px") {
+      padding: 130px 200px;
+    }
+    @include media("<=desktop") {
+      padding: 120px 180px;
+    }
+    @include media("<=1260px") {
+      padding: 100px 145px;
+    }
+    @include media("<=semiDesktop") {
+      padding: 90px 140px;
+    }
+    @include media("<=950px") {
+      padding: 80px 130px;
+    }
+    @include media("<=phone") {
+      padding: 50px 30px;
+    }
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: var(--pink-color-light);
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      z-index: 0;
+      @include media("<=1620px") {
+        width: 140px;
+        height: 140px;
+      }
+      @include media("<=1520px") {
+        width: 130px;
+        height: 130px;
+        top: -75px;
+        left: -75px;
+      }
+      @include media("<=desktop") {
+        width: 120px;
+        height: 120px;
+        left: -70px;
+      }
+      @include media("<=1260px") {
+        width: 110px;
+        height: 110px;
+        top: -65px;
+        left: -70px;
+      }
+      @include media("<=semiDesktop") {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+      }
+      @include media("<=900px") {
+        top: 80px;
+        left: 70px;
+      }
+      @include media("<=phone") {
+        display: none;
+      }
+    }
+    .heading {
+      width: 50%;
+      height: 60vh;
+      h1 {
+        width: 100%;
+        letter-spacing: 3px;
+        font-size: 5rem;
+        line-height: 5rem;
+        font-family: var(--babas-font);
+        text-transform: uppercase;
+        color: var(--text-color-black);
+        @include media("<=1608px") {
+          font-size: 4.6rem;
+          line-height: 4.6rem;
+        }
+        @include media("<=1508px") {
+          font-size: 4.3rem;
+          line-height: 4.3rem;
+        }
+        @include media("<=desktop") {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+        @include media("<=1260px") {
+          font-size: 3.4rem;
+          line-height: 3.4rem;
+        }
+        @include media("<=semiDesktop") {
+          font-size: 3.1rem;
+          line-height: 3.1rem;
+        }
+        @include media("<=900px") {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+        }
+        @include media("<=700px") {
+          font-size: 2.9rem;
+          line-height: 2.9rem;
+        }
+        @include media("<=phone") {
+          text-align: left;
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          letter-spacing: 2.5px;
+        }
+        div {
+          width: 100%;
+          height: 5rem;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          position: relative;
+          @include media("<=1608px") {
+            height: 4.6rem;
+            margin-bottom: 5px;
+          }
+          @include media("<=1508px") {
+            height: 4.3rem;
+          }
+          @include media("<=desktop") {
+            height: 4rem;
+            margin-bottom: 0.5rem;
+          }
+          @include media("<=1260px") {
+            height: 3.4rem;
+          }
+          @include media("<=1000px") {
+            height: 3.1rem;
+          }
+          @include media("<=900px") {
+            height: 3.4rem;
+          }
+          @include media("<=phone") {
+            height: 2.5rem;
+            margin-bottom: 5px;
+          }
+          span {
+            position: absolute;
+          }
+        }
+      }
+    }
+    .content {
+      width: 50%;
+      height: fit-content;
+      @include media("<=900px") {
+        width: 100%;
+        margin-top: 2rem;
+      }
+      p {
+        font-size: 17px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // Mobiles
+  &__mobiles{
+    @include media("<=phone") {
+      display: none;
+    }
+    width: 100%;
+    min-height: 110vh;
+    position: relative;
+    .layer{
+      width: 80%;
+      min-height: 90vh;
+      background: #f7f7f7;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .slider{
+      width: 80%;
+      min-height: 90vh;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .mobile{
+        min-height: 75vh;
+        padding: 0 2rem;
+        .device{
+          width: 100%;
+          min-height: 70vh;
+          background: #ededed;
+          border-radius: 45px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
