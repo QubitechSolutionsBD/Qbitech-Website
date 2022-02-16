@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 
 // ASSETS
-import client1 from "../../assets/pagehome/client/client1.png";
+import client1 from "../../assets/pagehome/client/happyClients/1.png";
 import client2 from "../../assets/pagehome/client/client2.png";
 import client3 from "../../assets/pagehome/client/client3.png";
 import quoto from "../../assets/pagehome/client/quoto.png";
@@ -12,10 +12,10 @@ const allTestomonials = [
   {
     id: 1,
     image: client1,
-    heading: "Efficient Collaborating",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
-    clientName: "Jane Cooper",
-    designation: "CEO at ABC Corporation",
+    heading: "They are sincere in keeping their commitments.",
+    desc: "It has been a great experience to work with Qubitech. The best thing about them is they care about the client needs the most. They are very passionate about their work and very sincere in keeping their commitments.",
+    clientName: "ABM Iftekhar Ahmed",
+    designation: "Co-founder, Obosor",
   },
   {
     id: 2,

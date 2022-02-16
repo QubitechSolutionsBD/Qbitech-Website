@@ -1104,7 +1104,7 @@
         .block {
           width: 80%;
           min-height: 40vh;
-          padding: 60px 40px;
+          padding: 30px 32px;
           border-radius: 10px;
           background: var(--background-color-light);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -1170,7 +1170,7 @@
             }
           }
           .text {
-            margin-top: 30px;
+            margin-top: 20px;
             @include media("<=desktop") {
               margin-top: 25px;
             }
@@ -1186,7 +1186,8 @@
               }
             }
             p {
-              font-size: 14px;
+              font-size: 13px;
+              text-align: justify;
               @include media("<=desktop") {
                 font-size: 13px;
                 line-height: 18px;
@@ -1282,9 +1283,10 @@
   }
   &__clients {
     width: 100%;
+    margin-top: 2rem;
     padding: 0 250px 50px 250px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     @include media("<=1620px") {
       padding: 0 230px 50px 230px;
     }
@@ -1302,10 +1304,14 @@
       padding: 0 130px 30px 130px;
     }
     @include media("<=phone") {
+      margin-top: 0;
       padding: 10px 30px 10px 30px;
     }
     img {
-      width: 100px;
+      width: 150px;
+      &:not(:last-child){
+        margin-right: 2rem;
+      }
       @include media("<=1620px") {
         width: 95px;
       }
@@ -1322,7 +1328,7 @@
         width: 75px;
       }
       @include media("<=phone") {
-        width: 30px;
+        width: 40px;
       }
     }
   }

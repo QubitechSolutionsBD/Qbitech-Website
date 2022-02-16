@@ -56,7 +56,7 @@ function Work() {
                 </div>
             }
         </div>
-        {/* <Footer /> */}
+        <Footer />
         </>
     )
 }
