@@ -33,6 +33,7 @@ function Observance() {
     arrows: false,
     initialSlide: 0,
     speed: 700,
+    autoplay: true,
     autoplaySpeed: 2500,
     dotsClass: "slick-dots slick-thumb",
     customPaging: (i) => {
