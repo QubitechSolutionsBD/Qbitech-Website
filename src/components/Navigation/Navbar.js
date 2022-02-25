@@ -47,7 +47,7 @@ function Navbar() {
       <div className="navigation" id="navigationContainer">
         {/* brand */}
         <div className="brand">
-          <Link to="/">
+          <Link to="/" onClick={navigationController}>
             <img src={logo} alt="Qbitech" id="brand" />
           </Link>
         </div>
@@ -55,16 +55,16 @@ function Navbar() {
         <div className="menu" id="navigationmenu">
           {/* links */}
           <div className="menu__links">
-            <Link to="/about" id="navigationmainlinks">
+            <Link to="/about" id="navigationmainlinks" onClick={navigationController}>
               ABOUT
             </Link>
-            <Link to="/services" id="navigationmainlinks">
+            <Link to="/services" id="navigationmainlinks" onClick={navigationController}>
               SERVICES
             </Link>
-            <Link to="/case-studies" id="navigationmainlinks">
+            <Link to="/case-studies" id="navigationmainlinks" onClick={navigationController}>
               WORKS
             </Link>
-            <Link to="/contact" id="navigationmainlinks">
+            <Link to="/contact" id="navigationmainlinks" onClick={navigationController}>
               CONTACT
             </Link>
           </div>
@@ -79,7 +79,9 @@ function Navbar() {
                 >
                   info@qubitechbd.com
                 </p>
-                <p id="navigationaddress"><a href="tel:+8801701027534">+8801701027534</a></p>
+                <p id="navigationaddress">
+                  <a href="tel:+8801701027534">+8801701027534</a>
+                </p>
               </div>
               <div className="addresses">
                 <p id="navigationaddress">Talaimari, Boalia, Kazla 6204</p>
