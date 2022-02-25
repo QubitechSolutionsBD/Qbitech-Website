@@ -8,17 +8,27 @@ export const aboutAnumation = () => {
   tl.to("#globalpagetransition", 0.7, { scale: 3000, ease: "expo.inOut" })
     .to("#globalpagetransition", 0.7, { scale: 0, ease: "expo.inOut" })
     .from("#globalBannerCircle1", 0.8, { scale: 0, ease: "expo.inOut" })
-    .from("#aboutbannerheading", 0.8, {
-      y: 100,
-      ease: "power4.out",
-      skewY: 7,
-      stagger: { amount: 0.3 },
-    }, "<")
-    .from("#aboutbannerheadingForMobile", 0.8, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-    }, "<")
+    .from(
+      "#aboutbannerheading",
+      0.8,
+      {
+        y: 100,
+        ease: "power4.out",
+        skewY: 7,
+        stagger: { amount: 0.3 },
+      },
+      "<"
+    )
+    .from(
+      "#aboutbannerheadingForMobile",
+      0.8,
+      {
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+      },
+      "<"
+    )
     .from("#aboutscroll", 0.5, { y: 30, opacity: 0, ease: "power4.out" });
 
   // ---------------> who we are
@@ -149,7 +159,7 @@ export const aboutAnumation = () => {
       trigger: "#aboutwhattext",
       start: "top 80%",
     },
-  })
+  });
   gsap.from("#aboutwhatheadmobile", 0.8, {
     y: 100,
     opacity: 0,
@@ -158,7 +168,7 @@ export const aboutAnumation = () => {
       trigger: "#aboutwhatheadmobile",
       start: "top 80%",
     },
-  })
+  });
   gsap.from("#aboutwhathead", 0.8, {
     y: 100,
     opacity: 0,
@@ -168,7 +178,7 @@ export const aboutAnumation = () => {
       trigger: "#aboutwhathead",
       start: "top 80%",
     },
-  })
+  });
   gsap.from("#globalMoreCircle1", 0.8, {
     scale: 0,
     ease: "expo.inOut",
@@ -186,7 +196,7 @@ export const aboutAnumation = () => {
       start: "top 70%",
     },
   });
-  
+
   // ---------------> culture, values & belief
   gsap.from("#aboutpageculturecircle", 0.8, {
     scale: 0,
@@ -194,6 +204,25 @@ export const aboutAnumation = () => {
     scrollTrigger: {
       trigger: "#aboutculturehead",
       start: "top 70%",
+    },
+  });
+  gsap.from("#aboutcukturecircle", 0.8, {
+    scale: 0,
+    ease: "expo.inOut",
+    stagger: { amount: 0.4 },
+    scrollTrigger: {
+      trigger: "#aboutculturehead",
+      start: "top 80%",
+    },
+  });
+  gsap.to("#aboutculturesmallcircle", 0.8, {
+    scale: 1,
+    ease: "expo.inOut",
+    stagger: { amount: 0.4 },
+    delay: 0.4,
+    scrollTrigger: {
+      trigger: "#aboutculturehead",
+      start: "top 80%",
     },
   });
   gsap.from("#aboutculturehead", 0.8, {
