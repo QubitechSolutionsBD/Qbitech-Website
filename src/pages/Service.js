@@ -73,7 +73,12 @@ function Service() {
             offers={offers}
           />
           <Technologies technologies={technologies} techRef={techRef} />
-          <Works works={works} workCardRef={workCardRef} />
+          {
+            works.length > 0
+            ? <Works works={works} workCardRef={workCardRef} />
+            : null
+
+          }
         </div>
       ) : <div className="loading">
           <div>...</div>

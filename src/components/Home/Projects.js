@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import right from "../../assets/pageservice/down-arrow.png";
 import left from "../../assets/pageservice/up-arrow.png";
 import MoreButton from "../Global/MoreButton";
+// PROJECT THUMBNAIL IMAGES
+import obothumbnail from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg"
+import musathumbnail from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg"
 
 function Projects() {
   const customSlider = useRef();
@@ -67,19 +70,29 @@ function Projects() {
           ref={(slider) => (customSlider.current = slider)}
         >
           <div className="work">
-            <Link to="/case-studies/1" className="container" id="homeprojectcard">1</Link>
+            <Link to="/case-studies/1" className="container" id="homeprojectcard">
+              <img src={obothumbnail} alt="p1"/>
+            </Link>
           </div>
           <div className="work">
-            <Link to="/case-studies/2" className="container" id="homeprojectcard">2</Link>
+            <Link to="/case-studies/2" className="container" id="homeprojectcard">
+              <img src={musathumbnail} alt="" />
+            </Link>
           </div>
           <div className="work">
-            <Link to="/case-studies/1" className="container" id="homeprojectcard">3</Link>
+            <Link to="/case-studies/1" className="container" id="homeprojectcard">
+              <img src={obothumbnail} alt="p1"/>
+            </Link>
           </div>
           <div className="work">
-            <Link to="/case-studies/2" className="container" id="homeprojectcard">4</Link>
+            <Link to="/case-studies/2" className="container" id="homeprojectcard">
+              <img src={musathumbnail} alt="p1"/>
+            </Link>
           </div>
           <div className="work">
-            <Link to="/case-studies/1" className="container" id="homeprojectcard">5</Link>
+            <Link to="/case-studies/1" className="container" id="homeprojectcard">
+              <img src={obothumbnail} alt="p1"/>
+            </Link>
           </div>
         </Slider>
         <div className="slider-btn-box">

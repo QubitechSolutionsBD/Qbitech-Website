@@ -31,11 +31,14 @@ import instagram from "../../assets/pageservice/instagram.png";
 import linkedin from "../../assets/pageservice/linked-in.png";
 import youtube from "../../assets/pageservice/youtube.png";
 
+// PROJECT THUMBNAIL
+import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg";
+import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg";
 
 const webdevelopmentData = {
   bannerHeading: ["Web", "Development"],
-  bannerText:`With elegant performance across every platform, our modern web frameworks to give your business a one-stop web solution service.`,
-  offerHeading:`We design & develop high-end marketing websites for ambitious brands.`,
+  bannerText: `With elegant performance across every platform, our modern web frameworks to give your business a one-stop web solution service.`,
+  offerHeading: `We design & develop high-end marketing websites for ambitious brands.`,
   offerTexts: `Here at Qubitech we excel at giving you a one-stop web solution service to elevate your brand. Our development experts emphasize on charismatic look, intuitive layout, UI/UX design and a responsive environment for clear cut communication. Our primary focus is to elevate your brand through a strong online presence.\n\n We begin our service through extensive brand research so that we can find the perfect user experience that delivers your brand's persona. Our UI/UX team makes sure we go forward with your users in mind. Our development process ensures your website is perfectly visible, secured & user-friendly on all screen sizes across all platforms & devices. Once the website is built, we provide all time service & support for the maintenance of the site. Even if you have an outdated website, we can create a professional looking website that can redefine your online presence. You can see from our portfolio what our dedicated team is capable of across all industries.`,
   offers: [
     "FRONTEND DEVELOPMNET",
@@ -57,7 +60,12 @@ const webdevelopmentData = {
     php,
     mysql,
   ],
-  works: [1, 5, 7, 9, 11, 12],
+  works: [
+    { id: "1", image: obothumb },
+    { id: "1", image: obothumb },
+    { id: "1", image: obothumb },
+    { id: "1", image: obothumb },
+  ],
 };
 
 const softwaredevelopmentData = {
@@ -86,7 +94,12 @@ const softwaredevelopmentData = {
     mongo,
     unity,
   ],
-  works: [1, 5, 7, 9, 11, 12],
+  works: [
+    { id: "2", image: musathumb },
+    { id: "2", image: musathumb },
+    { id: "2", image: musathumb },
+    { id: "2", image: musathumb },
+  ],
 };
 
 const hardwaredevelopmentData = {
@@ -99,16 +112,8 @@ const hardwaredevelopmentData = {
     "IOT BASED MONITORING SYSTEM",
     "IOT BASED AUTOMOTION SYSTEM",
   ],
-  technologies: [
-    arduino,
-    reasperi,
-    iot,
-    opencv,
-    cpp,
-    python,
-    vscode,
-  ],
-  works: [1, 5, 7, 9, 11, 12],
+  technologies: [arduino, reasperi, iot, opencv, cpp, python, vscode],
+  works: [],
 };
 
 const brandingMarketing = {
@@ -135,7 +140,7 @@ const brandingMarketing = {
     linkedin,
     youtube,
   ],
-  works: [1, 5, 7, 9, 11, 12],
+  works: [],
 };
 
 export const setupData = (
@@ -164,8 +169,7 @@ export const setupData = (
     setOffers(softwaredevelopmentData.offers);
     setTechnologies(softwaredevelopmentData.technologies);
     setWorks(softwaredevelopmentData.works);
-  }
-  else if (path === "hardware-development") {
+  } else if (path === "hardware-development") {
     setBannerHeading(hardwaredevelopmentData.bannerHeading);
     setBannerText(hardwaredevelopmentData.bannerText);
     setOfferHeading(hardwaredevelopmentData.offerHeading);
@@ -173,8 +177,7 @@ export const setupData = (
     setOffers(hardwaredevelopmentData.offers);
     setTechnologies(hardwaredevelopmentData.technologies);
     setWorks(hardwaredevelopmentData.works);
-  }
-  else if (path === "branding-and-marketing") {
+  } else if (path === "branding-and-marketing") {
     setBannerHeading(brandingMarketing.bannerHeading);
     setBannerText(brandingMarketing.bannerText);
     setOfferHeading(brandingMarketing.offerHeading);

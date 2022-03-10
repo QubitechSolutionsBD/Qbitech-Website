@@ -27,6 +27,7 @@ function CaseStudies({ nextSlideRef }) {
           <div className="cardoverlay" ref={(el) => (overlayRef.current[work.id] = el)}>
               <div className="box" ref={(el) => (overlayBoxRef.current[work.id] = el)}></div>
           </div>
+          <img src={work.thumbnail} alt=""/>
           <div className="info" ref={(el) => (itemHead.current[work.id] = el)}>
             <h2>{work.name}</h2>
             <p>{work.type}</p>

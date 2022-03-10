@@ -72,21 +72,15 @@ function Works({ works, workCardRef }) {
 
       <div className="content">
         <Slider {...settings} className="slider" ref={(slider) => (customSlider.current = slider)}>
-            <div className="work">
-              <Link to="/case-studies/1" className="container" id="serviceprojectcard"></Link>
+          {
+            works.map((w) => (
+              <div className="work">
+              <Link to={`/case-studies/${w.id}`} className="container" id="serviceprojectcard">
+                <img src={w.image} alt=""/>
+              </Link>
             </div>
-            <div className="work">
-              <Link to="/case-studies/2" className="container" id="serviceprojectcard"></Link>
-            </div>
-            <div className="work">
-              <Link to="/case-studies/1" className="container" id="serviceprojectcard"></Link>
-            </div>
-            <div className="work">
-              <Link to="/case-studies/2" className="container" id="serviceprojectcard"></Link>
-            </div>
-            <div className="work">
-              <Link to="/case-studies/1" className="container" id="serviceprojectcard"></Link>
-            </div>
+            ))
+          }
         </Slider>
         <div className="slider-btn-box">
           <button onClick={() => customSlider.current.slickPrev()}><img src={right} alt="" /></button>
