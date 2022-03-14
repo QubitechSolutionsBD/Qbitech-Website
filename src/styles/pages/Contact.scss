@@ -163,6 +163,9 @@
         @include media("<=phone") {
           margin-bottom: 10px;
         }
+        .PhoneInput{
+          background: #cccccc50;
+        }
         input,
         textarea,
         select {
@@ -192,6 +195,18 @@
           }
           @include media("<=phone") {
             width: 100%;
+          }
+        }
+        .PhoneInput{
+          background: #cccccc50;
+          padding: 15px 20px;
+          border-radius: 5px;
+          .PhoneInputCountry{
+            margin-right: 10px;
+          }
+          input{
+            padding: 0;
+            background: transparent;
           }
         }
         // Check box
@@ -295,8 +310,8 @@
         text-transform: uppercase;
         outline: none;
         border: none;
-        background: var(--pink-color);
-        // background: var(--background-color-dark);
+        // background: var(--pink-color);
+        background: var(--background-color-dark);
         // border-radius: 30px;
         border-radius: 5px;
         // color: var(--text-color-white);
@@ -305,6 +320,9 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        &:hover img{
+          transform: translateY(-5px);
+        }
         // transform: scale(1);
         // transition: 0.2s all ease-in-out;
         // &:hover {
@@ -318,6 +336,10 @@
           div {
             margin: 0 5px;
           }
+        }
+        img{
+          width: 30px;
+          transition: 0.4s;
         }
         @include media("<=phone") {
           font-size: 13.5px;

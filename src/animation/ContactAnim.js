@@ -9,36 +9,37 @@ export const contactAnim = () => {
     .from("#contactcircle", 0.8, {
       scale: 0,
       ease: "expo.inOut",
-    }).from("#contactHeading", 0.8, {
-      y: 200,
-      ease: "power4.out",
-      skewY: 8,
-      stagger: { amount: 0.3 },
     })
-    .from("#contactinputfields", 0.8, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      stagger: { amount: 0.3 },
-    })
-    .from("#contactSecondaryText", 0.8, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      stagger: { amount: 0.3 },
-    }, "<")
-    .from("#contactbutton", 0.6, {
-      css: { padding: 0, width: 0 },
-      ease: "expo.inOut",
-    })
-    .from("#contactbuttontext", 0.6, {
-      y: 70,
-      ease: "power4.out",
-    })
-    .from("#contactmoreinfo", 0.9, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      stagger: { amount: 0.3 },
-    });
+    // .from("#contactHeading", 0.8, {
+    //   y: 200,
+    //   ease: "power4.out",
+    //   skewY: 8,
+    //   stagger: { amount: 0.3 },
+    // })
+    // .from("#contactinputfields", 0.8, {
+    //   y: 100,
+    //   opacity: 0,
+    //   ease: "power4.out",
+    //   stagger: { amount: 0.3 },
+    // })
+    // .from("#contactSecondaryText", 0.8, {
+    //   y: 100,
+    //   opacity: 0,
+    //   ease: "power4.out",
+    //   stagger: { amount: 0.3 },
+    // }, "<")
+    // .from("#contactbutton", 0.6, {
+    //   css: { padding: 0, width: 0 },
+    //   ease: "expo.inOut",
+    // })
+    // .from("#contactbuttontext", 0.6, {
+    //   y: 70,
+    //   ease: "power4.out",
+    // })
+    // .from("#contactmoreinfo", 0.9, {
+    //   y: 100,
+    //   opacity: 0,
+    //   ease: "power4.out",
+    //   stagger: { amount: 0.3 },
+    // });
 }

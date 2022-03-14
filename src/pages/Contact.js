@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import emailjs from "emailjs-com";
+import toast, { Toaster } from "react-hot-toast";
+import PhoneInput from "react-phone-number-input";
+import emailjs from "emailjs-com";
 // COMPONENTS
 import Navbar from "../components/Navigation/Navbar";
 import Footer from "../components/Footer";
@@ -7,10 +9,7 @@ import GlobalPageTransition from "../components/Global/GlobalPageTransition";
 // ANIMATIONS
 import { contactAnim } from "../animation/ContactAnim";
 // IMAGES
-// import web from "../assets/pageContact/web.png";
-// import app from "../assets/pageContact/apps.png";
-// import chip from "../assets/pageContact/chip.png";
-// import marketing from "../assets/pageContact/marketing.png";
+import "react-phone-number-input/style.css";
 import arrowImg from "../assets/up-arrow.png";
 
 function Contact() {
@@ -22,7 +21,6 @@ function Contact() {
   const [budget, setBudget] = useState("");
   const [services, setServices] = useState([]);
   const [error, setError] = useState("");
-  const [successMessage, setSuccessMessage] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -32,16 +30,12 @@ function Contact() {
 
   const validationCheck = () => {
     if (name && email && mobile) {
-      if (mobile.length > 0 && mobile[0] === "0" && mobile[1] === "1") {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if(re.test(String(email).toLowerCase())){
-          return true;
-        } else{
-          setError("Invalid Email.");
-          return false;
-        }
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (re.test(String(email).toLowerCase())) {
+        return true;
       } else {
-        setError("Invalid Phone number.");
+        setError("Invalid Email.");
         return false;
       }
     } else {
@@ -89,31 +83,27 @@ function Contact() {
     e.preventDefault();
     if (validationCheck()) {
       setLoading(true);
-      // emailjs
-      //   .sendForm(
-      //     "service_iax6jgh",
-      //     "template_iim055q",
-      //     e.target,
-      //     "user_XQffkUYrfTtC2jfhBA1Ee"
-      //   )
-      //   .then(
-      //     () => {
-      //       clearAllFields();
-      //       setSuccessMessage(true);
-      //       setLoading(false);
-      //     },
-      //     () => {
-      //       setLoading(false);
-      //     }
-      //   );
-      console.log(name);
-      console.log(email);
-      console.log(mobile);
-      console.log(url);
-      console.log(budget);
-      console.log(services);
-      clearAllFields();
-      setSuccessMessage(true);
+      emailjs
+        .sendForm(
+          "service_iax6jgh",
+          "template_iim055q",
+          e.target,
+          "user_XQffkUYrfTtC2jfhBA1Ee"
+        )
+        .then(
+          () => {
+            clearAllFields();
+            toast.success("Thank you for your responce 😊");
+            setLoading(false);
+          },
+          () => {
+            setLoading(false);
+          }
+        )
+        .catch(() => {
+          toast.error("Something went wrong. 🙁");
+          setLoading(false);
+        })
     }
   };
 
@@ -155,13 +145,14 @@ function Contact() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <input
+              <PhoneInput
                 id="contactinputfields"
                 className="input_50"
                 type="text"
                 placeholder="Phone Number"
+                defaultCountry="BD"
                 value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
+                onChange={setMobile}
               />
             </div>
             <div className="input-container">
@@ -310,7 +301,9 @@ function Contact() {
 
             <div className="block" id="contactmoreinfo">
               <h2>Get in touch</h2>
-              <p><a href="tel:+8801701027534">+8801701027534</a></p>
+              <p>
+                <a href="tel:+8801701027534">+8801701027534</a>
+              </p>
               <p onClick={openMail} style={{ cursor: "pointer" }}>
                 info@qubitechbd.com
               </p>
@@ -319,30 +312,7 @@ function Contact() {
         </div>
       </div>
       <Footer />
-
-      <div
-        className={
-          successMessage ? "successMessage" : "successMessage disabled"
-        }
-      >
-        <div className="logo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="feather feather-check"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </div>
-        <div className="text">Message Sent</div>
-      </div>
+      <Toaster position="top-center" />
     </>
   );
 }
