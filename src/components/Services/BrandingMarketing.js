@@ -4,7 +4,7 @@ import MoreButton from "../Global/MoreButton";
 const BrandingMarketing = () => {
   return (
     <div className="services__brandingmarketing">
-      <h2 id="servicesbrandingmarketinghead">04</h2>
+      <h2 id="servicesbrandingmarketinghead">03</h2>
       <h1>
         <div id="servicesbrandingmarketinghead">
           <span>Branding</span>

@@ -15,12 +15,12 @@ import swift from "../../assets/pageservice/swift.png";
 import python from "../../assets/pageservice/python.png";
 import express from "../../assets/pageservice/express.png";
 import unity from "../../assets/pageservice/unity.png";
-import arduino from "../../assets/pageservice/arduino.png";
-import reasperi from "../../assets/pageservice/rasperi.png";
-import cpp from "../../assets/pageservice/cpp.png";
-import iot from "../../assets/pageservice/iot.png";
-import opencv from "../../assets/pageservice/opencv.png";
-import vscode from "../../assets/pageservice/vscode.png";
+// import arduino from "../../assets/pageservice/arduino.png";
+// import reasperi from "../../assets/pageservice/rasperi.png";
+// import cpp from "../../assets/pageservice/cpp.png";
+// import iot from "../../assets/pageservice/iot.png";
+// import opencv from "../../assets/pageservice/opencv.png";
+// import vscode from "../../assets/pageservice/vscode.png";
 import illustrator from "../../assets/pageservice/illustrator.png";
 import photoshop from "../../assets/pageservice/photoshop.png";
 import xd from "../../assets/pageservice/xd.png";
@@ -102,19 +102,19 @@ const softwaredevelopmentData = {
   ],
 };
 
-const hardwaredevelopmentData = {
-  bannerHeading: ["Hardware", "Development"],
-  bannerText: `Seamlessly integrate your ideas into IoT prototypes to simulate the idea before going into the market among the consumers.`,
-  offerHeading: `we combine your needs with our vast knowledge & experience in IoT Prototyping to help your brand.`,
-  offerTexts: `Everything begins with an idea. But ideas are worthless until you get them out of your head to see what can do. While you might plan out a business model surrounding your idea, you need to test the product to make sure there are no gaps in between.\n\nOur experienced team of experts are here to validate the idea before going into production with it. We help you identify the strengths & limitations of the product through audits, due diligence & real-life IoT prototyping. Internet of Things (IoT) introduces automating to your business model, increasing efficiency and accuracy.  It will add new value to your organization. You can say it’s like going from paper mail to emails. It’s cheaper, faster & it opens new doors of opportunity to your business. With Qubitech, we combine your idea with the latest technology with our vast knowledge & experience in IoT Prototyping to help empower your brand.`,
-  offers: [
-    "PRODUCT & IDEA PROTOTYPING",
-    "IOT BASED MONITORING SYSTEM",
-    "IOT BASED AUTOMOTION SYSTEM",
-  ],
-  technologies: [arduino, reasperi, iot, opencv, cpp, python, vscode],
-  works: [],
-};
+// const hardwaredevelopmentData = {
+//   bannerHeading: ["Hardware", "Development"],
+//   bannerText: `Seamlessly integrate your ideas into IoT prototypes to simulate the idea before going into the market among the consumers.`,
+//   offerHeading: `we combine your needs with our vast knowledge & experience in IoT Prototyping to help your brand.`,
+//   offerTexts: `Everything begins with an idea. But ideas are worthless until you get them out of your head to see what can do. While you might plan out a business model surrounding your idea, you need to test the product to make sure there are no gaps in between.\n\nOur experienced team of experts are here to validate the idea before going into production with it. We help you identify the strengths & limitations of the product through audits, due diligence & real-life IoT prototyping. Internet of Things (IoT) introduces automating to your business model, increasing efficiency and accuracy.  It will add new value to your organization. You can say it’s like going from paper mail to emails. It’s cheaper, faster & it opens new doors of opportunity to your business. With Qubitech, we combine your idea with the latest technology with our vast knowledge & experience in IoT Prototyping to help empower your brand.`,
+//   offers: [
+//     "PRODUCT & IDEA PROTOTYPING",
+//     "IOT BASED MONITORING SYSTEM",
+//     "IOT BASED AUTOMOTION SYSTEM",
+//   ],
+//   technologies: [arduino, reasperi, iot, opencv, cpp, python, vscode],
+//   works: [],
+// };
 
 const brandingMarketing = {
   bannerHeading: ["Branding &", "Marketing"],
@@ -169,15 +169,17 @@ export const setupData = (
     setOffers(softwaredevelopmentData.offers);
     setTechnologies(softwaredevelopmentData.technologies);
     setWorks(softwaredevelopmentData.works);
-  } else if (path === "hardware-development") {
-    setBannerHeading(hardwaredevelopmentData.bannerHeading);
-    setBannerText(hardwaredevelopmentData.bannerText);
-    setOfferHeading(hardwaredevelopmentData.offerHeading);
-    setOfferText(hardwaredevelopmentData.offerTexts);
-    setOffers(hardwaredevelopmentData.offers);
-    setTechnologies(hardwaredevelopmentData.technologies);
-    setWorks(hardwaredevelopmentData.works);
-  } else if (path === "branding-and-marketing") {
+  } 
+  // else if (path === "hardware-development") {
+  //   setBannerHeading(hardwaredevelopmentData.bannerHeading);
+  //   setBannerText(hardwaredevelopmentData.bannerText);
+  //   setOfferHeading(hardwaredevelopmentData.offerHeading);
+  //   setOfferText(hardwaredevelopmentData.offerTexts);
+  //   setOffers(hardwaredevelopmentData.offers);
+  //   setTechnologies(hardwaredevelopmentData.technologies);
+  //   setWorks(hardwaredevelopmentData.works);
+  // } 
+  else if (path === "branding-and-marketing") {
     setBannerHeading(brandingMarketing.bannerHeading);
     setBannerText(brandingMarketing.bannerText);
     setOfferHeading(brandingMarketing.offerHeading);

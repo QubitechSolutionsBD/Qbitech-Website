@@ -49,26 +49,12 @@ function Services() {
         </p>
         <Link to="/service/software-development" id="homeservicelinkformobile">Learn More <span>+</span></Link>
 
-        {/* -------------------- hardware development heading ------------------- */}
+        {/* ------------------- branding & marketing heading --------------- */}
         <h1
           className={classSelect === 2 ? "active" : ""}
           onClick={() => updateContent(2)}
         >
           <div className="headingnumber"><span id="homeServiceNumber">03</span></div>
-          <div className="headingtext"><span id="homeServiceHeading">HARDWARE DEVELOPMENT</span></div>
-        </h1>
-        <p id="homeservicetextformobile">
-          Seamlessly integrate your ideas into IoT prototypes to simulate the
-          idea before going into the market among the consumers.
-        </p>
-        <Link to="/service/hardware-development" id="homeservicelinkformobile">Learn More <span>+</span></Link>
-
-        {/* ------------------- branding & marketing heading --------------- */}
-        <h1
-          className={classSelect === 3 ? "active" : ""}
-          onClick={() => updateContent(3)}
-        >
-          <div className="headingnumber"><span id="homeServiceNumber">04</span></div>
           <div className="headingtext"><span id="homeServiceHeading">BRANDING & MARKETING</span></div>
         </h1>
         <p id="homeservicetextformobile">
@@ -89,11 +75,6 @@ function Services() {
           <p ref={contentRef} id="homeservicetexttextt">
             Streamline your business needs through our comprehensive mobile
             software solutions service to meet the needs of modern day industry.
-          </p>
-        ) : selected === 2 ? (
-          <p ref={contentRef} id="homeservicetexttextt">
-            Seamlessly integrate your ideas into IoT prototypes to simulate the
-            idea before going into the market among the consumers.
           </p>
         ) : (
           <p ref={contentRef} id="homeservicetexttextt">

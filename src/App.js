@@ -22,7 +22,6 @@ function App() {
           <Route exact path="/services" component={Services} />
           <Route exact path="/service/web-development" component={Service} />
           <Route exact path="/service/software-development" component={Service} />
-          <Route exact path="/service/hardware-development" component={Service} />
           <Route exact path="/service/branding-and-marketing" component={Service} />
           <Route exact path="/case-studies" component={Works} />
           <Route exact path="/case-studies/:id" component={Work} />

@@ -8,9 +8,9 @@ import OurServices from "../components/Services/OurServices";
 import Footer from "../components/Footer";
 import WebDevelopment from "../components/Services/WebDevelopment";
 import SoftwareDevelopment from "../components/Services/SoftwareDevelopment";
-// import WeDev from "../components/Services/WeDev";
-import HardwareDevelopment from "../components/Services/HardwareDevelopment";
 import BrandingMarketing from "../components/Services/BrandingMarketing";
+// import WeDev from "../components/Services/WeDev";
+// import HardwareDevelopment from "../components/Services/HardwareDevelopment";
 // import WeDev2 from "../components/Services/WeDev2";
 // import OurHappyCustomer from "../components/Services/OurHappyCustomer";
 
@@ -34,9 +34,9 @@ const Services = () => {
         <OurServices ourserviceRef={ourserviceRef} />
         <WebDevelopment />
         <SoftwareDevelopment />
-        {/* <WeDev /> */}
-        <HardwareDevelopment />
         <BrandingMarketing />
+        {/* <WeDev /> */}
+        {/* <HardwareDevelopment /> */}
         {/* <WeDev2 /> */}
         {/* <OurHappyCustomer /> */}
         <Footer />
