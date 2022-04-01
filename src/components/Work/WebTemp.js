@@ -1,9 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { works } from "../Works/Data";
-import GlobalPageTransition from "../Global/GlobalPageTransition";
+import Slider from "react-slick";
+import WebSlide from "./WebSlide";
 
-// ANIMATIONS
-// import { webTemplateAnimation } from "../../animation/WorkAnim";
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: "400px",
+  dotsClass: "slick-dots slick-thumb",
+    customPaging: (i) => {
+      return (
+        <div className="custom-dots">
+          <div className="box"></div>
+        </div>
+      );
+    },
+    responsive: [
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "50px",
+        }
+      }
+    ]
+};
 
 function WebTemp({ id }) {
   const [data, setData] = useState(null);
@@ -17,9 +43,9 @@ function WebTemp({ id }) {
 
   return (
     <>
-      <GlobalPageTransition />
-      <div className="webBanner">
-        <div className="webBanner__banner">
+      <div className="webtemp">
+        {/* Banner */}
+        <div className="webtemp__banner">
           <div className="image">
             <div className="bigCircle"></div>
             <img src={data && data.bannerImage} alt="obosor" />
@@ -32,69 +58,101 @@ function WebTemp({ id }) {
           </div>
         </div>
 
-        {/* content */}
-        <div className="webBanner__content">
-          <div className="items">
-            <div className="item">
+        {/* Short Description */}
+        <div className="webtemp__description">
+          {/* infor */}
+          <div className="webInf">
+            <div className="info">
+              <h3>Client</h3>
+              <p>Obosor</p>
+            </div>
+            <div className="info">
               <h3>Timeline</h3>
-              <p>{data && data.timeline}</p>
+              <p>3 months</p>
             </div>
-            <div className="item">
-              <h3>Clients</h3>
-              <p>{data && data.client}</p>
-            </div>
-            <div className="item">
+            <div className="info">
               <h3>Deliverables</h3>
-              <p>
+              <p>Web E-commerce management</p>
+            </div>
+            <div className="info">
+              <h3>Tools</h3>
+              <div className="tools">
                 {data &&
-                  data.deliverables.map((d) => (
-                    <span key={Math.random()}>{d}</span>
+                  data.tools.map((tool) => (
+                    <img key={tool.id} src={tool.name} alt="" />
                   ))}
-              </p>
-            </div>
-            <div className="item">
-              <h3>Industry</h3>
-              <p>{data && data.industry}</p>
+              </div>
             </div>
           </div>
 
-          <div className="toolList">
-            <h3>Tools</h3>
-            <div className="tools">
-              {data &&
-                data.tools.map((tool) => (
-                  <div className="tool" key={Math.random()}>
-                    <img src={tool} alt="tool" />
+          {/* features */}
+          <div className="webFeature">
+            <h3>Features</h3>
+            {/* feature */}
+            {data &&
+              data.features.map((feature) => (
+                <div className="feature" key={feature.id}>
+                  <div className="cir" id="projectculturecircle">
+                    <div
+                      className="cir-small"
+                      id="aboutculturesmallcircle"
+                    ></div>
                   </div>
-                ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="webBanner__images">
-          <div className="heading">
-            <h1>Solutions</h1>
-            <p>{data && data.solutions}</p>
-          </div>
-          <div className="line line-1">
-            {data &&
-              data.desktopImages1.map((di) => (
-                <img key={Math.random()} src={di} alt="" />
-              ))}
-          </div>
-          <div className="line line-2">
-            {data &&
-              data.desktopImages2.map((di) => (
-                <img key={Math.random()} src={di} alt="" />
+                  <div>{feature.feature}</div>
+                </div>
               ))}
           </div>
         </div>
 
-        <div className="webBanner__images">
-          <div className="heading">
-            <h1>Impacts</h1>
-            <p>{data && data.solutions}</p>
+        <h1>
+          <div>
+            <span id="aboutprocesshead">Solutions</span>
           </div>
+          <div>
+            <span id="aboutprocesshead">& Impacts</span>
+          </div>
+        </h1>
+        <div className="webtemp__solution">
+          <div className="solution">
+            <h3>Solutions</h3>
+            {data &&
+              data.solutions.map((solution) => (
+                <div className="feature" key={solution.id}>
+                  <div className="cir" id="projectculturecircle">
+                    <div
+                      className="cir-small"
+                      id="aboutculturesmallcircle"
+                    ></div>
+                  </div>
+                  <div>{solution.solution}</div>
+                </div>
+              ))}
+          </div>
+          <div className="impacts">
+            <h3>Impacts</h3>
+            {data &&
+              data.impacts.map((impact) => (
+                <div className="feature" key={impact.id}>
+                  <div className="cir" id="projectculturecircle">
+                    <div
+                      className="cir-small"
+                      id="aboutculturesmallcircle"
+                    ></div>
+                  </div>
+                  <div>{impact.impact}</div>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        <div className="webtemp__slides">
+          <Slider {...settings} className="slider">
+            {
+              data && data.slides.map(slide => (
+                <WebSlide id={slide.id} image={slide.slide} />
+              ))
+            }
+          </Slider>
         </div>
       </div>
     </>
