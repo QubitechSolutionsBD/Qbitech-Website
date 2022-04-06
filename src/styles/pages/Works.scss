@@ -46,7 +46,7 @@
       margin-bottom: 20vh;
       position: relative;
       transition: 0.4s;
-      border: 1px solid #ccc;
+      border: 2px solid #ccc;
       @include media("<=1460px") {
         min-height: 65vh;
         margin-bottom: 10vh;
@@ -179,7 +179,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        background: var(--text-color-black);
+        background: #ccc;
         @include media("<=1460px") {
           height: 65vh;
         }

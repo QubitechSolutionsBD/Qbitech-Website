@@ -104,20 +104,13 @@ function Services() {
       ) : classSelect === 2 ? (
         <Link
           className="global"
-          to="/service/hardware-development"
-          id="serviceLearnButton"
-        >
-          Learn More
-        </Link>
-      ) : (
-        <Link
-          className="global"
           to="/service/branding-and-marketing"
           id="serviceLearnButton"
         >
           Learn More
         </Link>
-      )}
+      ) : null
+      }
     </div>
   );
 }
