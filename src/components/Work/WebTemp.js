@@ -53,12 +53,20 @@ function WebTemp({ id }) {
           <div className="name">
             <div className="wrapper">
               <h1>{data && data.name}</h1>
+              <h2>{data && data.subName}</h2>
               <p>{data && data.ShortDescription}</p>
             </div>
           </div>
         </div>
 
+        
         {/* Short Description */}
+        <div className="firstHead">
+          <h1>
+            <div><span id="aboutprocesshead">Case</span></div>
+            <div><span id="aboutprocesshead">Studies</span></div>
+          </h1>
+        </div>
         <div className="webtemp__description">
           {/* infor */}
           <div className="webInf">
@@ -105,12 +113,8 @@ function WebTemp({ id }) {
         </div>
 
         <h1>
-          <div>
-            <span id="aboutprocesshead">Solutions</span>
-          </div>
-          <div>
-            <span id="aboutprocesshead">& Impacts</span>
-          </div>
+          <div><span id="aboutprocesshead">Solutions</span></div>
+          <div><span id="aboutprocesshead">& Impacts</span></div>
         </h1>
         <div className="webtemp__solution">
           <div className="solution">
@@ -145,6 +149,12 @@ function WebTemp({ id }) {
           </div>
         </div>
 
+        
+        {/* Slider */}
+        <h1>
+          <div><span id="aboutprocesshead">Project</span></div>
+          <div><span id="aboutprocesshead">Highlights</span></div>
+        </h1>
         <div className="webtemp__slides">
           <Slider {...settings} className="slider">
             {

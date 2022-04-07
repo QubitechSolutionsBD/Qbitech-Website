@@ -22,6 +22,7 @@ export const works = [
   {
     id: 1,
     name: `Obosor`,
+    subName: `An  online book shop service`,
     type: `web`,
     ShortDescription: `an on-demand streaming service for rather unconventional movies, created under the umbrella of a  major german television network. while working.`,
     timeline: `July 2021`,

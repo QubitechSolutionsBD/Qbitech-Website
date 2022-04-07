@@ -1277,6 +1277,7 @@
     font-weight: normal;
     margin-top: 2rem;
     text-transform: uppercase;
+    font-weight: bold;
     @include media("<=phone") {
       font-size: 16px;
     }
@@ -1308,29 +1309,28 @@
       padding: 10px 30px 10px 30px;
     }
     img {
-      width: 150px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 250px;
       border-radius: 10px;
       &:not(:last-child){
         margin-right: 2rem;
       }
       @include media("<=1620px") {
-        width: 95px;
+        width: 200px;
       }
       @include media("<=1520px") {
-        width: 90px;
+        width: 150px;
       }
       @include media("<=desktop") {
-        width: 85px;
+        width: 130px;
       }
       @include media("<=1260px") {
-        width: 80px;
+        width: 120px;
       }
       @include media("<=semiDesktop") {
-        width: 75px;
+        width: 100px;
       }
       @include media("<=phone") {
-        width: 40px;
+        width: 90px;
       }
     }
   }
