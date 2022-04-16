@@ -7,10 +7,10 @@ const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 1,
+  slidesToShow: 3,
   slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: "400px",
+  // centerMode: true,
+  // centerPadding: "400px",
   dotsClass: "slick-dots slick-thumb",
     customPaging: (i) => {
       return (
@@ -23,7 +23,7 @@ const settings = {
       {
         breakpoint: 520,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           centerPadding: "50px",
         }

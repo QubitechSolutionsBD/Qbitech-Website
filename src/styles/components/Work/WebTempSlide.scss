@@ -1,9 +1,8 @@
 .slide {
   width: 100%;
-  height: 60vh;
   padding: 2rem;
   @include media("<=1360px") {
-    height: 25vh;
+    height: fit-content;
     padding: 1rem;
   }
   img{

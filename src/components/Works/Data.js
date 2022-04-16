@@ -5,6 +5,8 @@ import reduxtLogo from "../../assets/pageservice/redux.png";
 import firebaseLogo from "../../assets/pageservice/firebase.png";
 import mongoLogo from "../../assets/pageservice/mongo.png";
 import vscodeLogo from "../../assets/pageservice/vscode.png";
+import dartLogo from "../../assets/pageservice/dart.png";
+import flutterLogo from "../../assets/pageservice/flutter.png";
 
 // BANNER IMAGE
 import obosorBannerImage from "../../assets/pageCaseStudy/oboshor/bannerImage.png";
@@ -16,15 +18,26 @@ import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg";
 // PAGES
 // ................... Obosor ...................
 import slide1 from "../../assets/pageCaseStudy/oboshor/slide1.png";
+import slide2 from "../../assets/pageCaseStudy/oboshor/slide2.png";
+import slide3 from "../../assets/pageCaseStudy/oboshor/slide3.png";
+import slide4 from "../../assets/pageCaseStudy/oboshor/slide4.png";
+// ................... Musafirkhana ...................
+import slide5 from "../../assets/pageCaseStudy/musafirkhana/1.png";
+import slide6 from "../../assets/pageCaseStudy/musafirkhana/2.png";
+import slide7 from "../../assets/pageCaseStudy/musafirkhana/3.png";
+import slide8 from "../../assets/pageCaseStudy/musafirkhana/4.png";
+import slide9 from "../../assets/pageCaseStudy/musafirkhana/5.png";
 
 
 export const works = [
+  // ///////////////////////////////////////////////////////////////////////
+  // ///////////////////////////////////////////////////////////////////////
   {
     id: 1,
     name: `Obosor`,
     subName: `An  online book shop service`,
     type: `web`,
-    ShortDescription: `an on-demand streaming service for rather unconventional movies, created under the umbrella of a  major german television network. while working.`,
+    ShortDescription: `Obosor is a community-based book shop founded in 2018. They have won the Bangabandhu Innovation Grant 2019. Obosor aims to promote reading and create readers who will lead Bangladesh in the future with their knowledge and creativity.`,
     timeline: `July 2021`,
     client: `Obosor`,
     deliverables: "Web E-commerce management",
@@ -39,55 +52,77 @@ export const works = [
     bannerImage: obosorBannerImage,
     thumbnail: obothumb,
     features: [
-      {id:1, feature: "Personalized accounts for individual users"},
-      {id:2, feature: "Detect colors in real-time and from a photograph"},
-      {id:3, feature: "Demo painting in real-time and photograph"},
-      {id:4, feature: "Paint preset images"},
-      {id:5, feature: "Choose the favorite color from a wide range of shades"},
-      {id:6, feature: "Painting service request from customers"},
+      {id:1, feature: "Individualized accounts for each user."},
+      {id:2, feature: "Tracking the order to get real-time status updates from the restaurant to the user's doorstep."},
+      {id:3, feature: "Users can plan every meal through the timeline."},
+      {id:4, feature: "Separate admin application with customization."},
+      {id:5, feature: "Full service management from the admin application."},
     ],
     solutions: [
-      {id:1, solution: "Berger Value Club is the first digital painting platform in Bangladesh where user can visualize their walls using an extensive collection of over 5,000 shades. User can virtually apply different shades of colour to any surface in real-time, on captured images and preset images."},
-      {id:2, solution: "Our advanced machine learning feature helps the user match and find the colour shade name in real-time or any captured image."},
-      {id:3, solution: "Berger Value Club is the first digital painting platform in Bangladesh where user can visualize their walls using an extensive collection of over 5,000 shades. User can virtually apply different shades of colour to any surface in real-time, on captured images and preset images."},
-      {id:4, solution: "Our advanced machine learning feature helps the user match and find the colour shade name in real-time or any captured image."},
+      {id:1, solution: "A seamless mobile application that allows users to order food without any hassles at all."},
+      {id:2, solution: "A completely configurable online admin application for keeping track of orders & overall insights."},
+      {id:3, solution: "Planning the meal throughout the day or week without worrying about anything."},
     ],
     impacts: [
-      {id:1, impact: "Berger Value Club is the first digital painting platform in Bangladesh where user can visualize their walls using an extensive collection of over 5,000 shades. User can virtually apply different shades of colour to any surface in real-time, on captured images and preset images."},
-      {id:2, impact: "Berger Value Club is the first digital painting platform in Bangladesh where user can visualize their walls using an extensive collection of over 5,000 shades. User can virtually apply different shades of colour to any surface in real-time, on captured images and preset images."},
-      {id:3, impact: "Our advanced machine learning feature helps the user match and find the colour shade name in real-time or any captured image."},
-      {id:4, impact: "Our advanced machine learning feature helps the user match and find the colour shade name in real-time or any captured image."},
+      {id:1, impact: "Musafir Khana is experiencing an increase in sales after interacting with users through the app."},
+      {id:2, impact: "A simple UI interface gives an increase in user retention."},
+      {id:3, impact: "Changing their services & features according to the user feedback from the app."},
+      {id:4, impact: "The company's credibility is increasing every day due to their online app based presence."},
     ],
     slides: [
       {id: 1, slide: slide1},
-      {id: 2, slide: slide1},
-      {id: 3, slide: slide1},
-      {id: 4, slide: slide1},
+      {id: 2, slide: slide2},
+      {id: 3, slide: slide3},
+      {id: 4, slide: slide4},
     ]
   },
+
+  // ///////////////////////////////////////////////////////////////////////
+  // ///////////////////////////////////////////////////////////////////////
   {
     id: 2,
     name: `Musafir Khana`,
     type: `app`,
-    ShortDescription: `an on-demand streaming service for rather unconventional movies, created under the umbrella of a 
-                       major german television network. while working.`,
+    ShortDescription: `Musafir Khana is a food delivery service that delivers home-cooked meals and delights to the users. Mainly Targeting corporate clients and offices.`,
     timeline: `July 2021`,
-    client: `Obosor`,
-    deliverables: [`Web, `, `E-Commerce, `, `Management`],
+    client: `Musafir Khana`,
+    deliverables: `App, E-Commerce, Management`,
     industry: `Hijibiji`,
-    tools: [
-      reactLogo,
-      reduxtLogo,
-      nodeLogo,
-      firebaseLogo,
-      mongoLogo,
-      vscodeLogo,
+    tools: [ 
+      {id:1, name: dartLogo},
+      {id:2, name: flutterLogo},
+      {id:3, name: firebaseLogo},
     ],
     bannerImage: obosorBannerImage,
-    solutions: `prior to the actual implementation by in-house developers, an interactive prototype was provided early on.
-                in this way, topics such as user flow or motion patterns could already be experienced hands-on during the
-                conceptual stages.`,
     thumbnail: musathumb,
+    features: [
+      {id:1, feature: "Personalized accounts for individual users."},
+      {id:2, feature: "Recommending books according to the genre."},
+      {id:3, feature: "Order tracking system for the users."},
+      {id:4, feature: "Customers can pay their invoice bills online."},
+      {id:5, feature: "Fully featured admin panel for stock and sales management."},
+      {id:6, feature: "Integration of live chat feature for customer support."},
+      {id:7, feature: "Integration of live chat feature for customer support."},
+    ],
+    solutions: [
+      {id:1, solution: "A fully digital ecosystem through a website & mobile application using the best practices for better user experience."},
+      {id:2, solution: "A fully customized web admin interface for monitoring sales & stocks."},
+      {id:3, solution: "Emphasized important factors & filtering options to help users narrow down the choices to give better recommendations on books."},
+    ],
+    impacts: [
+      {id:1, impact: "Obosor has generated more sales after engaging customers through their websites."},
+      {id:2, impact: "Overall customer engagement has increased as users can interact with the website instead of waiting for their reply from social media."},
+      {id:3, impact: "The team can get a better insight into what their inventory looks like & sales data."},
+      {id:4, impact: "Getting positive feedback coming through the simple user interface of the website and app."},
+      {id:5, impact: "The company's credibility has increased due to more engagements and online presence."},
+    ],
+    slides: [
+      {id: 1, slide: slide5},
+      {id: 2, slide: slide6},
+      {id: 3, slide: slide7},
+      {id: 4, slide: slide8},
+      {id: 5, slide: slide9},
+    ]
   },
 ];
 

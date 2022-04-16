@@ -328,10 +328,10 @@
 
     .slider {
       width: 100%;
-      min-height: 65vh;
+      min-height: fit-content;
       @include media("<=phone") {
         width: 100%;
-        min-height: 30vh;
+        min-height: fit-content;
       }
 
       ul.slick-dots {
