@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 
 // ASSETS
-import client1 from "../../assets/pagehome/client/happyClients/1.png";
-import client2 from "../../assets/pagehome/client/client2.png";
-import client3 from "../../assets/pagehome/client/client3.png";
+import client1 from "../../assets/pagehome/client/client1.jpg";
+import client2 from "../../assets/pagehome/client/client2.jpg";
+import client3 from "../../assets/pagehome/client/client3.jpg";
 import quoto from "../../assets/pagehome/client/quoto.png";
 
 // DATA
@@ -20,26 +20,26 @@ const allTestomonials = [
   {
     id: 2,
     image: client2,
-    heading: "Intuitive Design",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
-    clientName: "Eva Alexis",
-    designation: "CEO at CFG Limited",
+    heading: "Delivered with Perfection",
+    desc: "Qubitech Solutions have successfully visualized & delivered exactly what we were looking for on our website.  It had to be easy enough to reach out to remote startups while still being appealing enough to display to stakeholders. That's exactly what they provided us.",
+    clientName: "Tasnim Binte Shawkat",
+    designation: "President, Startup Rajshahi",
   },
   {
     id: 3,
     image: client3,
-    heading: "Mindblowing Service",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
-    clientName: "Stive Smith",
-    designation: "CEO at BCD Production",
+    heading: "Impressive",
+    desc: "Qubitech impressed me by developing an Android app to our exact specifications on a tight deadline. The experience and outcomes were great from concept to creation and the full evolution phase in between. They were the ideal combination of professionalism and thoroughness. ",
+    clientName: "Sabuz Monwar",
+    designation: "Co-founder, Musafirkhana",
   },
   {
     id: 4,
     image: client2,
-    heading: "Intuitive Design",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
-    clientName: "Eva Alexis",
-    designation: "CEO at CFG Limited",
+    heading: "Delivered with Perfection",
+    desc: "Qubitech Solutions have successfully visualized & delivered exactly what we were looking for on our website.  It had to be easy enough to reach out to remote startups while still being appealing enough to display to stakeholders. That's exactly what they provided us.",
+    clientName: "Tasnim Binte Shawkat",
+    designation: "President, Startup Rajshahi",
   },
 ];
 

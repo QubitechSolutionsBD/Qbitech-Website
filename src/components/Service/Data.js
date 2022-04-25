@@ -61,10 +61,10 @@ const webdevelopmentData = {
     mysql,
   ],
   works: [
-    { id: "1", image: obothumb },
-    { id: "1", image: obothumb },
-    { id: "1", image: obothumb },
-    { id: "1", image: obothumb },
+    { id: "1", image: obothumb, name: "Obosor" },
+    { id: "2", image: obothumb, name: "Obosor" },
+    { id: "3", image: obothumb, name: "Obosor" },
+    { id: "4", image: obothumb, name: "Obosor"},
   ],
 };
 
@@ -95,10 +95,10 @@ const softwaredevelopmentData = {
     unity,
   ],
   works: [
-    { id: "2", image: musathumb },
-    { id: "2", image: musathumb },
-    { id: "2", image: musathumb },
-    { id: "2", image: musathumb },
+    { id: "2", image: musathumb, name: "Musafirkhana" },
+    { id: "2", image: musathumb, name: "Musafirkhana" },
+    { id: "2", image: musathumb, name: "Musafirkhana" },
+    { id: "2", image: musathumb, name: "Musafirkhana" },
   ],
 };
 

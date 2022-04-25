@@ -1,12 +1,12 @@
 .apptemp__slides {
   padding-bottom: 5rem;
+  overflow: hidden;
   @include media("<=phone") {
     padding-bottom: 1rem;
   }
   .slider {
     width: 100%;
     padding: 2rem;
-    min-height: fit-content;
     @include media("<=1360px") {
       height: fit-content;
       padding: 0;

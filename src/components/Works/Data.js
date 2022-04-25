@@ -5,11 +5,12 @@ import reduxtLogo from "../../assets/pageservice/redux.png";
 import firebaseLogo from "../../assets/pageservice/firebase.png";
 import mongoLogo from "../../assets/pageservice/mongo.png";
 import vscodeLogo from "../../assets/pageservice/vscode.png";
-import dartLogo from "../../assets/pageservice/dart.png";
 import flutterLogo from "../../assets/pageservice/flutter.png";
+import java from "../../assets/pageservice/java.png";
 
 // BANNER IMAGE
 import obosorBannerImage from "../../assets/pageCaseStudy/oboshor/bannerImage.png";
+import musafirkhanaBannerImage from "../../assets/pageCaseStudy/musafirkhana/bannerImage.png";
 
 // PROJECT THUMBNAIL
 import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg";
@@ -89,11 +90,11 @@ export const works = [
     deliverables: `App, E-Commerce, Management`,
     industry: `Hijibiji`,
     tools: [ 
-      {id:1, name: dartLogo},
+      {id:1, name: java},
       {id:2, name: flutterLogo},
       {id:3, name: firebaseLogo},
     ],
-    bannerImage: obosorBannerImage,
+    bannerImage: musafirkhanaBannerImage,
     thumbnail: musathumb,
     features: [
       {id:1, feature: "Personalized accounts for individual users."},

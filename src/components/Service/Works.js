@@ -77,6 +77,8 @@ function Works({ works, workCardRef }) {
               <div className="work">
               <Link to={`/case-studies/${w.id}`} className="container" id="serviceprojectcard">
                 <img src={w.image} alt=""/>
+                <h1>{w.name}</h1>
+                <div className="circle"></div>
               </Link>
             </div>
             ))

@@ -72,26 +72,36 @@ function Projects() {
           <div className="work">
             <Link to="/case-studies/1" className="container" id="homeprojectcard">
               <img src={obothumbnail} alt="p1"/>
+              <h1>Obosor</h1>
+              <div className="circle"></div>
             </Link>
           </div>
           <div className="work">
             <Link to="/case-studies/2" className="container" id="homeprojectcard">
               <img src={musathumbnail} alt="" />
+              <h1>Musafirkhana</h1>
+              <div className="circle"></div>
             </Link>
           </div>
           <div className="work">
             <Link to="/case-studies/1" className="container" id="homeprojectcard">
               <img src={obothumbnail} alt="p1"/>
+              <h1>Obosor</h1>
+              <div className="circle"></div>
             </Link>
           </div>
           <div className="work">
             <Link to="/case-studies/2" className="container" id="homeprojectcard">
               <img src={musathumbnail} alt="p1"/>
+              <h1>Musafirkhana</h1>
+              <div className="circle"></div>
             </Link>
           </div>
           <div className="work">
             <Link to="/case-studies/1" className="container" id="homeprojectcard">
               <img src={obothumbnail} alt="p1"/>
+              <h1>Obosor</h1>
+              <div className="circle"></div>
             </Link>
           </div>
         </Slider>
