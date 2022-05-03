@@ -13,15 +13,15 @@ import obosorBannerImage from "../../assets/pageCaseStudy/oboshor/bannerImage.pn
 import musafirkhanaBannerImage from "../../assets/pageCaseStudy/musafirkhana/bannerImage.png";
 
 // PROJECT THUMBNAIL
-import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg";
-import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg";
+import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.webp";
+import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.webp";
 
 // PAGES
 // ................... Obosor ...................
-import slide1 from "../../assets/pageCaseStudy/oboshor/slide1.png";
-import slide2 from "../../assets/pageCaseStudy/oboshor/slide2.png";
-import slide3 from "../../assets/pageCaseStudy/oboshor/slide3.png";
-import slide4 from "../../assets/pageCaseStudy/oboshor/slide4.png";
+import slide1 from "../../assets/pageCaseStudy/oboshor/slide1.jpg";
+import slide2 from "../../assets/pageCaseStudy/oboshor/slide2.jpg";
+import slide3 from "../../assets/pageCaseStudy/oboshor/slide3.jpg";
+import slide4 from "../../assets/pageCaseStudy/oboshor/slide4.jpg";
 // ................... Musafirkhana ...................
 import slide5 from "../../assets/pageCaseStudy/musafirkhana/1.png";
 import slide6 from "../../assets/pageCaseStudy/musafirkhana/2.png";

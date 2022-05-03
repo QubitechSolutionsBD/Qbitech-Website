@@ -2,40 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./logo-removebg-preview.png" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <meta
-      name="google-site-verification"
-      content="fa_wtYtK213r89ecPvCY8akNSAL8bKS2TZbPtIASyTE"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      charset="UTF-8"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-    />
-    <!-- Messenger Chat Plugin Code -->
+    <meta name="title" content="Qubitech Solutions BD" />
+    <meta name="description" content="Qubitech is formed around a young group of entrepreneurs with the desire to streamline modern day developing practices in the industry. Our interest in the software development sector is not new." />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="fa_wtYtK213r89ecPvCY8akNSAL8bKS2TZbPtIASyTE" />
+    <meta property="og:url" content="http://qubitechbd.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Qubitech Solutions BD" />
+    <meta property="og:description" content="Qubitech is formed around a young group of entrepreneurs with the desire to streamline modern day developing practices in the industry. Our interest in the software development sector is not new." />
+    <meta property="og:image" content="ss.png" />
+    
+    <link rel="icon" href="./logo-removebg-preview.png" />
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
     <div id="fb-customer-chat" class="fb-customerchat"></div>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-S82TB18L79"
-    ></script>
-    <script>
+
+    <script crossorigin src="https://www.googletagmanager.com/gtag/js?id=G-S82TB18L79" integrity="sha384-th8odVsk4RSsaIURzBdNl0gwgn20eJfwO8s+ybZyG1MyvitBjiCWiW6eyHtuqPnY" crossorigin="anonymous"></script>
+    <script crossorigin>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -44,19 +30,16 @@
 
       gtag("config", "G-S82TB18L79");
     </script>
-
-    <script>
+    <script crossorigin>
       var chatbox = document.getElementById("fb-customer-chat");
       chatbox.setAttribute("page_id", "105104255043013");
       chatbox.setAttribute("attribution", "biz_inbox");
-
       window.fbAsyncInit = function () {
         FB.init({
           xfbml: true,
           version: "v12.0",
         });
       };
-
       (function (d, s, id) {
         var js,
           fjs = d.getElementsByTagName(s)[0];

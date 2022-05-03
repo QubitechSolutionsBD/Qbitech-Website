@@ -1290,6 +1290,7 @@
     margin-top: 2rem;
     padding: 0 250px 50px 250px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     @include media("<=1620px") {
       padding: 0 230px 50px 230px;
@@ -1314,6 +1315,7 @@
     img {
       width: 220px;
       border-radius: 10px;
+      margin-bottom: 1rem;
       &:not(:last-child){
         margin-right: 2rem;
       }
@@ -1333,7 +1335,7 @@
         width: 100px;
       }
       @include media("<=phone") {
-        width: 90px;
+        width: 50px;
       }
     }
   }

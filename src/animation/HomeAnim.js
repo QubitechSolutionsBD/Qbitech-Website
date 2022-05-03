@@ -30,8 +30,8 @@ export const overlayAnimation = (completeAnimation) => {
 // OVERLAY ANIMATION FOR MOBILE DEVICES
 export const overlayAnimationMobile = (completeAnimation) => {
   let tl = gsap.timeline();
-  tl.to(".overlay .block img", 0.6, { opacity: 0, delay: 1.2 })
-    .to(".overlay .block", 1.2, {
+  tl.to(".overlay .block img", 0.3, { opacity: 0, delay: 1 })
+    .to(".overlay .block", .8, {
       css: { borderRadius: 0, width: "100vw", height: "100vh" },
       ease: "expo.inOut",
     })

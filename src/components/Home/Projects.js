@@ -7,8 +7,8 @@ import right from "../../assets/pageservice/down-arrow.png";
 import left from "../../assets/pageservice/up-arrow.png";
 import MoreButton from "../Global/MoreButton";
 // PROJECT THUMBNAIL IMAGES
-import obothumbnail from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg"
-import musathumbnail from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg"
+import obothumbnail from "../../assets/pageCaseStudy/oboshor/thumbnail.webp"
+import musathumbnail from "../../assets/pageCaseStudy/musafirkhana/thumbnail.webp"
 
 function Projects() {
   const customSlider = useRef();
