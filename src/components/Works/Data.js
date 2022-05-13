@@ -13,8 +13,8 @@ import obosorBannerImage from "../../assets/pageCaseStudy/oboshor/bannerImage.pn
 import musafirkhanaBannerImage from "../../assets/pageCaseStudy/musafirkhana/bannerImage.png";
 
 // PROJECT THUMBNAIL
-import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.webp";
-import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.webp";
+import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg";
+import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg";
 
 // PAGES
 // ................... Obosor ...................

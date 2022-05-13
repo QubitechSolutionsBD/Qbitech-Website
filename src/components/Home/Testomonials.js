@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 
 // ASSETS
-import client1 from "../../assets/pagehome/client/client1.webp";
-import client2 from "../../assets/pagehome/client/client2.webp";
-import client3 from "../../assets/pagehome/client/client3.webp";
+import client1 from "../../assets/pagehome/client/client1.png";
+import client2 from "../../assets/pagehome/client/client2.png";
+import client3 from "../../assets/pagehome/client/client3.png";
 import quoto from "../../assets/pagehome/client/quoto.png";
 
 // DATA

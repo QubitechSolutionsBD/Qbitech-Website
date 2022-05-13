@@ -32,8 +32,8 @@ import linkedin from "../../assets/pageservice/linked-in.png";
 import youtube from "../../assets/pageservice/youtube.png";
 
 // PROJECT THUMBNAIL
-import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.webp";
-import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.webp";
+import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg";
+import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg";
 
 const webdevelopmentData = {
   bannerHeading: ["Web", "Development"],
