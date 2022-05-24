@@ -34,6 +34,8 @@ import youtube from "../../assets/pageservice/youtube.png";
 // PROJECT THUMBNAIL
 import obothumb from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg";
 import musathumb from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg";
+import bergerthumb from "../../assets/pageCaseStudy/berger/thumbnail.jpg";
+import startupRajshahithumb from "../../assets/pageCaseStudy/startupRajshahi/thumbnail.jpg";
 
 const webdevelopmentData = {
   bannerHeading: ["Web", "Development"],
@@ -62,9 +64,9 @@ const webdevelopmentData = {
   ],
   works: [
     { id: "1", image: obothumb, name: "Obosor" },
-    { id: "2", image: obothumb, name: "Obosor" },
+    { id: "2", image: startupRajshahithumb, name: "Startup Rajshahi" },
     { id: "3", image: obothumb, name: "Obosor" },
-    { id: "4", image: obothumb, name: "Obosor"},
+    { id: "4", image: startupRajshahithumb, name: "Startup Rajshahi" },
   ],
 };
 
@@ -95,10 +97,10 @@ const softwaredevelopmentData = {
     unity,
   ],
   works: [
-    { id: "2", image: musathumb, name: "Musafirkhana" },
-    { id: "2", image: musathumb, name: "Musafirkhana" },
-    { id: "2", image: musathumb, name: "Musafirkhana" },
-    { id: "2", image: musathumb, name: "Musafirkhana" },
+    { id: "1", image: musathumb, name: "Musafirkhana" },
+    { id: "2", image: bergerthumb, name: "Berger" },
+    { id: "3", image: musathumb, name: "Musafirkhana" },
+    { id: "4", image: bergerthumb, name: "Berger" },
   ],
 };
 

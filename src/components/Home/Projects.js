@@ -9,6 +9,8 @@ import MoreButton from "../Global/MoreButton";
 // PROJECT THUMBNAIL IMAGES
 import obothumbnail from "../../assets/pageCaseStudy/oboshor/thumbnail.jpg"
 import musathumbnail from "../../assets/pageCaseStudy/musafirkhana/thumbnail.jpg"
+import bergerthumbnail from "../../assets/pageCaseStudy/berger/thumbnail.jpg"
+import strupRajshahithumbnail from "../../assets/pageCaseStudy/startupRajshahi/thumbnail.jpg"
 
 function Projects() {
   const customSlider = useRef();
@@ -84,23 +86,16 @@ function Projects() {
             </Link>
           </div>
           <div className="work">
-            <Link to="/case-studies/1" className="container" id="homeprojectcard">
-              <img src={obothumbnail} alt="p1"/>
-              <h1>Obosor</h1>
+            <Link to="/case-studies/3" className="container" id="homeprojectcard">
+              <img src={bergerthumbnail} alt="" />
+              <h1>Berger</h1>
               <div className="circle"></div>
             </Link>
           </div>
           <div className="work">
-            <Link to="/case-studies/2" className="container" id="homeprojectcard">
-              <img src={musathumbnail} alt="p1"/>
-              <h1>Musafirkhana</h1>
-              <div className="circle"></div>
-            </Link>
-          </div>
-          <div className="work">
-            <Link to="/case-studies/1" className="container" id="homeprojectcard">
-              <img src={obothumbnail} alt="p1"/>
-              <h1>Obosor</h1>
+            <Link to="/case-studies/4" className="container" id="homeprojectcard">
+              <img src={strupRajshahithumbnail} alt="p1"/>
+              <h1>Startup Rajshahi</h1>
               <div className="circle"></div>
             </Link>
           </div>
