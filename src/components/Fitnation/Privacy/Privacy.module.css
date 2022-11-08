@@ -1,0 +1,3 @@
+.ol:global(.li) {
+  color: red !important;
+}

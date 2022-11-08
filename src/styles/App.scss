@@ -40,5 +40,49 @@ html {
   font-family: var(--poppins-font);
   font-weight: 300;
 }
-html { height: 100%; overflow:auto; }
-body { height: 100%; }
+html {
+  height: 100%;
+  overflow: auto;
+}
+body {
+  height: 100%;
+}
+
+.fitnation__wrapper {
+  background: var(--background-color-dark);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    color: #fff !important;
+    padding-bottom: 40px;
+  }
+}
+
+.fitnation__links {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s all ease-in-out;
+    &.active,
+    &:hover {
+      color: var(--pink-color);
+      transition: 0.3s all ease-in-out;
+    }
+  }
+}

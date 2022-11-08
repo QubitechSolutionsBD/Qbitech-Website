@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import Works from "./pages/Works";
 import Work from "./pages/Work";
+import Fitnation from "./pages/Fitnation";
+import FitnationTerms from "./pages/FitnationTerms";
+import FitnationPrivacy from "./pages/FitnationPrivacy";
 
 function App() {
   return (
@@ -21,11 +24,26 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/services" component={Services} />
           <Route exact path="/service/web-development" component={Service} />
-          <Route exact path="/service/software-development" component={Service} />
-          <Route exact path="/service/branding-and-marketing" component={Service} />
+          <Route
+            exact
+            path="/service/software-development"
+            component={Service}
+          />
+          <Route
+            exact
+            path="/service/branding-and-marketing"
+            component={Service}
+          />
           <Route exact path="/case-studies" component={Works} />
           <Route exact path="/case-studies/:id" component={Work} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/fitnation/terms" component={FitnationTerms} />
+          <Route
+            exact
+            path="/fitnation/privacy-policy"
+            component={FitnationPrivacy}
+          />
+          <Route exact path="/fitnation" component={Fitnation} />
           <Route component={NotFound} />
         </Switch>
       </Router>
