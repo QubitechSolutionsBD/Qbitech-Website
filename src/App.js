@@ -14,6 +14,7 @@ import Work from "./pages/Work";
 import Fitnation from "./pages/Fitnation";
 import FitnationTerms from "./pages/FitnationTerms";
 import FitnationPrivacy from "./pages/FitnationPrivacy";
+import FitnationDownloadFile from "./pages/FitnationDownloadFile";
 
 function App() {
   return (
@@ -44,6 +45,11 @@ function App() {
             component={FitnationPrivacy}
           />
           <Route exact path="/fitnation" component={Fitnation} />
+          <Route
+            exact
+            path="/fitnation/download"
+            component={FitnationDownloadFile}
+          />
           <Route component={NotFound} />
         </Switch>
       </Router>
