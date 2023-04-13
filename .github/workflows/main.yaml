@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-env:
-  USERNAME: ${{ secrets.GITHUB_USERNAME }}
-  ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 jobs:
   build-and-deploy:
@@ -20,7 +18,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_LOGIN_PWD }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker Image
         run: |
