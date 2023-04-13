@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+env:
+  USERNAME: ${{ secrets.GITHUB_USERNAME }}
+  ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build-and-deploy:
@@ -14,10 +17,9 @@ jobs:
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          USERNAME: ${{ env.USERNAME }}
+          PASSWORD: ${{ env.ACCESS_TOKEN }}
 
       - name: Build Docker Image
         run: |
